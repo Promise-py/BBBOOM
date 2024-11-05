@@ -105,8 +105,8 @@ int main(void)
   {
     // i2c_state++;
     /* USER CODE END WHILE */
-    i2c_state=ADS1015_Read(2);
-    HAL_Delay(1000);
+    // i2c_state=ADS1015_Read(2);
+    // HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

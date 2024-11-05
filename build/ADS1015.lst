@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
   29:BBBOOM/Src/ADS1015.c ****         break;
   30:BBBOOM/Src/ADS1015.c ****     case (3):
   31:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_3;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 2
 
 
   32:BBBOOM/Src/ADS1015.c ****         break;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
   60              		.loc 1 53 5 view .LVU6
   61 0022 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
   62              	.LVL3:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 3
 
 
   54:BBBOOM/Src/ADS1015.c ****     HAL_I2C_Mem_Read(&hi2c2, (i2cAddress<<1)+1, ReadAddr, I2C_MEMADD_SIZE_16BIT, &temp, 2,1000);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
   73:BBBOOM/Src/ADS1015.c **** //ADS1015写两字节数据
   74:BBBOOM/Src/ADS1015.c **** void ADS1015_WriteOneByte(uint8_t i2cAddress,uint16_t WriteAddr,uint16_t DataToWrite)
   75:BBBOOM/Src/ADS1015.c **** {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 4
 
 
  100              		.loc 1 75 1 is_stmt 1 view -0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  140              	.L7:
  141 002c 00000000 		.word	hi2c2
  142              		.cfi_endproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 5
 
 
  143              	.LFE68:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
   23:BBBOOM/Src/ADS1015.c ****     case (1):
  190              		.loc 1 23 9 is_stmt 1 view .LVU26
  191              	.L10:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 6
 
 
   35:BBBOOM/Src/ADS1015.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  232 0058 E4E7     		b	.L10
  233              	.L19:
  234 005a 00BF     		.align	2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 7
 
 
  235              	.L18:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  283              		.loc 1 95 1 is_stmt 1 view -0
  284              		.cfi_startproc
  285              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 8
 
 
  286              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  303              	.LVL17:
  133:BBBOOM/Src/ADS1015.c **** }
  304              		.loc 1 133 1 view .LVU54
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 9
 
 
  305 0014 7047     		bx	lr
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  349              		.loc 1 127 9 is_stmt 1 view .LVU64
  350 0046 0A20     		movs	r0, #10
  351 0048 FFF7FEFF 		bl	HAL_Delay
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 10
 
 
  352              	.LVL21:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  394 0078 D9E7     		b	.L24
  395              	.L25:
  121:BBBOOM/Src/ADS1015.c ****             break;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 11
 
 
  396              		.loc 1 121 17 view .LVU78
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  441              	.LVL25:
  442              		.loc 1 142 8 view .LVU85
  443 0014 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 12
 
 
  444              	.LVL26:
@@ -718,112 +718,105 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
  490              		.cfi_offset 14, -4
  152:BBBOOM/Src/ADS1015.c **** 
  153:BBBOOM/Src/ADS1015.c ****     if(hi2c==&hi2c2)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 13
 
 
  491              		.loc 1 153 5 is_stmt 1 view .LVU92
  492              		.loc 1 153 7 is_stmt 0 view .LVU93
- 493 0002 074B     		ldr	r3, .L49
+ 493 0002 054B     		ldr	r3, .L49
  494 0004 8342     		cmp	r3, r0
- 495 0006 04D0     		beq	.L48
+ 495 0006 00D0     		beq	.L48
  496              	.LVL28:
- 497              	.L46:
+ 497              	.L45:
  154:BBBOOM/Src/ADS1015.c ****     {
  155:BBBOOM/Src/ADS1015.c ****         HAL_I2C_Master_Receive_IT(&hi2c2,ADS1015_ADDRESS<<1,&ADS1015_RX_BUF,2);
  156:BBBOOM/Src/ADS1015.c ****         ADS1015_RX_BUF>>4;
  157:BBBOOM/Src/ADS1015.c ****     }
- 158:BBBOOM/Src/ADS1015.c ****      i2c_state++;
- 498              		.loc 1 158 6 is_stmt 1 view .LVU94
- 499              		.loc 1 158 15 is_stmt 0 view .LVU95
- 500 0008 064A     		ldr	r2, .L49+4
- 501 000a 1368     		ldr	r3, [r2]
- 502 000c 0133     		adds	r3, r3, #1
- 503 000e 1360     		str	r3, [r2]
+ 158:BBBOOM/Src/ADS1015.c ****     //  i2c_state++;
  159:BBBOOM/Src/ADS1015.c **** }
- 504              		.loc 1 159 1 view .LVU96
- 505 0010 08BD     		pop	{r3, pc}
- 506              	.LVL29:
- 507              	.L48:
+ 498              		.loc 1 159 1 view .LVU94
+ 499 0008 08BD     		pop	{r3, pc}
+ 500              	.LVL29:
+ 501              	.L48:
  155:BBBOOM/Src/ADS1015.c ****         ADS1015_RX_BUF>>4;
- 508              		.loc 1 155 9 is_stmt 1 view .LVU97
- 509 0012 0223     		movs	r3, #2
- 510 0014 044A     		ldr	r2, .L49+8
- 511 0016 9021     		movs	r1, #144
- 512 0018 0148     		ldr	r0, .L49
- 513              	.LVL30:
+ 502              		.loc 1 155 9 is_stmt 1 view .LVU95
+ 503 000a 0223     		movs	r3, #2
+ 504 000c 034A     		ldr	r2, .L49+4
+ 505 000e 9021     		movs	r1, #144
+ 506 0010 0148     		ldr	r0, .L49
+ 507              	.LVL30:
  155:BBBOOM/Src/ADS1015.c ****         ADS1015_RX_BUF>>4;
- 514              		.loc 1 155 9 is_stmt 0 view .LVU98
- 515 001a FFF7FEFF 		bl	HAL_I2C_Master_Receive_IT
- 516              	.LVL31:
+ 508              		.loc 1 155 9 is_stmt 0 view .LVU96
+ 509 0012 FFF7FEFF 		bl	HAL_I2C_Master_Receive_IT
+ 510              	.LVL31:
  156:BBBOOM/Src/ADS1015.c ****     }
- 517              		.loc 1 156 9 is_stmt 1 view .LVU99
- 518 001e F3E7     		b	.L46
- 519              	.L50:
- 520              		.align	2
- 521              	.L49:
- 522 0020 00000000 		.word	hi2c2
- 523 0024 00000000 		.word	i2c_state
- 524 0028 00000000 		.word	ADS1015_RX_BUF
- 525              		.cfi_endproc
- 526              	.LFE71:
- 528              		.global	ADS1015_RX_BUF
- 529              		.section	.bss.ADS1015_RX_BUF,"aw",%nobits
- 530              		.align	1
- 533              	ADS1015_RX_BUF:
- 534 0000 0000     		.space	2
- 535              		.global	ADS1015_CONFIG
- 536              		.section	.bss.ADS1015_CONFIG,"aw",%nobits
- 537              		.align	1
- 540              	ADS1015_CONFIG:
- 541 0000 0000     		.space	2
- 542              		.text
- 543              	.Letext0:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 14
+ 511              		.loc 1 156 9 is_stmt 1 view .LVU97
+ 512              		.loc 1 159 1 is_stmt 0 view .LVU98
+ 513 0016 F7E7     		b	.L45
+ 514              	.L50:
+ 515              		.align	2
+ 516              	.L49:
+ 517 0018 00000000 		.word	hi2c2
+ 518 001c 00000000 		.word	ADS1015_RX_BUF
+ 519              		.cfi_endproc
+ 520              	.LFE71:
+ 522              		.global	ADS1015_RX_BUF
+ 523              		.section	.bss.ADS1015_RX_BUF,"aw",%nobits
+ 524              		.align	1
+ 527              	ADS1015_RX_BUF:
+ 528 0000 0000     		.space	2
+ 529              		.global	ADS1015_CONFIG
+ 530              		.section	.bss.ADS1015_CONFIG,"aw",%nobits
+ 531              		.align	1
+ 534              	ADS1015_CONFIG:
+ 535 0000 0000     		.space	2
+ 536              		.text
+ 537              	.Letext0:
+ 538              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 539              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 540              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 541              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 542              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 543              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 14
 
 
- 544              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 545              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 546              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 547              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 548              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 549              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
- 550              		.file 8 "Core/Inc/main.h"
- 551              		.file 9 "Core/Inc/i2c.h"
- 552              		.file 10 "BBBOOM/Inc/ADS1015.h"
- 553              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 15
+ 544              		.file 8 "Core/Inc/i2c.h"
+ 545              		.file 9 "BBBOOM/Inc/ADS1015.h"
+ 546              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ADS1015.c
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:19     .text.ADS1015_ReadOneByte:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:25     .text.ADS1015_ReadOneByte:0000000000000000 ADS1015_ReadOneByte
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:86     .text.ADS1015_ReadOneByte:0000000000000048 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:91     .text.ADS1015_WriteOneByte:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:97     .text.ADS1015_WriteOneByte:0000000000000000 ADS1015_WriteOneByte
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:141    .text.ADS1015_WriteOneByte:000000000000002c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:146    .text.ADS1015_Config:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:152    .text.ADS1015_Config:0000000000000000 ADS1015_Config
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:179    .text.ADS1015_Config:0000000000000018 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:183    .text.ADS1015_Config:000000000000001c $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:236    .text.ADS1015_Config:000000000000005c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:540    .bss.ADS1015_CONFIG:0000000000000000 ADS1015_CONFIG
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:241    .text.ADS1015_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:247    .text.ADS1015_Init:0000000000000000 ADS1015_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:274    .text.ADS1015_Read:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:280    .text.ADS1015_Read:0000000000000000 ADS1015_Read
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:321    .text.ADS1015_Read:0000000000000022 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:325    .text.ADS1015_Read:0000000000000026 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:406    .text.ADS1015_Read:0000000000000084 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:412    .text.AD1015_Check:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:418    .text.AD1015_Check:0000000000000000 AD1015_Check
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:467    .text.AD1015_Check:0000000000000028 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:472    .text.HAL_I2C_MasterRxCpltCallback:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:478    .text.HAL_I2C_MasterRxCpltCallback:0000000000000000 HAL_I2C_MasterRxCpltCallback
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:522    .text.HAL_I2C_MasterRxCpltCallback:0000000000000020 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:533    .bss.ADS1015_RX_BUF:0000000000000000 ADS1015_RX_BUF
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:530    .bss.ADS1015_RX_BUF:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:537    .bss.ADS1015_CONFIG:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:19     .text.ADS1015_ReadOneByte:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:25     .text.ADS1015_ReadOneByte:0000000000000000 ADS1015_ReadOneByte
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:86     .text.ADS1015_ReadOneByte:0000000000000048 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:91     .text.ADS1015_WriteOneByte:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:97     .text.ADS1015_WriteOneByte:0000000000000000 ADS1015_WriteOneByte
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:141    .text.ADS1015_WriteOneByte:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:146    .text.ADS1015_Config:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:152    .text.ADS1015_Config:0000000000000000 ADS1015_Config
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:179    .text.ADS1015_Config:0000000000000018 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:183    .text.ADS1015_Config:000000000000001c $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:236    .text.ADS1015_Config:000000000000005c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:534    .bss.ADS1015_CONFIG:0000000000000000 ADS1015_CONFIG
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:241    .text.ADS1015_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:247    .text.ADS1015_Init:0000000000000000 ADS1015_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:274    .text.ADS1015_Read:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:280    .text.ADS1015_Read:0000000000000000 ADS1015_Read
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:321    .text.ADS1015_Read:0000000000000022 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:325    .text.ADS1015_Read:0000000000000026 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:406    .text.ADS1015_Read:0000000000000084 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:412    .text.AD1015_Check:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:418    .text.AD1015_Check:0000000000000000 AD1015_Check
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:467    .text.AD1015_Check:0000000000000028 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:472    .text.HAL_I2C_MasterRxCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:478    .text.HAL_I2C_MasterRxCpltCallback:0000000000000000 HAL_I2C_MasterRxCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:517    .text.HAL_I2C_MasterRxCpltCallback:0000000000000018 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:527    .bss.ADS1015_RX_BUF:0000000000000000 ADS1015_RX_BUF
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:524    .bss.ADS1015_RX_BUF:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccwweOAY.s:531    .bss.ADS1015_CONFIG:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_I2C_Master_Transmit
@@ -832,4 +825,3 @@ hi2c2
 HAL_I2C_Mem_Write
 HAL_Delay
 HAL_I2C_Master_Receive_IT
-i2c_state
