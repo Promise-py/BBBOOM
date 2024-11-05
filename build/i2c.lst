@@ -1,0 +1,891 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"i2c.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/i2c.c"
+  18              		.section	.text.MX_I2C1_Init,"ax",%progbits
+  19              		.align	1
+  20              		.global	MX_I2C1_Init
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	MX_I2C1_Init:
+  26              	.LFB65:
+   1:Core/Src/i2c.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/i2c.c **** /**
+   3:Core/Src/i2c.c ****   ******************************************************************************
+   4:Core/Src/i2c.c ****   * @file    i2c.c
+   5:Core/Src/i2c.c ****   * @brief   This file provides code for the configuration
+   6:Core/Src/i2c.c ****   *          of the I2C instances.
+   7:Core/Src/i2c.c ****   ******************************************************************************
+   8:Core/Src/i2c.c ****   * @attention
+   9:Core/Src/i2c.c ****   *
+  10:Core/Src/i2c.c ****   * Copyright (c) 2024 STMicroelectronics.
+  11:Core/Src/i2c.c ****   * All rights reserved.
+  12:Core/Src/i2c.c ****   *
+  13:Core/Src/i2c.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Core/Src/i2c.c ****   * in the root directory of this software component.
+  15:Core/Src/i2c.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Core/Src/i2c.c ****   *
+  17:Core/Src/i2c.c ****   ******************************************************************************
+  18:Core/Src/i2c.c ****   */
+  19:Core/Src/i2c.c **** /* USER CODE END Header */
+  20:Core/Src/i2c.c **** /* Includes ------------------------------------------------------------------*/
+  21:Core/Src/i2c.c **** #include "i2c.h"
+  22:Core/Src/i2c.c **** 
+  23:Core/Src/i2c.c **** /* USER CODE BEGIN 0 */
+  24:Core/Src/i2c.c **** uint8_t I2C2_RX_BUF[16];
+  25:Core/Src/i2c.c **** /* USER CODE END 0 */
+  26:Core/Src/i2c.c **** 
+  27:Core/Src/i2c.c **** I2C_HandleTypeDef hi2c1;
+  28:Core/Src/i2c.c **** I2C_HandleTypeDef hi2c2;
+  29:Core/Src/i2c.c **** 
+  30:Core/Src/i2c.c **** /* I2C1 init function */
+  31:Core/Src/i2c.c **** void MX_I2C1_Init(void)
+  32:Core/Src/i2c.c **** {
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 2
+
+
+  27              		.loc 1 32 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  33:Core/Src/i2c.c **** 
+  34:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_Init 0 */
+  35:Core/Src/i2c.c **** 
+  36:Core/Src/i2c.c ****   /* USER CODE END I2C1_Init 0 */
+  37:Core/Src/i2c.c **** 
+  38:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_Init 1 */
+  39:Core/Src/i2c.c **** 
+  40:Core/Src/i2c.c ****   /* USER CODE END I2C1_Init 1 */
+  41:Core/Src/i2c.c ****   hi2c1.Instance = I2C1;
+  36              		.loc 1 41 3 view .LVU1
+  37              		.loc 1 41 18 is_stmt 0 view .LVU2
+  38 0002 0B48     		ldr	r0, .L5
+  39 0004 0B4B     		ldr	r3, .L5+4
+  40 0006 0360     		str	r3, [r0]
+  42:Core/Src/i2c.c ****   hi2c1.Init.ClockSpeed = 100000;
+  41              		.loc 1 42 3 is_stmt 1 view .LVU3
+  42              		.loc 1 42 25 is_stmt 0 view .LVU4
+  43 0008 0B4B     		ldr	r3, .L5+8
+  44 000a 4360     		str	r3, [r0, #4]
+  43:Core/Src/i2c.c ****   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  45              		.loc 1 43 3 is_stmt 1 view .LVU5
+  46              		.loc 1 43 24 is_stmt 0 view .LVU6
+  47 000c 0023     		movs	r3, #0
+  48 000e 8360     		str	r3, [r0, #8]
+  44:Core/Src/i2c.c ****   hi2c1.Init.OwnAddress1 = 0;
+  49              		.loc 1 44 3 is_stmt 1 view .LVU7
+  50              		.loc 1 44 26 is_stmt 0 view .LVU8
+  51 0010 C360     		str	r3, [r0, #12]
+  45:Core/Src/i2c.c ****   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  52              		.loc 1 45 3 is_stmt 1 view .LVU9
+  53              		.loc 1 45 29 is_stmt 0 view .LVU10
+  54 0012 4FF48042 		mov	r2, #16384
+  55 0016 0261     		str	r2, [r0, #16]
+  46:Core/Src/i2c.c ****   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  56              		.loc 1 46 3 is_stmt 1 view .LVU11
+  57              		.loc 1 46 30 is_stmt 0 view .LVU12
+  58 0018 4361     		str	r3, [r0, #20]
+  47:Core/Src/i2c.c ****   hi2c1.Init.OwnAddress2 = 0;
+  59              		.loc 1 47 3 is_stmt 1 view .LVU13
+  60              		.loc 1 47 26 is_stmt 0 view .LVU14
+  61 001a 8361     		str	r3, [r0, #24]
+  48:Core/Src/i2c.c ****   hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  62              		.loc 1 48 3 is_stmt 1 view .LVU15
+  63              		.loc 1 48 30 is_stmt 0 view .LVU16
+  64 001c C361     		str	r3, [r0, #28]
+  49:Core/Src/i2c.c ****   hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  65              		.loc 1 49 3 is_stmt 1 view .LVU17
+  66              		.loc 1 49 28 is_stmt 0 view .LVU18
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 3
+
+
+  67 001e 0362     		str	r3, [r0, #32]
+  50:Core/Src/i2c.c ****   if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  68              		.loc 1 50 3 is_stmt 1 view .LVU19
+  69              		.loc 1 50 7 is_stmt 0 view .LVU20
+  70 0020 FFF7FEFF 		bl	HAL_I2C_Init
+  71              	.LVL0:
+  72              		.loc 1 50 6 view .LVU21
+  73 0024 00B9     		cbnz	r0, .L4
+  74              	.L1:
+  51:Core/Src/i2c.c ****   {
+  52:Core/Src/i2c.c ****     Error_Handler();
+  53:Core/Src/i2c.c ****   }
+  54:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_Init 2 */
+  55:Core/Src/i2c.c **** 
+  56:Core/Src/i2c.c ****   /* USER CODE END I2C1_Init 2 */
+  57:Core/Src/i2c.c **** 
+  58:Core/Src/i2c.c **** }
+  75              		.loc 1 58 1 view .LVU22
+  76 0026 08BD     		pop	{r3, pc}
+  77              	.L4:
+  52:Core/Src/i2c.c ****   }
+  78              		.loc 1 52 5 is_stmt 1 view .LVU23
+  79 0028 FFF7FEFF 		bl	Error_Handler
+  80              	.LVL1:
+  81              		.loc 1 58 1 is_stmt 0 view .LVU24
+  82 002c FBE7     		b	.L1
+  83              	.L6:
+  84 002e 00BF     		.align	2
+  85              	.L5:
+  86 0030 00000000 		.word	hi2c1
+  87 0034 00540040 		.word	1073763328
+  88 0038 A0860100 		.word	100000
+  89              		.cfi_endproc
+  90              	.LFE65:
+  92              		.section	.text.MX_I2C2_Init,"ax",%progbits
+  93              		.align	1
+  94              		.global	MX_I2C2_Init
+  95              		.syntax unified
+  96              		.thumb
+  97              		.thumb_func
+  99              	MX_I2C2_Init:
+ 100              	.LFB66:
+  59:Core/Src/i2c.c **** /* I2C2 init function */
+  60:Core/Src/i2c.c **** void MX_I2C2_Init(void)
+  61:Core/Src/i2c.c **** {
+ 101              		.loc 1 61 1 is_stmt 1 view -0
+ 102              		.cfi_startproc
+ 103              		@ args = 0, pretend = 0, frame = 0
+ 104              		@ frame_needed = 0, uses_anonymous_args = 0
+ 105 0000 08B5     		push	{r3, lr}
+ 106              	.LCFI1:
+ 107              		.cfi_def_cfa_offset 8
+ 108              		.cfi_offset 3, -8
+ 109              		.cfi_offset 14, -4
+  62:Core/Src/i2c.c **** 
+  63:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_Init 0 */
+  64:Core/Src/i2c.c **** 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 4
+
+
+  65:Core/Src/i2c.c ****   /* USER CODE END I2C2_Init 0 */
+  66:Core/Src/i2c.c **** 
+  67:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_Init 1 */
+  68:Core/Src/i2c.c **** 
+  69:Core/Src/i2c.c ****   /* USER CODE END I2C2_Init 1 */
+  70:Core/Src/i2c.c ****   hi2c2.Instance = I2C2;
+ 110              		.loc 1 70 3 view .LVU26
+ 111              		.loc 1 70 18 is_stmt 0 view .LVU27
+ 112 0002 0E48     		ldr	r0, .L11
+ 113 0004 0E4B     		ldr	r3, .L11+4
+ 114 0006 0360     		str	r3, [r0]
+  71:Core/Src/i2c.c ****   hi2c2.Init.ClockSpeed = 100000;
+ 115              		.loc 1 71 3 is_stmt 1 view .LVU28
+ 116              		.loc 1 71 25 is_stmt 0 view .LVU29
+ 117 0008 0E4B     		ldr	r3, .L11+8
+ 118 000a 4360     		str	r3, [r0, #4]
+  72:Core/Src/i2c.c ****   hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
+ 119              		.loc 1 72 3 is_stmt 1 view .LVU30
+ 120              		.loc 1 72 24 is_stmt 0 view .LVU31
+ 121 000c 0023     		movs	r3, #0
+ 122 000e 8360     		str	r3, [r0, #8]
+  73:Core/Src/i2c.c ****   hi2c2.Init.OwnAddress1 = 0;
+ 123              		.loc 1 73 3 is_stmt 1 view .LVU32
+ 124              		.loc 1 73 26 is_stmt 0 view .LVU33
+ 125 0010 C360     		str	r3, [r0, #12]
+  74:Core/Src/i2c.c ****   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+ 126              		.loc 1 74 3 is_stmt 1 view .LVU34
+ 127              		.loc 1 74 29 is_stmt 0 view .LVU35
+ 128 0012 4FF48042 		mov	r2, #16384
+ 129 0016 0261     		str	r2, [r0, #16]
+  75:Core/Src/i2c.c ****   hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+ 130              		.loc 1 75 3 is_stmt 1 view .LVU36
+ 131              		.loc 1 75 30 is_stmt 0 view .LVU37
+ 132 0018 4361     		str	r3, [r0, #20]
+  76:Core/Src/i2c.c ****   hi2c2.Init.OwnAddress2 = 0;
+ 133              		.loc 1 76 3 is_stmt 1 view .LVU38
+ 134              		.loc 1 76 26 is_stmt 0 view .LVU39
+ 135 001a 8361     		str	r3, [r0, #24]
+  77:Core/Src/i2c.c ****   hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+ 136              		.loc 1 77 3 is_stmt 1 view .LVU40
+ 137              		.loc 1 77 30 is_stmt 0 view .LVU41
+ 138 001c C361     		str	r3, [r0, #28]
+  78:Core/Src/i2c.c ****   hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+ 139              		.loc 1 78 3 is_stmt 1 view .LVU42
+ 140              		.loc 1 78 28 is_stmt 0 view .LVU43
+ 141 001e 0362     		str	r3, [r0, #32]
+  79:Core/Src/i2c.c ****   if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+ 142              		.loc 1 79 3 is_stmt 1 view .LVU44
+ 143              		.loc 1 79 7 is_stmt 0 view .LVU45
+ 144 0020 FFF7FEFF 		bl	HAL_I2C_Init
+ 145              	.LVL2:
+ 146              		.loc 1 79 6 view .LVU46
+ 147 0024 30B9     		cbnz	r0, .L10
+ 148              	.L8:
+  80:Core/Src/i2c.c ****   {
+  81:Core/Src/i2c.c ****     Error_Handler();
+  82:Core/Src/i2c.c ****   }
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 5
+
+
+  83:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_Init 2 */
+  84:Core/Src/i2c.c **** 	__HAL_I2C_ENABLE_IT(&hi2c2, I2C_IT_EVT);//�?启I2C2空闲中断
+ 149              		.loc 1 84 2 is_stmt 1 view .LVU47
+ 150 0026 054B     		ldr	r3, .L11
+ 151 0028 1A68     		ldr	r2, [r3]
+ 152 002a 5368     		ldr	r3, [r2, #4]
+ 153 002c 43F40073 		orr	r3, r3, #512
+ 154 0030 5360     		str	r3, [r2, #4]
+  85:Core/Src/i2c.c ****   /* USER CODE END I2C2_Init 2 */
+  86:Core/Src/i2c.c **** 
+  87:Core/Src/i2c.c **** }
+ 155              		.loc 1 87 1 is_stmt 0 view .LVU48
+ 156 0032 08BD     		pop	{r3, pc}
+ 157              	.L10:
+  81:Core/Src/i2c.c ****   }
+ 158              		.loc 1 81 5 is_stmt 1 view .LVU49
+ 159 0034 FFF7FEFF 		bl	Error_Handler
+ 160              	.LVL3:
+ 161 0038 F5E7     		b	.L8
+ 162              	.L12:
+ 163 003a 00BF     		.align	2
+ 164              	.L11:
+ 165 003c 00000000 		.word	hi2c2
+ 166 0040 00580040 		.word	1073764352
+ 167 0044 A0860100 		.word	100000
+ 168              		.cfi_endproc
+ 169              	.LFE66:
+ 171              		.section	.text.HAL_I2C_MspInit,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	HAL_I2C_MspInit
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 178              	HAL_I2C_MspInit:
+ 179              	.LVL4:
+ 180              	.LFB67:
+  88:Core/Src/i2c.c **** 
+  89:Core/Src/i2c.c **** void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
+  90:Core/Src/i2c.c **** {
+ 181              		.loc 1 90 1 view -0
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 32
+ 184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 185              		.loc 1 90 1 is_stmt 0 view .LVU51
+ 186 0000 10B5     		push	{r4, lr}
+ 187              	.LCFI2:
+ 188              		.cfi_def_cfa_offset 8
+ 189              		.cfi_offset 4, -8
+ 190              		.cfi_offset 14, -4
+ 191 0002 88B0     		sub	sp, sp, #32
+ 192              	.LCFI3:
+ 193              		.cfi_def_cfa_offset 40
+  91:Core/Src/i2c.c **** 
+  92:Core/Src/i2c.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 194              		.loc 1 92 3 is_stmt 1 view .LVU52
+ 195              		.loc 1 92 20 is_stmt 0 view .LVU53
+ 196 0004 0023     		movs	r3, #0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 6
+
+
+ 197 0006 0493     		str	r3, [sp, #16]
+ 198 0008 0593     		str	r3, [sp, #20]
+ 199 000a 0693     		str	r3, [sp, #24]
+ 200 000c 0793     		str	r3, [sp, #28]
+  93:Core/Src/i2c.c ****   if(i2cHandle->Instance==I2C1)
+ 201              		.loc 1 93 3 is_stmt 1 view .LVU54
+ 202              		.loc 1 93 15 is_stmt 0 view .LVU55
+ 203 000e 0368     		ldr	r3, [r0]
+ 204              		.loc 1 93 5 view .LVU56
+ 205 0010 324A     		ldr	r2, .L19
+ 206 0012 9342     		cmp	r3, r2
+ 207 0014 04D0     		beq	.L17
+  94:Core/Src/i2c.c ****   {
+  95:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_MspInit 0 */
+  96:Core/Src/i2c.c **** 
+  97:Core/Src/i2c.c ****   /* USER CODE END I2C1_MspInit 0 */
+  98:Core/Src/i2c.c **** 
+  99:Core/Src/i2c.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 100:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 101:Core/Src/i2c.c ****     PB8     ------> I2C1_SCL
+ 102:Core/Src/i2c.c ****     PB9     ------> I2C1_SDA
+ 103:Core/Src/i2c.c ****     */
+ 104:Core/Src/i2c.c ****     GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
+ 105:Core/Src/i2c.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+ 106:Core/Src/i2c.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 107:Core/Src/i2c.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 108:Core/Src/i2c.c **** 
+ 109:Core/Src/i2c.c ****     __HAL_AFIO_REMAP_I2C1_ENABLE();
+ 110:Core/Src/i2c.c **** 
+ 111:Core/Src/i2c.c ****     /* I2C1 clock enable */
+ 112:Core/Src/i2c.c ****     __HAL_RCC_I2C1_CLK_ENABLE();
+ 113:Core/Src/i2c.c **** 
+ 114:Core/Src/i2c.c ****     /* I2C1 interrupt Init */
+ 115:Core/Src/i2c.c ****     HAL_NVIC_SetPriority(I2C1_ER_IRQn, 0, 0);
+ 116:Core/Src/i2c.c ****     HAL_NVIC_EnableIRQ(I2C1_ER_IRQn);
+ 117:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_MspInit 1 */
+ 118:Core/Src/i2c.c **** 
+ 119:Core/Src/i2c.c ****   /* USER CODE END I2C1_MspInit 1 */
+ 120:Core/Src/i2c.c ****   }
+ 121:Core/Src/i2c.c ****   else if(i2cHandle->Instance==I2C2)
+ 208              		.loc 1 121 8 is_stmt 1 view .LVU57
+ 209              		.loc 1 121 10 is_stmt 0 view .LVU58
+ 210 0016 324A     		ldr	r2, .L19+4
+ 211 0018 9342     		cmp	r3, r2
+ 212 001a 2FD0     		beq	.L18
+ 213              	.LVL5:
+ 214              	.L13:
+ 122:Core/Src/i2c.c ****   {
+ 123:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_MspInit 0 */
+ 124:Core/Src/i2c.c **** 
+ 125:Core/Src/i2c.c ****   /* USER CODE END I2C2_MspInit 0 */
+ 126:Core/Src/i2c.c **** 
+ 127:Core/Src/i2c.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 128:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 129:Core/Src/i2c.c ****     PB10     ------> I2C2_SCL
+ 130:Core/Src/i2c.c ****     PB11     ------> I2C2_SDA
+ 131:Core/Src/i2c.c ****     */
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 7
+
+
+ 132:Core/Src/i2c.c ****     GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11;
+ 133:Core/Src/i2c.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+ 134:Core/Src/i2c.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 135:Core/Src/i2c.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 136:Core/Src/i2c.c **** 
+ 137:Core/Src/i2c.c ****     /* I2C2 clock enable */
+ 138:Core/Src/i2c.c ****     __HAL_RCC_I2C2_CLK_ENABLE();
+ 139:Core/Src/i2c.c **** 
+ 140:Core/Src/i2c.c ****     /* I2C2 interrupt Init */
+ 141:Core/Src/i2c.c ****     HAL_NVIC_SetPriority(I2C2_EV_IRQn, 0, 0);
+ 142:Core/Src/i2c.c ****     HAL_NVIC_EnableIRQ(I2C2_EV_IRQn);
+ 143:Core/Src/i2c.c ****     HAL_NVIC_SetPriority(I2C2_ER_IRQn, 0, 0);
+ 144:Core/Src/i2c.c ****     HAL_NVIC_EnableIRQ(I2C2_ER_IRQn);
+ 145:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_MspInit 1 */
+ 146:Core/Src/i2c.c **** 
+ 147:Core/Src/i2c.c ****   /* USER CODE END I2C2_MspInit 1 */
+ 148:Core/Src/i2c.c ****   }
+ 149:Core/Src/i2c.c **** }
+ 215              		.loc 1 149 1 view .LVU59
+ 216 001c 08B0     		add	sp, sp, #32
+ 217              	.LCFI4:
+ 218              		.cfi_remember_state
+ 219              		.cfi_def_cfa_offset 8
+ 220              		@ sp needed
+ 221 001e 10BD     		pop	{r4, pc}
+ 222              	.LVL6:
+ 223              	.L17:
+ 224              	.LCFI5:
+ 225              		.cfi_restore_state
+  99:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 226              		.loc 1 99 5 is_stmt 1 view .LVU60
+ 227              	.LBB2:
+  99:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 228              		.loc 1 99 5 view .LVU61
+  99:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 229              		.loc 1 99 5 view .LVU62
+ 230 0020 304C     		ldr	r4, .L19+8
+ 231 0022 A369     		ldr	r3, [r4, #24]
+ 232 0024 43F00803 		orr	r3, r3, #8
+ 233 0028 A361     		str	r3, [r4, #24]
+  99:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 234              		.loc 1 99 5 view .LVU63
+ 235 002a A369     		ldr	r3, [r4, #24]
+ 236 002c 03F00803 		and	r3, r3, #8
+ 237 0030 0093     		str	r3, [sp]
+  99:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 238              		.loc 1 99 5 view .LVU64
+ 239 0032 009B     		ldr	r3, [sp]
+ 240              	.LBE2:
+  99:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 241              		.loc 1 99 5 view .LVU65
+ 104:Core/Src/i2c.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+ 242              		.loc 1 104 5 view .LVU66
+ 104:Core/Src/i2c.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+ 243              		.loc 1 104 25 is_stmt 0 view .LVU67
+ 244 0034 4FF44073 		mov	r3, #768
+ 245 0038 0493     		str	r3, [sp, #16]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 8
+
+
+ 105:Core/Src/i2c.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 246              		.loc 1 105 5 is_stmt 1 view .LVU68
+ 105:Core/Src/i2c.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 247              		.loc 1 105 26 is_stmt 0 view .LVU69
+ 248 003a 1223     		movs	r3, #18
+ 249 003c 0593     		str	r3, [sp, #20]
+ 106:Core/Src/i2c.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 250              		.loc 1 106 5 is_stmt 1 view .LVU70
+ 106:Core/Src/i2c.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 251              		.loc 1 106 27 is_stmt 0 view .LVU71
+ 252 003e 0323     		movs	r3, #3
+ 253 0040 0793     		str	r3, [sp, #28]
+ 107:Core/Src/i2c.c **** 
+ 254              		.loc 1 107 5 is_stmt 1 view .LVU72
+ 255 0042 04A9     		add	r1, sp, #16
+ 256 0044 2848     		ldr	r0, .L19+12
+ 257              	.LVL7:
+ 107:Core/Src/i2c.c **** 
+ 258              		.loc 1 107 5 is_stmt 0 view .LVU73
+ 259 0046 FFF7FEFF 		bl	HAL_GPIO_Init
+ 260              	.LVL8:
+ 109:Core/Src/i2c.c **** 
+ 261              		.loc 1 109 5 is_stmt 1 view .LVU74
+ 262              	.LBB3:
+ 109:Core/Src/i2c.c **** 
+ 263              		.loc 1 109 5 view .LVU75
+ 264 004a 284A     		ldr	r2, .L19+16
+ 265 004c 5368     		ldr	r3, [r2, #4]
+ 266              	.LVL9:
+ 109:Core/Src/i2c.c **** 
+ 267              		.loc 1 109 5 view .LVU76
+ 109:Core/Src/i2c.c **** 
+ 268              		.loc 1 109 5 view .LVU77
+ 269 004e 43F0E063 		orr	r3, r3, #117440512
+ 270              	.LVL10:
+ 109:Core/Src/i2c.c **** 
+ 271              		.loc 1 109 5 is_stmt 0 view .LVU78
+ 272 0052 43F00203 		orr	r3, r3, #2
+ 273              	.LVL11:
+ 109:Core/Src/i2c.c **** 
+ 274              		.loc 1 109 5 is_stmt 1 view .LVU79
+ 275 0056 5360     		str	r3, [r2, #4]
+ 276              	.LBE3:
+ 109:Core/Src/i2c.c **** 
+ 277              		.loc 1 109 5 view .LVU80
+ 112:Core/Src/i2c.c **** 
+ 278              		.loc 1 112 5 view .LVU81
+ 279              	.LBB4:
+ 112:Core/Src/i2c.c **** 
+ 280              		.loc 1 112 5 view .LVU82
+ 112:Core/Src/i2c.c **** 
+ 281              		.loc 1 112 5 view .LVU83
+ 282 0058 E369     		ldr	r3, [r4, #28]
+ 283              	.LVL12:
+ 112:Core/Src/i2c.c **** 
+ 284              		.loc 1 112 5 is_stmt 0 view .LVU84
+ 285 005a 43F40013 		orr	r3, r3, #2097152
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 9
+
+
+ 286 005e E361     		str	r3, [r4, #28]
+ 287              	.LVL13:
+ 112:Core/Src/i2c.c **** 
+ 288              		.loc 1 112 5 is_stmt 1 view .LVU85
+ 289 0060 E369     		ldr	r3, [r4, #28]
+ 290 0062 03F40013 		and	r3, r3, #2097152
+ 291 0066 0193     		str	r3, [sp, #4]
+ 112:Core/Src/i2c.c **** 
+ 292              		.loc 1 112 5 view .LVU86
+ 293 0068 019B     		ldr	r3, [sp, #4]
+ 294              	.LBE4:
+ 112:Core/Src/i2c.c **** 
+ 295              		.loc 1 112 5 view .LVU87
+ 115:Core/Src/i2c.c ****     HAL_NVIC_EnableIRQ(I2C1_ER_IRQn);
+ 296              		.loc 1 115 5 view .LVU88
+ 297 006a 0022     		movs	r2, #0
+ 298 006c 1146     		mov	r1, r2
+ 299 006e 2020     		movs	r0, #32
+ 300 0070 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 301              	.LVL14:
+ 116:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_MspInit 1 */
+ 302              		.loc 1 116 5 view .LVU89
+ 303 0074 2020     		movs	r0, #32
+ 304 0076 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 305              	.LVL15:
+ 306 007a CFE7     		b	.L13
+ 307              	.LVL16:
+ 308              	.L18:
+ 127:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 309              		.loc 1 127 5 view .LVU90
+ 310              	.LBB5:
+ 127:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 311              		.loc 1 127 5 view .LVU91
+ 127:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 312              		.loc 1 127 5 view .LVU92
+ 313 007c 194C     		ldr	r4, .L19+8
+ 314 007e A369     		ldr	r3, [r4, #24]
+ 315 0080 43F00803 		orr	r3, r3, #8
+ 316 0084 A361     		str	r3, [r4, #24]
+ 127:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 317              		.loc 1 127 5 view .LVU93
+ 318 0086 A369     		ldr	r3, [r4, #24]
+ 319 0088 03F00803 		and	r3, r3, #8
+ 320 008c 0293     		str	r3, [sp, #8]
+ 127:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 321              		.loc 1 127 5 view .LVU94
+ 322 008e 029B     		ldr	r3, [sp, #8]
+ 323              	.LBE5:
+ 127:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 324              		.loc 1 127 5 view .LVU95
+ 132:Core/Src/i2c.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+ 325              		.loc 1 132 5 view .LVU96
+ 132:Core/Src/i2c.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+ 326              		.loc 1 132 25 is_stmt 0 view .LVU97
+ 327 0090 4FF44063 		mov	r3, #3072
+ 328 0094 0493     		str	r3, [sp, #16]
+ 133:Core/Src/i2c.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 10
+
+
+ 329              		.loc 1 133 5 is_stmt 1 view .LVU98
+ 133:Core/Src/i2c.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+ 330              		.loc 1 133 26 is_stmt 0 view .LVU99
+ 331 0096 1223     		movs	r3, #18
+ 332 0098 0593     		str	r3, [sp, #20]
+ 134:Core/Src/i2c.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 333              		.loc 1 134 5 is_stmt 1 view .LVU100
+ 134:Core/Src/i2c.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 334              		.loc 1 134 27 is_stmt 0 view .LVU101
+ 335 009a 0323     		movs	r3, #3
+ 336 009c 0793     		str	r3, [sp, #28]
+ 135:Core/Src/i2c.c **** 
+ 337              		.loc 1 135 5 is_stmt 1 view .LVU102
+ 338 009e 04A9     		add	r1, sp, #16
+ 339 00a0 1148     		ldr	r0, .L19+12
+ 340              	.LVL17:
+ 135:Core/Src/i2c.c **** 
+ 341              		.loc 1 135 5 is_stmt 0 view .LVU103
+ 342 00a2 FFF7FEFF 		bl	HAL_GPIO_Init
+ 343              	.LVL18:
+ 138:Core/Src/i2c.c **** 
+ 344              		.loc 1 138 5 is_stmt 1 view .LVU104
+ 345              	.LBB6:
+ 138:Core/Src/i2c.c **** 
+ 346              		.loc 1 138 5 view .LVU105
+ 138:Core/Src/i2c.c **** 
+ 347              		.loc 1 138 5 view .LVU106
+ 348 00a6 E369     		ldr	r3, [r4, #28]
+ 349 00a8 43F48003 		orr	r3, r3, #4194304
+ 350 00ac E361     		str	r3, [r4, #28]
+ 138:Core/Src/i2c.c **** 
+ 351              		.loc 1 138 5 view .LVU107
+ 352 00ae E369     		ldr	r3, [r4, #28]
+ 353 00b0 03F48003 		and	r3, r3, #4194304
+ 354 00b4 0393     		str	r3, [sp, #12]
+ 138:Core/Src/i2c.c **** 
+ 355              		.loc 1 138 5 view .LVU108
+ 356 00b6 039B     		ldr	r3, [sp, #12]
+ 357              	.LBE6:
+ 138:Core/Src/i2c.c **** 
+ 358              		.loc 1 138 5 view .LVU109
+ 141:Core/Src/i2c.c ****     HAL_NVIC_EnableIRQ(I2C2_EV_IRQn);
+ 359              		.loc 1 141 5 view .LVU110
+ 360 00b8 0022     		movs	r2, #0
+ 361 00ba 1146     		mov	r1, r2
+ 362 00bc 2120     		movs	r0, #33
+ 363 00be FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 364              	.LVL19:
+ 142:Core/Src/i2c.c ****     HAL_NVIC_SetPriority(I2C2_ER_IRQn, 0, 0);
+ 365              		.loc 1 142 5 view .LVU111
+ 366 00c2 2120     		movs	r0, #33
+ 367 00c4 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 368              	.LVL20:
+ 143:Core/Src/i2c.c ****     HAL_NVIC_EnableIRQ(I2C2_ER_IRQn);
+ 369              		.loc 1 143 5 view .LVU112
+ 370 00c8 0022     		movs	r2, #0
+ 371 00ca 1146     		mov	r1, r2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 11
+
+
+ 372 00cc 2220     		movs	r0, #34
+ 373 00ce FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 374              	.LVL21:
+ 144:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_MspInit 1 */
+ 375              		.loc 1 144 5 view .LVU113
+ 376 00d2 2220     		movs	r0, #34
+ 377 00d4 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 378              	.LVL22:
+ 379              		.loc 1 149 1 is_stmt 0 view .LVU114
+ 380 00d8 A0E7     		b	.L13
+ 381              	.L20:
+ 382 00da 00BF     		.align	2
+ 383              	.L19:
+ 384 00dc 00540040 		.word	1073763328
+ 385 00e0 00580040 		.word	1073764352
+ 386 00e4 00100240 		.word	1073876992
+ 387 00e8 000C0140 		.word	1073810432
+ 388 00ec 00000140 		.word	1073807360
+ 389              		.cfi_endproc
+ 390              	.LFE67:
+ 392              		.section	.text.HAL_I2C_MspDeInit,"ax",%progbits
+ 393              		.align	1
+ 394              		.global	HAL_I2C_MspDeInit
+ 395              		.syntax unified
+ 396              		.thumb
+ 397              		.thumb_func
+ 399              	HAL_I2C_MspDeInit:
+ 400              	.LVL23:
+ 401              	.LFB68:
+ 150:Core/Src/i2c.c **** 
+ 151:Core/Src/i2c.c **** void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
+ 152:Core/Src/i2c.c **** {
+ 402              		.loc 1 152 1 is_stmt 1 view -0
+ 403              		.cfi_startproc
+ 404              		@ args = 0, pretend = 0, frame = 0
+ 405              		@ frame_needed = 0, uses_anonymous_args = 0
+ 406              		.loc 1 152 1 is_stmt 0 view .LVU116
+ 407 0000 10B5     		push	{r4, lr}
+ 408              	.LCFI6:
+ 409              		.cfi_def_cfa_offset 8
+ 410              		.cfi_offset 4, -8
+ 411              		.cfi_offset 14, -4
+ 153:Core/Src/i2c.c **** 
+ 154:Core/Src/i2c.c ****   if(i2cHandle->Instance==I2C1)
+ 412              		.loc 1 154 3 is_stmt 1 view .LVU117
+ 413              		.loc 1 154 15 is_stmt 0 view .LVU118
+ 414 0002 0368     		ldr	r3, [r0]
+ 415              		.loc 1 154 5 view .LVU119
+ 416 0004 184A     		ldr	r2, .L27
+ 417 0006 9342     		cmp	r3, r2
+ 418 0008 03D0     		beq	.L25
+ 155:Core/Src/i2c.c ****   {
+ 156:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_MspDeInit 0 */
+ 157:Core/Src/i2c.c **** 
+ 158:Core/Src/i2c.c ****   /* USER CODE END I2C1_MspDeInit 0 */
+ 159:Core/Src/i2c.c ****     /* Peripheral clock disable */
+ 160:Core/Src/i2c.c ****     __HAL_RCC_I2C1_CLK_DISABLE();
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 12
+
+
+ 161:Core/Src/i2c.c **** 
+ 162:Core/Src/i2c.c ****     /**I2C1 GPIO Configuration
+ 163:Core/Src/i2c.c ****     PB8     ------> I2C1_SCL
+ 164:Core/Src/i2c.c ****     PB9     ------> I2C1_SDA
+ 165:Core/Src/i2c.c ****     */
+ 166:Core/Src/i2c.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_8);
+ 167:Core/Src/i2c.c **** 
+ 168:Core/Src/i2c.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_9);
+ 169:Core/Src/i2c.c **** 
+ 170:Core/Src/i2c.c ****     /* I2C1 interrupt Deinit */
+ 171:Core/Src/i2c.c ****     HAL_NVIC_DisableIRQ(I2C1_ER_IRQn);
+ 172:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_MspDeInit 1 */
+ 173:Core/Src/i2c.c **** 
+ 174:Core/Src/i2c.c ****   /* USER CODE END I2C1_MspDeInit 1 */
+ 175:Core/Src/i2c.c ****   }
+ 176:Core/Src/i2c.c ****   else if(i2cHandle->Instance==I2C2)
+ 419              		.loc 1 176 8 is_stmt 1 view .LVU120
+ 420              		.loc 1 176 10 is_stmt 0 view .LVU121
+ 421 000a 184A     		ldr	r2, .L27+4
+ 422 000c 9342     		cmp	r3, r2
+ 423 000e 15D0     		beq	.L26
+ 424              	.LVL24:
+ 425              	.L21:
+ 177:Core/Src/i2c.c ****   {
+ 178:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_MspDeInit 0 */
+ 179:Core/Src/i2c.c **** 
+ 180:Core/Src/i2c.c ****   /* USER CODE END I2C2_MspDeInit 0 */
+ 181:Core/Src/i2c.c ****     /* Peripheral clock disable */
+ 182:Core/Src/i2c.c ****     __HAL_RCC_I2C2_CLK_DISABLE();
+ 183:Core/Src/i2c.c **** 
+ 184:Core/Src/i2c.c ****     /**I2C2 GPIO Configuration
+ 185:Core/Src/i2c.c ****     PB10     ------> I2C2_SCL
+ 186:Core/Src/i2c.c ****     PB11     ------> I2C2_SDA
+ 187:Core/Src/i2c.c ****     */
+ 188:Core/Src/i2c.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_10);
+ 189:Core/Src/i2c.c **** 
+ 190:Core/Src/i2c.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_11);
+ 191:Core/Src/i2c.c **** 
+ 192:Core/Src/i2c.c ****     /* I2C2 interrupt Deinit */
+ 193:Core/Src/i2c.c ****     // HAL_NVIC_DisableIRQ(I2C2_EV_IRQn);
+ 194:Core/Src/i2c.c ****     HAL_NVIC_DisableIRQ(I2C2_ER_IRQn);
+ 195:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_MspDeInit 1 */
+ 196:Core/Src/i2c.c **** 
+ 197:Core/Src/i2c.c ****   /* USER CODE END I2C2_MspDeInit 1 */
+ 198:Core/Src/i2c.c ****   }
+ 199:Core/Src/i2c.c **** }
+ 426              		.loc 1 199 1 view .LVU122
+ 427 0010 10BD     		pop	{r4, pc}
+ 428              	.LVL25:
+ 429              	.L25:
+ 160:Core/Src/i2c.c **** 
+ 430              		.loc 1 160 5 is_stmt 1 view .LVU123
+ 431 0012 02F5DE32 		add	r2, r2, #113664
+ 432 0016 D369     		ldr	r3, [r2, #28]
+ 433 0018 23F40013 		bic	r3, r3, #2097152
+ 434 001c D361     		str	r3, [r2, #28]
+ 166:Core/Src/i2c.c **** 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 13
+
+
+ 435              		.loc 1 166 5 view .LVU124
+ 436 001e 144C     		ldr	r4, .L27+8
+ 437 0020 4FF48071 		mov	r1, #256
+ 438 0024 2046     		mov	r0, r4
+ 439              	.LVL26:
+ 166:Core/Src/i2c.c **** 
+ 440              		.loc 1 166 5 is_stmt 0 view .LVU125
+ 441 0026 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 442              	.LVL27:
+ 168:Core/Src/i2c.c **** 
+ 443              		.loc 1 168 5 is_stmt 1 view .LVU126
+ 444 002a 4FF40071 		mov	r1, #512
+ 445 002e 2046     		mov	r0, r4
+ 446 0030 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 447              	.LVL28:
+ 171:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C1_MspDeInit 1 */
+ 448              		.loc 1 171 5 view .LVU127
+ 449 0034 2020     		movs	r0, #32
+ 450 0036 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 451              	.LVL29:
+ 452 003a E9E7     		b	.L21
+ 453              	.LVL30:
+ 454              	.L26:
+ 182:Core/Src/i2c.c **** 
+ 455              		.loc 1 182 5 view .LVU128
+ 456 003c 02F5DC32 		add	r2, r2, #112640
+ 457 0040 D369     		ldr	r3, [r2, #28]
+ 458 0042 23F48003 		bic	r3, r3, #4194304
+ 459 0046 D361     		str	r3, [r2, #28]
+ 188:Core/Src/i2c.c **** 
+ 460              		.loc 1 188 5 view .LVU129
+ 461 0048 094C     		ldr	r4, .L27+8
+ 462 004a 4FF48061 		mov	r1, #1024
+ 463 004e 2046     		mov	r0, r4
+ 464              	.LVL31:
+ 188:Core/Src/i2c.c **** 
+ 465              		.loc 1 188 5 is_stmt 0 view .LVU130
+ 466 0050 FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 467              	.LVL32:
+ 190:Core/Src/i2c.c **** 
+ 468              		.loc 1 190 5 is_stmt 1 view .LVU131
+ 469 0054 4FF40061 		mov	r1, #2048
+ 470 0058 2046     		mov	r0, r4
+ 471 005a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 472              	.LVL33:
+ 194:Core/Src/i2c.c ****   /* USER CODE BEGIN I2C2_MspDeInit 1 */
+ 473              		.loc 1 194 5 view .LVU132
+ 474 005e 2220     		movs	r0, #34
+ 475 0060 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 476              	.LVL34:
+ 477              		.loc 1 199 1 is_stmt 0 view .LVU133
+ 478 0064 D4E7     		b	.L21
+ 479              	.L28:
+ 480 0066 00BF     		.align	2
+ 481              	.L27:
+ 482 0068 00540040 		.word	1073763328
+ 483 006c 00580040 		.word	1073764352
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 14
+
+
+ 484 0070 000C0140 		.word	1073810432
+ 485              		.cfi_endproc
+ 486              	.LFE68:
+ 488              		.section	.text.HAL_I2C_ErrorCallback,"ax",%progbits
+ 489              		.align	1
+ 490              		.global	HAL_I2C_ErrorCallback
+ 491              		.syntax unified
+ 492              		.thumb
+ 493              		.thumb_func
+ 495              	HAL_I2C_ErrorCallback:
+ 496              	.LVL35:
+ 497              	.LFB69:
+ 200:Core/Src/i2c.c **** 
+ 201:Core/Src/i2c.c **** /* USER CODE BEGIN 1 */
+ 202:Core/Src/i2c.c **** 
+ 203:Core/Src/i2c.c **** void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+ 204:Core/Src/i2c.c **** {
+ 498              		.loc 1 204 1 is_stmt 1 view -0
+ 499              		.cfi_startproc
+ 500              		@ args = 0, pretend = 0, frame = 0
+ 501              		@ frame_needed = 0, uses_anonymous_args = 0
+ 502              		@ link register save eliminated.
+ 205:Core/Src/i2c.c ****   if(hi2c==&hi2c2)
+ 503              		.loc 1 205 3 view .LVU135
+ 206:Core/Src/i2c.c ****   {
+ 207:Core/Src/i2c.c **** 		// HAL_I2Cx_ReceiveToIdle_DMA(&huart6, , );
+ 208:Core/Src/i2c.c ****   }  
+ 504              		.loc 1 208 3 view .LVU136
+ 209:Core/Src/i2c.c **** }
+ 505              		.loc 1 209 1 is_stmt 0 view .LVU137
+ 506 0000 7047     		bx	lr
+ 507              		.cfi_endproc
+ 508              	.LFE69:
+ 510              		.global	hi2c2
+ 511              		.section	.bss.hi2c2,"aw",%nobits
+ 512              		.align	2
+ 515              	hi2c2:
+ 516 0000 00000000 		.space	84
+ 516      00000000 
+ 516      00000000 
+ 516      00000000 
+ 516      00000000 
+ 517              		.global	hi2c1
+ 518              		.section	.bss.hi2c1,"aw",%nobits
+ 519              		.align	2
+ 522              	hi2c1:
+ 523 0000 00000000 		.space	84
+ 523      00000000 
+ 523      00000000 
+ 523      00000000 
+ 523      00000000 
+ 524              		.global	I2C2_RX_BUF
+ 525              		.section	.bss.I2C2_RX_BUF,"aw",%nobits
+ 526              		.align	2
+ 529              	I2C2_RX_BUF:
+ 530 0000 00000000 		.space	16
+ 530      00000000 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 15
+
+
+ 530      00000000 
+ 530      00000000 
+ 531              		.text
+ 532              	.Letext0:
+ 533              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 534              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 535              		.file 4 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 536              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 537              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 538              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 539              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ 540              		.file 9 "Core/Inc/i2c.h"
+ 541              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ 542              		.file 11 "Core/Inc/main.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 i2c.c
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:19     .text.MX_I2C1_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:25     .text.MX_I2C1_Init:0000000000000000 MX_I2C1_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:86     .text.MX_I2C1_Init:0000000000000030 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:522    .bss.hi2c1:0000000000000000 hi2c1
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:93     .text.MX_I2C2_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:99     .text.MX_I2C2_Init:0000000000000000 MX_I2C2_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:165    .text.MX_I2C2_Init:000000000000003c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:515    .bss.hi2c2:0000000000000000 hi2c2
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:172    .text.HAL_I2C_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:178    .text.HAL_I2C_MspInit:0000000000000000 HAL_I2C_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:384    .text.HAL_I2C_MspInit:00000000000000dc $d
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:393    .text.HAL_I2C_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:399    .text.HAL_I2C_MspDeInit:0000000000000000 HAL_I2C_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:482    .text.HAL_I2C_MspDeInit:0000000000000068 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:489    .text.HAL_I2C_ErrorCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:495    .text.HAL_I2C_ErrorCallback:0000000000000000 HAL_I2C_ErrorCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:512    .bss.hi2c2:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:519    .bss.hi2c1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:529    .bss.I2C2_RX_BUF:0000000000000000 I2C2_RX_BUF
+C:\Users\Lenovo\AppData\Local\Temp\ccaKccvi.s:526    .bss.I2C2_RX_BUF:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_I2C_Init
+Error_Handler
+HAL_GPIO_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_GPIO_DeInit
+HAL_NVIC_DisableIRQ

@@ -1,0 +1,835 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"ADS1015.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "BBBOOM/Src/ADS1015.c"
+  18              		.section	.text.ADS1015_ReadOneByte,"ax",%progbits
+  19              		.align	1
+  20              		.global	ADS1015_ReadOneByte
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  25              	ADS1015_ReadOneByte:
+  26              	.LVL0:
+  27              	.LFB67:
+   1:BBBOOM/Src/ADS1015.c **** #include "ADS1015.h"
+   2:BBBOOM/Src/ADS1015.c **** #include "main.h"
+   3:BBBOOM/Src/ADS1015.c **** 
+   4:BBBOOM/Src/ADS1015.c **** uint16_t ADS1015_CONFIG;
+   5:BBBOOM/Src/ADS1015.c **** uint16_t ADS1015_RX_BUF;
+   6:BBBOOM/Src/ADS1015.c **** void ADS1015_Config(uint8_t i2cAddress,uint8_t channel)
+   7:BBBOOM/Src/ADS1015.c **** {
+   8:BBBOOM/Src/ADS1015.c ****     
+   9:BBBOOM/Src/ADS1015.c ****     // Start with default values
+  10:BBBOOM/Src/ADS1015.c ****     ADS1015_CONFIG  = ADS1015_REG_CONFIG_CQUE_NONE    | // Disable the comparator (default val)
+  11:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_CLAT_NONLAT  | // Non-latching (default val)
+  12:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_CPOL_ACTVLOW | // Alert/Rdy active low   (default val)
+  13:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_CMODE_TRAD   | // Traditional comparator (default val)
+  14:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_DR_3300SPS   | // 1600 samples per second (default)
+  15:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_MODE_SINGLE;   // Single-shot mode (default)
+  16:BBBOOM/Src/ADS1015.c ****     
+  17:BBBOOM/Src/ADS1015.c ****     // Set PGA/voltage range
+  18:BBBOOM/Src/ADS1015.c ****     ADS1015_CONFIG |= ADS1015_REG_CONFIG_PGA_4_096V;
+  19:BBBOOM/Src/ADS1015.c ****     switch (channel)
+  20:BBBOOM/Src/ADS1015.c ****     {
+  21:BBBOOM/Src/ADS1015.c ****     case (0):
+  22:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_0;
+  23:BBBOOM/Src/ADS1015.c ****         break;
+  24:BBBOOM/Src/ADS1015.c ****     case (1):
+  25:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_1;
+  26:BBBOOM/Src/ADS1015.c ****         break;
+  27:BBBOOM/Src/ADS1015.c ****     case (2):
+  28:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_2;
+  29:BBBOOM/Src/ADS1015.c ****         break;
+  30:BBBOOM/Src/ADS1015.c ****     case (3):
+  31:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_3;
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 2
+
+
+  32:BBBOOM/Src/ADS1015.c ****         break;
+  33:BBBOOM/Src/ADS1015.c ****     }
+  34:BBBOOM/Src/ADS1015.c ****     // Set 'start single-conversion' bit
+  35:BBBOOM/Src/ADS1015.c ****     ADS1015_CONFIG |= ADS1015_REG_CONFIG_OS_SINGLE;
+  36:BBBOOM/Src/ADS1015.c **** 
+  37:BBBOOM/Src/ADS1015.c ****     // Write config register to the ADC
+  38:BBBOOM/Src/ADS1015.c ****     ADS1015_WriteOneByte(i2cAddress, ADS1015_REG_POINTER_CONFIG, ADS1015_CONFIG);
+  39:BBBOOM/Src/ADS1015.c **** }
+  40:BBBOOM/Src/ADS1015.c **** 
+  41:BBBOOM/Src/ADS1015.c **** 
+  42:BBBOOM/Src/ADS1015.c **** //ADS1015初始化函数
+  43:BBBOOM/Src/ADS1015.c **** void ADS1015_Init(void)
+  44:BBBOOM/Src/ADS1015.c **** {
+  45:BBBOOM/Src/ADS1015.c ****     ADS1015_Config(ADS1015_ADDRESS,0);
+  46:BBBOOM/Src/ADS1015.c ****     ADS1015_Config(ADS1015_ADDRESS,2);
+  47:BBBOOM/Src/ADS1015.c **** }
+  48:BBBOOM/Src/ADS1015.c **** 
+  49:BBBOOM/Src/ADS1015.c **** //ADS1015从寄存器读两字节数据
+  50:BBBOOM/Src/ADS1015.c **** uint16_t ADS1015_ReadOneByte(uint8_t i2cAddress,uint16_t ReadAddr)
+  51:BBBOOM/Src/ADS1015.c **** {
+  28              		.loc 1 51 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 16
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 51 1 is_stmt 0 view .LVU1
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 4, -16
+  37              		.cfi_offset 5, -12
+  38              		.cfi_offset 6, -8
+  39              		.cfi_offset 14, -4
+  40 0002 88B0     		sub	sp, sp, #32
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 48
+  43 0004 ADF81610 		strh	r1, [sp, #22]	@ movhi
+  52:BBBOOM/Src/ADS1015.c ****     uint16_t temp=0;		  	    																 
+  44              		.loc 1 52 5 is_stmt 1 view .LVU2
+  45              		.loc 1 52 14 is_stmt 0 view .LVU3
+  46 0008 0023     		movs	r3, #0
+  47 000a ADF81E30 		strh	r3, [sp, #30]	@ movhi
+  53:BBBOOM/Src/ADS1015.c ****     HAL_I2C_Master_Transmit(&hi2c2, i2cAddress<<1, &ReadAddr, I2C_MEMADD_SIZE_8BIT,1000);
+  48              		.loc 1 53 5 is_stmt 1 view .LVU4
+  49 000e 4400     		lsls	r4, r0, #1
+  50 0010 0D4D     		ldr	r5, .L3
+  51 0012 4FF47A76 		mov	r6, #1000
+  52 0016 0096     		str	r6, [sp]
+  53 0018 0123     		movs	r3, #1
+  54 001a 0DF11602 		add	r2, sp, #22
+  55 001e 2146     		mov	r1, r4
+  56              	.LVL1:
+  57              		.loc 1 53 5 is_stmt 0 view .LVU5
+  58 0020 2846     		mov	r0, r5
+  59              	.LVL2:
+  60              		.loc 1 53 5 view .LVU6
+  61 0022 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+  62              	.LVL3:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 3
+
+
+  54:BBBOOM/Src/ADS1015.c ****     HAL_I2C_Mem_Read(&hi2c2, (i2cAddress<<1)+1, ReadAddr, I2C_MEMADD_SIZE_16BIT, &temp, 2,1000);
+  63              		.loc 1 54 5 is_stmt 1 view .LVU7
+  64 0026 0296     		str	r6, [sp, #8]
+  65 0028 0223     		movs	r3, #2
+  66 002a 0193     		str	r3, [sp, #4]
+  67 002c 0DF11E03 		add	r3, sp, #30
+  68 0030 0093     		str	r3, [sp]
+  69 0032 1023     		movs	r3, #16
+  70 0034 BDF81620 		ldrh	r2, [sp, #22]
+  71 0038 611C     		adds	r1, r4, #1
+  72 003a 2846     		mov	r0, r5
+  73 003c FFF7FEFF 		bl	HAL_I2C_Mem_Read
+  74              	.LVL4:
+  55:BBBOOM/Src/ADS1015.c **** 
+  56:BBBOOM/Src/ADS1015.c ****     // IIC_Start();  
+  57:BBBOOM/Src/ADS1015.c ****     // IIC_Send_Byte(i2cAddress<<1);  
+  58:BBBOOM/Src/ADS1015.c ****     // IIC_Wait_Ack();	 
+  59:BBBOOM/Src/ADS1015.c ****     // IIC_Send_Byte(ReadAddr);  
+  60:BBBOOM/Src/ADS1015.c ****     // IIC_Wait_Ack();	     	
+  61:BBBOOM/Src/ADS1015.c ****     // IIC_Stop();	
+  62:BBBOOM/Src/ADS1015.c ****     
+  63:BBBOOM/Src/ADS1015.c ****     // IIC_Start();
+  64:BBBOOM/Src/ADS1015.c ****     // IIC_Send_Byte((i2cAddress<<1)+1);          		   
+  65:BBBOOM/Src/ADS1015.c ****     // IIC_Wait_Ack();	 
+  66:BBBOOM/Src/ADS1015.c ****     // temp=IIC_Read_Byte(1);	
+  67:BBBOOM/Src/ADS1015.c ****     // temp=temp<<8;
+  68:BBBOOM/Src/ADS1015.c ****     // temp+=IIC_Read_Byte(1);	
+  69:BBBOOM/Src/ADS1015.c ****     // IIC_Stop();	    
+  70:BBBOOM/Src/ADS1015.c ****     return temp;
+  75              		.loc 1 70 5 view .LVU8
+  71:BBBOOM/Src/ADS1015.c **** }
+  76              		.loc 1 71 1 is_stmt 0 view .LVU9
+  77 0040 BDF81E00 		ldrh	r0, [sp, #30]
+  78 0044 08B0     		add	sp, sp, #32
+  79              	.LCFI2:
+  80              		.cfi_def_cfa_offset 16
+  81              		@ sp needed
+  82 0046 70BD     		pop	{r4, r5, r6, pc}
+  83              	.L4:
+  84              		.align	2
+  85              	.L3:
+  86 0048 00000000 		.word	hi2c2
+  87              		.cfi_endproc
+  88              	.LFE67:
+  90              		.section	.text.ADS1015_WriteOneByte,"ax",%progbits
+  91              		.align	1
+  92              		.global	ADS1015_WriteOneByte
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  97              	ADS1015_WriteOneByte:
+  98              	.LVL5:
+  99              	.LFB68:
+  72:BBBOOM/Src/ADS1015.c **** 
+  73:BBBOOM/Src/ADS1015.c **** //ADS1015写两字节数据
+  74:BBBOOM/Src/ADS1015.c **** void ADS1015_WriteOneByte(uint8_t i2cAddress,uint16_t WriteAddr,uint16_t DataToWrite)
+  75:BBBOOM/Src/ADS1015.c **** {
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 4
+
+
+ 100              		.loc 1 75 1 is_stmt 1 view -0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 8
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              		.loc 1 75 1 is_stmt 0 view .LVU11
+ 105 0000 00B5     		push	{lr}
+ 106              	.LCFI3:
+ 107              		.cfi_def_cfa_offset 4
+ 108              		.cfi_offset 14, -4
+ 109 0002 87B0     		sub	sp, sp, #28
+ 110              	.LCFI4:
+ 111              		.cfi_def_cfa_offset 32
+ 112 0004 ADF81620 		strh	r2, [sp, #22]	@ movhi
+  76:BBBOOM/Src/ADS1015.c ****     // uint8_t datH=DataToWrite>>8;
+  77:BBBOOM/Src/ADS1015.c ****     // uint8_t datL=DataToWrite&0xff;	    																 
+  78:BBBOOM/Src/ADS1015.c ****     HAL_I2C_Mem_Write(&hi2c2,i2cAddress<<1,WriteAddr,I2C_MEMADD_SIZE_16BIT,&DataToWrite,2,1000);
+ 113              		.loc 1 78 5 is_stmt 1 view .LVU12
+ 114 0008 4FF47A73 		mov	r3, #1000
+ 115 000c 0293     		str	r3, [sp, #8]
+ 116 000e 0223     		movs	r3, #2
+ 117 0010 0193     		str	r3, [sp, #4]
+ 118 0012 0DF11603 		add	r3, sp, #22
+ 119 0016 0093     		str	r3, [sp]
+ 120 0018 1023     		movs	r3, #16
+ 121 001a 0A46     		mov	r2, r1
+ 122              	.LVL6:
+ 123              		.loc 1 78 5 is_stmt 0 view .LVU13
+ 124 001c 4100     		lsls	r1, r0, #1
+ 125              	.LVL7:
+ 126              		.loc 1 78 5 view .LVU14
+ 127 001e 0348     		ldr	r0, .L7
+ 128              	.LVL8:
+ 129              		.loc 1 78 5 view .LVU15
+ 130 0020 FFF7FEFF 		bl	HAL_I2C_Mem_Write
+ 131              	.LVL9:
+  79:BBBOOM/Src/ADS1015.c ****     
+  80:BBBOOM/Src/ADS1015.c ****     // HAL_I2C_Transmit(&hi2c2,i2cAddress<<1,WriteAddr,I2C_MEMADD_SIZE_8BIT,&datL,1,0x100);
+  81:BBBOOM/Src/ADS1015.c **** 
+  82:BBBOOM/Src/ADS1015.c ****     // IIC_Send_Byte(WriteAddr);  
+  83:BBBOOM/Src/ADS1015.c ****     // IIC_Wait_Ack();	     	
+  84:BBBOOM/Src/ADS1015.c ****     // IIC_Send_Byte(DataToWrite>>8); 
+  85:BBBOOM/Src/ADS1015.c ****     // IIC_Wait_Ack();	
+  86:BBBOOM/Src/ADS1015.c ****     // IIC_Send_Byte(DataToWrite&0xff); 
+  87:BBBOOM/Src/ADS1015.c ****     // IIC_Wait_Ack();	
+  88:BBBOOM/Src/ADS1015.c ****     // IIC_Stop();
+  89:BBBOOM/Src/ADS1015.c **** }
+ 132              		.loc 1 89 1 view .LVU16
+ 133 0024 07B0     		add	sp, sp, #28
+ 134              	.LCFI5:
+ 135              		.cfi_def_cfa_offset 4
+ 136              		@ sp needed
+ 137 0026 5DF804FB 		ldr	pc, [sp], #4
+ 138              	.L8:
+ 139 002a 00BF     		.align	2
+ 140              	.L7:
+ 141 002c 00000000 		.word	hi2c2
+ 142              		.cfi_endproc
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 5
+
+
+ 143              	.LFE68:
+ 145              		.section	.text.ADS1015_Config,"ax",%progbits
+ 146              		.align	1
+ 147              		.global	ADS1015_Config
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 152              	ADS1015_Config:
+ 153              	.LVL10:
+ 154              	.LFB65:
+   7:BBBOOM/Src/ADS1015.c ****     
+ 155              		.loc 1 7 1 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+   7:BBBOOM/Src/ADS1015.c ****     
+ 159              		.loc 1 7 1 is_stmt 0 view .LVU18
+ 160 0000 08B5     		push	{r3, lr}
+ 161              	.LCFI6:
+ 162              		.cfi_def_cfa_offset 8
+ 163              		.cfi_offset 3, -8
+ 164              		.cfi_offset 14, -4
+  10:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_CLAT_NONLAT  | // Non-latching (default val)
+ 165              		.loc 1 10 5 is_stmt 1 view .LVU19
+  10:BBBOOM/Src/ADS1015.c ****                     ADS1015_REG_CONFIG_CLAT_NONLAT  | // Non-latching (default val)
+ 166              		.loc 1 10 21 is_stmt 0 view .LVU20
+ 167 0002 164B     		ldr	r3, .L18
+ 168 0004 40F2C312 		movw	r2, #451
+ 169 0008 1A80     		strh	r2, [r3]	@ movhi
+  18:BBBOOM/Src/ADS1015.c ****     switch (channel)
+ 170              		.loc 1 18 5 is_stmt 1 view .LVU21
+  18:BBBOOM/Src/ADS1015.c ****     switch (channel)
+ 171              		.loc 1 18 20 is_stmt 0 view .LVU22
+ 172 000a 40F2C332 		movw	r2, #963
+ 173 000e 1A80     		strh	r2, [r3]	@ movhi
+  19:BBBOOM/Src/ADS1015.c ****     {
+ 174              		.loc 1 19 5 is_stmt 1 view .LVU23
+ 175 0010 0329     		cmp	r1, #3
+ 176 0012 07D8     		bhi	.L10
+ 177 0014 DFE801F0 		tbb	[pc, r1]
+ 178              	.L12:
+ 179 0018 02       		.byte	(.L15-.L12)/2
+ 180 0019 12       		.byte	(.L14-.L12)/2
+ 181 001a 17       		.byte	(.L13-.L12)/2
+ 182 001b 1C       		.byte	(.L11-.L12)/2
+ 183              		.p2align 1
+ 184              	.L15:
+  22:BBBOOM/Src/ADS1015.c ****         break;
+ 185              		.loc 1 22 9 view .LVU24
+  22:BBBOOM/Src/ADS1015.c ****         break;
+ 186              		.loc 1 22 24 is_stmt 0 view .LVU25
+ 187 001c 0F4B     		ldr	r3, .L18
+ 188 001e 44F2C332 		movw	r2, #17347
+ 189 0022 1A80     		strh	r2, [r3]	@ movhi
+  23:BBBOOM/Src/ADS1015.c ****     case (1):
+ 190              		.loc 1 23 9 is_stmt 1 view .LVU26
+ 191              	.L10:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 6
+
+
+  35:BBBOOM/Src/ADS1015.c **** 
+ 192              		.loc 1 35 5 view .LVU27
+  35:BBBOOM/Src/ADS1015.c **** 
+ 193              		.loc 1 35 20 is_stmt 0 view .LVU28
+ 194 0024 0D4B     		ldr	r3, .L18
+ 195 0026 1A88     		ldrh	r2, [r3]
+ 196 0028 6FEA4242 		mvn	r2, r2, lsl #17
+ 197 002c 6FEA5242 		mvn	r2, r2, lsr #17
+ 198 0030 92B2     		uxth	r2, r2
+ 199 0032 1A80     		strh	r2, [r3]	@ movhi
+  38:BBBOOM/Src/ADS1015.c **** }
+ 200              		.loc 1 38 5 is_stmt 1 view .LVU29
+ 201 0034 0121     		movs	r1, #1
+ 202              	.LVL11:
+  38:BBBOOM/Src/ADS1015.c **** }
+ 203              		.loc 1 38 5 is_stmt 0 view .LVU30
+ 204 0036 FFF7FEFF 		bl	ADS1015_WriteOneByte
+ 205              	.LVL12:
+  39:BBBOOM/Src/ADS1015.c **** 
+ 206              		.loc 1 39 1 view .LVU31
+ 207 003a 08BD     		pop	{r3, pc}
+ 208              	.LVL13:
+ 209              	.L14:
+  25:BBBOOM/Src/ADS1015.c ****         break;
+ 210              		.loc 1 25 9 is_stmt 1 view .LVU32
+  25:BBBOOM/Src/ADS1015.c ****         break;
+ 211              		.loc 1 25 24 is_stmt 0 view .LVU33
+ 212 003c 074B     		ldr	r3, .L18
+ 213 003e 45F2C332 		movw	r2, #21443
+ 214 0042 1A80     		strh	r2, [r3]	@ movhi
+  26:BBBOOM/Src/ADS1015.c ****     case (2):
+ 215              		.loc 1 26 9 is_stmt 1 view .LVU34
+ 216 0044 EEE7     		b	.L10
+ 217              	.L13:
+  28:BBBOOM/Src/ADS1015.c ****         break;
+ 218              		.loc 1 28 9 view .LVU35
+  28:BBBOOM/Src/ADS1015.c ****         break;
+ 219              		.loc 1 28 24 is_stmt 0 view .LVU36
+ 220 0046 054B     		ldr	r3, .L18
+ 221 0048 46F2C332 		movw	r2, #25539
+ 222 004c 1A80     		strh	r2, [r3]	@ movhi
+  29:BBBOOM/Src/ADS1015.c ****     case (3):
+ 223              		.loc 1 29 9 is_stmt 1 view .LVU37
+ 224 004e E9E7     		b	.L10
+ 225              	.L11:
+  31:BBBOOM/Src/ADS1015.c ****         break;
+ 226              		.loc 1 31 9 view .LVU38
+  31:BBBOOM/Src/ADS1015.c ****         break;
+ 227              		.loc 1 31 24 is_stmt 0 view .LVU39
+ 228 0050 024B     		ldr	r3, .L18
+ 229 0052 47F2C332 		movw	r2, #29635
+ 230 0056 1A80     		strh	r2, [r3]	@ movhi
+  32:BBBOOM/Src/ADS1015.c ****     }
+ 231              		.loc 1 32 9 is_stmt 1 view .LVU40
+ 232 0058 E4E7     		b	.L10
+ 233              	.L19:
+ 234 005a 00BF     		.align	2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 7
+
+
+ 235              	.L18:
+ 236 005c 00000000 		.word	ADS1015_CONFIG
+ 237              		.cfi_endproc
+ 238              	.LFE65:
+ 240              		.section	.text.ADS1015_Init,"ax",%progbits
+ 241              		.align	1
+ 242              		.global	ADS1015_Init
+ 243              		.syntax unified
+ 244              		.thumb
+ 245              		.thumb_func
+ 247              	ADS1015_Init:
+ 248              	.LFB66:
+  44:BBBOOM/Src/ADS1015.c ****     ADS1015_Config(ADS1015_ADDRESS,0);
+ 249              		.loc 1 44 1 view -0
+ 250              		.cfi_startproc
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253 0000 08B5     		push	{r3, lr}
+ 254              	.LCFI7:
+ 255              		.cfi_def_cfa_offset 8
+ 256              		.cfi_offset 3, -8
+ 257              		.cfi_offset 14, -4
+  45:BBBOOM/Src/ADS1015.c ****     ADS1015_Config(ADS1015_ADDRESS,2);
+ 258              		.loc 1 45 5 view .LVU42
+ 259 0002 0021     		movs	r1, #0
+ 260 0004 4820     		movs	r0, #72
+ 261 0006 FFF7FEFF 		bl	ADS1015_Config
+ 262              	.LVL14:
+  46:BBBOOM/Src/ADS1015.c **** }
+ 263              		.loc 1 46 5 view .LVU43
+ 264 000a 0221     		movs	r1, #2
+ 265 000c 4820     		movs	r0, #72
+ 266 000e FFF7FEFF 		bl	ADS1015_Config
+ 267              	.LVL15:
+  47:BBBOOM/Src/ADS1015.c **** 
+ 268              		.loc 1 47 1 is_stmt 0 view .LVU44
+ 269 0012 08BD     		pop	{r3, pc}
+ 270              		.cfi_endproc
+ 271              	.LFE66:
+ 273              		.section	.text.ADS1015_Read,"ax",%progbits
+ 274              		.align	1
+ 275              		.global	ADS1015_Read
+ 276              		.syntax unified
+ 277              		.thumb
+ 278              		.thumb_func
+ 280              	ADS1015_Read:
+ 281              	.LVL16:
+ 282              	.LFB69:
+  90:BBBOOM/Src/ADS1015.c **** 
+  91:BBBOOM/Src/ADS1015.c **** //ADS1015读数据
+  92:BBBOOM/Src/ADS1015.c **** //返回值：获取的AD值
+  93:BBBOOM/Src/ADS1015.c **** //Channel：通道数，范围0-3
+  94:BBBOOM/Src/ADS1015.c **** uint16_t ADS1015_Read(uint8_t channel)
+  95:BBBOOM/Src/ADS1015.c **** {
+ 283              		.loc 1 95 1 is_stmt 1 view -0
+ 284              		.cfi_startproc
+ 285              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 8
+
+
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+  96:BBBOOM/Src/ADS1015.c ****     int temp;
+ 287              		.loc 1 96 5 view .LVU46
+  97:BBBOOM/Src/ADS1015.c ****         // Start with default values
+  98:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG  = ADS1015_REG_CONFIG_CQUE_NONE    | // Disable the comparator (default val)
+ 288              		.loc 1 98 9 view .LVU47
+ 289              		.loc 1 98 25 is_stmt 0 view .LVU48
+ 290 0000 204B     		ldr	r3, .L37
+ 291 0002 40F2C312 		movw	r2, #451
+ 292 0006 1A80     		strh	r2, [r3]	@ movhi
+  99:BBBOOM/Src/ADS1015.c ****                         ADS1015_REG_CONFIG_CLAT_NONLAT  | // Non-latching (default val)
+ 100:BBBOOM/Src/ADS1015.c ****                         ADS1015_REG_CONFIG_CPOL_ACTVLOW | // Alert/Rdy active low   (default val)
+ 101:BBBOOM/Src/ADS1015.c ****                         ADS1015_REG_CONFIG_CMODE_TRAD   | // Traditional comparator (default val)
+ 102:BBBOOM/Src/ADS1015.c ****                         ADS1015_REG_CONFIG_DR_3300SPS   | // 1600 samples per second (default)
+ 103:BBBOOM/Src/ADS1015.c ****                         ADS1015_REG_CONFIG_MODE_SINGLE;   // Single-shot mode (default)
+ 104:BBBOOM/Src/ADS1015.c ****         
+ 105:BBBOOM/Src/ADS1015.c ****         // Set PGA/voltage range
+ 106:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_PGA_4_096V;
+ 293              		.loc 1 106 9 is_stmt 1 view .LVU49
+ 294              		.loc 1 106 24 is_stmt 0 view .LVU50
+ 295 0008 40F2C332 		movw	r2, #963
+ 296 000c 1A80     		strh	r2, [r3]	@ movhi
+ 107:BBBOOM/Src/ADS1015.c ****     if(channel<3) 
+ 297              		.loc 1 107 5 is_stmt 1 view .LVU51
+ 298              		.loc 1 107 7 is_stmt 0 view .LVU52
+ 299 000e 0228     		cmp	r0, #2
+ 300 0010 01D9     		bls	.L36
+ 108:BBBOOM/Src/ADS1015.c ****     {
+ 109:BBBOOM/Src/ADS1015.c ****         switch (channel)
+ 110:BBBOOM/Src/ADS1015.c ****         {
+ 111:BBBOOM/Src/ADS1015.c ****             case (0):
+ 112:BBBOOM/Src/ADS1015.c ****                 ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_0;
+ 113:BBBOOM/Src/ADS1015.c ****             break;
+ 114:BBBOOM/Src/ADS1015.c ****             case (1):
+ 115:BBBOOM/Src/ADS1015.c ****                 ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_1;
+ 116:BBBOOM/Src/ADS1015.c ****             break;
+ 117:BBBOOM/Src/ADS1015.c ****             case (2):
+ 118:BBBOOM/Src/ADS1015.c ****                 ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_2;
+ 119:BBBOOM/Src/ADS1015.c ****             break;
+ 120:BBBOOM/Src/ADS1015.c ****             case (3):
+ 121:BBBOOM/Src/ADS1015.c ****                 ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_SINGLE_3;
+ 122:BBBOOM/Src/ADS1015.c ****             break;
+ 123:BBBOOM/Src/ADS1015.c ****         }	
+ 124:BBBOOM/Src/ADS1015.c ****             // Set 'start single-conversion' bit
+ 125:BBBOOM/Src/ADS1015.c ****         ADS1015_CONFIG |= ADS1015_REG_CONFIG_OS_SINGLE;
+ 126:BBBOOM/Src/ADS1015.c ****         ADS1015_WriteOneByte(ADS1015_ADDRESS,ADS1015_REG_POINTER_CONFIG, ADS1015_CONFIG);
+ 127:BBBOOM/Src/ADS1015.c ****         HAL_Delay(10);
+ 128:BBBOOM/Src/ADS1015.c ****         HAL_I2C_Master_Receive_IT(&hi2c2,ADS1015_ADDRESS<<1,&temp,2);
+ 129:BBBOOM/Src/ADS1015.c ****         temp=temp>>4;
+ 130:BBBOOM/Src/ADS1015.c ****         return temp;
+ 131:BBBOOM/Src/ADS1015.c ****     }
+ 132:BBBOOM/Src/ADS1015.c ****     return 0;
+ 301              		.loc 1 132 12 view .LVU53
+ 302 0012 0020     		movs	r0, #0
+ 303              	.LVL17:
+ 133:BBBOOM/Src/ADS1015.c **** }
+ 304              		.loc 1 133 1 view .LVU54
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 9
+
+
+ 305 0014 7047     		bx	lr
+ 306              	.LVL18:
+ 307              	.L36:
+  95:BBBOOM/Src/ADS1015.c ****     int temp;
+ 308              		.loc 1 95 1 view .LVU55
+ 309 0016 00B5     		push	{lr}
+ 310              	.LCFI8:
+ 311              		.cfi_def_cfa_offset 4
+ 312              		.cfi_offset 14, -4
+ 313 0018 83B0     		sub	sp, sp, #12
+ 314              	.LCFI9:
+ 315              		.cfi_def_cfa_offset 16
+ 109:BBBOOM/Src/ADS1015.c ****         {
+ 316              		.loc 1 109 9 is_stmt 1 view .LVU56
+ 317 001a 0328     		cmp	r0, #3
+ 318 001c 07D8     		bhi	.L24
+ 319 001e DFE800F0 		tbb	[pc, r0]
+ 320              	.L26:
+ 321 0022 02       		.byte	(.L29-.L26)/2
+ 322 0023 22       		.byte	(.L28-.L26)/2
+ 323 0024 27       		.byte	(.L27-.L26)/2
+ 324 0025 2C       		.byte	(.L25-.L26)/2
+ 325              		.p2align 1
+ 326              	.L29:
+ 112:BBBOOM/Src/ADS1015.c ****             break;
+ 327              		.loc 1 112 17 view .LVU57
+ 112:BBBOOM/Src/ADS1015.c ****             break;
+ 328              		.loc 1 112 32 is_stmt 0 view .LVU58
+ 329 0026 174B     		ldr	r3, .L37
+ 330 0028 44F2C332 		movw	r2, #17347
+ 331 002c 1A80     		strh	r2, [r3]	@ movhi
+ 113:BBBOOM/Src/ADS1015.c ****             case (1):
+ 332              		.loc 1 113 13 is_stmt 1 view .LVU59
+ 333              	.L24:
+ 125:BBBOOM/Src/ADS1015.c ****         ADS1015_WriteOneByte(ADS1015_ADDRESS,ADS1015_REG_POINTER_CONFIG, ADS1015_CONFIG);
+ 334              		.loc 1 125 9 view .LVU60
+ 125:BBBOOM/Src/ADS1015.c ****         ADS1015_WriteOneByte(ADS1015_ADDRESS,ADS1015_REG_POINTER_CONFIG, ADS1015_CONFIG);
+ 335              		.loc 1 125 24 is_stmt 0 view .LVU61
+ 336 002e 154B     		ldr	r3, .L37
+ 337 0030 1A88     		ldrh	r2, [r3]
+ 338 0032 6FEA4242 		mvn	r2, r2, lsl #17
+ 339 0036 6FEA5242 		mvn	r2, r2, lsr #17
+ 340 003a 92B2     		uxth	r2, r2
+ 341 003c 1A80     		strh	r2, [r3]	@ movhi
+ 126:BBBOOM/Src/ADS1015.c ****         HAL_Delay(10);
+ 342              		.loc 1 126 9 is_stmt 1 view .LVU62
+ 343 003e 0121     		movs	r1, #1
+ 344 0040 4820     		movs	r0, #72
+ 345              	.LVL19:
+ 126:BBBOOM/Src/ADS1015.c ****         HAL_Delay(10);
+ 346              		.loc 1 126 9 is_stmt 0 view .LVU63
+ 347 0042 FFF7FEFF 		bl	ADS1015_WriteOneByte
+ 348              	.LVL20:
+ 127:BBBOOM/Src/ADS1015.c ****         HAL_I2C_Master_Receive_IT(&hi2c2,ADS1015_ADDRESS<<1,&temp,2);
+ 349              		.loc 1 127 9 is_stmt 1 view .LVU64
+ 350 0046 0A20     		movs	r0, #10
+ 351 0048 FFF7FEFF 		bl	HAL_Delay
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 10
+
+
+ 352              	.LVL21:
+ 128:BBBOOM/Src/ADS1015.c ****         temp=temp>>4;
+ 353              		.loc 1 128 9 view .LVU65
+ 354 004c 0223     		movs	r3, #2
+ 355 004e 01AA     		add	r2, sp, #4
+ 356 0050 9021     		movs	r1, #144
+ 357 0052 0D48     		ldr	r0, .L37+4
+ 358 0054 FFF7FEFF 		bl	HAL_I2C_Master_Receive_IT
+ 359              	.LVL22:
+ 129:BBBOOM/Src/ADS1015.c ****         return temp;
+ 360              		.loc 1 129 9 view .LVU66
+ 129:BBBOOM/Src/ADS1015.c ****         return temp;
+ 361              		.loc 1 129 18 is_stmt 0 view .LVU67
+ 362 0058 0198     		ldr	r0, [sp, #4]
+ 363 005a 0011     		asrs	r0, r0, #4
+ 129:BBBOOM/Src/ADS1015.c ****         return temp;
+ 364              		.loc 1 129 13 view .LVU68
+ 365 005c 0190     		str	r0, [sp, #4]
+ 130:BBBOOM/Src/ADS1015.c ****     }
+ 366              		.loc 1 130 9 is_stmt 1 view .LVU69
+ 130:BBBOOM/Src/ADS1015.c ****     }
+ 367              		.loc 1 130 16 is_stmt 0 view .LVU70
+ 368 005e 80B2     		uxth	r0, r0
+ 369              		.loc 1 133 1 view .LVU71
+ 370 0060 03B0     		add	sp, sp, #12
+ 371              	.LCFI10:
+ 372              		.cfi_remember_state
+ 373              		.cfi_def_cfa_offset 4
+ 374              		@ sp needed
+ 375 0062 5DF804FB 		ldr	pc, [sp], #4
+ 376              	.LVL23:
+ 377              	.L28:
+ 378              	.LCFI11:
+ 379              		.cfi_restore_state
+ 115:BBBOOM/Src/ADS1015.c ****             break;
+ 380              		.loc 1 115 17 is_stmt 1 view .LVU72
+ 115:BBBOOM/Src/ADS1015.c ****             break;
+ 381              		.loc 1 115 32 is_stmt 0 view .LVU73
+ 382 0066 074B     		ldr	r3, .L37
+ 383 0068 45F2C332 		movw	r2, #21443
+ 384 006c 1A80     		strh	r2, [r3]	@ movhi
+ 116:BBBOOM/Src/ADS1015.c ****             case (2):
+ 385              		.loc 1 116 13 is_stmt 1 view .LVU74
+ 386 006e DEE7     		b	.L24
+ 387              	.L27:
+ 118:BBBOOM/Src/ADS1015.c ****             break;
+ 388              		.loc 1 118 17 view .LVU75
+ 118:BBBOOM/Src/ADS1015.c ****             break;
+ 389              		.loc 1 118 32 is_stmt 0 view .LVU76
+ 390 0070 044B     		ldr	r3, .L37
+ 391 0072 46F2C332 		movw	r2, #25539
+ 392 0076 1A80     		strh	r2, [r3]	@ movhi
+ 119:BBBOOM/Src/ADS1015.c ****             case (3):
+ 393              		.loc 1 119 13 is_stmt 1 view .LVU77
+ 394 0078 D9E7     		b	.L24
+ 395              	.L25:
+ 121:BBBOOM/Src/ADS1015.c ****             break;
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 11
+
+
+ 396              		.loc 1 121 17 view .LVU78
+ 121:BBBOOM/Src/ADS1015.c ****             break;
+ 397              		.loc 1 121 32 is_stmt 0 view .LVU79
+ 398 007a 024B     		ldr	r3, .L37
+ 399 007c 47F2C332 		movw	r2, #29635
+ 400 0080 1A80     		strh	r2, [r3]	@ movhi
+ 122:BBBOOM/Src/ADS1015.c ****         }	
+ 401              		.loc 1 122 13 is_stmt 1 view .LVU80
+ 402 0082 D4E7     		b	.L24
+ 403              	.L38:
+ 404              		.align	2
+ 405              	.L37:
+ 406 0084 00000000 		.word	ADS1015_CONFIG
+ 407 0088 00000000 		.word	hi2c2
+ 408              		.cfi_endproc
+ 409              	.LFE69:
+ 411              		.section	.text.AD1015_Check,"ax",%progbits
+ 412              		.align	1
+ 413              		.global	AD1015_Check
+ 414              		.syntax unified
+ 415              		.thumb
+ 416              		.thumb_func
+ 418              	AD1015_Check:
+ 419              	.LVL24:
+ 420              	.LFB70:
+ 134:BBBOOM/Src/ADS1015.c **** 
+ 135:BBBOOM/Src/ADS1015.c **** //检测AD1015是否存在
+ 136:BBBOOM/Src/ADS1015.c **** //参数：
+ 137:BBBOOM/Src/ADS1015.c **** //i2cAddress：芯片地址
+ 138:BBBOOM/Src/ADS1015.c **** //返回值：0存在 1不存在
+ 139:BBBOOM/Src/ADS1015.c **** uint8_t AD1015_Check(uint8_t i2cAddress)
+ 140:BBBOOM/Src/ADS1015.c **** {
+ 421              		.loc 1 140 1 view -0
+ 422              		.cfi_startproc
+ 423              		@ args = 0, pretend = 0, frame = 0
+ 424              		@ frame_needed = 0, uses_anonymous_args = 0
+ 425              		.loc 1 140 1 is_stmt 0 view .LVU82
+ 426 0000 00B5     		push	{lr}
+ 427              	.LCFI12:
+ 428              		.cfi_def_cfa_offset 4
+ 429              		.cfi_offset 14, -4
+ 430 0002 83B0     		sub	sp, sp, #12
+ 431              	.LCFI13:
+ 432              		.cfi_def_cfa_offset 16
+ 141:BBBOOM/Src/ADS1015.c ****       
+ 142:BBBOOM/Src/ADS1015.c ****     if(HAL_I2C_Master_Transmit(&hi2c2,i2cAddress<<1,0,1,1000)!=HAL_ERROR)
+ 433              		.loc 1 142 5 is_stmt 1 view .LVU83
+ 434              		.loc 1 142 8 is_stmt 0 view .LVU84
+ 435 0004 4FF47A73 		mov	r3, #1000
+ 436 0008 0093     		str	r3, [sp]
+ 437 000a 0123     		movs	r3, #1
+ 438 000c 0022     		movs	r2, #0
+ 439 000e 00FA03F1 		lsl	r1, r0, r3
+ 440 0012 0548     		ldr	r0, .L43
+ 441              	.LVL25:
+ 442              		.loc 1 142 8 view .LVU85
+ 443 0014 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 12
+
+
+ 444              	.LVL26:
+ 445              		.loc 1 142 7 view .LVU86
+ 446 0018 0128     		cmp	r0, #1
+ 447 001a 03D0     		beq	.L41
+ 143:BBBOOM/Src/ADS1015.c ****     {
+ 144:BBBOOM/Src/ADS1015.c ****         return 1;
+ 448              		.loc 1 144 16 view .LVU87
+ 449 001c 0120     		movs	r0, #1
+ 450              	.L40:
+ 145:BBBOOM/Src/ADS1015.c ****     }  
+ 146:BBBOOM/Src/ADS1015.c ****     else return 0;
+ 147:BBBOOM/Src/ADS1015.c **** }
+ 451              		.loc 1 147 1 view .LVU88
+ 452 001e 03B0     		add	sp, sp, #12
+ 453              	.LCFI14:
+ 454              		.cfi_remember_state
+ 455              		.cfi_def_cfa_offset 4
+ 456              		@ sp needed
+ 457 0020 5DF804FB 		ldr	pc, [sp], #4
+ 458              	.L41:
+ 459              	.LCFI15:
+ 460              		.cfi_restore_state
+ 146:BBBOOM/Src/ADS1015.c **** }
+ 461              		.loc 1 146 17 view .LVU89
+ 462 0024 0020     		movs	r0, #0
+ 463 0026 FAE7     		b	.L40
+ 464              	.L44:
+ 465              		.align	2
+ 466              	.L43:
+ 467 0028 00000000 		.word	hi2c2
+ 468              		.cfi_endproc
+ 469              	.LFE70:
+ 471              		.section	.text.HAL_I2C_MasterRxCpltCallback,"ax",%progbits
+ 472              		.align	1
+ 473              		.global	HAL_I2C_MasterRxCpltCallback
+ 474              		.syntax unified
+ 475              		.thumb
+ 476              		.thumb_func
+ 478              	HAL_I2C_MasterRxCpltCallback:
+ 479              	.LVL27:
+ 480              	.LFB71:
+ 148:BBBOOM/Src/ADS1015.c **** 
+ 149:BBBOOM/Src/ADS1015.c **** 
+ 150:BBBOOM/Src/ADS1015.c **** void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef *hi2c)
+ 151:BBBOOM/Src/ADS1015.c **** {
+ 481              		.loc 1 151 1 is_stmt 1 view -0
+ 482              		.cfi_startproc
+ 483              		@ args = 0, pretend = 0, frame = 0
+ 484              		@ frame_needed = 0, uses_anonymous_args = 0
+ 485              		.loc 1 151 1 is_stmt 0 view .LVU91
+ 486 0000 08B5     		push	{r3, lr}
+ 487              	.LCFI16:
+ 488              		.cfi_def_cfa_offset 8
+ 489              		.cfi_offset 3, -8
+ 490              		.cfi_offset 14, -4
+ 152:BBBOOM/Src/ADS1015.c **** 
+ 153:BBBOOM/Src/ADS1015.c ****     if(hi2c==&hi2c2)
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 13
+
+
+ 491              		.loc 1 153 5 is_stmt 1 view .LVU92
+ 492              		.loc 1 153 7 is_stmt 0 view .LVU93
+ 493 0002 074B     		ldr	r3, .L49
+ 494 0004 8342     		cmp	r3, r0
+ 495 0006 04D0     		beq	.L48
+ 496              	.LVL28:
+ 497              	.L46:
+ 154:BBBOOM/Src/ADS1015.c ****     {
+ 155:BBBOOM/Src/ADS1015.c ****         HAL_I2C_Master_Receive_IT(&hi2c2,ADS1015_ADDRESS<<1,&ADS1015_RX_BUF,2);
+ 156:BBBOOM/Src/ADS1015.c ****         ADS1015_RX_BUF>>4;
+ 157:BBBOOM/Src/ADS1015.c ****     }
+ 158:BBBOOM/Src/ADS1015.c ****      i2c_state++;
+ 498              		.loc 1 158 6 is_stmt 1 view .LVU94
+ 499              		.loc 1 158 15 is_stmt 0 view .LVU95
+ 500 0008 064A     		ldr	r2, .L49+4
+ 501 000a 1368     		ldr	r3, [r2]
+ 502 000c 0133     		adds	r3, r3, #1
+ 503 000e 1360     		str	r3, [r2]
+ 159:BBBOOM/Src/ADS1015.c **** }
+ 504              		.loc 1 159 1 view .LVU96
+ 505 0010 08BD     		pop	{r3, pc}
+ 506              	.LVL29:
+ 507              	.L48:
+ 155:BBBOOM/Src/ADS1015.c ****         ADS1015_RX_BUF>>4;
+ 508              		.loc 1 155 9 is_stmt 1 view .LVU97
+ 509 0012 0223     		movs	r3, #2
+ 510 0014 044A     		ldr	r2, .L49+8
+ 511 0016 9021     		movs	r1, #144
+ 512 0018 0148     		ldr	r0, .L49
+ 513              	.LVL30:
+ 155:BBBOOM/Src/ADS1015.c ****         ADS1015_RX_BUF>>4;
+ 514              		.loc 1 155 9 is_stmt 0 view .LVU98
+ 515 001a FFF7FEFF 		bl	HAL_I2C_Master_Receive_IT
+ 516              	.LVL31:
+ 156:BBBOOM/Src/ADS1015.c ****     }
+ 517              		.loc 1 156 9 is_stmt 1 view .LVU99
+ 518 001e F3E7     		b	.L46
+ 519              	.L50:
+ 520              		.align	2
+ 521              	.L49:
+ 522 0020 00000000 		.word	hi2c2
+ 523 0024 00000000 		.word	i2c_state
+ 524 0028 00000000 		.word	ADS1015_RX_BUF
+ 525              		.cfi_endproc
+ 526              	.LFE71:
+ 528              		.global	ADS1015_RX_BUF
+ 529              		.section	.bss.ADS1015_RX_BUF,"aw",%nobits
+ 530              		.align	1
+ 533              	ADS1015_RX_BUF:
+ 534 0000 0000     		.space	2
+ 535              		.global	ADS1015_CONFIG
+ 536              		.section	.bss.ADS1015_CONFIG,"aw",%nobits
+ 537              		.align	1
+ 540              	ADS1015_CONFIG:
+ 541 0000 0000     		.space	2
+ 542              		.text
+ 543              	.Letext0:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 14
+
+
+ 544              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 545              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 546              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 547              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 548              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 549              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ 550              		.file 8 "Core/Inc/main.h"
+ 551              		.file 9 "Core/Inc/i2c.h"
+ 552              		.file 10 "BBBOOM/Inc/ADS1015.h"
+ 553              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ADS1015.c
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:19     .text.ADS1015_ReadOneByte:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:25     .text.ADS1015_ReadOneByte:0000000000000000 ADS1015_ReadOneByte
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:86     .text.ADS1015_ReadOneByte:0000000000000048 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:91     .text.ADS1015_WriteOneByte:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:97     .text.ADS1015_WriteOneByte:0000000000000000 ADS1015_WriteOneByte
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:141    .text.ADS1015_WriteOneByte:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:146    .text.ADS1015_Config:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:152    .text.ADS1015_Config:0000000000000000 ADS1015_Config
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:179    .text.ADS1015_Config:0000000000000018 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:183    .text.ADS1015_Config:000000000000001c $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:236    .text.ADS1015_Config:000000000000005c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:540    .bss.ADS1015_CONFIG:0000000000000000 ADS1015_CONFIG
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:241    .text.ADS1015_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:247    .text.ADS1015_Init:0000000000000000 ADS1015_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:274    .text.ADS1015_Read:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:280    .text.ADS1015_Read:0000000000000000 ADS1015_Read
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:321    .text.ADS1015_Read:0000000000000022 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:325    .text.ADS1015_Read:0000000000000026 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:406    .text.ADS1015_Read:0000000000000084 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:412    .text.AD1015_Check:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:418    .text.AD1015_Check:0000000000000000 AD1015_Check
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:467    .text.AD1015_Check:0000000000000028 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:472    .text.HAL_I2C_MasterRxCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:478    .text.HAL_I2C_MasterRxCpltCallback:0000000000000000 HAL_I2C_MasterRxCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:522    .text.HAL_I2C_MasterRxCpltCallback:0000000000000020 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:533    .bss.ADS1015_RX_BUF:0000000000000000 ADS1015_RX_BUF
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:530    .bss.ADS1015_RX_BUF:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjNhpLD.s:537    .bss.ADS1015_CONFIG:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_I2C_Master_Transmit
+HAL_I2C_Mem_Read
+hi2c2
+HAL_I2C_Mem_Write
+HAL_Delay
+HAL_I2C_Master_Receive_IT
+i2c_state

@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        },
+        {
+            "name": "arm-cmsis-c/cpp_use_makefile_win",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_HAL_DRIVER",
+                "STM32F407xx",
+                "ARM_MATH_CM4",
+                "ARM_MATH_MATRIX_CHECK",
+                "ARM_MATH_ROUNDING",
+                "ARM_MATH_LOOPUNROLL",
+                "DISABLEFLOAT16",
+                "USE_RTOS_FOR_UART"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-arm",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}
