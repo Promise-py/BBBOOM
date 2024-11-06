@@ -81,7 +81,7 @@ void MX_I2C2_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN I2C2_Init 2 */
-	__HAL_I2C_ENABLE_IT(&hi2c2, I2C_IT_EVT);//�?启I2C2空闲中断
+	__HAL_I2C_ENABLE_IT(&hi2c2, I2C_IT_EVT);//�??启I2C2空闲中断
   /* USER CODE END I2C2_Init 2 */
 
 }
@@ -190,7 +190,7 @@ void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_11);
 
     /* I2C2 interrupt Deinit */
-    // HAL_NVIC_DisableIRQ(I2C2_EV_IRQn);
+    HAL_NVIC_DisableIRQ(I2C2_EV_IRQn);
     HAL_NVIC_DisableIRQ(I2C2_ER_IRQn);
   /* USER CODE BEGIN I2C2_MspDeInit 1 */
 

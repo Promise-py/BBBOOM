@@ -1,0 +1,737 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"Battery.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "BBBOOM/Src/Battery.c"
+  18              		.global	__aeabi_ui2f
+  19              		.global	__aeabi_fmul
+  20              		.global	__aeabi_f2d
+  21              		.global	__aeabi_dmul
+  22              		.global	__aeabi_d2f
+  23              		.global	__aeabi_fcmpgt
+  24              		.global	__aeabi_fadd
+  25              		.section	.text.Battery_Init,"ax",%progbits
+  26              		.align	1
+  27              		.global	Battery_Init
+  28              		.syntax unified
+  29              		.thumb
+  30              		.thumb_func
+  32              	Battery_Init:
+  33              	.LVL0:
+  34              	.LFB65:
+   1:BBBOOM/Src/Battery.c **** 
+   2:BBBOOM/Src/Battery.c **** #include "Battery.h"
+   3:BBBOOM/Src/Battery.c **** #include "ADS1015.h"
+   4:BBBOOM/Src/Battery.c **** 
+   5:BBBOOM/Src/Battery.c **** BATTERY Battery[3];
+   6:BBBOOM/Src/Battery.c **** 
+   7:BBBOOM/Src/Battery.c **** void Battery_Init(BATTERY *battery,float alarm_voltage,float cut_off_voltage)
+   8:BBBOOM/Src/Battery.c **** {
+  35              		.loc 1 8 1 view -0
+  36              		.cfi_startproc
+  37              		@ args = 0, pretend = 0, frame = 32
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39              		.loc 1 8 1 is_stmt 0 view .LVU1
+  40 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  41              	.LCFI0:
+  42              		.cfi_def_cfa_offset 20
+  43              		.cfi_offset 4, -20
+  44              		.cfi_offset 5, -16
+  45              		.cfi_offset 6, -12
+  46              		.cfi_offset 7, -8
+  47              		.cfi_offset 14, -4
+  48 0002 89B0     		sub	sp, sp, #36
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 56
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 2
+
+
+  51 0004 0446     		mov	r4, r0
+   9:BBBOOM/Src/Battery.c ****     uint16_t ADC1_value[8];//IN 8-14
+  52              		.loc 1 9 5 is_stmt 1 view .LVU2
+  10:BBBOOM/Src/Battery.c ****     uint16_t ADC2_value[8];//IN 0-7
+  53              		.loc 1 10 5 view .LVU3
+  11:BBBOOM/Src/Battery.c ****     uint8_t i;
+  54              		.loc 1 11 5 view .LVU4
+  12:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 3; i++)
+  55              		.loc 1 12 5 view .LVU5
+  56              	.LVL1:
+  57              		.loc 1 12 13 is_stmt 0 view .LVU6
+  58 0006 0023     		movs	r3, #0
+  59              		.loc 1 12 5 view .LVU7
+  60 0008 03E0     		b	.L2
+  61              	.LVL2:
+  62              	.L3:
+  13:BBBOOM/Src/Battery.c ****     {
+  14:BBBOOM/Src/Battery.c ****         battery[0].Alarm_Voltage = alarm_voltage;
+  63              		.loc 1 14 9 is_stmt 1 discriminator 3 view .LVU8
+  64              		.loc 1 14 34 is_stmt 0 discriminator 3 view .LVU9
+  65 000a 2162     		str	r1, [r4, #32]	@ float
+  15:BBBOOM/Src/Battery.c ****         battery[0].CutOff_Voltage = cut_off_voltage;
+  66              		.loc 1 15 9 is_stmt 1 discriminator 3 view .LVU10
+  67              		.loc 1 15 35 is_stmt 0 discriminator 3 view .LVU11
+  68 000c 6262     		str	r2, [r4, #36]	@ float
+  12:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 3; i++)
+  69              		.loc 1 12 26 is_stmt 1 discriminator 3 view .LVU12
+  70 000e 0133     		adds	r3, r3, #1
+  71              	.LVL3:
+  12:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 3; i++)
+  72              		.loc 1 12 26 is_stmt 0 discriminator 3 view .LVU13
+  73 0010 DBB2     		uxtb	r3, r3
+  74              	.LVL4:
+  75              	.L2:
+  12:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 3; i++)
+  76              		.loc 1 12 20 is_stmt 1 discriminator 1 view .LVU14
+  77 0012 022B     		cmp	r3, #2
+  78 0014 F9D9     		bls	.L3
+  16:BBBOOM/Src/Battery.c ****     }
+  17:BBBOOM/Src/Battery.c ****     
+  18:BBBOOM/Src/Battery.c ****     for(i=0;i<8;i++)
+  79              		.loc 1 18 10 is_stmt 0 view .LVU15
+  80 0016 0025     		movs	r5, #0
+  81 0018 01E0     		b	.L4
+  82              	.LVL5:
+  83              	.L5:
+  84              		.loc 1 18 18 is_stmt 1 discriminator 2 view .LVU16
+  85 001a 0135     		adds	r5, r5, #1
+  86              	.LVL6:
+  87              		.loc 1 18 18 is_stmt 0 discriminator 2 view .LVU17
+  88 001c EDB2     		uxtb	r5, r5
+  89              	.LVL7:
+  90              	.L4:
+  91              		.loc 1 18 14 is_stmt 1 discriminator 1 view .LVU18
+  92 001e 072D     		cmp	r5, #7
+  93 0020 16D8     		bhi	.L26
+  19:BBBOOM/Src/Battery.c **** 	{
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 3
+
+
+  20:BBBOOM/Src/Battery.c ****         HAL_ADC_Start(&hadc1);//启动ADC转换，必须放在for循环中，否则只能采集第�
+  94              		.loc 1 20 9 view .LVU19
+  95 0022 AB4E     		ldr	r6, .L30+16
+  96 0024 3046     		mov	r0, r6
+  97 0026 FFF7FEFF 		bl	HAL_ADC_Start
+  98              	.LVL8:
+  21:BBBOOM/Src/Battery.c ****         HAL_ADC_PollForConversion(&hadc1,100); //用于轮询转换，是一个阻塞函数，等�
+  99              		.loc 1 21 9 view .LVU20
+ 100 002a 6421     		movs	r1, #100
+ 101 002c 3046     		mov	r0, r6
+ 102 002e FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 103              	.LVL9:
+  22:BBBOOM/Src/Battery.c ****         if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc1),HAL_ADC_STATE_REG_EOC)) //判断转换完成标�
+ 104              		.loc 1 22 9 view .LVU21
+ 105              		.loc 1 22 12 is_stmt 0 view .LVU22
+ 106 0032 3046     		mov	r0, r6
+ 107 0034 FFF7FEFF 		bl	HAL_ADC_GetState
+ 108              	.LVL10:
+ 109              		.loc 1 22 11 view .LVU23
+ 110 0038 10F4007F 		tst	r0, #512
+ 111 003c EDD0     		beq	.L5
+  23:BBBOOM/Src/Battery.c ****         ADC1_value[i]=HAL_ADC_GetValue(&hadc1); //开始读ADC的值
+ 112              		.loc 1 23 9 is_stmt 1 view .LVU24
+ 113              		.loc 1 23 23 is_stmt 0 view .LVU25
+ 114 003e 3046     		mov	r0, r6
+ 115 0040 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 116              	.LVL11:
+ 117              		.loc 1 23 22 view .LVU26
+ 118 0044 08AB     		add	r3, sp, #32
+ 119 0046 03EB4503 		add	r3, r3, r5, lsl #1
+ 120 004a 23F8100C 		strh	r0, [r3, #-16]	@ movhi
+ 121 004e E4E7     		b	.L5
+ 122              	.L26:
+  24:BBBOOM/Src/Battery.c **** 	}
+  25:BBBOOM/Src/Battery.c **** 
+  26:BBBOOM/Src/Battery.c ****     for(i=0;i<8;i++)
+ 123              		.loc 1 26 10 view .LVU27
+ 124 0050 0025     		movs	r5, #0
+ 125              	.LVL12:
+ 126              		.loc 1 26 10 view .LVU28
+ 127 0052 01E0     		b	.L7
+ 128              	.LVL13:
+ 129              	.L8:
+ 130              		.loc 1 26 18 is_stmt 1 discriminator 2 view .LVU29
+ 131 0054 0135     		adds	r5, r5, #1
+ 132              	.LVL14:
+ 133              		.loc 1 26 18 is_stmt 0 discriminator 2 view .LVU30
+ 134 0056 EDB2     		uxtb	r5, r5
+ 135              	.LVL15:
+ 136              	.L7:
+ 137              		.loc 1 26 14 is_stmt 1 discriminator 1 view .LVU31
+ 138 0058 072D     		cmp	r5, #7
+ 139 005a 16D8     		bhi	.L27
+  27:BBBOOM/Src/Battery.c **** 	{
+  28:BBBOOM/Src/Battery.c ****         HAL_ADC_Start(&hadc2);//启动ADC转换，必须放在for循环中，否则只能采集第�
+ 140              		.loc 1 28 9 view .LVU32
+ 141 005c 9D4E     		ldr	r6, .L30+20
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 4
+
+
+ 142 005e 3046     		mov	r0, r6
+ 143 0060 FFF7FEFF 		bl	HAL_ADC_Start
+ 144              	.LVL16:
+  29:BBBOOM/Src/Battery.c ****         HAL_ADC_PollForConversion(&hadc2,100); //用于轮询转换，是一个阻塞函数，等�
+ 145              		.loc 1 29 9 view .LVU33
+ 146 0064 6421     		movs	r1, #100
+ 147 0066 3046     		mov	r0, r6
+ 148 0068 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 149              	.LVL17:
+  30:BBBOOM/Src/Battery.c ****         if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc2),HAL_ADC_STATE_REG_EOC)) //判断转换完成标�
+ 150              		.loc 1 30 9 view .LVU34
+ 151              		.loc 1 30 12 is_stmt 0 view .LVU35
+ 152 006c 3046     		mov	r0, r6
+ 153 006e FFF7FEFF 		bl	HAL_ADC_GetState
+ 154              	.LVL18:
+ 155              		.loc 1 30 11 view .LVU36
+ 156 0072 10F4007F 		tst	r0, #512
+ 157 0076 EDD0     		beq	.L8
+  31:BBBOOM/Src/Battery.c ****         ADC2_value[i]=HAL_ADC_GetValue(&hadc2); //开始读ADC的值
+ 158              		.loc 1 31 9 is_stmt 1 view .LVU37
+ 159              		.loc 1 31 23 is_stmt 0 view .LVU38
+ 160 0078 3046     		mov	r0, r6
+ 161 007a FFF7FEFF 		bl	HAL_ADC_GetValue
+ 162              	.LVL19:
+ 163              		.loc 1 31 22 view .LVU39
+ 164 007e 08AB     		add	r3, sp, #32
+ 165 0080 03EB4503 		add	r3, r3, r5, lsl #1
+ 166 0084 23F8200C 		strh	r0, [r3, #-32]	@ movhi
+ 167 0088 E4E7     		b	.L8
+ 168              	.L27:
+  32:BBBOOM/Src/Battery.c **** 	}
+  33:BBBOOM/Src/Battery.c **** 
+  34:BBBOOM/Src/Battery.c ****     //一号电池电芯电压录入
+  35:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 4; i++)
+ 169              		.loc 1 35 13 view .LVU40
+ 170 008a 0025     		movs	r5, #0
+ 171              	.LVL20:
+ 172              	.L10:
+ 173              		.loc 1 35 20 is_stmt 1 discriminator 1 view .LVU41
+ 174 008c 032D     		cmp	r5, #3
+ 175 008e 1FD8     		bhi	.L28
+  36:BBBOOM/Src/Battery.c ****     {
+  37:BBBOOM/Src/Battery.c ****         battery[0].Cells_Voltage[i] = (float)ADC1_value[2+i]/4096*3.3*Resistance;
+ 176              		.loc 1 37 9 discriminator 3 view .LVU42
+ 177              		.loc 1 37 58 is_stmt 0 discriminator 3 view .LVU43
+ 178 0090 AB1C     		adds	r3, r5, #2
+ 179              		.loc 1 37 56 discriminator 3 view .LVU44
+ 180 0092 08AA     		add	r2, sp, #32
+ 181 0094 02EB4303 		add	r3, r2, r3, lsl #1
+ 182              		.loc 1 37 39 discriminator 3 view .LVU45
+ 183 0098 33F8100C 		ldrh	r0, [r3, #-16]
+ 184 009c FFF7FEFF 		bl	__aeabi_ui2f
+ 185              	.LVL21:
+ 186              		.loc 1 37 61 discriminator 3 view .LVU46
+ 187 00a0 4FF06651 		mov	r1, #964689920
+ 188 00a4 FFF7FEFF 		bl	__aeabi_fmul
+ 189              	.LVL22:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 5
+
+
+ 190 00a8 FFF7FEFF 		bl	__aeabi_f2d
+ 191              	.LVL23:
+ 192              		.loc 1 37 66 discriminator 3 view .LVU47
+ 193 00ac 84A3     		adr	r3, .L30
+ 194 00ae D3E90023 		ldrd	r2, [r3]
+ 195 00b2 FFF7FEFF 		bl	__aeabi_dmul
+ 196              	.LVL24:
+ 197              		.loc 1 37 70 discriminator 3 view .LVU48
+ 198 00b6 84A3     		adr	r3, .L30+8
+ 199 00b8 D3E90023 		ldrd	r2, [r3]
+ 200 00bc FFF7FEFF 		bl	__aeabi_dmul
+ 201              	.LVL25:
+ 202 00c0 FFF7FEFF 		bl	__aeabi_d2f
+ 203              	.LVL26:
+ 204              		.loc 1 37 37 discriminator 3 view .LVU49
+ 205 00c4 04EB8503 		add	r3, r4, r5, lsl #2
+ 206 00c8 5860     		str	r0, [r3, #4]	@ float
+  35:BBBOOM/Src/Battery.c ****     {
+ 207              		.loc 1 35 26 is_stmt 1 discriminator 3 view .LVU50
+ 208 00ca 0135     		adds	r5, r5, #1
+ 209              	.LVL27:
+  35:BBBOOM/Src/Battery.c ****     {
+ 210              		.loc 1 35 26 is_stmt 0 discriminator 3 view .LVU51
+ 211 00cc EDB2     		uxtb	r5, r5
+ 212              	.LVL28:
+  35:BBBOOM/Src/Battery.c ****     {
+ 213              		.loc 1 35 26 discriminator 3 view .LVU52
+ 214 00ce DDE7     		b	.L10
+ 215              	.L28:
+  38:BBBOOM/Src/Battery.c ****     }
+  39:BBBOOM/Src/Battery.c ****     battery[0].Cells_Voltage[4] = (float)ADC2_value[0]/4096*3.3*Resistance;
+ 216              		.loc 1 39 5 is_stmt 1 view .LVU53
+ 217              		.loc 1 39 35 is_stmt 0 view .LVU54
+ 218 00d0 BDF80000 		ldrh	r0, [sp]
+ 219 00d4 FFF7FEFF 		bl	__aeabi_ui2f
+ 220              	.LVL29:
+ 221              		.loc 1 39 55 view .LVU55
+ 222 00d8 4FF06651 		mov	r1, #964689920
+ 223 00dc FFF7FEFF 		bl	__aeabi_fmul
+ 224              	.LVL30:
+ 225 00e0 FFF7FEFF 		bl	__aeabi_f2d
+ 226              	.LVL31:
+ 227              		.loc 1 39 60 view .LVU56
+ 228 00e4 76A3     		adr	r3, .L30
+ 229 00e6 D3E90023 		ldrd	r2, [r3]
+ 230 00ea FFF7FEFF 		bl	__aeabi_dmul
+ 231              	.LVL32:
+ 232              		.loc 1 39 64 view .LVU57
+ 233 00ee 76A3     		adr	r3, .L30+8
+ 234 00f0 D3E90023 		ldrd	r2, [r3]
+ 235 00f4 FFF7FEFF 		bl	__aeabi_dmul
+ 236              	.LVL33:
+ 237 00f8 FFF7FEFF 		bl	__aeabi_d2f
+ 238              	.LVL34:
+ 239              		.loc 1 39 33 view .LVU58
+ 240 00fc 6061     		str	r0, [r4, #20]	@ float
+  40:BBBOOM/Src/Battery.c ****     battery[0].Cells_Voltage[5] = (float)ADC2_value[1]/4096*3.3*Resistance;
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 6
+
+
+ 241              		.loc 1 40 5 is_stmt 1 view .LVU59
+ 242              		.loc 1 40 35 is_stmt 0 view .LVU60
+ 243 00fe BDF80200 		ldrh	r0, [sp, #2]
+ 244 0102 FFF7FEFF 		bl	__aeabi_ui2f
+ 245              	.LVL35:
+ 246              		.loc 1 40 55 view .LVU61
+ 247 0106 4FF06651 		mov	r1, #964689920
+ 248 010a FFF7FEFF 		bl	__aeabi_fmul
+ 249              	.LVL36:
+ 250 010e FFF7FEFF 		bl	__aeabi_f2d
+ 251              	.LVL37:
+ 252              		.loc 1 40 60 view .LVU62
+ 253 0112 6BA3     		adr	r3, .L30
+ 254 0114 D3E90023 		ldrd	r2, [r3]
+ 255 0118 FFF7FEFF 		bl	__aeabi_dmul
+ 256              	.LVL38:
+ 257              		.loc 1 40 64 view .LVU63
+ 258 011c 6AA3     		adr	r3, .L30+8
+ 259 011e D3E90023 		ldrd	r2, [r3]
+ 260 0122 FFF7FEFF 		bl	__aeabi_dmul
+ 261              	.LVL39:
+ 262 0126 FFF7FEFF 		bl	__aeabi_d2f
+ 263              	.LVL40:
+ 264              		.loc 1 40 33 view .LVU64
+ 265 012a A061     		str	r0, [r4, #24]	@ float
+  41:BBBOOM/Src/Battery.c ****     
+  42:BBBOOM/Src/Battery.c **** 
+  43:BBBOOM/Src/Battery.c ****     //二号电池电芯电压录入
+  44:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 6; i++)
+ 266              		.loc 1 44 5 is_stmt 1 view .LVU65
+ 267              	.LVL41:
+ 268              		.loc 1 44 13 is_stmt 0 view .LVU66
+ 269 012c 0025     		movs	r5, #0
+ 270              		.loc 1 44 5 view .LVU67
+ 271 012e 1EE0     		b	.L12
+ 272              	.LVL42:
+ 273              	.L13:
+  45:BBBOOM/Src/Battery.c ****     {
+  46:BBBOOM/Src/Battery.c ****         battery[1].Cells_Voltage[i] = (float)ADC2_value[2+i]/4096*3.3*Resistance;
+ 274              		.loc 1 46 9 is_stmt 1 discriminator 3 view .LVU68
+ 275              		.loc 1 46 58 is_stmt 0 discriminator 3 view .LVU69
+ 276 0130 AB1C     		adds	r3, r5, #2
+ 277              		.loc 1 46 56 discriminator 3 view .LVU70
+ 278 0132 08AA     		add	r2, sp, #32
+ 279 0134 02EB4303 		add	r3, r2, r3, lsl #1
+ 280              		.loc 1 46 39 discriminator 3 view .LVU71
+ 281 0138 33F8200C 		ldrh	r0, [r3, #-32]
+ 282 013c FFF7FEFF 		bl	__aeabi_ui2f
+ 283              	.LVL43:
+ 284              		.loc 1 46 61 discriminator 3 view .LVU72
+ 285 0140 4FF06651 		mov	r1, #964689920
+ 286 0144 FFF7FEFF 		bl	__aeabi_fmul
+ 287              	.LVL44:
+ 288 0148 FFF7FEFF 		bl	__aeabi_f2d
+ 289              	.LVL45:
+ 290              		.loc 1 46 66 discriminator 3 view .LVU73
+ 291 014c 5CA3     		adr	r3, .L30
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 7
+
+
+ 292 014e D3E90023 		ldrd	r2, [r3]
+ 293 0152 FFF7FEFF 		bl	__aeabi_dmul
+ 294              	.LVL46:
+ 295              		.loc 1 46 70 discriminator 3 view .LVU74
+ 296 0156 5CA3     		adr	r3, .L30+8
+ 297 0158 D3E90023 		ldrd	r2, [r3]
+ 298 015c FFF7FEFF 		bl	__aeabi_dmul
+ 299              	.LVL47:
+ 300 0160 FFF7FEFF 		bl	__aeabi_d2f
+ 301              	.LVL48:
+ 302              		.loc 1 46 37 discriminator 3 view .LVU75
+ 303 0164 04EB8503 		add	r3, r4, r5, lsl #2
+ 304 0168 D862     		str	r0, [r3, #44]	@ float
+  44:BBBOOM/Src/Battery.c ****     {
+ 305              		.loc 1 44 26 is_stmt 1 discriminator 3 view .LVU76
+ 306 016a 0135     		adds	r5, r5, #1
+ 307              	.LVL49:
+  44:BBBOOM/Src/Battery.c ****     {
+ 308              		.loc 1 44 26 is_stmt 0 discriminator 3 view .LVU77
+ 309 016c EDB2     		uxtb	r5, r5
+ 310              	.LVL50:
+ 311              	.L12:
+  44:BBBOOM/Src/Battery.c ****     {
+ 312              		.loc 1 44 20 is_stmt 1 discriminator 1 view .LVU78
+ 313 016e 052D     		cmp	r5, #5
+ 314 0170 DED9     		bls	.L13
+  47:BBBOOM/Src/Battery.c ****     }
+  48:BBBOOM/Src/Battery.c **** 
+  49:BBBOOM/Src/Battery.c ****     //三号电池电芯电压录入
+  50:BBBOOM/Src/Battery.c ****     battery[2].Cells_Voltage[0] = (float)ADC1_value[6]/4096*3.3*Resistance;
+ 315              		.loc 1 50 5 view .LVU79
+ 316              		.loc 1 50 35 is_stmt 0 view .LVU80
+ 317 0172 BDF81C00 		ldrh	r0, [sp, #28]
+ 318 0176 FFF7FEFF 		bl	__aeabi_ui2f
+ 319              	.LVL51:
+ 320              		.loc 1 50 55 view .LVU81
+ 321 017a 4FF06651 		mov	r1, #964689920
+ 322 017e FFF7FEFF 		bl	__aeabi_fmul
+ 323              	.LVL52:
+ 324 0182 FFF7FEFF 		bl	__aeabi_f2d
+ 325              	.LVL53:
+ 326              		.loc 1 50 60 view .LVU82
+ 327 0186 4EA3     		adr	r3, .L30
+ 328 0188 D3E90023 		ldrd	r2, [r3]
+ 329 018c FFF7FEFF 		bl	__aeabi_dmul
+ 330              	.LVL54:
+ 331              		.loc 1 50 64 view .LVU83
+ 332 0190 4DA3     		adr	r3, .L30+8
+ 333 0192 D3E90023 		ldrd	r2, [r3]
+ 334 0196 FFF7FEFF 		bl	__aeabi_dmul
+ 335              	.LVL55:
+ 336 019a FFF7FEFF 		bl	__aeabi_d2f
+ 337              	.LVL56:
+ 338              		.loc 1 50 33 view .LVU84
+ 339 019e 6065     		str	r0, [r4, #84]	@ float
+  51:BBBOOM/Src/Battery.c ****     battery[2].Cells_Voltage[1] = (float)ADC1_value[7]/4096*3.3*Resistance;
+ 340              		.loc 1 51 5 is_stmt 1 view .LVU85
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 8
+
+
+ 341              		.loc 1 51 35 is_stmt 0 view .LVU86
+ 342 01a0 BDF81E00 		ldrh	r0, [sp, #30]
+ 343 01a4 FFF7FEFF 		bl	__aeabi_ui2f
+ 344              	.LVL57:
+ 345              		.loc 1 51 55 view .LVU87
+ 346 01a8 4FF06651 		mov	r1, #964689920
+ 347 01ac FFF7FEFF 		bl	__aeabi_fmul
+ 348              	.LVL58:
+ 349 01b0 FFF7FEFF 		bl	__aeabi_f2d
+ 350              	.LVL59:
+ 351              		.loc 1 51 60 view .LVU88
+ 352 01b4 42A3     		adr	r3, .L30
+ 353 01b6 D3E90023 		ldrd	r2, [r3]
+ 354 01ba FFF7FEFF 		bl	__aeabi_dmul
+ 355              	.LVL60:
+ 356              		.loc 1 51 64 view .LVU89
+ 357 01be 42A3     		adr	r3, .L30+8
+ 358 01c0 D3E90023 		ldrd	r2, [r3]
+ 359 01c4 FFF7FEFF 		bl	__aeabi_dmul
+ 360              	.LVL61:
+ 361 01c8 FFF7FEFF 		bl	__aeabi_d2f
+ 362              	.LVL62:
+ 363              		.loc 1 51 33 view .LVU90
+ 364 01cc A065     		str	r0, [r4, #88]	@ float
+  52:BBBOOM/Src/Battery.c ****     battery[2].Cells_Voltage[2] = (float)ADC1_value[0]/4096*3.3*Resistance;
+ 365              		.loc 1 52 5 is_stmt 1 view .LVU91
+ 366              		.loc 1 52 35 is_stmt 0 view .LVU92
+ 367 01ce BDF81000 		ldrh	r0, [sp, #16]
+ 368 01d2 FFF7FEFF 		bl	__aeabi_ui2f
+ 369              	.LVL63:
+ 370              		.loc 1 52 55 view .LVU93
+ 371 01d6 4FF06651 		mov	r1, #964689920
+ 372 01da FFF7FEFF 		bl	__aeabi_fmul
+ 373              	.LVL64:
+ 374 01de FFF7FEFF 		bl	__aeabi_f2d
+ 375              	.LVL65:
+ 376              		.loc 1 52 60 view .LVU94
+ 377 01e2 37A3     		adr	r3, .L30
+ 378 01e4 D3E90023 		ldrd	r2, [r3]
+ 379 01e8 FFF7FEFF 		bl	__aeabi_dmul
+ 380              	.LVL66:
+ 381              		.loc 1 52 64 view .LVU95
+ 382 01ec 36A3     		adr	r3, .L30+8
+ 383 01ee D3E90023 		ldrd	r2, [r3]
+ 384 01f2 FFF7FEFF 		bl	__aeabi_dmul
+ 385              	.LVL67:
+ 386 01f6 FFF7FEFF 		bl	__aeabi_d2f
+ 387              	.LVL68:
+ 388              		.loc 1 52 33 view .LVU96
+ 389 01fa E065     		str	r0, [r4, #92]	@ float
+  53:BBBOOM/Src/Battery.c ****     battery[2].Cells_Voltage[3] = (float)ADC1_value[1]/4096*3.3*Resistance;
+ 390              		.loc 1 53 5 is_stmt 1 view .LVU97
+ 391              		.loc 1 53 35 is_stmt 0 view .LVU98
+ 392 01fc BDF81200 		ldrh	r0, [sp, #18]
+ 393 0200 FFF7FEFF 		bl	__aeabi_ui2f
+ 394              	.LVL69:
+ 395              		.loc 1 53 55 view .LVU99
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 9
+
+
+ 396 0204 4FF06651 		mov	r1, #964689920
+ 397 0208 FFF7FEFF 		bl	__aeabi_fmul
+ 398              	.LVL70:
+ 399 020c FFF7FEFF 		bl	__aeabi_f2d
+ 400              	.LVL71:
+ 401              		.loc 1 53 60 view .LVU100
+ 402 0210 2BA3     		adr	r3, .L30
+ 403 0212 D3E90023 		ldrd	r2, [r3]
+ 404 0216 FFF7FEFF 		bl	__aeabi_dmul
+ 405              	.LVL72:
+ 406              		.loc 1 53 64 view .LVU101
+ 407 021a 2BA3     		adr	r3, .L30+8
+ 408 021c D3E90023 		ldrd	r2, [r3]
+ 409 0220 FFF7FEFF 		bl	__aeabi_dmul
+ 410              	.LVL73:
+ 411 0224 FFF7FEFF 		bl	__aeabi_d2f
+ 412              	.LVL74:
+ 413              		.loc 1 53 33 view .LVU102
+ 414 0228 2066     		str	r0, [r4, #96]	@ float
+  54:BBBOOM/Src/Battery.c **** 
+  55:BBBOOM/Src/Battery.c ****     battery[2].Cells_Voltage[4] = ADS1015_Read(0);
+ 415              		.loc 1 55 5 is_stmt 1 view .LVU103
+ 416              		.loc 1 55 35 is_stmt 0 view .LVU104
+ 417 022a 0020     		movs	r0, #0
+ 418 022c FFF7FEFF 		bl	ADS1015_Read
+ 419              	.LVL75:
+ 420              		.loc 1 55 33 view .LVU105
+ 421 0230 FFF7FEFF 		bl	__aeabi_ui2f
+ 422              	.LVL76:
+ 423 0234 6066     		str	r0, [r4, #100]	@ float
+  56:BBBOOM/Src/Battery.c ****     battery[2].Cells_Voltage[5] = ADS1015_Read(2);
+ 424              		.loc 1 56 5 is_stmt 1 view .LVU106
+ 425              		.loc 1 56 35 is_stmt 0 view .LVU107
+ 426 0236 0220     		movs	r0, #2
+ 427 0238 FFF7FEFF 		bl	ADS1015_Read
+ 428              	.LVL77:
+ 429              		.loc 1 56 33 view .LVU108
+ 430 023c FFF7FEFF 		bl	__aeabi_ui2f
+ 431              	.LVL78:
+ 432 0240 A066     		str	r0, [r4, #104]	@ float
+  57:BBBOOM/Src/Battery.c **** 
+  58:BBBOOM/Src/Battery.c ****     //电池总电压&电芯节数录入
+  59:BBBOOM/Src/Battery.c ****     for ( i = 0; i < 6; i++)
+ 433              		.loc 1 59 5 is_stmt 1 view .LVU109
+ 434              	.LVL79:
+ 435              		.loc 1 59 13 is_stmt 0 view .LVU110
+ 436 0242 0025     		movs	r5, #0
+ 437              		.loc 1 59 5 view .LVU111
+ 438 0244 01E0     		b	.L14
+ 439              	.LVL80:
+ 440              	.L19:
+ 441              		.loc 1 59 26 is_stmt 1 discriminator 2 view .LVU112
+ 442 0246 0135     		adds	r5, r5, #1
+ 443              	.LVL81:
+ 444              		.loc 1 59 26 is_stmt 0 discriminator 2 view .LVU113
+ 445 0248 EDB2     		uxtb	r5, r5
+ 446              	.LVL82:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 10
+
+
+ 447              	.L14:
+ 448              		.loc 1 59 20 is_stmt 1 discriminator 1 view .LVU114
+ 449 024a 052D     		cmp	r5, #5
+ 450 024c 36D8     		bhi	.L29
+  60:BBBOOM/Src/Battery.c ****     {
+  61:BBBOOM/Src/Battery.c ****         if(battery[0].Cells_Voltage[i]>1)
+ 451              		.loc 1 61 9 view .LVU115
+ 452              		.loc 1 61 36 is_stmt 0 view .LVU116
+ 453 024e 2E46     		mov	r6, r5
+ 454 0250 04EB8503 		add	r3, r4, r5, lsl #2
+ 455 0254 5F68     		ldr	r7, [r3, #4]	@ float
+ 456              		.loc 1 61 11 view .LVU117
+ 457 0256 4FF07E51 		mov	r1, #1065353216
+ 458 025a 3846     		mov	r0, r7
+ 459 025c FFF7FEFF 		bl	__aeabi_fcmpgt
+ 460              	.LVL83:
+ 461 0260 38B1     		cbz	r0, .L15
+  62:BBBOOM/Src/Battery.c ****         {
+  63:BBBOOM/Src/Battery.c ****             battery[0].Battery_Voltage += battery[0].Cells_Voltage[i];
+ 462              		.loc 1 63 13 is_stmt 1 view .LVU118
+ 463              		.loc 1 63 40 is_stmt 0 view .LVU119
+ 464 0262 E169     		ldr	r1, [r4, #28]	@ float
+ 465 0264 3846     		mov	r0, r7
+ 466 0266 FFF7FEFF 		bl	__aeabi_fadd
+ 467              	.LVL84:
+ 468 026a E061     		str	r0, [r4, #28]	@ float
+  64:BBBOOM/Src/Battery.c ****             battery[0].Cells_Num++;
+ 469              		.loc 1 64 13 is_stmt 1 view .LVU120
+ 470              		.loc 1 64 23 is_stmt 0 view .LVU121
+ 471 026c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 472              		.loc 1 64 33 view .LVU122
+ 473 026e 0133     		adds	r3, r3, #1
+ 474 0270 2370     		strb	r3, [r4]
+ 475              	.L15:
+  65:BBBOOM/Src/Battery.c ****         }
+  66:BBBOOM/Src/Battery.c **** 
+  67:BBBOOM/Src/Battery.c ****         if(battery[1].Cells_Voltage[i]>1)
+ 476              		.loc 1 67 9 is_stmt 1 view .LVU123
+ 477              		.loc 1 67 36 is_stmt 0 view .LVU124
+ 478 0272 04EB8606 		add	r6, r4, r6, lsl #2
+ 479 0276 F66A     		ldr	r6, [r6, #44]	@ float
+ 480              		.loc 1 67 11 view .LVU125
+ 481 0278 4FF07E51 		mov	r1, #1065353216
+ 482 027c 3046     		mov	r0, r6
+ 483 027e FFF7FEFF 		bl	__aeabi_fcmpgt
+ 484              	.LVL85:
+ 485 0282 48B1     		cbz	r0, .L17
+  68:BBBOOM/Src/Battery.c ****         {
+  69:BBBOOM/Src/Battery.c ****             battery[1].Battery_Voltage += battery[1].Cells_Voltage[i];
+ 486              		.loc 1 69 13 is_stmt 1 view .LVU126
+ 487              		.loc 1 69 40 is_stmt 0 view .LVU127
+ 488 0284 616C     		ldr	r1, [r4, #68]	@ float
+ 489 0286 3046     		mov	r0, r6
+ 490 0288 FFF7FEFF 		bl	__aeabi_fadd
+ 491              	.LVL86:
+ 492 028c 6064     		str	r0, [r4, #68]	@ float
+  70:BBBOOM/Src/Battery.c ****             battery[1].Cells_Num++;
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 11
+
+
+ 493              		.loc 1 70 13 is_stmt 1 view .LVU128
+ 494              		.loc 1 70 23 is_stmt 0 view .LVU129
+ 495 028e 94F82830 		ldrb	r3, [r4, #40]	@ zero_extendqisi2
+ 496              		.loc 1 70 33 view .LVU130
+ 497 0292 0133     		adds	r3, r3, #1
+ 498 0294 84F82830 		strb	r3, [r4, #40]
+ 499              	.L17:
+  71:BBBOOM/Src/Battery.c ****         }
+  72:BBBOOM/Src/Battery.c **** 
+  73:BBBOOM/Src/Battery.c ****         if(battery[1].Cells_Voltage[i]>1)
+ 500              		.loc 1 73 9 is_stmt 1 view .LVU131
+ 501              		.loc 1 73 11 is_stmt 0 view .LVU132
+ 502 0298 4FF07E51 		mov	r1, #1065353216
+ 503 029c 3046     		mov	r0, r6
+ 504 029e FFF7FEFF 		bl	__aeabi_fcmpgt
+ 505              	.LVL87:
+ 506 02a2 0028     		cmp	r0, #0
+ 507 02a4 CFD0     		beq	.L19
+  74:BBBOOM/Src/Battery.c ****         {
+  75:BBBOOM/Src/Battery.c ****             battery[1].Battery_Voltage += battery[1].Cells_Voltage[i];
+ 508              		.loc 1 75 13 is_stmt 1 view .LVU133
+ 509              		.loc 1 75 40 is_stmt 0 view .LVU134
+ 510 02a6 616C     		ldr	r1, [r4, #68]	@ float
+ 511 02a8 3046     		mov	r0, r6
+ 512 02aa FFF7FEFF 		bl	__aeabi_fadd
+ 513              	.LVL88:
+ 514 02ae 6064     		str	r0, [r4, #68]	@ float
+  76:BBBOOM/Src/Battery.c ****             battery[1].Cells_Num++;
+ 515              		.loc 1 76 13 is_stmt 1 view .LVU135
+ 516              		.loc 1 76 23 is_stmt 0 view .LVU136
+ 517 02b0 94F82830 		ldrb	r3, [r4, #40]	@ zero_extendqisi2
+ 518              		.loc 1 76 33 view .LVU137
+ 519 02b4 0133     		adds	r3, r3, #1
+ 520 02b6 84F82830 		strb	r3, [r4, #40]
+ 521 02ba C4E7     		b	.L19
+ 522              	.L29:
+  77:BBBOOM/Src/Battery.c ****         }
+  78:BBBOOM/Src/Battery.c ****     }
+  79:BBBOOM/Src/Battery.c ****     
+  80:BBBOOM/Src/Battery.c **** }
+ 523              		.loc 1 80 1 view .LVU138
+ 524 02bc 09B0     		add	sp, sp, #36
+ 525              	.LCFI2:
+ 526              		.cfi_def_cfa_offset 20
+ 527              		@ sp needed
+ 528 02be F0BD     		pop	{r4, r5, r6, r7, pc}
+ 529              	.LVL89:
+ 530              	.L31:
+ 531              		.loc 1 80 1 view .LVU139
+ 532              		.align	3
+ 533              	.L30:
+ 534 02c0 66666666 		.word	1717986918
+ 535 02c4 66660A40 		.word	1074423398
+ 536 02c8 CDCCCCCC 		.word	-858993459
+ 537 02cc CCCC1240 		.word	1074973900
+ 538 02d0 00000000 		.word	hadc1
+ 539 02d4 00000000 		.word	hadc2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 12
+
+
+ 540              		.cfi_endproc
+ 541              	.LFE65:
+ 543              		.section	.text.Battery_Read,"ax",%progbits
+ 544              		.align	1
+ 545              		.global	Battery_Read
+ 546              		.syntax unified
+ 547              		.thumb
+ 548              		.thumb_func
+ 550              	Battery_Read:
+ 551              	.LVL90:
+ 552              	.LFB66:
+  81:BBBOOM/Src/Battery.c **** 
+  82:BBBOOM/Src/Battery.c **** void Battery_Read(BATTERY *battery)
+  83:BBBOOM/Src/Battery.c **** {
+ 553              		.loc 1 83 1 is_stmt 1 view -0
+ 554              		.cfi_startproc
+ 555              		@ args = 0, pretend = 0, frame = 0
+ 556              		@ frame_needed = 0, uses_anonymous_args = 0
+ 557              		@ link register save eliminated.
+  84:BBBOOM/Src/Battery.c **** 
+  85:BBBOOM/Src/Battery.c **** }
+ 558              		.loc 1 85 1 view .LVU141
+ 559 0000 7047     		bx	lr
+ 560              		.cfi_endproc
+ 561              	.LFE66:
+ 563              		.global	Battery
+ 564              		.section	.bss.Battery,"aw",%nobits
+ 565              		.align	2
+ 568              	Battery:
+ 569 0000 00000000 		.space	120
+ 569      00000000 
+ 569      00000000 
+ 569      00000000 
+ 569      00000000 
+ 570              		.text
+ 571              	.Letext0:
+ 572              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 573              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 574              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 575              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 576              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 577              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 578              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 579              		.file 9 "Core/Inc/adc.h"
+ 580              		.file 10 "BBBOOM/Inc/Battery.h"
+ 581              		.file 11 "BBBOOM/Inc/ADS1015.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Battery.c
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:26     .text.Battery_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:32     .text.Battery_Init:0000000000000000 Battery_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:534    .text.Battery_Init:00000000000002c0 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:544    .text.Battery_Read:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:550    .text.Battery_Read:0000000000000000 Battery_Read
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:568    .bss.Battery:0000000000000000 Battery
+C:\Users\Lenovo\AppData\Local\Temp\ccGPlLc6.s:565    .bss.Battery:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+__aeabi_ui2f
+__aeabi_fmul
+__aeabi_f2d
+__aeabi_dmul
+__aeabi_d2f
+__aeabi_fcmpgt
+__aeabi_fadd
+HAL_ADC_Start
+HAL_ADC_PollForConversion
+HAL_ADC_GetState
+HAL_ADC_GetValue
+ADS1015_Read
+hadc1
+hadc2
