@@ -33,11 +33,6 @@ void OLED_DisplayTurn(u8 i)
 		}
 }
 
-
-
-
-
-
 //等待信号响应
 void I2C_WaitAck(void) //测数据信号的电平
 {
@@ -393,14 +388,7 @@ void OLED_ShowPicture(u8 x,u8 y,u8 sizex,u8 sizey,u8 BMP[],u8 mode)
 	 }
 }
 
-void OLED_ShowRUAGH(void)
-{
-  OLED_Init();
-  OLED_ColorTurn(0);
-  OLED_DisplayTurn(0);
-  OLED_ShowPicture(32,0,64,64,RUAGH,1);
-  OLED_Refresh();
-}
+
 
 //OLED的初始化
 void OLED_Init(void)

@@ -5,7 +5,10 @@
         "stdint.h": "c",
         "ads1015.h": "c",
         "stm32f1xx_hal.h": "c",
-        "i2c.h": "c"
+        "i2c.h": "c",
+        "oledfont.h": "c",
+        "ui.h": "c",
+        "battery.h": "c"
     },
     "Codegeex.RepoIndex": true,
     "C_Cpp.default.compilerPath": "D:\\msys64\\mingw64\\bin\\arm-none-eabi-gcc.exe"
