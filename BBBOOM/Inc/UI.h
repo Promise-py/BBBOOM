@@ -13,6 +13,6 @@ typedef struct UI_STATE
 }UI_STATE;
 
 extern char ch1[];
-void OLED_ShowRUAGH(void);
-void Show_Normal_UI(BATTERY *battery, uint8_t CHx, uint8_t xS, float alaV,float cutV);
+void UI_ShowRUAGH(void);
+void UI_Normal(BATTERY *battery, uint8_t CHx, uint8_t xS, float cell_v, float alaV,float cutV);
 #endif

@@ -70,7 +70,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -97,13 +97,12 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
   // OLED_Init();
-  // OLED_ShowRUAGH();
   ADS1015_Init();
 
   HAL_Delay(10);
-  HAL_ADCEx_Calibration_Start(&hadc1);
+  HAL_ADCEx_Calibration_Start(&hadc1);//adc1校准
   HAL_Delay(10);
-  HAL_ADCEx_Calibration_Start(&hadc2);
+  HAL_ADCEx_Calibration_Start(&hadc2);//adc2校准
 
   Battery_Init(Battery,3.8,3.7);
   // Show_Normal_UI(Battery,1,1,1,1); 

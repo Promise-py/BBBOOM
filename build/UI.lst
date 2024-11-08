@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -18,13 +18,13 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
   17              		.file 1 "BBBOOM/Src/UI.c"
-  18              		.section	.text.OLED_ShowRUAGH,"ax",%progbits
+  18              		.section	.text.UI_ShowRUAGH,"ax",%progbits
   19              		.align	1
-  20              		.global	OLED_ShowRUAGH
+  20              		.global	UI_ShowRUAGH
   21              		.syntax unified
   22              		.thumb
   23              		.thumb_func
-  25              	OLED_ShowRUAGH:
+  25              	UI_ShowRUAGH:
   26              	.LFB65:
    1:BBBOOM/Src/UI.c **** #include "UI.h"
    2:BBBOOM/Src/UI.c **** 
@@ -33,7 +33,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
    5:BBBOOM/Src/UI.c **** UI_STATE UI_State;//当前UI状态
    6:BBBOOM/Src/UI.c **** 
    7:BBBOOM/Src/UI.c **** //显示启动院徽
-   8:BBBOOM/Src/UI.c **** void OLED_ShowRUAGH(void)
+   8:BBBOOM/Src/UI.c **** void UI_ShowRUAGH(void)
    9:BBBOOM/Src/UI.c **** {
   27              		.loc 1 9 1 view -0
   28              		.cfi_startproc
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
   45              	.LVL1:
   12:BBBOOM/Src/UI.c ****   OLED_ShowPicture(32,0,64,64,RUAGH,1);
   46              		.loc 1 12 3 view .LVU3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 2
 
 
   47 0010 0123     		movs	r3, #1
@@ -89,7 +89,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
   70              		.cfi_endproc
   71              	.LFE65:
   73              		.global	__aeabi_fcmpgt
-  74              		.section	.rodata.Show_Normal_UI.str1.4,"aMS",%progbits,1
+  74              		.section	.rodata.UI_Normal.str1.4,"aMS",%progbits,1
   75              		.align	2
   76              	.LC0:
   77 0000 43483100 		.ascii	"CH1\000"
@@ -103,27 +103,28 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
   85              	.LC3:
   86 000c 546F7461 		.ascii	"Total\000"
   86      6C00
-  87              		.section	.text.Show_Normal_UI,"ax",%progbits
+  87              		.section	.text.UI_Normal,"ax",%progbits
   88              		.align	1
-  89              		.global	Show_Normal_UI
+  89              		.global	UI_Normal
   90              		.syntax unified
   91              		.thumb
   92              		.thumb_func
-  94              	Show_Normal_UI:
+  94              	UI_Normal:
   95              	.LVL4:
   96              	.LFB66:
   15:BBBOOM/Src/UI.c **** 
   16:BBBOOM/Src/UI.c **** 
-  17:BBBOOM/Src/UI.c **** void Show_Normal_UI(BATTERY *battery, uint8_t CHx, uint8_t xS, float alaV,float cutV)
-  18:BBBOOM/Src/UI.c **** {
-  97              		.loc 1 18 1 is_stmt 1 view -0
+  17:BBBOOM/Src/UI.c **** 
+  18:BBBOOM/Src/UI.c **** void UI_Normal(BATTERY *battery, uint8_t CHx, uint8_t xS, float cell_v, float alaV,float cutV)
+  19:BBBOOM/Src/UI.c **** {
+  97              		.loc 1 19 1 is_stmt 1 view -0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 3
+
+
   98              		.cfi_startproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 3
-
-
-  99              		@ args = 4, pretend = 0, frame = 0
+  99              		@ args = 8, pretend = 0, frame = 0
  100              		@ frame_needed = 0, uses_anonymous_args = 0
- 101              		.loc 1 18 1 is_stmt 0 view .LVU7
+ 101              		.loc 1 19 1 is_stmt 0 view .LVU7
  102 0000 70B5     		push	{r4, r5, r6, lr}
  103              	.LCFI3:
  104              		.cfi_def_cfa_offset 16
@@ -137,22 +138,23 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  112 0004 0546     		mov	r5, r0
  113 0006 0C46     		mov	r4, r1
  114 0008 1646     		mov	r6, r2
-  19:BBBOOM/Src/UI.c ****     
-  20:BBBOOM/Src/UI.c ****     OLED_ColorTurn(0);
- 115              		.loc 1 20 5 is_stmt 1 view .LVU8
+  20:BBBOOM/Src/UI.c ****     
+  21:BBBOOM/Src/UI.c ****     OLED_ColorTurn(0);
+ 115              		.loc 1 21 5 is_stmt 1 view .LVU8
  116 000a 0020     		movs	r0, #0
  117              	.LVL5:
- 118              		.loc 1 20 5 is_stmt 0 view .LVU9
+ 118              		.loc 1 21 5 is_stmt 0 view .LVU9
  119 000c FFF7FEFF 		bl	OLED_ColorTurn
  120              	.LVL6:
-  21:BBBOOM/Src/UI.c ****     OLED_DisplayTurn(0);
- 121              		.loc 1 21 5 is_stmt 1 view .LVU10
+  22:BBBOOM/Src/UI.c ****     OLED_DisplayTurn(0);
+ 121              		.loc 1 22 5 is_stmt 1 view .LVU10
  122 0010 0020     		movs	r0, #0
  123 0012 FFF7FEFF 		bl	OLED_DisplayTurn
  124              	.LVL7:
-  22:BBBOOM/Src/UI.c **** 
-  23:BBBOOM/Src/UI.c ****     switch(CHx)
- 125              		.loc 1 23 5 view .LVU11
+  23:BBBOOM/Src/UI.c **** 
+  24:BBBOOM/Src/UI.c ****     //显示当前使用通道
+  25:BBBOOM/Src/UI.c ****     switch(CHx)
+ 125              		.loc 1 25 5 view .LVU11
  126 0016 022C     		cmp	r4, #2
  127 0018 00F08180 		beq	.L6
  128 001c 032C     		cmp	r4, #3
@@ -160,31 +162,32 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  130 0022 012C     		cmp	r4, #1
  131 0024 4ED0     		beq	.L34
  132              	.L8:
-  24:BBBOOM/Src/UI.c ****     {
-  25:BBBOOM/Src/UI.c ****         case 1:
-  26:BBBOOM/Src/UI.c ****             if(battery[0].Battery_Voltage>1)OLED_ShowString(0,16,"CH1",8,0);
-  27:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
-  28:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
-  29:BBBOOM/Src/UI.c ****         break;
-  30:BBBOOM/Src/UI.c **** 
-  31:BBBOOM/Src/UI.c ****         case 2:
-  32:BBBOOM/Src/UI.c ****             if(battery[0].Battery_Voltage>1)OLED_ShowString(0,16,"CH1",8,1);
-  33:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
-  34:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
-  35:BBBOOM/Src/UI.c ****         break;
-  36:BBBOOM/Src/UI.c **** 
-  37:BBBOOM/Src/UI.c ****         case 3:
-  38:BBBOOM/Src/UI.c ****             if(battery[0].Battery_Voltage>1)OLED_ShowString(0,16,"CH1",8,1);
-  39:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
-  40:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
-  41:BBBOOM/Src/UI.c ****         break;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 4
+  26:BBBOOM/Src/UI.c ****     {
+  27:BBBOOM/Src/UI.c ****         case 1:
+  28:BBBOOM/Src/UI.c ****             if(battery[0].Battery_Voltage>1)OLED_ShowString(0,16,"CH1",8,0);
+  29:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+  30:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+  31:BBBOOM/Src/UI.c ****         break;
+  32:BBBOOM/Src/UI.c **** 
+  33:BBBOOM/Src/UI.c ****         case 2:
+  34:BBBOOM/Src/UI.c ****             if(battery[0].Battery_Voltage>1)OLED_ShowString(0,16,"CH1",8,1);
+  35:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
+  36:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+  37:BBBOOM/Src/UI.c ****         break;
+  38:BBBOOM/Src/UI.c **** 
+  39:BBBOOM/Src/UI.c ****         case 3:
+  40:BBBOOM/Src/UI.c ****             if(battery[0].Battery_Voltage>1)OLED_ShowString(0,16,"CH1",8,1);
+  41:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 4
 
 
-  42:BBBOOM/Src/UI.c ****     }
-  43:BBBOOM/Src/UI.c ****     
-  44:BBBOOM/Src/UI.c ****     OLED_ShowString(0,16,"CH1",8,1);
- 133              		.loc 1 44 5 view .LVU12
+  42:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
+  43:BBBOOM/Src/UI.c ****         break;
+  44:BBBOOM/Src/UI.c ****     }
+  45:BBBOOM/Src/UI.c ****     
+  46:BBBOOM/Src/UI.c ****     //当前通道
+  47:BBBOOM/Src/UI.c ****     OLED_ShowString(0,16,"CH1",8,1);
+ 133              		.loc 1 47 5 view .LVU12
  134 0026 0124     		movs	r4, #1
  135 0028 0094     		str	r4, [sp]
  136 002a 0823     		movs	r3, #8
@@ -193,8 +196,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  139 0030 0020     		movs	r0, #0
  140 0032 FFF7FEFF 		bl	OLED_ShowString
  141              	.LVL8:
-  45:BBBOOM/Src/UI.c ****     OLED_ShowString(0,32,"CH2",8,1);
- 142              		.loc 1 45 5 view .LVU13
+  48:BBBOOM/Src/UI.c ****     OLED_ShowString(0,32,"CH2",8,1);
+ 142              		.loc 1 48 5 view .LVU13
  143 0036 0094     		str	r4, [sp]
  144 0038 0823     		movs	r3, #8
  145 003a 684A     		ldr	r2, .L41+4
@@ -202,8 +205,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  147 003e 0020     		movs	r0, #0
  148 0040 FFF7FEFF 		bl	OLED_ShowString
  149              	.LVL9:
-  46:BBBOOM/Src/UI.c ****     OLED_ShowString(0,48,"CH3",8,1);
- 150              		.loc 1 46 5 view .LVU14
+  49:BBBOOM/Src/UI.c ****     OLED_ShowString(0,48,"CH3",8,1);
+ 150              		.loc 1 49 5 view .LVU14
  151 0044 0094     		str	r4, [sp]
  152 0046 0823     		movs	r3, #8
  153 0048 654A     		ldr	r2, .L41+8
@@ -211,14 +214,14 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  155 004c 0020     		movs	r0, #0
  156 004e FFF7FEFF 		bl	OLED_ShowString
  157              	.LVL10:
-  47:BBBOOM/Src/UI.c **** 
-  48:BBBOOM/Src/UI.c ****     //显示当前电芯电压
-  49:BBBOOM/Src/UI.c ****     OLED_ShowNum(45,0,xS,1,8,1);
- 158              		.loc 1 49 5 view .LVU15
+  50:BBBOOM/Src/UI.c **** 
+  51:BBBOOM/Src/UI.c ****     //显示当前电芯
+  52:BBBOOM/Src/UI.c ****     OLED_ShowNum(45,0,xS,1,8,1);
+ 158              		.loc 1 52 5 view .LVU15
  159 0052 0194     		str	r4, [sp, #4]
  160 0054 0825     		movs	r5, #8
  161              	.LVL11:
- 162              		.loc 1 49 5 is_stmt 0 view .LVU16
+ 162              		.loc 1 52 5 is_stmt 0 view .LVU16
  163 0056 0095     		str	r5, [sp]
  164 0058 2346     		mov	r3, r4
  165 005a 3246     		mov	r2, r6
@@ -226,8 +229,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  167 005e 2D20     		movs	r0, #45
  168 0060 FFF7FEFF 		bl	OLED_ShowNum
  169              	.LVL12:
-  50:BBBOOM/Src/UI.c ****     OLED_ShowChar(55,0,'S',8,1);
- 170              		.loc 1 50 5 is_stmt 1 view .LVU17
+  53:BBBOOM/Src/UI.c ****     OLED_ShowChar(55,0,'S',8,1);
+ 170              		.loc 1 53 5 is_stmt 1 view .LVU17
  171 0064 0094     		str	r4, [sp]
  172 0066 2B46     		mov	r3, r5
  173 0068 5322     		movs	r2, #83
@@ -235,12 +238,13 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  175 006c 3720     		movs	r0, #55
  176 006e FFF7FEFF 		bl	OLED_ShowChar
  177              	.LVL13:
-  51:BBBOOM/Src/UI.c **** 
-  52:BBBOOM/Src/UI.c ****     OLED_ShowNum(35,13,3,1,24,1);//个位
- 178              		.loc 1 52 5 view .LVU18
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 5
 
 
+  54:BBBOOM/Src/UI.c **** 
+  55:BBBOOM/Src/UI.c ****     //显示当前电芯电压
+  56:BBBOOM/Src/UI.c ****     OLED_ShowNum(35,13,3,1,24,1);//个位
+ 178              		.loc 1 56 5 view .LVU18
  179 0072 0194     		str	r4, [sp, #4]
  180 0074 1826     		movs	r6, #24
  181 0076 0096     		str	r6, [sp]
@@ -250,17 +254,15 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  185 007e 2320     		movs	r0, #35
  186 0080 FFF7FEFF 		bl	OLED_ShowNum
  187              	.LVL14:
-  53:BBBOOM/Src/UI.c **** 
-  54:BBBOOM/Src/UI.c ****     // OLED_DrawPoint(57,41,1);
-  55:BBBOOM/Src/UI.c ****     OLED_DrawCircle(47,32,1);//小数点
- 188              		.loc 1 55 5 view .LVU19
+  57:BBBOOM/Src/UI.c ****     OLED_DrawCircle(47,32,1);//小数点
+ 188              		.loc 1 57 5 view .LVU19
  189 0084 2246     		mov	r2, r4
  190 0086 2021     		movs	r1, #32
  191 0088 2F20     		movs	r0, #47
  192 008a FFF7FEFF 		bl	OLED_DrawCircle
  193              	.LVL15:
-  56:BBBOOM/Src/UI.c ****     OLED_ShowNum(50,13,82,2,24,1);//十&百分位
- 194              		.loc 1 56 5 view .LVU20
+  58:BBBOOM/Src/UI.c ****     OLED_ShowNum(50,13,82,2,24,1);//十&百分位
+ 194              		.loc 1 58 5 view .LVU20
  195 008e 0194     		str	r4, [sp, #4]
  196 0090 0096     		str	r6, [sp]
  197 0092 0223     		movs	r3, #2
@@ -269,10 +271,10 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  200 0098 3220     		movs	r0, #50
  201 009a FFF7FEFF 		bl	OLED_ShowNum
  202              	.LVL16:
-  57:BBBOOM/Src/UI.c ****     
-  58:BBBOOM/Src/UI.c ****     //显示总电压
-  59:BBBOOM/Src/UI.c ****     OLED_ShowString(90,0,"Total",8,1);
- 203              		.loc 1 59 5 view .LVU21
+  59:BBBOOM/Src/UI.c ****     
+  60:BBBOOM/Src/UI.c ****     //显示总电压
+  61:BBBOOM/Src/UI.c ****     OLED_ShowString(90,0,"Total",8,1);
+ 203              		.loc 1 61 5 view .LVU21
  204 009e 0094     		str	r4, [sp]
  205 00a0 2B46     		mov	r3, r5
  206 00a2 504A     		ldr	r2, .L41+12
@@ -280,9 +282,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  208 00a6 5A20     		movs	r0, #90
  209 00a8 FFF7FEFF 		bl	OLED_ShowString
  210              	.LVL17:
-  60:BBBOOM/Src/UI.c **** 
-  61:BBBOOM/Src/UI.c ****     OLED_ShowNum(90,13,24,2,8,1);//十&个位
- 211              		.loc 1 61 5 view .LVU22
+  62:BBBOOM/Src/UI.c ****     OLED_ShowNum(90,13,24,2,8,1);//十&个位
+ 211              		.loc 1 62 5 view .LVU22
  212 00ac 0194     		str	r4, [sp, #4]
  213 00ae 0095     		str	r5, [sp]
  214 00b0 0223     		movs	r3, #2
@@ -291,14 +292,13 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  217 00b6 5A20     		movs	r0, #90
  218 00b8 FFF7FEFF 		bl	OLED_ShowNum
  219              	.LVL18:
-  62:BBBOOM/Src/UI.c **** 
-  63:BBBOOM/Src/UI.c ****     OLED_Refresh();
- 220              		.loc 1 63 5 view .LVU23
+  63:BBBOOM/Src/UI.c **** 
+  64:BBBOOM/Src/UI.c ****     OLED_Refresh();
+ 220              		.loc 1 64 5 view .LVU23
  221 00bc FFF7FEFF 		bl	OLED_Refresh
  222              	.LVL19:
-  64:BBBOOM/Src/UI.c **** 
   65:BBBOOM/Src/UI.c **** }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 6
 
 
  223              		.loc 1 65 1 is_stmt 0 view .LVU24
@@ -312,38 +312,38 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  231              	.L34:
  232              	.LCFI6:
  233              		.cfi_restore_state
-  26:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
- 234              		.loc 1 26 13 is_stmt 1 view .LVU25
-  26:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
- 235              		.loc 1 26 15 is_stmt 0 view .LVU26
+  28:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ 234              		.loc 1 28 13 is_stmt 1 view .LVU25
+  28:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ 235              		.loc 1 28 15 is_stmt 0 view .LVU26
  236 00c4 4FF07E51 		mov	r1, #1065353216
  237 00c8 E869     		ldr	r0, [r5, #28]	@ float
  238 00ca FFF7FEFF 		bl	__aeabi_fcmpgt
  239              	.LVL21:
  240 00ce A8B9     		cbnz	r0, .L35
  241              	.L9:
-  27:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
- 242              		.loc 1 27 13 is_stmt 1 view .LVU27
-  27:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
- 243              		.loc 1 27 15 is_stmt 0 view .LVU28
+  29:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+ 242              		.loc 1 29 13 is_stmt 1 view .LVU27
+  29:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+ 243              		.loc 1 29 15 is_stmt 0 view .LVU28
  244 00d0 4FF07E51 		mov	r1, #1065353216
  245 00d4 686C     		ldr	r0, [r5, #68]	@ float
  246 00d6 FFF7FEFF 		bl	__aeabi_fcmpgt
  247              	.LVL22:
  248 00da B8B9     		cbnz	r0, .L36
  249              	.L11:
-  28:BBBOOM/Src/UI.c ****         break;
- 250              		.loc 1 28 13 is_stmt 1 view .LVU29
-  28:BBBOOM/Src/UI.c ****         break;
- 251              		.loc 1 28 15 is_stmt 0 view .LVU30
+  30:BBBOOM/Src/UI.c ****         break;
+ 250              		.loc 1 30 13 is_stmt 1 view .LVU29
+  30:BBBOOM/Src/UI.c ****         break;
+ 251              		.loc 1 30 15 is_stmt 0 view .LVU30
  252 00dc 4FF07E51 		mov	r1, #1065353216
  253 00e0 E86E     		ldr	r0, [r5, #108]	@ float
  254 00e2 FFF7FEFF 		bl	__aeabi_fcmpgt
  255              	.LVL23:
  256 00e6 0028     		cmp	r0, #0
  257 00e8 9DD0     		beq	.L8
-  28:BBBOOM/Src/UI.c ****         break;
- 258              		.loc 1 28 45 is_stmt 1 discriminator 1 view .LVU31
+  30:BBBOOM/Src/UI.c ****         break;
+ 258              		.loc 1 30 45 is_stmt 1 discriminator 1 view .LVU31
  259 00ea 0123     		movs	r3, #1
  260 00ec 0093     		str	r3, [sp]
  261 00ee 0823     		movs	r3, #8
@@ -354,11 +354,11 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  266              	.LVL24:
  267 00fa 94E7     		b	.L8
  268              	.L35:
-  26:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
- 269              		.loc 1 26 45 discriminator 1 view .LVU32
+  28:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ 269              		.loc 1 28 45 discriminator 1 view .LVU32
  270 00fc 0020     		movs	r0, #0
  271 00fe 0090     		str	r0, [sp]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 7
 
 
  272 0100 0823     		movs	r3, #8
@@ -368,8 +368,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  276              	.LVL25:
  277 010a E1E7     		b	.L9
  278              	.L36:
-  27:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
- 279              		.loc 1 27 45 discriminator 1 view .LVU33
+  29:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+ 279              		.loc 1 29 45 discriminator 1 view .LVU33
  280 010c 0123     		movs	r3, #1
  281 010e 0093     		str	r3, [sp]
  282 0110 0823     		movs	r3, #8
@@ -380,53 +380,53 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  287              	.LVL26:
  288 011c DEE7     		b	.L11
  289              	.L6:
-  32:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
- 290              		.loc 1 32 13 view .LVU34
-  32:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
- 291              		.loc 1 32 15 is_stmt 0 view .LVU35
+  34:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
+ 290              		.loc 1 34 13 view .LVU34
+  34:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
+ 291              		.loc 1 34 15 is_stmt 0 view .LVU35
  292 011e 4FF07E51 		mov	r1, #1065353216
  293 0122 E869     		ldr	r0, [r5, #28]	@ float
  294 0124 FFF7FEFF 		bl	__aeabi_fcmpgt
  295              	.LVL27:
  296 0128 B0B9     		cbnz	r0, .L37
  297              	.L14:
-  33:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
- 298              		.loc 1 33 13 is_stmt 1 view .LVU36
-  33:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
- 299              		.loc 1 33 15 is_stmt 0 view .LVU37
+  35:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+ 298              		.loc 1 35 13 is_stmt 1 view .LVU36
+  35:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+ 299              		.loc 1 35 15 is_stmt 0 view .LVU37
  300 012a 4FF07E51 		mov	r1, #1065353216
  301 012e 686C     		ldr	r0, [r5, #68]	@ float
  302 0130 FFF7FEFF 		bl	__aeabi_fcmpgt
  303              	.LVL28:
  304 0134 C8B9     		cbnz	r0, .L38
  305              	.L16:
-  34:BBBOOM/Src/UI.c ****         break;
- 306              		.loc 1 34 13 is_stmt 1 view .LVU38
-  34:BBBOOM/Src/UI.c ****         break;
- 307              		.loc 1 34 15 is_stmt 0 view .LVU39
+  36:BBBOOM/Src/UI.c ****         break;
+ 306              		.loc 1 36 13 is_stmt 1 view .LVU38
+  36:BBBOOM/Src/UI.c ****         break;
+ 307              		.loc 1 36 15 is_stmt 0 view .LVU39
  308 0136 4FF07E51 		mov	r1, #1065353216
  309 013a E86E     		ldr	r0, [r5, #108]	@ float
  310 013c FFF7FEFF 		bl	__aeabi_fcmpgt
  311              	.LVL29:
  312 0140 0028     		cmp	r0, #0
  313 0142 3FF470AF 		beq	.L8
-  34:BBBOOM/Src/UI.c ****         break;
- 314              		.loc 1 34 45 is_stmt 1 discriminator 1 view .LVU40
+  36:BBBOOM/Src/UI.c ****         break;
+ 314              		.loc 1 36 45 is_stmt 1 discriminator 1 view .LVU40
  315 0146 0123     		movs	r3, #1
  316 0148 0093     		str	r3, [sp]
  317 014a 0823     		movs	r3, #8
  318 014c 244A     		ldr	r2, .L41+8
  319 014e 3021     		movs	r1, #48
  320 0150 0020     		movs	r0, #0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 8
 
 
  321 0152 FFF7FEFF 		bl	OLED_ShowString
  322              	.LVL30:
  323 0156 66E7     		b	.L8
  324              	.L37:
-  32:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
- 325              		.loc 1 32 45 discriminator 1 view .LVU41
+  34:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,0);
+ 325              		.loc 1 34 45 discriminator 1 view .LVU41
  326 0158 0123     		movs	r3, #1
  327 015a 0093     		str	r3, [sp]
  328 015c 0823     		movs	r3, #8
@@ -437,8 +437,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  333              	.LVL31:
  334 0168 DFE7     		b	.L14
  335              	.L38:
-  33:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
- 336              		.loc 1 33 45 discriminator 1 view .LVU42
+  35:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,1);
+ 336              		.loc 1 35 45 discriminator 1 view .LVU42
  337 016a 0020     		movs	r0, #0
  338 016c 0090     		str	r0, [sp]
  339 016e 0823     		movs	r3, #8
@@ -448,41 +448,41 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  343              	.LVL32:
  344 0178 DDE7     		b	.L16
  345              	.L7:
-  38:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
- 346              		.loc 1 38 13 view .LVU43
-  38:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
- 347              		.loc 1 38 15 is_stmt 0 view .LVU44
+  40:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ 346              		.loc 1 40 13 view .LVU43
+  40:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ 347              		.loc 1 40 15 is_stmt 0 view .LVU44
  348 017a 4FF07E51 		mov	r1, #1065353216
  349 017e E869     		ldr	r0, [r5, #28]	@ float
  350 0180 FFF7FEFF 		bl	__aeabi_fcmpgt
  351              	.LVL33:
  352 0184 A8B9     		cbnz	r0, .L39
  353              	.L19:
-  39:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
- 354              		.loc 1 39 13 is_stmt 1 view .LVU45
-  39:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
- 355              		.loc 1 39 15 is_stmt 0 view .LVU46
+  41:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
+ 354              		.loc 1 41 13 is_stmt 1 view .LVU45
+  41:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
+ 355              		.loc 1 41 15 is_stmt 0 view .LVU46
  356 0186 4FF07E51 		mov	r1, #1065353216
  357 018a 686C     		ldr	r0, [r5, #68]	@ float
  358 018c FFF7FEFF 		bl	__aeabi_fcmpgt
  359              	.LVL34:
  360 0190 C0B9     		cbnz	r0, .L40
  361              	.L21:
-  40:BBBOOM/Src/UI.c ****         break;
- 362              		.loc 1 40 13 is_stmt 1 view .LVU47
-  40:BBBOOM/Src/UI.c ****         break;
- 363              		.loc 1 40 15 is_stmt 0 view .LVU48
+  42:BBBOOM/Src/UI.c ****         break;
+ 362              		.loc 1 42 13 is_stmt 1 view .LVU47
+  42:BBBOOM/Src/UI.c ****         break;
+ 363              		.loc 1 42 15 is_stmt 0 view .LVU48
  364 0192 4FF07E51 		mov	r1, #1065353216
  365 0196 E86E     		ldr	r0, [r5, #108]	@ float
  366 0198 FFF7FEFF 		bl	__aeabi_fcmpgt
  367              	.LVL35:
  368 019c 0028     		cmp	r0, #0
  369 019e 3FF442AF 		beq	.L8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 9
 
 
-  40:BBBOOM/Src/UI.c ****         break;
- 370              		.loc 1 40 45 is_stmt 1 discriminator 1 view .LVU49
+  42:BBBOOM/Src/UI.c ****         break;
+ 370              		.loc 1 42 45 is_stmt 1 discriminator 1 view .LVU49
  371 01a2 0020     		movs	r0, #0
  372 01a4 0090     		str	r0, [sp]
  373 01a6 0823     		movs	r3, #8
@@ -492,8 +492,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  377              	.LVL36:
  378 01b0 39E7     		b	.L8
  379              	.L39:
-  38:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
- 380              		.loc 1 38 45 discriminator 1 view .LVU50
+  40:BBBOOM/Src/UI.c ****             if(battery[1].Battery_Voltage>1)OLED_ShowString(0,32,"CH2",8,1);
+ 380              		.loc 1 40 45 discriminator 1 view .LVU50
  381 01b2 0123     		movs	r3, #1
  382 01b4 0093     		str	r3, [sp]
  383 01b6 0823     		movs	r3, #8
@@ -504,8 +504,8 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  388              	.LVL37:
  389 01c2 E0E7     		b	.L19
  390              	.L40:
-  39:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
- 391              		.loc 1 39 45 discriminator 1 view .LVU51
+  41:BBBOOM/Src/UI.c ****             if(battery[2].Battery_Voltage>1)OLED_ShowString(0,48,"CH3",8,0);
+ 391              		.loc 1 41 45 discriminator 1 view .LVU51
  392 01c4 0123     		movs	r3, #1
  393 01c6 0093     		str	r3, [sp]
  394 01c8 0823     		movs	r3, #8
@@ -524,203 +524,238 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 1
  407 01e4 0C000000 		.word	.LC3
  408              		.cfi_endproc
  409              	.LFE66:
- 411              		.global	UI_State
- 412              		.section	.bss.UI_State,"aw",%nobits
- 413              		.align	2
- 416              	UI_State:
- 417 0000 000000   		.space	3
- 418              		.global	ch1
- 419              		.section	.data.ch1,"aw"
- 420              		.align	2
- 423              	ch1:
- 424 0000 43483100 		.ascii	"CH1\000"
- 425              		.section	.rodata.RUAGH,"a"
- 426              		.align	2
- 429              	RUAGH:
- 430 0000 00000000 		.ascii	"\000\000\000\000\000\000\200\300\340\360\370\370\340"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 10
+ 411              		.section	.text.HAL_GPIO_EXTI_Callback,"ax",%progbits
+ 412              		.align	1
+ 413              		.global	HAL_GPIO_EXTI_Callback
+ 414              		.syntax unified
+ 415              		.thumb
+ 416              		.thumb_func
+ 418              	HAL_GPIO_EXTI_Callback:
+ 419              	.LVL39:
+ 420              	.LFB67:
+  66:BBBOOM/Src/UI.c **** 
+  67:BBBOOM/Src/UI.c **** //按键切换UI
+  68:BBBOOM/Src/UI.c **** void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+  69:BBBOOM/Src/UI.c **** {
+ 421              		.loc 1 69 1 view -0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 10
 
 
- 430      000080C0 
- 430      E0F0F8F8 
- 430      E0
- 431 000d E0F0F8F8 		.ascii	"\340\360\370\370\3708\000\000\000\000\000\000\000\000"
- 431      F8380000 
- 431      00000000 
- 431      0000
- 432 001b 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
- 432      00000000 
- 432      00000000 
- 432      00
- 433 0028 00000000 		.ascii	"\000\000\000\000px\370\370\370\370\340\340\360\370\360"
- 433      7078F8F8 
- 433      F8F8E0E0 
- 433      F0F8F0
- 434 0037 E0E08000 		.ascii	"\340\340\200\000\000\000\000\000\000\000\200\200\374"
- 434      00000000 
- 434      00008080 
- 434      FC
- 435 0044 FCFEFE8F 		.ascii	"\374\376\376\217\357\377\377\377\377\177?\275\235\201"
- 435      EFFFFFFF 
- 435      FF7F3FBD 
- 435      9D81
- 436 0052 80808080 		.ascii	"\200\200\200\200\200\200\300\340\360\370\360\374|~~"
- 436      8080C0E0 
- 436      F0F8F0FC 
- 436      7C7E7E
- 437 0061 7CFCF8F8 		.ascii	"|\374\370\370\340\340\340\300\200\300\200\200\200\215"
- 437      E0E0E0C0 
- 437      80C08080 
- 437      808D
- 438 006f 8DBFBF3F 		.ascii	"\215\277\277?\377\377\377\377\317\377\377\376\374\374"
- 438      FFFFFFFF 
- 438      CFFFFFFE 
- 438      FCFC
- 439 007d A00000E8 		.ascii	"\240\000\000\350\377\377\377\377\361\377\377\377\377"
- 439      FFFFFFFF 
- 439      F1FFFFFF 
- 439      FF
- 440 008a 1F0F0100 		.ascii	"\037\017\001\000\000\377\377\377\377\007\007\007\007"
- 440      00FFFFFF 
- 440      FF070707 
- 440      07
- 441 0097 0707FFF7 		.ascii	"\007\007\377\367\377\371\370\360\360\360\360\360\361"
- 441      FFF9F8F0 
- 441      F0F0F0F0 
- 441      F1
- 442 00a4 F3F7E3E3 		.ascii	"\363\367\343\343\003\007\007\007g\377\377\377\377\377"
- 442      03070707 
- 442      67FFFFFF 
- 442      FFFF
- 443 00b2 0003033F 		.ascii	"\000\003\003?\377\377\377\377\375\377\377\377\377\340"
- 443      FFFFFFFF 
- 443      FDFFFFFF 
- 443      FFE0
- 444 00c0 FFFFFFFF 		.ascii	"\377\377\377\377\237\377\377\377\377\377\000\000\000"
- 444      9FFFFFFF 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 11
+ 422              		.cfi_startproc
+ 423              		@ args = 0, pretend = 0, frame = 0
+ 424              		@ frame_needed = 0, uses_anonymous_args = 0
+ 425              		@ link register save eliminated.
+  70:BBBOOM/Src/UI.c ****     if(GPIO_Pin == Button_GPIO_Port)
+ 426              		.loc 1 70 5 view .LVU53
+  71:BBBOOM/Src/UI.c ****     {
+  72:BBBOOM/Src/UI.c **** 
+  73:BBBOOM/Src/UI.c ****     }
+ 427              		.loc 1 73 5 view .LVU54
+  74:BBBOOM/Src/UI.c **** }
+ 428              		.loc 1 74 1 is_stmt 0 view .LVU55
+ 429 0000 7047     		bx	lr
+ 430              		.cfi_endproc
+ 431              	.LFE67:
+ 433              		.global	UI_State
+ 434              		.section	.bss.UI_State,"aw",%nobits
+ 435              		.align	2
+ 438              	UI_State:
+ 439 0000 000000   		.space	3
+ 440              		.global	ch1
+ 441              		.section	.data.ch1,"aw"
+ 442              		.align	2
+ 445              	ch1:
+ 446 0000 43483100 		.ascii	"CH1\000"
+ 447              		.section	.rodata.RUAGH,"a"
+ 448              		.align	2
+ 451              	RUAGH:
+ 452 0000 00000000 		.ascii	"\000\000\000\000\000\000\200\300\340\360\370\370\340"
+ 452      000080C0 
+ 452      E0F0F8F8 
+ 452      E0
+ 453 000d E0F0F8F8 		.ascii	"\340\360\370\370\3708\000\000\000\000\000\000\000\000"
+ 453      F8380000 
+ 453      00000000 
+ 453      0000
+ 454 001b 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 454      00000000 
+ 454      00000000 
+ 454      00
+ 455 0028 00000000 		.ascii	"\000\000\000\000px\370\370\370\370\340\340\360\370\360"
+ 455      7078F8F8 
+ 455      F8F8E0E0 
+ 455      F0F8F0
+ 456 0037 E0E08000 		.ascii	"\340\340\200\000\000\000\000\000\000\000\200\200\374"
+ 456      00000000 
+ 456      00008080 
+ 456      FC
+ 457 0044 FCFEFE8F 		.ascii	"\374\376\376\217\357\377\377\377\377\177?\275\235\201"
+ 457      EFFFFFFF 
+ 457      FF7F3FBD 
+ 457      9D81
+ 458 0052 80808080 		.ascii	"\200\200\200\200\200\200\300\340\360\370\360\374|~~"
+ 458      8080C0E0 
+ 458      F0F8F0FC 
+ 458      7C7E7E
+ 459 0061 7CFCF8F8 		.ascii	"|\374\370\370\340\340\340\300\200\300\200\200\200\215"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 11
 
 
- 444      FFFF0000 
- 444      00
- 445 00cd 0020FFFF 		.ascii	"\000 \377\377\377\377\370\000\000\000\000\010\357\377"
- 445      FFFFF800 
- 445      00000008 
- 445      EFFF
- 446 00db EFFFFEFE 		.ascii	"\357\377\376\376\376\357\356\377\361\377\377\377\377"
- 446      FEEFEEFF 
- 446      F1FFFFFF 
- 446      FF
- 447 00e8 02000000 		.ascii	"\002\000\000\000\370\377\377\377\377\177\000\000\000"
- 447      F8FFFFFF 
- 447      FF7F0000 
- 447      00
- 448 00f5 00B7FFFF 		.ascii	"\000\267\377\377\377\377\377\377\377\377\357\007\377"
- 448      FFFFFFFF 
- 448      FFFFEF07 
- 448      FF
- 449 0102 FFFFFFF7 		.ascii	"\377\377\377\367\377\377\377\377\376\376\300@\000\001"
- 449      FFFFFFFF 
- 449      FEFEC040 
- 449      0001
- 450 0110 1F3FFFFF 		.ascii	"\037?\377\377\374\370\340\300\240\177\177\177?\001\001"
- 450      FCF8E0C0 
- 450      A07F7F7F 
- 450      3F0101
- 451 011f 01010107 		.ascii	"\001\001\001\007\037?\177~\374\260\360\360\376\377\377"
- 451      1F3F7F7E 
- 451      FCB0F0F0 
- 451      FEFFFF
- 452 012e FF1F0000 		.ascii	"\377\037\000\000\000\360\360\376\377\377\377\377\367"
- 452      00F0F0FE 
- 452      FFFFFFFF 
- 452      F7
- 453 013b FFFFFFFF 		.ascii	"\377\377\377\377\003\000\000\000\037\037?\177~\377\377"
- 453      03000000 
- 453      1F1F3F7F 
- 453      7EFFFF
- 454 014a DFFFFFFE 		.ascii	"\337\377\377\376\376\376\376\360\360\361\307\237\037"
- 454      FEFEFEF0 
- 454      F0F1C79F 
- 454      1F
- 455 0157 5F3F7EFE 		.ascii	"_?~\376\374\370\370\360\360\360\360\370\370\376\376"
- 455      FCF8F8F0 
- 455      F0F0F0F8 
- 455      F8FEFE
- 456 0166 FE7F1F5F 		.ascii	"\376\177\037_\217\307\343\360\370\370\376\376\376\377"
- 456      8FC7E3F0 
- 456      F8F8FEFE 
- 456      FEFF
- 457 0174 DFFFFFFE 		.ascii	"\337\377\377\376\377\177\177?\037\002\000\000\000\000"
- 457      FF7F7F3F 
- 457      1F020000 
- 457      0000
- 458 0182 00000000 		.ascii	"\000\000\000\000\001\003\017\017\017o\177\177\177\373"
- 458      01030F0F 
- 458      0F6F7F7F 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 12
-
-
- 458      7FFB
- 459 0190 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377~\376\376\376\377"
- 459      FFFFFFFF 
- 459      FF7EFEFE 
- 459      FEFF
- 460 019e FB7B7BFF 		.ascii	"\373{{\377\377\376\376\376\376\376\377\377\377\377\377"
- 460      FFFEFEFE 
- 460      FEFEFFFF 
- 460      FFFFFF
- 461 01ad FFFF7B7B 		.ascii	"\377\377{{\177\177\177/\017\017\007\003\003\000\000"
- 461      7F7F7F2F 
- 461      0F0F0703 
- 461      030000
- 462 01bc 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
- 462      00000000 
- 462      00000000 
- 462      00
- 463 01c9 00000000 		.ascii	"\000\000\000\000\000\000\000\000\001\003\003\003\003"
- 463      00000000 
- 463      01030303 
- 463      03
- 464 01d6 030F0F0F 		.ascii	"\003\017\017\017\017\017\017\017\017\007\003\017\017"
- 464      0F0F0F0F 
- 464      0F07030F 
- 464      0F
- 465 01e3 0F0F0F0F 		.ascii	"\017\017\017\017\017\003\003\003\003\003\003\003\000"
- 465      0F030303 
- 465      03030303 
- 465      00
- 466 01f0 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
- 466      00000000 
- 466      00000000 
+ 459      E0E0E0C0 
+ 459      80C08080 
+ 459      808D
+ 460 006f 8DBFBF3F 		.ascii	"\215\277\277?\377\377\377\377\317\377\377\376\374\374"
+ 460      FFFFFFFF 
+ 460      CFFFFFFE 
+ 460      FCFC
+ 461 007d A00000E8 		.ascii	"\240\000\000\350\377\377\377\377\361\377\377\377\377"
+ 461      FFFFFFFF 
+ 461      F1FFFFFF 
+ 461      FF
+ 462 008a 1F0F0100 		.ascii	"\037\017\001\000\000\377\377\377\377\007\007\007\007"
+ 462      00FFFFFF 
+ 462      FF070707 
+ 462      07
+ 463 0097 0707FFF7 		.ascii	"\007\007\377\367\377\371\370\360\360\360\360\360\361"
+ 463      FFF9F8F0 
+ 463      F0F0F0F0 
+ 463      F1
+ 464 00a4 F3F7E3E3 		.ascii	"\363\367\343\343\003\007\007\007g\377\377\377\377\377"
+ 464      03070707 
+ 464      67FFFFFF 
+ 464      FFFF
+ 465 00b2 0003033F 		.ascii	"\000\003\003?\377\377\377\377\375\377\377\377\377\340"
+ 465      FFFFFFFF 
+ 465      FDFFFFFF 
+ 465      FFE0
+ 466 00c0 FFFFFFFF 		.ascii	"\377\377\377\377\237\377\377\377\377\377\000\000\000"
+ 466      9FFFFFFF 
+ 466      FFFF0000 
  466      00
- 467 01fd 000000   		.ascii	"\000\000\000"
- 468              		.text
- 469              	.Letext0:
- 470              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 471              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 472              		.file 4 "BBBOOM/Inc/oled.h"
- 473              		.file 5 "BBBOOM/Inc/Battery.h"
- 474              		.file 6 "BBBOOM/Inc/oledfont.h"
- 475              		.file 7 "BBBOOM/Inc/UI.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s 			page 13
+ 467 00cd 0020FFFF 		.ascii	"\000 \377\377\377\377\370\000\000\000\000\010\357\377"
+ 467      FFFFF800 
+ 467      00000008 
+ 467      EFFF
+ 468 00db EFFFFEFE 		.ascii	"\357\377\376\376\376\357\356\377\361\377\377\377\377"
+ 468      FEEFEEFF 
+ 468      F1FFFFFF 
+ 468      FF
+ 469 00e8 02000000 		.ascii	"\002\000\000\000\370\377\377\377\377\177\000\000\000"
+ 469      F8FFFFFF 
+ 469      FF7F0000 
+ 469      00
+ 470 00f5 00B7FFFF 		.ascii	"\000\267\377\377\377\377\377\377\377\377\357\007\377"
+ 470      FFFFFFFF 
+ 470      FFFFEF07 
+ 470      FF
+ 471 0102 FFFFFFF7 		.ascii	"\377\377\377\367\377\377\377\377\376\376\300@\000\001"
+ 471      FFFFFFFF 
+ 471      FEFEC040 
+ 471      0001
+ 472 0110 1F3FFFFF 		.ascii	"\037?\377\377\374\370\340\300\240\177\177\177?\001\001"
+ 472      FCF8E0C0 
+ 472      A07F7F7F 
+ 472      3F0101
+ 473 011f 01010107 		.ascii	"\001\001\001\007\037?\177~\374\260\360\360\376\377\377"
+ 473      1F3F7F7E 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 12
+
+
+ 473      FCB0F0F0 
+ 473      FEFFFF
+ 474 012e FF1F0000 		.ascii	"\377\037\000\000\000\360\360\376\377\377\377\377\367"
+ 474      00F0F0FE 
+ 474      FFFFFFFF 
+ 474      F7
+ 475 013b FFFFFFFF 		.ascii	"\377\377\377\377\003\000\000\000\037\037?\177~\377\377"
+ 475      03000000 
+ 475      1F1F3F7F 
+ 475      7EFFFF
+ 476 014a DFFFFFFE 		.ascii	"\337\377\377\376\376\376\376\360\360\361\307\237\037"
+ 476      FEFEFEF0 
+ 476      F0F1C79F 
+ 476      1F
+ 477 0157 5F3F7EFE 		.ascii	"_?~\376\374\370\370\360\360\360\360\370\370\376\376"
+ 477      FCF8F8F0 
+ 477      F0F0F0F8 
+ 477      F8FEFE
+ 478 0166 FE7F1F5F 		.ascii	"\376\177\037_\217\307\343\360\370\370\376\376\376\377"
+ 478      8FC7E3F0 
+ 478      F8F8FEFE 
+ 478      FEFF
+ 479 0174 DFFFFFFE 		.ascii	"\337\377\377\376\377\177\177?\037\002\000\000\000\000"
+ 479      FF7F7F3F 
+ 479      1F020000 
+ 479      0000
+ 480 0182 00000000 		.ascii	"\000\000\000\000\001\003\017\017\017o\177\177\177\373"
+ 480      01030F0F 
+ 480      0F6F7F7F 
+ 480      7FFB
+ 481 0190 FFFFFFFF 		.ascii	"\377\377\377\377\377\377\377\377\377~\376\376\376\377"
+ 481      FFFFFFFF 
+ 481      FF7EFEFE 
+ 481      FEFF
+ 482 019e FB7B7BFF 		.ascii	"\373{{\377\377\376\376\376\376\376\377\377\377\377\377"
+ 482      FFFEFEFE 
+ 482      FEFEFFFF 
+ 482      FFFFFF
+ 483 01ad FFFF7B7B 		.ascii	"\377\377{{\177\177\177/\017\017\007\003\003\000\000"
+ 483      7F7F7F2F 
+ 483      0F0F0703 
+ 483      030000
+ 484 01bc 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 484      00000000 
+ 484      00000000 
+ 484      00
+ 485 01c9 00000000 		.ascii	"\000\000\000\000\000\000\000\000\001\003\003\003\003"
+ 485      00000000 
+ 485      01030303 
+ 485      03
+ 486 01d6 030F0F0F 		.ascii	"\003\017\017\017\017\017\017\017\017\007\003\017\017"
+ 486      0F0F0F0F 
+ 486      0F07030F 
+ 486      0F
+ 487 01e3 0F0F0F0F 		.ascii	"\017\017\017\017\017\003\003\003\003\003\003\003\000"
+ 487      0F030303 
+ 487      03030303 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 13
+
+
+ 487      00
+ 488 01f0 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\000\000"
+ 488      00000000 
+ 488      00000000 
+ 488      00
+ 489 01fd 000000   		.ascii	"\000\000\000"
+ 490              		.text
+ 491              	.Letext0:
+ 492              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 493              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 494              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 495              		.file 5 "BBBOOM/Inc/oled.h"
+ 496              		.file 6 "BBBOOM/Inc/Battery.h"
+ 497              		.file 7 "BBBOOM/Inc/oledfont.h"
+ 498              		.file 8 "BBBOOM/Inc/UI.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 UI.c
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:19     .text.OLED_ShowRUAGH:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:25     .text.OLED_ShowRUAGH:0000000000000000 OLED_ShowRUAGH
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:69     .text.OLED_ShowRUAGH:0000000000000030 $d
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:429    .rodata.RUAGH:0000000000000000 RUAGH
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:75     .rodata.Show_Normal_UI.str1.4:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:88     .text.Show_Normal_UI:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:94     .text.Show_Normal_UI:0000000000000000 Show_Normal_UI
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:404    .text.Show_Normal_UI:00000000000001d8 $d
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:416    .bss.UI_State:0000000000000000 UI_State
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:413    .bss.UI_State:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:423    .data.ch1:0000000000000000 ch1
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:420    .data.ch1:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\cc2yv5ra.s:426    .rodata.RUAGH:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:19     .text.UI_ShowRUAGH:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:25     .text.UI_ShowRUAGH:0000000000000000 UI_ShowRUAGH
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:69     .text.UI_ShowRUAGH:0000000000000030 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:451    .rodata.RUAGH:0000000000000000 RUAGH
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:75     .rodata.UI_Normal.str1.4:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:88     .text.UI_Normal:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:94     .text.UI_Normal:0000000000000000 UI_Normal
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:404    .text.UI_Normal:00000000000001d8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:412    .text.HAL_GPIO_EXTI_Callback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:418    .text.HAL_GPIO_EXTI_Callback:0000000000000000 HAL_GPIO_EXTI_Callback
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:438    .bss.UI_State:0000000000000000 UI_State
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:435    .bss.UI_State:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:445    .data.ch1:0000000000000000 ch1
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:442    .data.ch1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccLFnGmt.s:448    .rodata.RUAGH:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 OLED_ColorTurn

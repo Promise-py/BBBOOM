@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
   30:Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
   31:Core/Src/stm32f1xx_it.c **** 
   32:Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 2
 
 
   33:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
   35              		.loc 1 78 3 discriminator 1 view .LVU2
   76:Core/Src/stm32f1xx_it.c ****   {
   36              		.loc 1 76 10 discriminator 1 view .LVU3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 3
 
 
   37 0000 FEE7     		b	.L2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  100:Core/Src/stm32f1xx_it.c **** void MemManage_Handler(void)
  101:Core/Src/stm32f1xx_it.c **** {
   73              		.loc 1 101 1 view -0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 4
 
 
   74              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  105              		.loc 1 120 9 discriminator 1 view .LVU15
  106 0000 FEE7     		b	.L8
  107              		.cfi_endproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 5
 
 
  108              	.LFE68:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  143              		.cfi_startproc
  144              		@ args = 0, pretend = 0, frame = 0
  145              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 6
 
 
  146              		@ link register save eliminated.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  171:Core/Src/stm32f1xx_it.c **** void PendSV_Handler(void)
  172:Core/Src/stm32f1xx_it.c **** {
  180              		.loc 1 172 1 view -0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 7
 
 
  181              		.cfi_startproc
@@ -414,16 +414,16 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  212 0006 08BD     		pop	{r3, pc}
  213              		.cfi_endproc
  214              	.LFE73:
- 216              		.section	.text.I2C1_ER_IRQHandler,"ax",%progbits
+ 216              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
  217              		.align	1
- 218              		.global	I2C1_ER_IRQHandler
+ 218              		.global	EXTI9_5_IRQHandler
  219              		.syntax unified
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 8
 
 
  220              		.thumb
  221              		.thumb_func
- 223              	I2C1_ER_IRQHandler:
+ 223              	EXTI9_5_IRQHandler:
  224              	.LFB74:
  194:Core/Src/stm32f1xx_it.c **** 
  195:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
@@ -434,9 +434,9 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  200:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
  201:Core/Src/stm32f1xx_it.c **** 
  202:Core/Src/stm32f1xx_it.c **** /**
- 203:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C1 error interrupt.
+ 203:Core/Src/stm32f1xx_it.c ****   * @brief This function handles EXTI line[9:5] interrupts.
  204:Core/Src/stm32f1xx_it.c ****   */
- 205:Core/Src/stm32f1xx_it.c **** void I2C1_ER_IRQHandler(void)
+ 205:Core/Src/stm32f1xx_it.c **** void EXTI9_5_IRQHandler(void)
  206:Core/Src/stm32f1xx_it.c **** {
  225              		.loc 1 206 1 is_stmt 1 view -0
  226              		.cfi_startproc
@@ -447,170 +447,216 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 1
  231              		.cfi_def_cfa_offset 8
  232              		.cfi_offset 3, -8
  233              		.cfi_offset 14, -4
- 207:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 0 */
+ 207:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
  208:Core/Src/stm32f1xx_it.c **** 
- 209:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 0 */
- 210:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c1);
+ 209:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 0 */
+ 210:Core/Src/stm32f1xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(Button_Pin);
  234              		.loc 1 210 3 view .LVU30
- 235 0002 0248     		ldr	r0, .L18
- 236 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 235 0002 2020     		movs	r0, #32
+ 236 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
  237              	.LVL1:
- 211:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 1 */
+ 211:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
  212:Core/Src/stm32f1xx_it.c **** 
- 213:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 1 */
+ 213:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 1 */
  214:Core/Src/stm32f1xx_it.c **** }
  238              		.loc 1 214 1 is_stmt 0 view .LVU31
  239 0008 08BD     		pop	{r3, pc}
- 240              	.L19:
- 241 000a 00BF     		.align	2
- 242              	.L18:
- 243 000c 00000000 		.word	hi2c1
- 244              		.cfi_endproc
- 245              	.LFE74:
- 247              		.section	.text.I2C2_EV_IRQHandler,"ax",%progbits
- 248              		.align	1
- 249              		.global	I2C2_EV_IRQHandler
- 250              		.syntax unified
- 251              		.thumb
- 252              		.thumb_func
- 254              	I2C2_EV_IRQHandler:
- 255              	.LFB75:
+ 240              		.cfi_endproc
+ 241              	.LFE74:
+ 243              		.section	.text.I2C1_ER_IRQHandler,"ax",%progbits
+ 244              		.align	1
+ 245              		.global	I2C1_ER_IRQHandler
+ 246              		.syntax unified
+ 247              		.thumb
+ 248              		.thumb_func
+ 250              	I2C1_ER_IRQHandler:
+ 251              	.LFB75:
  215:Core/Src/stm32f1xx_it.c **** 
  216:Core/Src/stm32f1xx_it.c **** /**
- 217:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 event interrupt.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 9
-
-
+ 217:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C1 error interrupt.
  218:Core/Src/stm32f1xx_it.c ****   */
- 219:Core/Src/stm32f1xx_it.c **** void I2C2_EV_IRQHandler(void)
+ 219:Core/Src/stm32f1xx_it.c **** void I2C1_ER_IRQHandler(void)
  220:Core/Src/stm32f1xx_it.c **** {
- 256              		.loc 1 220 1 is_stmt 1 view -0
- 257              		.cfi_startproc
- 258              		@ args = 0, pretend = 0, frame = 0
- 259              		@ frame_needed = 0, uses_anonymous_args = 0
- 260 0000 08B5     		push	{r3, lr}
- 261              	.LCFI2:
- 262              		.cfi_def_cfa_offset 8
- 263              		.cfi_offset 3, -8
- 264              		.cfi_offset 14, -4
- 221:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 0 */
- 222:Core/Src/stm32f1xx_it.c ****   i2c_state++;
- 265              		.loc 1 222 3 view .LVU33
- 266              		.loc 1 222 12 is_stmt 0 view .LVU34
- 267 0002 044A     		ldr	r2, .L22
- 268 0004 1368     		ldr	r3, [r2]
- 269 0006 0133     		adds	r3, r3, #1
- 270 0008 1360     		str	r3, [r2]
- 223:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 0 */
- 224:Core/Src/stm32f1xx_it.c ****   HAL_I2C_EV_IRQHandler(&hi2c2);
- 271              		.loc 1 224 3 is_stmt 1 view .LVU35
- 272 000a 0348     		ldr	r0, .L22+4
- 273 000c FFF7FEFF 		bl	HAL_I2C_EV_IRQHandler
- 274              	.LVL2:
- 225:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 1 */
+ 252              		.loc 1 220 1 is_stmt 1 view -0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 9
+
+
+ 253              		.cfi_startproc
+ 254              		@ args = 0, pretend = 0, frame = 0
+ 255              		@ frame_needed = 0, uses_anonymous_args = 0
+ 256 0000 08B5     		push	{r3, lr}
+ 257              	.LCFI2:
+ 258              		.cfi_def_cfa_offset 8
+ 259              		.cfi_offset 3, -8
+ 260              		.cfi_offset 14, -4
+ 221:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 0 */
+ 222:Core/Src/stm32f1xx_it.c **** 
+ 223:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 0 */
+ 224:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c1);
+ 261              		.loc 1 224 3 view .LVU33
+ 262 0002 0248     		ldr	r0, .L20
+ 263 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 264              	.LVL2:
+ 225:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 1 */
  226:Core/Src/stm32f1xx_it.c **** 
- 227:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 1 */
+ 227:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 1 */
  228:Core/Src/stm32f1xx_it.c **** }
- 275              		.loc 1 228 1 is_stmt 0 view .LVU36
- 276 0010 08BD     		pop	{r3, pc}
- 277              	.L23:
- 278 0012 00BF     		.align	2
- 279              	.L22:
- 280 0014 00000000 		.word	i2c_state
- 281 0018 00000000 		.word	hi2c2
- 282              		.cfi_endproc
- 283              	.LFE75:
- 285              		.section	.text.I2C2_ER_IRQHandler,"ax",%progbits
- 286              		.align	1
- 287              		.global	I2C2_ER_IRQHandler
- 288              		.syntax unified
- 289              		.thumb
- 290              		.thumb_func
- 292              	I2C2_ER_IRQHandler:
- 293              	.LFB76:
+ 265              		.loc 1 228 1 is_stmt 0 view .LVU34
+ 266 0008 08BD     		pop	{r3, pc}
+ 267              	.L21:
+ 268 000a 00BF     		.align	2
+ 269              	.L20:
+ 270 000c 00000000 		.word	hi2c1
+ 271              		.cfi_endproc
+ 272              	.LFE75:
+ 274              		.section	.text.I2C2_EV_IRQHandler,"ax",%progbits
+ 275              		.align	1
+ 276              		.global	I2C2_EV_IRQHandler
+ 277              		.syntax unified
+ 278              		.thumb
+ 279              		.thumb_func
+ 281              	I2C2_EV_IRQHandler:
+ 282              	.LFB76:
  229:Core/Src/stm32f1xx_it.c **** 
  230:Core/Src/stm32f1xx_it.c **** /**
- 231:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 error interrupt.
+ 231:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 event interrupt.
  232:Core/Src/stm32f1xx_it.c ****   */
- 233:Core/Src/stm32f1xx_it.c **** void I2C2_ER_IRQHandler(void)
+ 233:Core/Src/stm32f1xx_it.c **** void I2C2_EV_IRQHandler(void)
  234:Core/Src/stm32f1xx_it.c **** {
- 294              		.loc 1 234 1 is_stmt 1 view -0
- 295              		.cfi_startproc
- 296              		@ args = 0, pretend = 0, frame = 0
- 297              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 10
+ 283              		.loc 1 234 1 is_stmt 1 view -0
+ 284              		.cfi_startproc
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287 0000 08B5     		push	{r3, lr}
+ 288              	.LCFI3:
+ 289              		.cfi_def_cfa_offset 8
+ 290              		.cfi_offset 3, -8
+ 291              		.cfi_offset 14, -4
+ 235:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 0 */
+ 236:Core/Src/stm32f1xx_it.c ****   i2c_state++;
+ 292              		.loc 1 236 3 view .LVU36
+ 293              		.loc 1 236 12 is_stmt 0 view .LVU37
+ 294 0002 044A     		ldr	r2, .L24
+ 295 0004 1368     		ldr	r3, [r2]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 10
 
 
- 298 0000 08B5     		push	{r3, lr}
- 299              	.LCFI3:
- 300              		.cfi_def_cfa_offset 8
- 301              		.cfi_offset 3, -8
- 302              		.cfi_offset 14, -4
- 235:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 0 */
- 236:Core/Src/stm32f1xx_it.c **** 
- 237:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 0 */
- 238:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c2);
- 303              		.loc 1 238 3 view .LVU38
- 304 0002 0248     		ldr	r0, .L26
- 305 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
- 306              	.LVL3:
- 239:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 1 */
+ 296 0006 0133     		adds	r3, r3, #1
+ 297 0008 1360     		str	r3, [r2]
+ 237:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 0 */
+ 238:Core/Src/stm32f1xx_it.c ****   HAL_I2C_EV_IRQHandler(&hi2c2);
+ 298              		.loc 1 238 3 is_stmt 1 view .LVU38
+ 299 000a 0348     		ldr	r0, .L24+4
+ 300 000c FFF7FEFF 		bl	HAL_I2C_EV_IRQHandler
+ 301              	.LVL3:
+ 239:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 1 */
  240:Core/Src/stm32f1xx_it.c **** 
- 241:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 1 */
+ 241:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 1 */
  242:Core/Src/stm32f1xx_it.c **** }
- 307              		.loc 1 242 1 is_stmt 0 view .LVU39
- 308 0008 08BD     		pop	{r3, pc}
- 309              	.L27:
- 310 000a 00BF     		.align	2
- 311              	.L26:
- 312 000c 00000000 		.word	hi2c2
- 313              		.cfi_endproc
- 314              	.LFE76:
- 316              		.text
- 317              	.Letext0:
- 318              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 319              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 320              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 321              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 322              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 323              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
- 324              		.file 8 "Core/Inc/main.h"
- 325              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s 			page 11
+ 302              		.loc 1 242 1 is_stmt 0 view .LVU39
+ 303 0010 08BD     		pop	{r3, pc}
+ 304              	.L25:
+ 305 0012 00BF     		.align	2
+ 306              	.L24:
+ 307 0014 00000000 		.word	i2c_state
+ 308 0018 00000000 		.word	hi2c2
+ 309              		.cfi_endproc
+ 310              	.LFE76:
+ 312              		.section	.text.I2C2_ER_IRQHandler,"ax",%progbits
+ 313              		.align	1
+ 314              		.global	I2C2_ER_IRQHandler
+ 315              		.syntax unified
+ 316              		.thumb
+ 317              		.thumb_func
+ 319              	I2C2_ER_IRQHandler:
+ 320              	.LFB77:
+ 243:Core/Src/stm32f1xx_it.c **** 
+ 244:Core/Src/stm32f1xx_it.c **** /**
+ 245:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 error interrupt.
+ 246:Core/Src/stm32f1xx_it.c ****   */
+ 247:Core/Src/stm32f1xx_it.c **** void I2C2_ER_IRQHandler(void)
+ 248:Core/Src/stm32f1xx_it.c **** {
+ 321              		.loc 1 248 1 is_stmt 1 view -0
+ 322              		.cfi_startproc
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 0, uses_anonymous_args = 0
+ 325 0000 08B5     		push	{r3, lr}
+ 326              	.LCFI4:
+ 327              		.cfi_def_cfa_offset 8
+ 328              		.cfi_offset 3, -8
+ 329              		.cfi_offset 14, -4
+ 249:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 0 */
+ 250:Core/Src/stm32f1xx_it.c **** 
+ 251:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 0 */
+ 252:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c2);
+ 330              		.loc 1 252 3 view .LVU41
+ 331 0002 0248     		ldr	r0, .L28
+ 332 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 333              	.LVL4:
+ 253:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 1 */
+ 254:Core/Src/stm32f1xx_it.c **** 
+ 255:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 1 */
+ 256:Core/Src/stm32f1xx_it.c **** }
+ 334              		.loc 1 256 1 is_stmt 0 view .LVU42
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 11
+
+
+ 335 0008 08BD     		pop	{r3, pc}
+ 336              	.L29:
+ 337 000a 00BF     		.align	2
+ 338              	.L28:
+ 339 000c 00000000 		.word	hi2c2
+ 340              		.cfi_endproc
+ 341              	.LFE77:
+ 343              		.text
+ 344              	.Letext0:
+ 345              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 346              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 347              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 348              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 349              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 350              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ 351              		.file 8 "Core/Inc/main.h"
+ 352              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 353              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_it.c
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:19     .text.NMI_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:25     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:42     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:48     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:65     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:71     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:88     .text.BusFault_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:94     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:111    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:134    .text.SVC_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:140    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:153    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:172    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:178    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:191    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:197    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:217    .text.I2C1_ER_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:223    .text.I2C1_ER_IRQHandler:0000000000000000 I2C1_ER_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:243    .text.I2C1_ER_IRQHandler:000000000000000c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:248    .text.I2C2_EV_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:254    .text.I2C2_EV_IRQHandler:0000000000000000 I2C2_EV_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:280    .text.I2C2_EV_IRQHandler:0000000000000014 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:286    .text.I2C2_ER_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:292    .text.I2C2_ER_IRQHandler:0000000000000000 I2C2_ER_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccLaNDRx.s:312    .text.I2C2_ER_IRQHandler:000000000000000c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:19     .text.NMI_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:25     .text.NMI_Handler:0000000000000000 NMI_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:42     .text.HardFault_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:48     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:65     .text.MemManage_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:71     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:88     .text.BusFault_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:94     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:111    .text.UsageFault_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:134    .text.SVC_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:140    .text.SVC_Handler:0000000000000000 SVC_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:153    .text.DebugMon_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:172    .text.PendSV_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:178    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:191    .text.SysTick_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:197    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:217    .text.EXTI9_5_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:223    .text.EXTI9_5_IRQHandler:0000000000000000 EXTI9_5_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:244    .text.I2C1_ER_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:250    .text.I2C1_ER_IRQHandler:0000000000000000 I2C1_ER_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:270    .text.I2C1_ER_IRQHandler:000000000000000c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:275    .text.I2C2_EV_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:281    .text.I2C2_EV_IRQHandler:0000000000000000 I2C2_EV_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:307    .text.I2C2_EV_IRQHandler:0000000000000014 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:313    .text.I2C2_ER_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:319    .text.I2C2_ER_IRQHandler:0000000000000000 I2C2_ER_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:339    .text.I2C2_ER_IRQHandler:000000000000000c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
+HAL_GPIO_EXTI_IRQHandler
 HAL_I2C_ER_IRQHandler
 hi2c1
 HAL_I2C_EV_IRQHandler

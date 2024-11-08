@@ -124,7 +124,7 @@ uint16_t ADS1015_Read(uint8_t channel)
             // Set 'start single-conversion' bit
         ADS1015_CONFIG |= ADS1015_REG_CONFIG_OS_SINGLE;
         ADS1015_WriteOneByte(ADS1015_ADDRESS,ADS1015_REG_POINTER_CONFIG, ADS1015_CONFIG);
-        HAL_Delay(10);
+        HAL_Delay(1);
         HAL_I2C_Master_Receive_IT(&hi2c2,ADS1015_ADDRESS<<1,&temp,2);
         temp=temp>>4;
         return temp;
