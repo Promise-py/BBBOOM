@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"stm32f1xx_it.c"
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 1
   30:Core/Src/stm32f1xx_it.c **** /* USER CODE END TD */
   31:Core/Src/stm32f1xx_it.c **** 
   32:Core/Src/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 2
 
 
   33:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN PD */
@@ -88,575 +88,717 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 1
   57:Core/Src/stm32f1xx_it.c **** /* External variables --------------------------------------------------------*/
   58:Core/Src/stm32f1xx_it.c **** extern I2C_HandleTypeDef hi2c1;
   59:Core/Src/stm32f1xx_it.c **** extern I2C_HandleTypeDef hi2c2;
-  60:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN EV */
-  61:Core/Src/stm32f1xx_it.c **** 
-  62:Core/Src/stm32f1xx_it.c **** /* USER CODE END EV */
-  63:Core/Src/stm32f1xx_it.c **** 
-  64:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
-  65:Core/Src/stm32f1xx_it.c **** /*           Cortex-M3 Processor Interruption and Exception Handlers          */
-  66:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
-  67:Core/Src/stm32f1xx_it.c **** /**
-  68:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Non maskable interrupt.
-  69:Core/Src/stm32f1xx_it.c ****   */
-  70:Core/Src/stm32f1xx_it.c **** void NMI_Handler(void)
-  71:Core/Src/stm32f1xx_it.c **** {
-  27              		.loc 1 71 1 view -0
+  60:Core/Src/stm32f1xx_it.c **** extern TIM_HandleTypeDef htim1;
+  61:Core/Src/stm32f1xx_it.c **** /* USER CODE BEGIN EV */
+  62:Core/Src/stm32f1xx_it.c **** 
+  63:Core/Src/stm32f1xx_it.c **** /* USER CODE END EV */
+  64:Core/Src/stm32f1xx_it.c **** 
+  65:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
+  66:Core/Src/stm32f1xx_it.c **** /*           Cortex-M3 Processor Interruption and Exception Handlers          */
+  67:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
+  68:Core/Src/stm32f1xx_it.c **** /**
+  69:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Non maskable interrupt.
+  70:Core/Src/stm32f1xx_it.c ****   */
+  71:Core/Src/stm32f1xx_it.c **** void NMI_Handler(void)
+  72:Core/Src/stm32f1xx_it.c **** {
+  27              		.loc 1 72 1
   28              		.cfi_startproc
-  29              		@ Volatile: function does not return.
-  30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32              		@ link register save eliminated.
-  33              	.L2:
-  72:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
-  73:Core/Src/stm32f1xx_it.c **** 
-  74:Core/Src/stm32f1xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
-  75:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
-  76:Core/Src/stm32f1xx_it.c ****    while (1)
-  34              		.loc 1 76 4 discriminator 1 view .LVU1
-  77:Core/Src/stm32f1xx_it.c ****   {
-  78:Core/Src/stm32f1xx_it.c ****   }
-  35              		.loc 1 78 3 discriminator 1 view .LVU2
-  76:Core/Src/stm32f1xx_it.c ****   {
-  36              		.loc 1 76 10 discriminator 1 view .LVU3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 3
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 80B4     		push	{r7}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 7, -4
+  36 0002 00AF     		add	r7, sp, #0
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_register 7
+  39              	.L2:
+  73:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+  74:Core/Src/stm32f1xx_it.c **** 
+  75:Core/Src/stm32f1xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 0 */
+  76:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 3
 
 
-  37 0000 FEE7     		b	.L2
-  38              		.cfi_endproc
-  39              	.LFE65:
-  41              		.section	.text.HardFault_Handler,"ax",%progbits
-  42              		.align	1
-  43              		.global	HardFault_Handler
-  44              		.syntax unified
-  45              		.thumb
-  46              		.thumb_func
-  48              	HardFault_Handler:
-  49              	.LFB66:
-  79:Core/Src/stm32f1xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
-  80:Core/Src/stm32f1xx_it.c **** }
-  81:Core/Src/stm32f1xx_it.c **** 
-  82:Core/Src/stm32f1xx_it.c **** /**
-  83:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Hard fault interrupt.
-  84:Core/Src/stm32f1xx_it.c ****   */
-  85:Core/Src/stm32f1xx_it.c **** void HardFault_Handler(void)
-  86:Core/Src/stm32f1xx_it.c **** {
-  50              		.loc 1 86 1 view -0
-  51              		.cfi_startproc
-  52              		@ Volatile: function does not return.
-  53              		@ args = 0, pretend = 0, frame = 0
-  54              		@ frame_needed = 0, uses_anonymous_args = 0
-  55              		@ link register save eliminated.
-  56              	.L4:
-  87:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
-  88:Core/Src/stm32f1xx_it.c **** 
-  89:Core/Src/stm32f1xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
-  90:Core/Src/stm32f1xx_it.c ****   while (1)
-  57              		.loc 1 90 3 discriminator 1 view .LVU5
-  91:Core/Src/stm32f1xx_it.c ****   {
-  92:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-  93:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
-  94:Core/Src/stm32f1xx_it.c ****   }
-  58              		.loc 1 94 3 discriminator 1 view .LVU6
-  90:Core/Src/stm32f1xx_it.c ****   {
-  59              		.loc 1 90 9 discriminator 1 view .LVU7
-  60 0000 FEE7     		b	.L4
-  61              		.cfi_endproc
-  62              	.LFE66:
-  64              		.section	.text.MemManage_Handler,"ax",%progbits
-  65              		.align	1
-  66              		.global	MemManage_Handler
-  67              		.syntax unified
-  68              		.thumb
-  69              		.thumb_func
-  71              	MemManage_Handler:
-  72              	.LFB67:
-  95:Core/Src/stm32f1xx_it.c **** }
-  96:Core/Src/stm32f1xx_it.c **** 
-  97:Core/Src/stm32f1xx_it.c **** /**
-  98:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Memory management fault.
-  99:Core/Src/stm32f1xx_it.c ****   */
- 100:Core/Src/stm32f1xx_it.c **** void MemManage_Handler(void)
- 101:Core/Src/stm32f1xx_it.c **** {
-  73              		.loc 1 101 1 view -0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 4
+  77:Core/Src/stm32f1xx_it.c ****    while (1)
+  40              		.loc 1 77 10 discriminator 1
+  41 0004 00BF     		nop
+  42 0006 FDE7     		b	.L2
+  43              		.cfi_endproc
+  44              	.LFE65:
+  46              		.section	.text.HardFault_Handler,"ax",%progbits
+  47              		.align	1
+  48              		.global	HardFault_Handler
+  49              		.syntax unified
+  50              		.thumb
+  51              		.thumb_func
+  53              	HardFault_Handler:
+  54              	.LFB66:
+  78:Core/Src/stm32f1xx_it.c ****   {
+  79:Core/Src/stm32f1xx_it.c ****   }
+  80:Core/Src/stm32f1xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
+  81:Core/Src/stm32f1xx_it.c **** }
+  82:Core/Src/stm32f1xx_it.c **** 
+  83:Core/Src/stm32f1xx_it.c **** /**
+  84:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Hard fault interrupt.
+  85:Core/Src/stm32f1xx_it.c ****   */
+  86:Core/Src/stm32f1xx_it.c **** void HardFault_Handler(void)
+  87:Core/Src/stm32f1xx_it.c **** {
+  55              		.loc 1 87 1
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 1, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60 0000 80B4     		push	{r7}
+  61              	.LCFI2:
+  62              		.cfi_def_cfa_offset 4
+  63              		.cfi_offset 7, -4
+  64 0002 00AF     		add	r7, sp, #0
+  65              	.LCFI3:
+  66              		.cfi_def_cfa_register 7
+  67              	.L4:
+  88:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN HardFault_IRQn 0 */
+  89:Core/Src/stm32f1xx_it.c **** 
+  90:Core/Src/stm32f1xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
+  91:Core/Src/stm32f1xx_it.c ****   while (1)
+  68              		.loc 1 91 9 discriminator 1
+  69 0004 00BF     		nop
+  70 0006 FDE7     		b	.L4
+  71              		.cfi_endproc
+  72              	.LFE66:
+  74              		.section	.text.MemManage_Handler,"ax",%progbits
+  75              		.align	1
+  76              		.global	MemManage_Handler
+  77              		.syntax unified
+  78              		.thumb
+  79              		.thumb_func
+  81              	MemManage_Handler:
+  82              	.LFB67:
+  92:Core/Src/stm32f1xx_it.c ****   {
+  93:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+  94:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_HardFault_IRQn 0 */
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 4
 
 
-  74              		.cfi_startproc
-  75              		@ Volatile: function does not return.
-  76              		@ args = 0, pretend = 0, frame = 0
-  77              		@ frame_needed = 0, uses_anonymous_args = 0
-  78              		@ link register save eliminated.
-  79              	.L6:
- 102:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
- 103:Core/Src/stm32f1xx_it.c **** 
- 104:Core/Src/stm32f1xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
- 105:Core/Src/stm32f1xx_it.c ****   while (1)
-  80              		.loc 1 105 3 discriminator 1 view .LVU9
- 106:Core/Src/stm32f1xx_it.c ****   {
- 107:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
- 108:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
- 109:Core/Src/stm32f1xx_it.c ****   }
-  81              		.loc 1 109 3 discriminator 1 view .LVU10
- 105:Core/Src/stm32f1xx_it.c ****   {
-  82              		.loc 1 105 9 discriminator 1 view .LVU11
-  83 0000 FEE7     		b	.L6
-  84              		.cfi_endproc
-  85              	.LFE67:
-  87              		.section	.text.BusFault_Handler,"ax",%progbits
-  88              		.align	1
-  89              		.global	BusFault_Handler
-  90              		.syntax unified
-  91              		.thumb
-  92              		.thumb_func
-  94              	BusFault_Handler:
-  95              	.LFB68:
- 110:Core/Src/stm32f1xx_it.c **** }
- 111:Core/Src/stm32f1xx_it.c **** 
- 112:Core/Src/stm32f1xx_it.c **** /**
- 113:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Prefetch fault, memory access fault.
- 114:Core/Src/stm32f1xx_it.c ****   */
- 115:Core/Src/stm32f1xx_it.c **** void BusFault_Handler(void)
- 116:Core/Src/stm32f1xx_it.c **** {
-  96              		.loc 1 116 1 view -0
-  97              		.cfi_startproc
-  98              		@ Volatile: function does not return.
-  99              		@ args = 0, pretend = 0, frame = 0
- 100              		@ frame_needed = 0, uses_anonymous_args = 0
- 101              		@ link register save eliminated.
- 102              	.L8:
- 117:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN BusFault_IRQn 0 */
- 118:Core/Src/stm32f1xx_it.c **** 
- 119:Core/Src/stm32f1xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
- 120:Core/Src/stm32f1xx_it.c ****   while (1)
- 103              		.loc 1 120 3 discriminator 1 view .LVU13
- 121:Core/Src/stm32f1xx_it.c ****   {
- 122:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
- 123:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
- 124:Core/Src/stm32f1xx_it.c ****   }
- 104              		.loc 1 124 3 discriminator 1 view .LVU14
- 120:Core/Src/stm32f1xx_it.c ****   {
- 105              		.loc 1 120 9 discriminator 1 view .LVU15
- 106 0000 FEE7     		b	.L8
- 107              		.cfi_endproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 5
+  95:Core/Src/stm32f1xx_it.c ****   }
+  96:Core/Src/stm32f1xx_it.c **** }
+  97:Core/Src/stm32f1xx_it.c **** 
+  98:Core/Src/stm32f1xx_it.c **** /**
+  99:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Memory management fault.
+ 100:Core/Src/stm32f1xx_it.c ****   */
+ 101:Core/Src/stm32f1xx_it.c **** void MemManage_Handler(void)
+ 102:Core/Src/stm32f1xx_it.c **** {
+  83              		.loc 1 102 1
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 1, uses_anonymous_args = 0
+  87              		@ link register save eliminated.
+  88 0000 80B4     		push	{r7}
+  89              	.LCFI4:
+  90              		.cfi_def_cfa_offset 4
+  91              		.cfi_offset 7, -4
+  92 0002 00AF     		add	r7, sp, #0
+  93              	.LCFI5:
+  94              		.cfi_def_cfa_register 7
+  95              	.L6:
+ 103:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
+ 104:Core/Src/stm32f1xx_it.c **** 
+ 105:Core/Src/stm32f1xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
+ 106:Core/Src/stm32f1xx_it.c ****   while (1)
+  96              		.loc 1 106 9 discriminator 1
+  97 0004 00BF     		nop
+  98 0006 FDE7     		b	.L6
+  99              		.cfi_endproc
+ 100              	.LFE67:
+ 102              		.section	.text.BusFault_Handler,"ax",%progbits
+ 103              		.align	1
+ 104              		.global	BusFault_Handler
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 109              	BusFault_Handler:
+ 110              	.LFB68:
+ 107:Core/Src/stm32f1xx_it.c ****   {
+ 108:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
+ 109:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_MemoryManagement_IRQn 0 */
+ 110:Core/Src/stm32f1xx_it.c ****   }
+ 111:Core/Src/stm32f1xx_it.c **** }
+ 112:Core/Src/stm32f1xx_it.c **** 
+ 113:Core/Src/stm32f1xx_it.c **** /**
+ 114:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Prefetch fault, memory access fault.
+ 115:Core/Src/stm32f1xx_it.c ****   */
+ 116:Core/Src/stm32f1xx_it.c **** void BusFault_Handler(void)
+ 117:Core/Src/stm32f1xx_it.c **** {
+ 111              		.loc 1 117 1
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 1, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
+ 116 0000 80B4     		push	{r7}
+ 117              	.LCFI6:
+ 118              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 5
 
 
- 108              	.LFE68:
- 110              		.section	.text.UsageFault_Handler,"ax",%progbits
- 111              		.align	1
- 112              		.global	UsageFault_Handler
- 113              		.syntax unified
- 114              		.thumb
- 115              		.thumb_func
- 117              	UsageFault_Handler:
- 118              	.LFB69:
- 125:Core/Src/stm32f1xx_it.c **** }
- 126:Core/Src/stm32f1xx_it.c **** 
- 127:Core/Src/stm32f1xx_it.c **** /**
- 128:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Undefined instruction or illegal state.
- 129:Core/Src/stm32f1xx_it.c ****   */
- 130:Core/Src/stm32f1xx_it.c **** void UsageFault_Handler(void)
- 131:Core/Src/stm32f1xx_it.c **** {
- 119              		.loc 1 131 1 view -0
- 120              		.cfi_startproc
- 121              		@ Volatile: function does not return.
- 122              		@ args = 0, pretend = 0, frame = 0
- 123              		@ frame_needed = 0, uses_anonymous_args = 0
- 124              		@ link register save eliminated.
- 125              	.L10:
- 132:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN UsageFault_IRQn 0 */
- 133:Core/Src/stm32f1xx_it.c **** 
- 134:Core/Src/stm32f1xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
- 135:Core/Src/stm32f1xx_it.c ****   while (1)
- 126              		.loc 1 135 3 discriminator 1 view .LVU17
- 136:Core/Src/stm32f1xx_it.c ****   {
- 137:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
- 138:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
- 139:Core/Src/stm32f1xx_it.c ****   }
- 127              		.loc 1 139 3 discriminator 1 view .LVU18
- 135:Core/Src/stm32f1xx_it.c ****   {
- 128              		.loc 1 135 9 discriminator 1 view .LVU19
- 129 0000 FEE7     		b	.L10
- 130              		.cfi_endproc
- 131              	.LFE69:
- 133              		.section	.text.SVC_Handler,"ax",%progbits
- 134              		.align	1
- 135              		.global	SVC_Handler
- 136              		.syntax unified
- 137              		.thumb
- 138              		.thumb_func
- 140              	SVC_Handler:
- 141              	.LFB70:
- 140:Core/Src/stm32f1xx_it.c **** }
- 141:Core/Src/stm32f1xx_it.c **** 
- 142:Core/Src/stm32f1xx_it.c **** /**
- 143:Core/Src/stm32f1xx_it.c ****   * @brief This function handles System service call via SWI instruction.
- 144:Core/Src/stm32f1xx_it.c ****   */
- 145:Core/Src/stm32f1xx_it.c **** void SVC_Handler(void)
- 146:Core/Src/stm32f1xx_it.c **** {
- 142              		.loc 1 146 1 view -0
- 143              		.cfi_startproc
- 144              		@ args = 0, pretend = 0, frame = 0
- 145              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 6
+ 119              		.cfi_offset 7, -4
+ 120 0002 00AF     		add	r7, sp, #0
+ 121              	.LCFI7:
+ 122              		.cfi_def_cfa_register 7
+ 123              	.L8:
+ 118:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN BusFault_IRQn 0 */
+ 119:Core/Src/stm32f1xx_it.c **** 
+ 120:Core/Src/stm32f1xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
+ 121:Core/Src/stm32f1xx_it.c ****   while (1)
+ 124              		.loc 1 121 9 discriminator 1
+ 125 0004 00BF     		nop
+ 126 0006 FDE7     		b	.L8
+ 127              		.cfi_endproc
+ 128              	.LFE68:
+ 130              		.section	.text.UsageFault_Handler,"ax",%progbits
+ 131              		.align	1
+ 132              		.global	UsageFault_Handler
+ 133              		.syntax unified
+ 134              		.thumb
+ 135              		.thumb_func
+ 137              	UsageFault_Handler:
+ 138              	.LFB69:
+ 122:Core/Src/stm32f1xx_it.c ****   {
+ 123:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_BusFault_IRQn 0 */
+ 124:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_BusFault_IRQn 0 */
+ 125:Core/Src/stm32f1xx_it.c ****   }
+ 126:Core/Src/stm32f1xx_it.c **** }
+ 127:Core/Src/stm32f1xx_it.c **** 
+ 128:Core/Src/stm32f1xx_it.c **** /**
+ 129:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Undefined instruction or illegal state.
+ 130:Core/Src/stm32f1xx_it.c ****   */
+ 131:Core/Src/stm32f1xx_it.c **** void UsageFault_Handler(void)
+ 132:Core/Src/stm32f1xx_it.c **** {
+ 139              		.loc 1 132 1
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 0
+ 142              		@ frame_needed = 1, uses_anonymous_args = 0
+ 143              		@ link register save eliminated.
+ 144 0000 80B4     		push	{r7}
+ 145              	.LCFI8:
+ 146              		.cfi_def_cfa_offset 4
+ 147              		.cfi_offset 7, -4
+ 148 0002 00AF     		add	r7, sp, #0
+ 149              	.LCFI9:
+ 150              		.cfi_def_cfa_register 7
+ 151              	.L10:
+ 133:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN UsageFault_IRQn 0 */
+ 134:Core/Src/stm32f1xx_it.c **** 
+ 135:Core/Src/stm32f1xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
+ 136:Core/Src/stm32f1xx_it.c ****   while (1)
+ 152              		.loc 1 136 9 discriminator 1
+ 153 0004 00BF     		nop
+ 154 0006 FDE7     		b	.L10
+ 155              		.cfi_endproc
+ 156              	.LFE69:
+ 158              		.section	.text.SVC_Handler,"ax",%progbits
+ 159              		.align	1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 6
 
 
- 146              		@ link register save eliminated.
- 147:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 0 */
- 148:Core/Src/stm32f1xx_it.c **** 
- 149:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SVCall_IRQn 0 */
- 150:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 1 */
- 151:Core/Src/stm32f1xx_it.c **** 
- 152:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SVCall_IRQn 1 */
- 153:Core/Src/stm32f1xx_it.c **** }
- 147              		.loc 1 153 1 view .LVU21
- 148 0000 7047     		bx	lr
- 149              		.cfi_endproc
- 150              	.LFE70:
- 152              		.section	.text.DebugMon_Handler,"ax",%progbits
- 153              		.align	1
- 154              		.global	DebugMon_Handler
- 155              		.syntax unified
- 156              		.thumb
- 157              		.thumb_func
- 159              	DebugMon_Handler:
- 160              	.LFB71:
- 154:Core/Src/stm32f1xx_it.c **** 
- 155:Core/Src/stm32f1xx_it.c **** /**
- 156:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Debug monitor.
- 157:Core/Src/stm32f1xx_it.c ****   */
- 158:Core/Src/stm32f1xx_it.c **** void DebugMon_Handler(void)
- 159:Core/Src/stm32f1xx_it.c **** {
- 161              		.loc 1 159 1 view -0
- 162              		.cfi_startproc
- 163              		@ args = 0, pretend = 0, frame = 0
- 164              		@ frame_needed = 0, uses_anonymous_args = 0
- 165              		@ link register save eliminated.
- 160:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
- 161:Core/Src/stm32f1xx_it.c **** 
- 162:Core/Src/stm32f1xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 0 */
- 163:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 1 */
- 164:Core/Src/stm32f1xx_it.c **** 
- 165:Core/Src/stm32f1xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 1 */
- 166:Core/Src/stm32f1xx_it.c **** }
- 166              		.loc 1 166 1 view .LVU23
- 167 0000 7047     		bx	lr
- 168              		.cfi_endproc
- 169              	.LFE71:
- 171              		.section	.text.PendSV_Handler,"ax",%progbits
- 172              		.align	1
- 173              		.global	PendSV_Handler
- 174              		.syntax unified
- 175              		.thumb
- 176              		.thumb_func
- 178              	PendSV_Handler:
- 179              	.LFB72:
- 167:Core/Src/stm32f1xx_it.c **** 
- 168:Core/Src/stm32f1xx_it.c **** /**
- 169:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Pendable request for system service.
- 170:Core/Src/stm32f1xx_it.c ****   */
- 171:Core/Src/stm32f1xx_it.c **** void PendSV_Handler(void)
- 172:Core/Src/stm32f1xx_it.c **** {
- 180              		.loc 1 172 1 view -0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 7
+ 160              		.global	SVC_Handler
+ 161              		.syntax unified
+ 162              		.thumb
+ 163              		.thumb_func
+ 165              	SVC_Handler:
+ 166              	.LFB70:
+ 137:Core/Src/stm32f1xx_it.c ****   {
+ 138:Core/Src/stm32f1xx_it.c ****     /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
+ 139:Core/Src/stm32f1xx_it.c ****     /* USER CODE END W1_UsageFault_IRQn 0 */
+ 140:Core/Src/stm32f1xx_it.c ****   }
+ 141:Core/Src/stm32f1xx_it.c **** }
+ 142:Core/Src/stm32f1xx_it.c **** 
+ 143:Core/Src/stm32f1xx_it.c **** /**
+ 144:Core/Src/stm32f1xx_it.c ****   * @brief This function handles System service call via SWI instruction.
+ 145:Core/Src/stm32f1xx_it.c ****   */
+ 146:Core/Src/stm32f1xx_it.c **** void SVC_Handler(void)
+ 147:Core/Src/stm32f1xx_it.c **** {
+ 167              		.loc 1 147 1
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 1, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+ 172 0000 80B4     		push	{r7}
+ 173              	.LCFI10:
+ 174              		.cfi_def_cfa_offset 4
+ 175              		.cfi_offset 7, -4
+ 176 0002 00AF     		add	r7, sp, #0
+ 177              	.LCFI11:
+ 178              		.cfi_def_cfa_register 7
+ 148:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 0 */
+ 149:Core/Src/stm32f1xx_it.c **** 
+ 150:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SVCall_IRQn 0 */
+ 151:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SVCall_IRQn 1 */
+ 152:Core/Src/stm32f1xx_it.c **** 
+ 153:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SVCall_IRQn 1 */
+ 154:Core/Src/stm32f1xx_it.c **** }
+ 179              		.loc 1 154 1
+ 180 0004 00BF     		nop
+ 181 0006 BD46     		mov	sp, r7
+ 182              	.LCFI12:
+ 183              		.cfi_def_cfa_register 13
+ 184              		@ sp needed
+ 185 0008 80BC     		pop	{r7}
+ 186              	.LCFI13:
+ 187              		.cfi_restore 7
+ 188              		.cfi_def_cfa_offset 0
+ 189 000a 7047     		bx	lr
+ 190              		.cfi_endproc
+ 191              	.LFE70:
+ 193              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 194              		.align	1
+ 195              		.global	DebugMon_Handler
+ 196              		.syntax unified
+ 197              		.thumb
+ 198              		.thumb_func
+ 200              	DebugMon_Handler:
+ 201              	.LFB71:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 7
 
 
- 181              		.cfi_startproc
- 182              		@ args = 0, pretend = 0, frame = 0
- 183              		@ frame_needed = 0, uses_anonymous_args = 0
- 184              		@ link register save eliminated.
- 173:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 0 */
- 174:Core/Src/stm32f1xx_it.c **** 
- 175:Core/Src/stm32f1xx_it.c ****   /* USER CODE END PendSV_IRQn 0 */
- 176:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 1 */
- 177:Core/Src/stm32f1xx_it.c **** 
- 178:Core/Src/stm32f1xx_it.c ****   /* USER CODE END PendSV_IRQn 1 */
- 179:Core/Src/stm32f1xx_it.c **** }
- 185              		.loc 1 179 1 view .LVU25
- 186 0000 7047     		bx	lr
- 187              		.cfi_endproc
- 188              	.LFE72:
- 190              		.section	.text.SysTick_Handler,"ax",%progbits
- 191              		.align	1
- 192              		.global	SysTick_Handler
- 193              		.syntax unified
- 194              		.thumb
- 195              		.thumb_func
- 197              	SysTick_Handler:
- 198              	.LFB73:
- 180:Core/Src/stm32f1xx_it.c **** 
- 181:Core/Src/stm32f1xx_it.c **** /**
- 182:Core/Src/stm32f1xx_it.c ****   * @brief This function handles System tick timer.
- 183:Core/Src/stm32f1xx_it.c ****   */
- 184:Core/Src/stm32f1xx_it.c **** void SysTick_Handler(void)
- 185:Core/Src/stm32f1xx_it.c **** {
- 199              		.loc 1 185 1 view -0
- 200              		.cfi_startproc
- 201              		@ args = 0, pretend = 0, frame = 0
- 202              		@ frame_needed = 0, uses_anonymous_args = 0
- 203 0000 08B5     		push	{r3, lr}
- 204              	.LCFI0:
- 205              		.cfi_def_cfa_offset 8
- 206              		.cfi_offset 3, -8
- 207              		.cfi_offset 14, -4
- 186:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
- 187:Core/Src/stm32f1xx_it.c **** 
- 188:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
- 189:Core/Src/stm32f1xx_it.c ****   HAL_IncTick();
- 208              		.loc 1 189 3 view .LVU27
- 209 0002 FFF7FEFF 		bl	HAL_IncTick
- 210              	.LVL0:
- 190:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
- 191:Core/Src/stm32f1xx_it.c **** 
- 192:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
- 193:Core/Src/stm32f1xx_it.c **** }
- 211              		.loc 1 193 1 is_stmt 0 view .LVU28
- 212 0006 08BD     		pop	{r3, pc}
- 213              		.cfi_endproc
- 214              	.LFE73:
- 216              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
- 217              		.align	1
- 218              		.global	EXTI9_5_IRQHandler
- 219              		.syntax unified
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 8
+ 155:Core/Src/stm32f1xx_it.c **** 
+ 156:Core/Src/stm32f1xx_it.c **** /**
+ 157:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Debug monitor.
+ 158:Core/Src/stm32f1xx_it.c ****   */
+ 159:Core/Src/stm32f1xx_it.c **** void DebugMon_Handler(void)
+ 160:Core/Src/stm32f1xx_it.c **** {
+ 202              		.loc 1 160 1
+ 203              		.cfi_startproc
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 1, uses_anonymous_args = 0
+ 206              		@ link register save eliminated.
+ 207 0000 80B4     		push	{r7}
+ 208              	.LCFI14:
+ 209              		.cfi_def_cfa_offset 4
+ 210              		.cfi_offset 7, -4
+ 211 0002 00AF     		add	r7, sp, #0
+ 212              	.LCFI15:
+ 213              		.cfi_def_cfa_register 7
+ 161:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
+ 162:Core/Src/stm32f1xx_it.c **** 
+ 163:Core/Src/stm32f1xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 0 */
+ 164:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 1 */
+ 165:Core/Src/stm32f1xx_it.c **** 
+ 166:Core/Src/stm32f1xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 1 */
+ 167:Core/Src/stm32f1xx_it.c **** }
+ 214              		.loc 1 167 1
+ 215 0004 00BF     		nop
+ 216 0006 BD46     		mov	sp, r7
+ 217              	.LCFI16:
+ 218              		.cfi_def_cfa_register 13
+ 219              		@ sp needed
+ 220 0008 80BC     		pop	{r7}
+ 221              	.LCFI17:
+ 222              		.cfi_restore 7
+ 223              		.cfi_def_cfa_offset 0
+ 224 000a 7047     		bx	lr
+ 225              		.cfi_endproc
+ 226              	.LFE71:
+ 228              		.section	.text.PendSV_Handler,"ax",%progbits
+ 229              		.align	1
+ 230              		.global	PendSV_Handler
+ 231              		.syntax unified
+ 232              		.thumb
+ 233              		.thumb_func
+ 235              	PendSV_Handler:
+ 236              	.LFB72:
+ 168:Core/Src/stm32f1xx_it.c **** 
+ 169:Core/Src/stm32f1xx_it.c **** /**
+ 170:Core/Src/stm32f1xx_it.c ****   * @brief This function handles Pendable request for system service.
+ 171:Core/Src/stm32f1xx_it.c ****   */
+ 172:Core/Src/stm32f1xx_it.c **** void PendSV_Handler(void)
+ 173:Core/Src/stm32f1xx_it.c **** {
+ 237              		.loc 1 173 1
+ 238              		.cfi_startproc
+ 239              		@ args = 0, pretend = 0, frame = 0
+ 240              		@ frame_needed = 1, uses_anonymous_args = 0
+ 241              		@ link register save eliminated.
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 8
 
 
- 220              		.thumb
- 221              		.thumb_func
- 223              	EXTI9_5_IRQHandler:
- 224              	.LFB74:
- 194:Core/Src/stm32f1xx_it.c **** 
- 195:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
- 196:Core/Src/stm32f1xx_it.c **** /* STM32F1xx Peripheral Interrupt Handlers                                    */
- 197:Core/Src/stm32f1xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
- 198:Core/Src/stm32f1xx_it.c **** /* For the available peripheral interrupt handler names,                      */
- 199:Core/Src/stm32f1xx_it.c **** /* please refer to the startup file (startup_stm32f1xx.s).                    */
- 200:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
- 201:Core/Src/stm32f1xx_it.c **** 
- 202:Core/Src/stm32f1xx_it.c **** /**
- 203:Core/Src/stm32f1xx_it.c ****   * @brief This function handles EXTI line[9:5] interrupts.
- 204:Core/Src/stm32f1xx_it.c ****   */
- 205:Core/Src/stm32f1xx_it.c **** void EXTI9_5_IRQHandler(void)
- 206:Core/Src/stm32f1xx_it.c **** {
- 225              		.loc 1 206 1 is_stmt 1 view -0
- 226              		.cfi_startproc
- 227              		@ args = 0, pretend = 0, frame = 0
- 228              		@ frame_needed = 0, uses_anonymous_args = 0
- 229 0000 08B5     		push	{r3, lr}
- 230              	.LCFI1:
- 231              		.cfi_def_cfa_offset 8
- 232              		.cfi_offset 3, -8
- 233              		.cfi_offset 14, -4
- 207:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
- 208:Core/Src/stm32f1xx_it.c **** 
- 209:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 0 */
- 210:Core/Src/stm32f1xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(Button_Pin);
- 234              		.loc 1 210 3 view .LVU30
- 235 0002 2020     		movs	r0, #32
- 236 0004 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
- 237              	.LVL1:
- 211:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
- 212:Core/Src/stm32f1xx_it.c **** 
- 213:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 1 */
- 214:Core/Src/stm32f1xx_it.c **** }
- 238              		.loc 1 214 1 is_stmt 0 view .LVU31
- 239 0008 08BD     		pop	{r3, pc}
- 240              		.cfi_endproc
- 241              	.LFE74:
- 243              		.section	.text.I2C1_ER_IRQHandler,"ax",%progbits
- 244              		.align	1
- 245              		.global	I2C1_ER_IRQHandler
- 246              		.syntax unified
- 247              		.thumb
- 248              		.thumb_func
- 250              	I2C1_ER_IRQHandler:
- 251              	.LFB75:
- 215:Core/Src/stm32f1xx_it.c **** 
- 216:Core/Src/stm32f1xx_it.c **** /**
- 217:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C1 error interrupt.
- 218:Core/Src/stm32f1xx_it.c ****   */
- 219:Core/Src/stm32f1xx_it.c **** void I2C1_ER_IRQHandler(void)
- 220:Core/Src/stm32f1xx_it.c **** {
- 252              		.loc 1 220 1 is_stmt 1 view -0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 9
+ 242 0000 80B4     		push	{r7}
+ 243              	.LCFI18:
+ 244              		.cfi_def_cfa_offset 4
+ 245              		.cfi_offset 7, -4
+ 246 0002 00AF     		add	r7, sp, #0
+ 247              	.LCFI19:
+ 248              		.cfi_def_cfa_register 7
+ 174:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 0 */
+ 175:Core/Src/stm32f1xx_it.c **** 
+ 176:Core/Src/stm32f1xx_it.c ****   /* USER CODE END PendSV_IRQn 0 */
+ 177:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN PendSV_IRQn 1 */
+ 178:Core/Src/stm32f1xx_it.c **** 
+ 179:Core/Src/stm32f1xx_it.c ****   /* USER CODE END PendSV_IRQn 1 */
+ 180:Core/Src/stm32f1xx_it.c **** }
+ 249              		.loc 1 180 1
+ 250 0004 00BF     		nop
+ 251 0006 BD46     		mov	sp, r7
+ 252              	.LCFI20:
+ 253              		.cfi_def_cfa_register 13
+ 254              		@ sp needed
+ 255 0008 80BC     		pop	{r7}
+ 256              	.LCFI21:
+ 257              		.cfi_restore 7
+ 258              		.cfi_def_cfa_offset 0
+ 259 000a 7047     		bx	lr
+ 260              		.cfi_endproc
+ 261              	.LFE72:
+ 263              		.section	.text.SysTick_Handler,"ax",%progbits
+ 264              		.align	1
+ 265              		.global	SysTick_Handler
+ 266              		.syntax unified
+ 267              		.thumb
+ 268              		.thumb_func
+ 270              	SysTick_Handler:
+ 271              	.LFB73:
+ 181:Core/Src/stm32f1xx_it.c **** 
+ 182:Core/Src/stm32f1xx_it.c **** /**
+ 183:Core/Src/stm32f1xx_it.c ****   * @brief This function handles System tick timer.
+ 184:Core/Src/stm32f1xx_it.c ****   */
+ 185:Core/Src/stm32f1xx_it.c **** void SysTick_Handler(void)
+ 186:Core/Src/stm32f1xx_it.c **** {
+ 272              		.loc 1 186 1
+ 273              		.cfi_startproc
+ 274              		@ args = 0, pretend = 0, frame = 0
+ 275              		@ frame_needed = 1, uses_anonymous_args = 0
+ 276 0000 80B5     		push	{r7, lr}
+ 277              	.LCFI22:
+ 278              		.cfi_def_cfa_offset 8
+ 279              		.cfi_offset 7, -8
+ 280              		.cfi_offset 14, -4
+ 281 0002 00AF     		add	r7, sp, #0
+ 282              	.LCFI23:
+ 283              		.cfi_def_cfa_register 7
+ 187:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
+ 188:Core/Src/stm32f1xx_it.c **** 
+ 189:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
+ 190:Core/Src/stm32f1xx_it.c ****   HAL_IncTick();
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 9
 
 
- 253              		.cfi_startproc
- 254              		@ args = 0, pretend = 0, frame = 0
- 255              		@ frame_needed = 0, uses_anonymous_args = 0
- 256 0000 08B5     		push	{r3, lr}
- 257              	.LCFI2:
- 258              		.cfi_def_cfa_offset 8
- 259              		.cfi_offset 3, -8
- 260              		.cfi_offset 14, -4
- 221:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 0 */
- 222:Core/Src/stm32f1xx_it.c **** 
- 223:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 0 */
- 224:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c1);
- 261              		.loc 1 224 3 view .LVU33
- 262 0002 0248     		ldr	r0, .L20
- 263 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
- 264              	.LVL2:
- 225:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 1 */
- 226:Core/Src/stm32f1xx_it.c **** 
- 227:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 1 */
- 228:Core/Src/stm32f1xx_it.c **** }
- 265              		.loc 1 228 1 is_stmt 0 view .LVU34
- 266 0008 08BD     		pop	{r3, pc}
- 267              	.L21:
- 268 000a 00BF     		.align	2
- 269              	.L20:
- 270 000c 00000000 		.word	hi2c1
- 271              		.cfi_endproc
- 272              	.LFE75:
- 274              		.section	.text.I2C2_EV_IRQHandler,"ax",%progbits
- 275              		.align	1
- 276              		.global	I2C2_EV_IRQHandler
- 277              		.syntax unified
- 278              		.thumb
- 279              		.thumb_func
- 281              	I2C2_EV_IRQHandler:
- 282              	.LFB76:
- 229:Core/Src/stm32f1xx_it.c **** 
- 230:Core/Src/stm32f1xx_it.c **** /**
- 231:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 event interrupt.
- 232:Core/Src/stm32f1xx_it.c ****   */
- 233:Core/Src/stm32f1xx_it.c **** void I2C2_EV_IRQHandler(void)
- 234:Core/Src/stm32f1xx_it.c **** {
- 283              		.loc 1 234 1 is_stmt 1 view -0
- 284              		.cfi_startproc
- 285              		@ args = 0, pretend = 0, frame = 0
- 286              		@ frame_needed = 0, uses_anonymous_args = 0
- 287 0000 08B5     		push	{r3, lr}
- 288              	.LCFI3:
- 289              		.cfi_def_cfa_offset 8
- 290              		.cfi_offset 3, -8
- 291              		.cfi_offset 14, -4
- 235:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 0 */
- 236:Core/Src/stm32f1xx_it.c ****   i2c_state++;
- 292              		.loc 1 236 3 view .LVU36
- 293              		.loc 1 236 12 is_stmt 0 view .LVU37
- 294 0002 044A     		ldr	r2, .L24
- 295 0004 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 10
+ 284              		.loc 1 190 3
+ 285 0004 FFF7FEFF 		bl	HAL_IncTick
+ 191:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
+ 192:Core/Src/stm32f1xx_it.c **** 
+ 193:Core/Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
+ 194:Core/Src/stm32f1xx_it.c **** }
+ 286              		.loc 1 194 1
+ 287 0008 00BF     		nop
+ 288 000a 80BD     		pop	{r7, pc}
+ 289              		.cfi_endproc
+ 290              	.LFE73:
+ 292              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
+ 293              		.align	1
+ 294              		.global	EXTI9_5_IRQHandler
+ 295              		.syntax unified
+ 296              		.thumb
+ 297              		.thumb_func
+ 299              	EXTI9_5_IRQHandler:
+ 300              	.LFB74:
+ 195:Core/Src/stm32f1xx_it.c **** 
+ 196:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
+ 197:Core/Src/stm32f1xx_it.c **** /* STM32F1xx Peripheral Interrupt Handlers                                    */
+ 198:Core/Src/stm32f1xx_it.c **** /* Add here the Interrupt Handlers for the used peripherals.                  */
+ 199:Core/Src/stm32f1xx_it.c **** /* For the available peripheral interrupt handler names,                      */
+ 200:Core/Src/stm32f1xx_it.c **** /* please refer to the startup file (startup_stm32f1xx.s).                    */
+ 201:Core/Src/stm32f1xx_it.c **** /******************************************************************************/
+ 202:Core/Src/stm32f1xx_it.c **** 
+ 203:Core/Src/stm32f1xx_it.c **** /**
+ 204:Core/Src/stm32f1xx_it.c ****   * @brief This function handles EXTI line[9:5] interrupts.
+ 205:Core/Src/stm32f1xx_it.c ****   */
+ 206:Core/Src/stm32f1xx_it.c **** void EXTI9_5_IRQHandler(void)
+ 207:Core/Src/stm32f1xx_it.c **** {
+ 301              		.loc 1 207 1
+ 302              		.cfi_startproc
+ 303              		@ args = 0, pretend = 0, frame = 0
+ 304              		@ frame_needed = 1, uses_anonymous_args = 0
+ 305 0000 80B5     		push	{r7, lr}
+ 306              	.LCFI24:
+ 307              		.cfi_def_cfa_offset 8
+ 308              		.cfi_offset 7, -8
+ 309              		.cfi_offset 14, -4
+ 310 0002 00AF     		add	r7, sp, #0
+ 311              	.LCFI25:
+ 312              		.cfi_def_cfa_register 7
+ 208:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+ 209:Core/Src/stm32f1xx_it.c **** 
+ 210:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 0 */
+ 211:Core/Src/stm32f1xx_it.c ****   HAL_GPIO_EXTI_IRQHandler(Button_Pin);
+ 313              		.loc 1 211 3
+ 314 0004 2020     		movs	r0, #32
+ 315 0006 FFF7FEFF 		bl	HAL_GPIO_EXTI_IRQHandler
+ 212:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+ 213:Core/Src/stm32f1xx_it.c **** 
+ 214:Core/Src/stm32f1xx_it.c ****   /* USER CODE END EXTI9_5_IRQn 1 */
+ 215:Core/Src/stm32f1xx_it.c **** }
+ 316              		.loc 1 215 1
+ 317 000a 00BF     		nop
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 10
 
 
- 296 0006 0133     		adds	r3, r3, #1
- 297 0008 1360     		str	r3, [r2]
- 237:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 0 */
- 238:Core/Src/stm32f1xx_it.c ****   HAL_I2C_EV_IRQHandler(&hi2c2);
- 298              		.loc 1 238 3 is_stmt 1 view .LVU38
- 299 000a 0348     		ldr	r0, .L24+4
- 300 000c FFF7FEFF 		bl	HAL_I2C_EV_IRQHandler
- 301              	.LVL3:
- 239:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 1 */
- 240:Core/Src/stm32f1xx_it.c **** 
- 241:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 1 */
- 242:Core/Src/stm32f1xx_it.c **** }
- 302              		.loc 1 242 1 is_stmt 0 view .LVU39
- 303 0010 08BD     		pop	{r3, pc}
- 304              	.L25:
- 305 0012 00BF     		.align	2
- 306              	.L24:
- 307 0014 00000000 		.word	i2c_state
- 308 0018 00000000 		.word	hi2c2
- 309              		.cfi_endproc
- 310              	.LFE76:
- 312              		.section	.text.I2C2_ER_IRQHandler,"ax",%progbits
- 313              		.align	1
- 314              		.global	I2C2_ER_IRQHandler
- 315              		.syntax unified
- 316              		.thumb
- 317              		.thumb_func
- 319              	I2C2_ER_IRQHandler:
- 320              	.LFB77:
- 243:Core/Src/stm32f1xx_it.c **** 
- 244:Core/Src/stm32f1xx_it.c **** /**
- 245:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 error interrupt.
- 246:Core/Src/stm32f1xx_it.c ****   */
- 247:Core/Src/stm32f1xx_it.c **** void I2C2_ER_IRQHandler(void)
- 248:Core/Src/stm32f1xx_it.c **** {
- 321              		.loc 1 248 1 is_stmt 1 view -0
- 322              		.cfi_startproc
- 323              		@ args = 0, pretend = 0, frame = 0
- 324              		@ frame_needed = 0, uses_anonymous_args = 0
- 325 0000 08B5     		push	{r3, lr}
- 326              	.LCFI4:
- 327              		.cfi_def_cfa_offset 8
- 328              		.cfi_offset 3, -8
- 329              		.cfi_offset 14, -4
- 249:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 0 */
- 250:Core/Src/stm32f1xx_it.c **** 
- 251:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 0 */
- 252:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c2);
- 330              		.loc 1 252 3 view .LVU41
- 331 0002 0248     		ldr	r0, .L28
- 332 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
- 333              	.LVL4:
- 253:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 1 */
- 254:Core/Src/stm32f1xx_it.c **** 
- 255:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 1 */
- 256:Core/Src/stm32f1xx_it.c **** }
- 334              		.loc 1 256 1 is_stmt 0 view .LVU42
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 11
+ 318 000c 80BD     		pop	{r7, pc}
+ 319              		.cfi_endproc
+ 320              	.LFE74:
+ 322              		.section	.text.TIM1_UP_IRQHandler,"ax",%progbits
+ 323              		.align	1
+ 324              		.global	TIM1_UP_IRQHandler
+ 325              		.syntax unified
+ 326              		.thumb
+ 327              		.thumb_func
+ 329              	TIM1_UP_IRQHandler:
+ 330              	.LFB75:
+ 216:Core/Src/stm32f1xx_it.c **** 
+ 217:Core/Src/stm32f1xx_it.c **** /**
+ 218:Core/Src/stm32f1xx_it.c ****   * @brief This function handles TIM1 update interrupt.
+ 219:Core/Src/stm32f1xx_it.c ****   */
+ 220:Core/Src/stm32f1xx_it.c **** void TIM1_UP_IRQHandler(void)
+ 221:Core/Src/stm32f1xx_it.c **** {
+ 331              		.loc 1 221 1
+ 332              		.cfi_startproc
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 1, uses_anonymous_args = 0
+ 335 0000 80B5     		push	{r7, lr}
+ 336              	.LCFI26:
+ 337              		.cfi_def_cfa_offset 8
+ 338              		.cfi_offset 7, -8
+ 339              		.cfi_offset 14, -4
+ 340 0002 00AF     		add	r7, sp, #0
+ 341              	.LCFI27:
+ 342              		.cfi_def_cfa_register 7
+ 222:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN TIM1_UP_IRQn 0 */
+ 223:Core/Src/stm32f1xx_it.c **** 
+ 224:Core/Src/stm32f1xx_it.c ****   /* USER CODE END TIM1_UP_IRQn 0 */
+ 225:Core/Src/stm32f1xx_it.c ****   HAL_TIM_IRQHandler(&htim1);
+ 343              		.loc 1 225 3
+ 344 0004 0248     		ldr	r0, .L17
+ 345 0006 FFF7FEFF 		bl	HAL_TIM_IRQHandler
+ 226:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN TIM1_UP_IRQn 1 */
+ 227:Core/Src/stm32f1xx_it.c **** 
+ 228:Core/Src/stm32f1xx_it.c ****   /* USER CODE END TIM1_UP_IRQn 1 */
+ 229:Core/Src/stm32f1xx_it.c **** }
+ 346              		.loc 1 229 1
+ 347 000a 00BF     		nop
+ 348 000c 80BD     		pop	{r7, pc}
+ 349              	.L18:
+ 350 000e 00BF     		.align	2
+ 351              	.L17:
+ 352 0010 00000000 		.word	htim1
+ 353              		.cfi_endproc
+ 354              	.LFE75:
+ 356              		.section	.text.I2C1_ER_IRQHandler,"ax",%progbits
+ 357              		.align	1
+ 358              		.global	I2C1_ER_IRQHandler
+ 359              		.syntax unified
+ 360              		.thumb
+ 361              		.thumb_func
+ 363              	I2C1_ER_IRQHandler:
+ 364              	.LFB76:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 11
 
 
- 335 0008 08BD     		pop	{r3, pc}
- 336              	.L29:
- 337 000a 00BF     		.align	2
- 338              	.L28:
- 339 000c 00000000 		.word	hi2c2
- 340              		.cfi_endproc
- 341              	.LFE77:
- 343              		.text
- 344              	.Letext0:
- 345              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 346              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 347              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 348              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 349              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 350              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
- 351              		.file 8 "Core/Inc/main.h"
- 352              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 353              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s 			page 12
+ 230:Core/Src/stm32f1xx_it.c **** 
+ 231:Core/Src/stm32f1xx_it.c **** /**
+ 232:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C1 error interrupt.
+ 233:Core/Src/stm32f1xx_it.c ****   */
+ 234:Core/Src/stm32f1xx_it.c **** void I2C1_ER_IRQHandler(void)
+ 235:Core/Src/stm32f1xx_it.c **** {
+ 365              		.loc 1 235 1
+ 366              		.cfi_startproc
+ 367              		@ args = 0, pretend = 0, frame = 0
+ 368              		@ frame_needed = 1, uses_anonymous_args = 0
+ 369 0000 80B5     		push	{r7, lr}
+ 370              	.LCFI28:
+ 371              		.cfi_def_cfa_offset 8
+ 372              		.cfi_offset 7, -8
+ 373              		.cfi_offset 14, -4
+ 374 0002 00AF     		add	r7, sp, #0
+ 375              	.LCFI29:
+ 376              		.cfi_def_cfa_register 7
+ 236:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 0 */
+ 237:Core/Src/stm32f1xx_it.c **** 
+ 238:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 0 */
+ 239:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c1);
+ 377              		.loc 1 239 3
+ 378 0004 0248     		ldr	r0, .L20
+ 379 0006 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 240:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C1_ER_IRQn 1 */
+ 241:Core/Src/stm32f1xx_it.c **** 
+ 242:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C1_ER_IRQn 1 */
+ 243:Core/Src/stm32f1xx_it.c **** }
+ 380              		.loc 1 243 1
+ 381 000a 00BF     		nop
+ 382 000c 80BD     		pop	{r7, pc}
+ 383              	.L21:
+ 384 000e 00BF     		.align	2
+ 385              	.L20:
+ 386 0010 00000000 		.word	hi2c1
+ 387              		.cfi_endproc
+ 388              	.LFE76:
+ 390              		.section	.text.I2C2_EV_IRQHandler,"ax",%progbits
+ 391              		.align	1
+ 392              		.global	I2C2_EV_IRQHandler
+ 393              		.syntax unified
+ 394              		.thumb
+ 395              		.thumb_func
+ 397              	I2C2_EV_IRQHandler:
+ 398              	.LFB77:
+ 244:Core/Src/stm32f1xx_it.c **** 
+ 245:Core/Src/stm32f1xx_it.c **** /**
+ 246:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 event interrupt.
+ 247:Core/Src/stm32f1xx_it.c ****   */
+ 248:Core/Src/stm32f1xx_it.c **** void I2C2_EV_IRQHandler(void)
+ 249:Core/Src/stm32f1xx_it.c **** {
+ 399              		.loc 1 249 1
+ 400              		.cfi_startproc
+ 401              		@ args = 0, pretend = 0, frame = 0
+ 402              		@ frame_needed = 1, uses_anonymous_args = 0
+ 403 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 12
+
+
+ 404              	.LCFI30:
+ 405              		.cfi_def_cfa_offset 8
+ 406              		.cfi_offset 7, -8
+ 407              		.cfi_offset 14, -4
+ 408 0002 00AF     		add	r7, sp, #0
+ 409              	.LCFI31:
+ 410              		.cfi_def_cfa_register 7
+ 250:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 0 */
+ 251:Core/Src/stm32f1xx_it.c ****   i2c_state++;
+ 411              		.loc 1 251 12
+ 412 0004 044B     		ldr	r3, .L23
+ 413 0006 1B68     		ldr	r3, [r3]
+ 414 0008 0133     		adds	r3, r3, #1
+ 415 000a 034A     		ldr	r2, .L23
+ 416 000c 1360     		str	r3, [r2]
+ 252:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 0 */
+ 253:Core/Src/stm32f1xx_it.c ****   HAL_I2C_EV_IRQHandler(&hi2c2);
+ 417              		.loc 1 253 3
+ 418 000e 0348     		ldr	r0, .L23+4
+ 419 0010 FFF7FEFF 		bl	HAL_I2C_EV_IRQHandler
+ 254:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_EV_IRQn 1 */
+ 255:Core/Src/stm32f1xx_it.c **** 
+ 256:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_EV_IRQn 1 */
+ 257:Core/Src/stm32f1xx_it.c **** }
+ 420              		.loc 1 257 1
+ 421 0014 00BF     		nop
+ 422 0016 80BD     		pop	{r7, pc}
+ 423              	.L24:
+ 424              		.align	2
+ 425              	.L23:
+ 426 0018 00000000 		.word	i2c_state
+ 427 001c 00000000 		.word	hi2c2
+ 428              		.cfi_endproc
+ 429              	.LFE77:
+ 431              		.section	.text.I2C2_ER_IRQHandler,"ax",%progbits
+ 432              		.align	1
+ 433              		.global	I2C2_ER_IRQHandler
+ 434              		.syntax unified
+ 435              		.thumb
+ 436              		.thumb_func
+ 438              	I2C2_ER_IRQHandler:
+ 439              	.LFB78:
+ 258:Core/Src/stm32f1xx_it.c **** 
+ 259:Core/Src/stm32f1xx_it.c **** /**
+ 260:Core/Src/stm32f1xx_it.c ****   * @brief This function handles I2C2 error interrupt.
+ 261:Core/Src/stm32f1xx_it.c ****   */
+ 262:Core/Src/stm32f1xx_it.c **** void I2C2_ER_IRQHandler(void)
+ 263:Core/Src/stm32f1xx_it.c **** {
+ 440              		.loc 1 263 1
+ 441              		.cfi_startproc
+ 442              		@ args = 0, pretend = 0, frame = 0
+ 443              		@ frame_needed = 1, uses_anonymous_args = 0
+ 444 0000 80B5     		push	{r7, lr}
+ 445              	.LCFI32:
+ 446              		.cfi_def_cfa_offset 8
+ 447              		.cfi_offset 7, -8
+ 448              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 13
+
+
+ 449 0002 00AF     		add	r7, sp, #0
+ 450              	.LCFI33:
+ 451              		.cfi_def_cfa_register 7
+ 264:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 0 */
+ 265:Core/Src/stm32f1xx_it.c **** 
+ 266:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 0 */
+ 267:Core/Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c2);
+ 452              		.loc 1 267 3
+ 453 0004 0248     		ldr	r0, .L26
+ 454 0006 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 268:Core/Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 1 */
+ 269:Core/Src/stm32f1xx_it.c **** 
+ 270:Core/Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 1 */
+ 271:Core/Src/stm32f1xx_it.c **** }
+ 455              		.loc 1 271 1
+ 456 000a 00BF     		nop
+ 457 000c 80BD     		pop	{r7, pc}
+ 458              	.L27:
+ 459 000e 00BF     		.align	2
+ 460              	.L26:
+ 461 0010 00000000 		.word	hi2c2
+ 462              		.cfi_endproc
+ 463              	.LFE78:
+ 465              		.text
+ 466              	.Letext0:
+ 467              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 468              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 469              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 470              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 471              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 472              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ 473              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 474              		.file 9 "Core/Inc/main.h"
+ 475              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 476              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_it.c
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:19     .text.NMI_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:25     .text.NMI_Handler:0000000000000000 NMI_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:42     .text.HardFault_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:48     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:65     .text.MemManage_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:71     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:88     .text.BusFault_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:94     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:111    .text.UsageFault_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:134    .text.SVC_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:140    .text.SVC_Handler:0000000000000000 SVC_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:153    .text.DebugMon_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:172    .text.PendSV_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:178    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:191    .text.SysTick_Handler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:197    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:217    .text.EXTI9_5_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:223    .text.EXTI9_5_IRQHandler:0000000000000000 EXTI9_5_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:244    .text.I2C1_ER_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:250    .text.I2C1_ER_IRQHandler:0000000000000000 I2C1_ER_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:270    .text.I2C1_ER_IRQHandler:000000000000000c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:275    .text.I2C2_EV_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:281    .text.I2C2_EV_IRQHandler:0000000000000000 I2C2_EV_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:307    .text.I2C2_EV_IRQHandler:0000000000000014 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:313    .text.I2C2_ER_IRQHandler:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:319    .text.I2C2_ER_IRQHandler:0000000000000000 I2C2_ER_IRQHandler
-C:\Users\Lenovo\AppData\Local\Temp\ccfTCuMf.s:339    .text.I2C2_ER_IRQHandler:000000000000000c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:19     .text.NMI_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:25     .text.NMI_Handler:0000000000000000 NMI_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:47     .text.HardFault_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:53     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:75     .text.MemManage_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:81     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:103    .text.BusFault_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:109    .text.BusFault_Handler:0000000000000000 BusFault_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:131    .text.UsageFault_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:137    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:159    .text.SVC_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:165    .text.SVC_Handler:0000000000000000 SVC_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:194    .text.DebugMon_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:200    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:229    .text.PendSV_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:235    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:264    .text.SysTick_Handler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:270    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:293    .text.EXTI9_5_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:299    .text.EXTI9_5_IRQHandler:0000000000000000 EXTI9_5_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:323    .text.TIM1_UP_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:329    .text.TIM1_UP_IRQHandler:0000000000000000 TIM1_UP_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:352    .text.TIM1_UP_IRQHandler:0000000000000010 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:357    .text.I2C1_ER_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:363    .text.I2C1_ER_IRQHandler:0000000000000000 I2C1_ER_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:386    .text.I2C1_ER_IRQHandler:0000000000000010 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:391    .text.I2C2_EV_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:397    .text.I2C2_EV_IRQHandler:0000000000000000 I2C2_EV_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:426    .text.I2C2_EV_IRQHandler:0000000000000018 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:432    .text.I2C2_ER_IRQHandler:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:438    .text.I2C2_ER_IRQHandler:0000000000000000 I2C2_ER_IRQHandler
+C:\Users\Lenovo\AppData\Local\Temp\ccpxM23Y.s:461    .text.I2C2_ER_IRQHandler:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
 HAL_GPIO_EXTI_IRQHandler
+HAL_TIM_IRQHandler
+htim1
 HAL_I2C_ER_IRQHandler
 hi2c1
 HAL_I2C_EV_IRQHandler

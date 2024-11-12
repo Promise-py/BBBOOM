@@ -1,5 +1,5 @@
 build/Battery.o: BBBOOM/Src/Battery.c BBBOOM/Inc/Battery.h \
- Core/Inc/main.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ BBBOOM/Inc/ADS1015.h Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  Core/Inc/stm32f1xx_hal_conf.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -21,10 +21,13 @@ build/Battery.o: BBBOOM/Src/Battery.c BBBOOM/Inc/Battery.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
- Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h Core/Inc/adc.h \
- Core/Inc/main.h BBBOOM/Inc/ADS1015.h Core/Inc/i2c.h
+ Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
+ Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+ Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h Core/Inc/i2c.h \
+ Core/Inc/main.h Core/Inc/main.h Core/Inc/adc.h BBBOOM/Inc/FSM.h \
+ BBBOOM/Inc/Battery.h BBBOOM/Inc/oled.h
 BBBOOM/Inc/Battery.h:
-Core/Inc/main.h:
+BBBOOM/Inc/ADS1015.h:
 Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 Core/Inc/stm32f1xx_hal_conf.h:
 Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -50,7 +53,12 @@ Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
 Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
-Core/Inc/adc.h:
-Core/Inc/main.h:
-BBBOOM/Inc/ADS1015.h:
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
+Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 Core/Inc/i2c.h:
+Core/Inc/main.h:
+Core/Inc/main.h:
+Core/Inc/adc.h:
+BBBOOM/Inc/FSM.h:
+BBBOOM/Inc/Battery.h:
+BBBOOM/Inc/oled.h:

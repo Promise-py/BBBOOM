@@ -56,8 +56,6 @@ extern int i2c_state;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Buzzer_Pin GPIO_PIN_3
-#define Buzzer_GPIO_Port GPIOB
 #define Button_Pin GPIO_PIN_5
 #define Button_GPIO_Port GPIOB
 #define Button_EXTI_IRQn EXTI9_5_IRQn

@@ -20,6 +20,7 @@
 #include "main.h"
 #include "adc.h"
 #include "i2c.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -28,6 +29,7 @@
 #include "ADS1015.h"
 #include "Battery.h"
 #include "UI.h"
+#include "FSM.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,17 +97,30 @@ int main(void)
   MX_ADC2_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
+  MX_TIM1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  // OLED_Init();
-  ADS1015_Init();
-
-  HAL_Delay(10);
-  HAL_ADCEx_Calibration_Start(&hadc1);//adc1校准
-  HAL_Delay(10);
-  HAL_ADCEx_Calibration_Start(&hadc2);//adc2校准
-
+  OLED_Init();
+  UI_ShowRUAGH();
   Battery_Init(Battery,3.8,3.7);
+  FSM_StateRefresh(Battery,&BB_fsm);
+  // ADS1015_Init();
+  // ADS1015_Config(hi2c2,ADS1015_SINGLE_END,0);
+  // ADS1015_Config_Register(hi2c2,ADS1015_REG_POINTER_CONFIG,ADS1015_CONFIG);
+
+  // ADS1015_Config(hi2c2,ADS1015_SINGLE_END,2);
+  // ADS1015_Config_Register(hi2c2,ADS1015_REG_POINTER_CONFIG,ADS1015_CONFIG);
+
+  i2c_state=AD1015_Check(hi2c2);
+  // i2c_state=HAL_I2C_IsDeviceReady(&hi2c2, ADS1015_ADDRESS<<1, 2, 1000);
+  // Battery_Init(Battery,3.8,3.7);
   // Show_Normal_UI(Battery,1,1,1,1); 
+
+  HAL_TIM_Base_Start_IT(&htim1); //定时�?1使能
+
+  // 使能timx的�?�靓y
+  HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

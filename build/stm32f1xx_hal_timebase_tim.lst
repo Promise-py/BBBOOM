@@ -1,0 +1,476 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32f1xx_hal_timebase_tim.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/stm32f1xx_hal_timebase_tim.c"
+  18              		.global	htim3
+  19              		.section	.bss.htim3,"aw",%nobits
+  20              		.align	2
+  23              	htim3:
+  24 0000 00000000 		.space	72
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  25              		.section	.text.HAL_InitTick,"ax",%progbits
+  26              		.align	1
+  27              		.global	HAL_InitTick
+  28              		.syntax unified
+  29              		.thumb
+  30              		.thumb_func
+  32              	HAL_InitTick:
+  33              	.LFB65:
+   1:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/stm32f1xx_hal_timebase_tim.c **** /**
+   3:Core/Src/stm32f1xx_hal_timebase_tim.c ****   ******************************************************************************
+   4:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @file    stm32f1xx_hal_timebase_tim.c
+   5:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @brief   HAL time base based on the hardware TIM.
+   6:Core/Src/stm32f1xx_hal_timebase_tim.c ****   ******************************************************************************
+   7:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @attention
+   8:Core/Src/stm32f1xx_hal_timebase_tim.c ****   *
+   9:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * Copyright (c) 2024 STMicroelectronics.
+  10:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * All rights reserved.
+  11:Core/Src/stm32f1xx_hal_timebase_tim.c ****   *
+  12:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * in the root directory of this software component.
+  14:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:Core/Src/stm32f1xx_hal_timebase_tim.c ****   *
+  16:Core/Src/stm32f1xx_hal_timebase_tim.c ****   ******************************************************************************
+  17:Core/Src/stm32f1xx_hal_timebase_tim.c ****   */
+  18:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* USER CODE END Header */
+  19:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  20:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Includes ------------------------------------------------------------------*/
+  21:Core/Src/stm32f1xx_hal_timebase_tim.c **** #include "stm32f1xx_hal.h"
+  22:Core/Src/stm32f1xx_hal_timebase_tim.c **** #include "stm32f1xx_hal_tim.h"
+  23:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 2
+
+
+  24:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Private typedef -----------------------------------------------------------*/
+  25:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Private define ------------------------------------------------------------*/
+  26:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Private macro -------------------------------------------------------------*/
+  27:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Private variables ---------------------------------------------------------*/
+  28:Core/Src/stm32f1xx_hal_timebase_tim.c **** TIM_HandleTypeDef        htim3;
+  29:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Private function prototypes -----------------------------------------------*/
+  30:Core/Src/stm32f1xx_hal_timebase_tim.c **** void TIM3_IRQHandler(void);
+  31:Core/Src/stm32f1xx_hal_timebase_tim.c **** /* Private functions ---------------------------------------------------------*/
+  32:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  33:Core/Src/stm32f1xx_hal_timebase_tim.c **** /**
+  34:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @brief  This function configures the TIM3 as a time base source.
+  35:Core/Src/stm32f1xx_hal_timebase_tim.c ****   *         The time source is configured  to have 1ms time base with a dedicated
+  36:Core/Src/stm32f1xx_hal_timebase_tim.c ****   *         Tick interrupt priority.
+  37:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @note   This function is called  automatically at the beginning of program after
+  38:Core/Src/stm32f1xx_hal_timebase_tim.c ****   *         reset by HAL_Init() or at any time when clock is configured, by HAL_RCC_ClockConfig().
+  39:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @param  TickPriority: Tick interrupt priority.
+  40:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @retval HAL status
+  41:Core/Src/stm32f1xx_hal_timebase_tim.c ****   */
+  42:Core/Src/stm32f1xx_hal_timebase_tim.c **** HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
+  43:Core/Src/stm32f1xx_hal_timebase_tim.c **** {
+  34              		.loc 1 43 1
+  35              		.cfi_startproc
+  36              		@ args = 0, pretend = 0, frame = 56
+  37              		@ frame_needed = 1, uses_anonymous_args = 0
+  38 0000 80B5     		push	{r7, lr}
+  39              	.LCFI0:
+  40              		.cfi_def_cfa_offset 8
+  41              		.cfi_offset 7, -8
+  42              		.cfi_offset 14, -4
+  43 0002 8EB0     		sub	sp, sp, #56
+  44              	.LCFI1:
+  45              		.cfi_def_cfa_offset 64
+  46 0004 00AF     		add	r7, sp, #0
+  47              	.LCFI2:
+  48              		.cfi_def_cfa_register 7
+  49 0006 7860     		str	r0, [r7, #4]
+  44:Core/Src/stm32f1xx_hal_timebase_tim.c ****   RCC_ClkInitTypeDef    clkconfig;
+  45:Core/Src/stm32f1xx_hal_timebase_tim.c ****   uint32_t              uwTimclock, uwAPB1Prescaler = 0U;
+  50              		.loc 1 45 37
+  51 0008 0023     		movs	r3, #0
+  52 000a FB62     		str	r3, [r7, #44]
+  46:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  47:Core/Src/stm32f1xx_hal_timebase_tim.c ****   uint32_t              uwPrescalerValue = 0U;
+  53              		.loc 1 47 25
+  54 000c 0023     		movs	r3, #0
+  55 000e BB62     		str	r3, [r7, #40]
+  48:Core/Src/stm32f1xx_hal_timebase_tim.c ****   uint32_t              pFLatency;
+  49:Core/Src/stm32f1xx_hal_timebase_tim.c ****   HAL_StatusTypeDef     status = HAL_OK;
+  56              		.loc 1 49 25
+  57 0010 0023     		movs	r3, #0
+  58 0012 87F83330 		strb	r3, [r7, #51]
+  59              	.LBB2:
+  50:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  51:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Enable TIM3 clock */
+  52:Core/Src/stm32f1xx_hal_timebase_tim.c ****   __HAL_RCC_TIM3_CLK_ENABLE();
+  60              		.loc 1 52 3
+  61 0016 344B     		ldr	r3, .L7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 3
+
+
+  62 0018 DB69     		ldr	r3, [r3, #28]
+  63 001a 334A     		ldr	r2, .L7
+  64 001c 43F00203 		orr	r3, r3, #2
+  65 0020 D361     		str	r3, [r2, #28]
+  66 0022 314B     		ldr	r3, .L7
+  67 0024 DB69     		ldr	r3, [r3, #28]
+  68 0026 03F00203 		and	r3, r3, #2
+  69 002a FB60     		str	r3, [r7, #12]
+  70 002c FB68     		ldr	r3, [r7, #12]
+  71              	.LBE2:
+  53:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Get clock configuration */
+  54:Core/Src/stm32f1xx_hal_timebase_tim.c ****   HAL_RCC_GetClockConfig(&clkconfig, &pFLatency);
+  72              		.loc 1 54 3
+  73 002e 07F11002 		add	r2, r7, #16
+  74 0032 07F11403 		add	r3, r7, #20
+  75 0036 1146     		mov	r1, r2
+  76 0038 1846     		mov	r0, r3
+  77 003a FFF7FEFF 		bl	HAL_RCC_GetClockConfig
+  55:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Get APB1 prescaler */
+  56:Core/Src/stm32f1xx_hal_timebase_tim.c ****   uwAPB1Prescaler = clkconfig.APB1CLKDivider;
+  78              		.loc 1 56 19
+  79 003e 3B6A     		ldr	r3, [r7, #32]
+  80 0040 FB62     		str	r3, [r7, #44]
+  57:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Compute TIM3 clock */
+  58:Core/Src/stm32f1xx_hal_timebase_tim.c ****   if (uwAPB1Prescaler == RCC_HCLK_DIV1)
+  81              		.loc 1 58 6
+  82 0042 FB6A     		ldr	r3, [r7, #44]
+  83 0044 002B     		cmp	r3, #0
+  84 0046 03D1     		bne	.L2
+  59:Core/Src/stm32f1xx_hal_timebase_tim.c ****   {
+  60:Core/Src/stm32f1xx_hal_timebase_tim.c ****     uwTimclock = HAL_RCC_GetPCLK1Freq();
+  85              		.loc 1 60 18
+  86 0048 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+  87 004c 7863     		str	r0, [r7, #52]
+  88 004e 04E0     		b	.L3
+  89              	.L2:
+  61:Core/Src/stm32f1xx_hal_timebase_tim.c ****   }
+  62:Core/Src/stm32f1xx_hal_timebase_tim.c ****   else
+  63:Core/Src/stm32f1xx_hal_timebase_tim.c ****   {
+  64:Core/Src/stm32f1xx_hal_timebase_tim.c ****     uwTimclock = 2UL * HAL_RCC_GetPCLK1Freq();
+  90              		.loc 1 64 24
+  91 0050 FFF7FEFF 		bl	HAL_RCC_GetPCLK1Freq
+  92 0054 0346     		mov	r3, r0
+  93              		.loc 1 64 16
+  94 0056 5B00     		lsls	r3, r3, #1
+  95 0058 7B63     		str	r3, [r7, #52]
+  96              	.L3:
+  65:Core/Src/stm32f1xx_hal_timebase_tim.c ****   }
+  66:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  67:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Compute the prescaler value to have TIM3 counter clock equal to 1MHz */
+  68:Core/Src/stm32f1xx_hal_timebase_tim.c ****   uwPrescalerValue = (uint32_t) ((uwTimclock / 1000000U) - 1U);
+  97              		.loc 1 68 46
+  98 005a 7B6B     		ldr	r3, [r7, #52]
+  99 005c 234A     		ldr	r2, .L7+4
+ 100 005e A2FB0323 		umull	r2, r3, r2, r3
+ 101 0062 9B0C     		lsrs	r3, r3, #18
+ 102              		.loc 1 68 20
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 4
+
+
+ 103 0064 013B     		subs	r3, r3, #1
+ 104 0066 BB62     		str	r3, [r7, #40]
+  69:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  70:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Initialize TIM3 */
+  71:Core/Src/stm32f1xx_hal_timebase_tim.c ****   htim3.Instance = TIM3;
+ 105              		.loc 1 71 18
+ 106 0068 214B     		ldr	r3, .L7+8
+ 107 006a 224A     		ldr	r2, .L7+12
+ 108 006c 1A60     		str	r2, [r3]
+  72:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  73:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Initialize TIMx peripheral as follow:
+  74:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  75:Core/Src/stm32f1xx_hal_timebase_tim.c ****   + Period = [(TIM3CLK/1000) - 1]. to have a (1/1000) s time base.
+  76:Core/Src/stm32f1xx_hal_timebase_tim.c ****   + Prescaler = (uwTimclock/1000000 - 1) to have a 1MHz counter clock.
+  77:Core/Src/stm32f1xx_hal_timebase_tim.c ****   + ClockDivision = 0
+  78:Core/Src/stm32f1xx_hal_timebase_tim.c ****   + Counter direction = Up
+  79:Core/Src/stm32f1xx_hal_timebase_tim.c ****   */
+  80:Core/Src/stm32f1xx_hal_timebase_tim.c ****   htim3.Init.Period = (1000000U / 1000U) - 1U;
+ 109              		.loc 1 80 21
+ 110 006e 204B     		ldr	r3, .L7+8
+ 111 0070 40F2E732 		movw	r2, #999
+ 112 0074 DA60     		str	r2, [r3, #12]
+  81:Core/Src/stm32f1xx_hal_timebase_tim.c ****   htim3.Init.Prescaler = uwPrescalerValue;
+ 113              		.loc 1 81 24
+ 114 0076 1E4A     		ldr	r2, .L7+8
+ 115 0078 BB6A     		ldr	r3, [r7, #40]
+ 116 007a 5360     		str	r3, [r2, #4]
+  82:Core/Src/stm32f1xx_hal_timebase_tim.c ****   htim3.Init.ClockDivision = 0;
+ 117              		.loc 1 82 28
+ 118 007c 1C4B     		ldr	r3, .L7+8
+ 119 007e 0022     		movs	r2, #0
+ 120 0080 1A61     		str	r2, [r3, #16]
+  83:Core/Src/stm32f1xx_hal_timebase_tim.c ****   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 121              		.loc 1 83 26
+ 122 0082 1B4B     		ldr	r3, .L7+8
+ 123 0084 0022     		movs	r2, #0
+ 124 0086 9A60     		str	r2, [r3, #8]
+  84:Core/Src/stm32f1xx_hal_timebase_tim.c ****   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 125              		.loc 1 84 32
+ 126 0088 194B     		ldr	r3, .L7+8
+ 127 008a 0022     		movs	r2, #0
+ 128 008c 9A61     		str	r2, [r3, #24]
+  85:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+  86:Core/Src/stm32f1xx_hal_timebase_tim.c ****   status = HAL_TIM_Base_Init(&htim3);
+ 129              		.loc 1 86 12
+ 130 008e 1848     		ldr	r0, .L7+8
+ 131 0090 FFF7FEFF 		bl	HAL_TIM_Base_Init
+ 132 0094 0346     		mov	r3, r0
+ 133 0096 87F83330 		strb	r3, [r7, #51]
+  87:Core/Src/stm32f1xx_hal_timebase_tim.c ****   if (status == HAL_OK)
+ 134              		.loc 1 87 6
+ 135 009a 97F83330 		ldrb	r3, [r7, #51]	@ zero_extendqisi2
+ 136 009e 002B     		cmp	r3, #0
+ 137 00a0 1BD1     		bne	.L4
+  88:Core/Src/stm32f1xx_hal_timebase_tim.c ****   {
+  89:Core/Src/stm32f1xx_hal_timebase_tim.c ****     /* Start the TIM time Base generation in interrupt mode */
+  90:Core/Src/stm32f1xx_hal_timebase_tim.c ****     status = HAL_TIM_Base_Start_IT(&htim3);
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 5
+
+
+ 138              		.loc 1 90 14
+ 139 00a2 1348     		ldr	r0, .L7+8
+ 140 00a4 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 141 00a8 0346     		mov	r3, r0
+ 142 00aa 87F83330 		strb	r3, [r7, #51]
+  91:Core/Src/stm32f1xx_hal_timebase_tim.c ****     if (status == HAL_OK)
+ 143              		.loc 1 91 8
+ 144 00ae 97F83330 		ldrb	r3, [r7, #51]	@ zero_extendqisi2
+ 145 00b2 002B     		cmp	r3, #0
+ 146 00b4 11D1     		bne	.L4
+  92:Core/Src/stm32f1xx_hal_timebase_tim.c ****     {
+  93:Core/Src/stm32f1xx_hal_timebase_tim.c ****     /* Enable the TIM3 global Interrupt */
+  94:Core/Src/stm32f1xx_hal_timebase_tim.c ****         HAL_NVIC_EnableIRQ(TIM3_IRQn);
+ 147              		.loc 1 94 9
+ 148 00b6 1D20     		movs	r0, #29
+ 149 00b8 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  95:Core/Src/stm32f1xx_hal_timebase_tim.c ****       /* Configure the SysTick IRQ priority */
+  96:Core/Src/stm32f1xx_hal_timebase_tim.c ****       if (TickPriority < (1UL << __NVIC_PRIO_BITS))
+ 150              		.loc 1 96 10
+ 151 00bc 7B68     		ldr	r3, [r7, #4]
+ 152 00be 0F2B     		cmp	r3, #15
+ 153 00c0 08D8     		bhi	.L5
+  97:Core/Src/stm32f1xx_hal_timebase_tim.c ****       {
+  98:Core/Src/stm32f1xx_hal_timebase_tim.c ****         /* Configure the TIM IRQ priority */
+  99:Core/Src/stm32f1xx_hal_timebase_tim.c ****         HAL_NVIC_SetPriority(TIM3_IRQn, TickPriority, 0U);
+ 154              		.loc 1 99 9
+ 155 00c2 0022     		movs	r2, #0
+ 156 00c4 7968     		ldr	r1, [r7, #4]
+ 157 00c6 1D20     		movs	r0, #29
+ 158 00c8 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 100:Core/Src/stm32f1xx_hal_timebase_tim.c ****         uwTickPrio = TickPriority;
+ 159              		.loc 1 100 20
+ 160 00cc 0A4A     		ldr	r2, .L7+16
+ 161 00ce 7B68     		ldr	r3, [r7, #4]
+ 162 00d0 1360     		str	r3, [r2]
+ 163 00d2 02E0     		b	.L4
+ 164              	.L5:
+ 101:Core/Src/stm32f1xx_hal_timebase_tim.c ****       }
+ 102:Core/Src/stm32f1xx_hal_timebase_tim.c ****       else
+ 103:Core/Src/stm32f1xx_hal_timebase_tim.c ****       {
+ 104:Core/Src/stm32f1xx_hal_timebase_tim.c ****         status = HAL_ERROR;
+ 165              		.loc 1 104 16
+ 166 00d4 0123     		movs	r3, #1
+ 167 00d6 87F83330 		strb	r3, [r7, #51]
+ 168              	.L4:
+ 105:Core/Src/stm32f1xx_hal_timebase_tim.c ****       }
+ 106:Core/Src/stm32f1xx_hal_timebase_tim.c ****     }
+ 107:Core/Src/stm32f1xx_hal_timebase_tim.c ****   }
+ 108:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+ 109:Core/Src/stm32f1xx_hal_timebase_tim.c ****  /* Return function status */
+ 110:Core/Src/stm32f1xx_hal_timebase_tim.c ****   return status;
+ 169              		.loc 1 110 10
+ 170 00da 97F83330 		ldrb	r3, [r7, #51]	@ zero_extendqisi2
+ 111:Core/Src/stm32f1xx_hal_timebase_tim.c **** }
+ 171              		.loc 1 111 1
+ 172 00de 1846     		mov	r0, r3
+ 173 00e0 3837     		adds	r7, r7, #56
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 6
+
+
+ 174              	.LCFI3:
+ 175              		.cfi_def_cfa_offset 8
+ 176 00e2 BD46     		mov	sp, r7
+ 177              	.LCFI4:
+ 178              		.cfi_def_cfa_register 13
+ 179              		@ sp needed
+ 180 00e4 80BD     		pop	{r7, pc}
+ 181              	.L8:
+ 182 00e6 00BF     		.align	2
+ 183              	.L7:
+ 184 00e8 00100240 		.word	1073876992
+ 185 00ec 83DE1B43 		.word	1125899907
+ 186 00f0 00000000 		.word	htim3
+ 187 00f4 00040040 		.word	1073742848
+ 188 00f8 00000000 		.word	uwTickPrio
+ 189              		.cfi_endproc
+ 190              	.LFE65:
+ 192              		.section	.text.HAL_SuspendTick,"ax",%progbits
+ 193              		.align	1
+ 194              		.global	HAL_SuspendTick
+ 195              		.syntax unified
+ 196              		.thumb
+ 197              		.thumb_func
+ 199              	HAL_SuspendTick:
+ 200              	.LFB66:
+ 112:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+ 113:Core/Src/stm32f1xx_hal_timebase_tim.c **** /**
+ 114:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @brief  Suspend Tick increment.
+ 115:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @note   Disable the tick increment by disabling TIM3 update interrupt.
+ 116:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @param  None
+ 117:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @retval None
+ 118:Core/Src/stm32f1xx_hal_timebase_tim.c ****   */
+ 119:Core/Src/stm32f1xx_hal_timebase_tim.c **** void HAL_SuspendTick(void)
+ 120:Core/Src/stm32f1xx_hal_timebase_tim.c **** {
+ 201              		.loc 1 120 1
+ 202              		.cfi_startproc
+ 203              		@ args = 0, pretend = 0, frame = 0
+ 204              		@ frame_needed = 1, uses_anonymous_args = 0
+ 205              		@ link register save eliminated.
+ 206 0000 80B4     		push	{r7}
+ 207              	.LCFI5:
+ 208              		.cfi_def_cfa_offset 4
+ 209              		.cfi_offset 7, -4
+ 210 0002 00AF     		add	r7, sp, #0
+ 211              	.LCFI6:
+ 212              		.cfi_def_cfa_register 7
+ 121:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Disable TIM3 update Interrupt */
+ 122:Core/Src/stm32f1xx_hal_timebase_tim.c ****   __HAL_TIM_DISABLE_IT(&htim3, TIM_IT_UPDATE);
+ 213              		.loc 1 122 3
+ 214 0004 054B     		ldr	r3, .L10
+ 215 0006 1B68     		ldr	r3, [r3]
+ 216 0008 DA68     		ldr	r2, [r3, #12]
+ 217 000a 044B     		ldr	r3, .L10
+ 218 000c 1B68     		ldr	r3, [r3]
+ 219 000e 22F00102 		bic	r2, r2, #1
+ 220 0012 DA60     		str	r2, [r3, #12]
+ 123:Core/Src/stm32f1xx_hal_timebase_tim.c **** }
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 7
+
+
+ 221              		.loc 1 123 1
+ 222 0014 00BF     		nop
+ 223 0016 BD46     		mov	sp, r7
+ 224              	.LCFI7:
+ 225              		.cfi_def_cfa_register 13
+ 226              		@ sp needed
+ 227 0018 80BC     		pop	{r7}
+ 228              	.LCFI8:
+ 229              		.cfi_restore 7
+ 230              		.cfi_def_cfa_offset 0
+ 231 001a 7047     		bx	lr
+ 232              	.L11:
+ 233              		.align	2
+ 234              	.L10:
+ 235 001c 00000000 		.word	htim3
+ 236              		.cfi_endproc
+ 237              	.LFE66:
+ 239              		.section	.text.HAL_ResumeTick,"ax",%progbits
+ 240              		.align	1
+ 241              		.global	HAL_ResumeTick
+ 242              		.syntax unified
+ 243              		.thumb
+ 244              		.thumb_func
+ 246              	HAL_ResumeTick:
+ 247              	.LFB67:
+ 124:Core/Src/stm32f1xx_hal_timebase_tim.c **** 
+ 125:Core/Src/stm32f1xx_hal_timebase_tim.c **** /**
+ 126:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @brief  Resume Tick increment.
+ 127:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @note   Enable the tick increment by Enabling TIM3 update interrupt.
+ 128:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @param  None
+ 129:Core/Src/stm32f1xx_hal_timebase_tim.c ****   * @retval None
+ 130:Core/Src/stm32f1xx_hal_timebase_tim.c ****   */
+ 131:Core/Src/stm32f1xx_hal_timebase_tim.c **** void HAL_ResumeTick(void)
+ 132:Core/Src/stm32f1xx_hal_timebase_tim.c **** {
+ 248              		.loc 1 132 1
+ 249              		.cfi_startproc
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 1, uses_anonymous_args = 0
+ 252              		@ link register save eliminated.
+ 253 0000 80B4     		push	{r7}
+ 254              	.LCFI9:
+ 255              		.cfi_def_cfa_offset 4
+ 256              		.cfi_offset 7, -4
+ 257 0002 00AF     		add	r7, sp, #0
+ 258              	.LCFI10:
+ 259              		.cfi_def_cfa_register 7
+ 133:Core/Src/stm32f1xx_hal_timebase_tim.c ****   /* Enable TIM3 Update interrupt */
+ 134:Core/Src/stm32f1xx_hal_timebase_tim.c ****   __HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);
+ 260              		.loc 1 134 3
+ 261 0004 054B     		ldr	r3, .L13
+ 262 0006 1B68     		ldr	r3, [r3]
+ 263 0008 DA68     		ldr	r2, [r3, #12]
+ 264 000a 044B     		ldr	r3, .L13
+ 265 000c 1B68     		ldr	r3, [r3]
+ 266 000e 42F00102 		orr	r2, r2, #1
+ 267 0012 DA60     		str	r2, [r3, #12]
+ 135:Core/Src/stm32f1xx_hal_timebase_tim.c **** }
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 8
+
+
+ 268              		.loc 1 135 1
+ 269 0014 00BF     		nop
+ 270 0016 BD46     		mov	sp, r7
+ 271              	.LCFI11:
+ 272              		.cfi_def_cfa_register 13
+ 273              		@ sp needed
+ 274 0018 80BC     		pop	{r7}
+ 275              	.LCFI12:
+ 276              		.cfi_restore 7
+ 277              		.cfi_def_cfa_offset 0
+ 278 001a 7047     		bx	lr
+ 279              	.L14:
+ 280              		.align	2
+ 281              	.L13:
+ 282 001c 00000000 		.word	htim3
+ 283              		.cfi_endproc
+ 284              	.LFE67:
+ 286              		.text
+ 287              	.Letext0:
+ 288              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 289              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 290              		.file 4 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 291              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 292              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 293              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 294              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 295              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 296              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_timebase_tim.c
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:23     .bss.htim3:0000000000000000 htim3
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:20     .bss.htim3:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:26     .text.HAL_InitTick:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:32     .text.HAL_InitTick:0000000000000000 HAL_InitTick
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:184    .text.HAL_InitTick:00000000000000e8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:193    .text.HAL_SuspendTick:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:199    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:235    .text.HAL_SuspendTick:000000000000001c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:240    .text.HAL_ResumeTick:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:246    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+C:\Users\Lenovo\AppData\Local\Temp\ccfJ6Py6.s:282    .text.HAL_ResumeTick:000000000000001c $d
+
+UNDEFINED SYMBOLS
+HAL_RCC_GetClockConfig
+HAL_RCC_GetPCLK1Freq
+HAL_TIM_Base_Init
+HAL_TIM_Base_Start_IT
+HAL_NVIC_EnableIRQ
+HAL_NVIC_SetPriority
+uwTickPrio

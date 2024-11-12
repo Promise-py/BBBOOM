@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"gpio.c"
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 1
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 2
 
 
   33:Core/Src/gpio.c **** /* USER CODE END 1 */
@@ -72,212 +72,163 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 1
   41:Core/Src/gpio.c **** */
   42:Core/Src/gpio.c **** void MX_GPIO_Init(void)
   43:Core/Src/gpio.c **** {
-  27              		.loc 1 43 1 view -0
+  27              		.loc 1 43 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 32
-  30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31 0000 70B5     		push	{r4, r5, r6, lr}
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
   32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 16
-  34              		.cfi_offset 4, -16
-  35              		.cfi_offset 5, -12
-  36              		.cfi_offset 6, -8
-  37              		.cfi_offset 14, -4
-  38 0002 88B0     		sub	sp, sp, #32
-  39              	.LCFI1:
-  40              		.cfi_def_cfa_offset 48
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 7, -8
+  35              		.cfi_offset 14, -4
+  36 0002 88B0     		sub	sp, sp, #32
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 40
+  39 0004 00AF     		add	r7, sp, #0
+  40              	.LCFI2:
+  41              		.cfi_def_cfa_register 7
   44:Core/Src/gpio.c **** 
   45:Core/Src/gpio.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  41              		.loc 1 45 3 view .LVU1
-  42              		.loc 1 45 20 is_stmt 0 view .LVU2
-  43 0004 0024     		movs	r4, #0
-  44 0006 0494     		str	r4, [sp, #16]
-  45 0008 0594     		str	r4, [sp, #20]
-  46 000a 0694     		str	r4, [sp, #24]
-  47 000c 0794     		str	r4, [sp, #28]
+  42              		.loc 1 45 20
+  43 0006 07F11003 		add	r3, r7, #16
+  44 000a 0022     		movs	r2, #0
+  45 000c 1A60     		str	r2, [r3]
+  46 000e 5A60     		str	r2, [r3, #4]
+  47 0010 9A60     		str	r2, [r3, #8]
+  48 0012 DA60     		str	r2, [r3, #12]
+  49              	.LBB2:
   46:Core/Src/gpio.c **** 
   47:Core/Src/gpio.c ****   /* GPIO Ports Clock Enable */
   48:Core/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
-  48              		.loc 1 48 3 is_stmt 1 view .LVU3
-  49              	.LBB2:
-  50              		.loc 1 48 3 view .LVU4
-  51              		.loc 1 48 3 view .LVU5
-  52 000e 244B     		ldr	r3, .L3
-  53 0010 9A69     		ldr	r2, [r3, #24]
-  54 0012 42F01002 		orr	r2, r2, #16
-  55 0016 9A61     		str	r2, [r3, #24]
-  56              		.loc 1 48 3 view .LVU6
-  57 0018 9A69     		ldr	r2, [r3, #24]
-  58 001a 02F01002 		and	r2, r2, #16
-  59 001e 0092     		str	r2, [sp]
-  60              		.loc 1 48 3 view .LVU7
-  61 0020 009A     		ldr	r2, [sp]
-  62              	.LBE2:
-  63              		.loc 1 48 3 view .LVU8
+  50              		.loc 1 48 3
+  51 0014 234B     		ldr	r3, .L2
+  52 0016 9B69     		ldr	r3, [r3, #24]
+  53 0018 224A     		ldr	r2, .L2
+  54 001a 43F01003 		orr	r3, r3, #16
+  55 001e 9361     		str	r3, [r2, #24]
+  56 0020 204B     		ldr	r3, .L2
+  57 0022 9B69     		ldr	r3, [r3, #24]
+  58 0024 03F01003 		and	r3, r3, #16
+  59 0028 FB60     		str	r3, [r7, #12]
+  60 002a FB68     		ldr	r3, [r7, #12]
+  61              	.LBE2:
+  62              	.LBB3:
   49:Core/Src/gpio.c ****   __HAL_RCC_GPIOD_CLK_ENABLE();
-  64              		.loc 1 49 3 view .LVU9
-  65              	.LBB3:
-  66              		.loc 1 49 3 view .LVU10
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 3
+  63              		.loc 1 49 3
+  64 002c 1D4B     		ldr	r3, .L2
+  65 002e 9B69     		ldr	r3, [r3, #24]
+  66 0030 1C4A     		ldr	r2, .L2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 3
 
 
-  67              		.loc 1 49 3 view .LVU11
-  68 0022 9A69     		ldr	r2, [r3, #24]
-  69 0024 42F02002 		orr	r2, r2, #32
-  70 0028 9A61     		str	r2, [r3, #24]
-  71              		.loc 1 49 3 view .LVU12
-  72 002a 9A69     		ldr	r2, [r3, #24]
-  73 002c 02F02002 		and	r2, r2, #32
-  74 0030 0192     		str	r2, [sp, #4]
-  75              		.loc 1 49 3 view .LVU13
-  76 0032 019A     		ldr	r2, [sp, #4]
-  77              	.LBE3:
-  78              		.loc 1 49 3 view .LVU14
+  67 0032 43F02003 		orr	r3, r3, #32
+  68 0036 9361     		str	r3, [r2, #24]
+  69 0038 1A4B     		ldr	r3, .L2
+  70 003a 9B69     		ldr	r3, [r3, #24]
+  71 003c 03F02003 		and	r3, r3, #32
+  72 0040 BB60     		str	r3, [r7, #8]
+  73 0042 BB68     		ldr	r3, [r7, #8]
+  74              	.LBE3:
+  75              	.LBB4:
   50:Core/Src/gpio.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
-  79              		.loc 1 50 3 view .LVU15
-  80              	.LBB4:
-  81              		.loc 1 50 3 view .LVU16
-  82              		.loc 1 50 3 view .LVU17
-  83 0034 9A69     		ldr	r2, [r3, #24]
-  84 0036 42F00402 		orr	r2, r2, #4
-  85 003a 9A61     		str	r2, [r3, #24]
-  86              		.loc 1 50 3 view .LVU18
-  87 003c 9A69     		ldr	r2, [r3, #24]
-  88 003e 02F00402 		and	r2, r2, #4
-  89 0042 0292     		str	r2, [sp, #8]
-  90              		.loc 1 50 3 view .LVU19
-  91 0044 029A     		ldr	r2, [sp, #8]
-  92              	.LBE4:
-  93              		.loc 1 50 3 view .LVU20
+  76              		.loc 1 50 3
+  77 0044 174B     		ldr	r3, .L2
+  78 0046 9B69     		ldr	r3, [r3, #24]
+  79 0048 164A     		ldr	r2, .L2
+  80 004a 43F00403 		orr	r3, r3, #4
+  81 004e 9361     		str	r3, [r2, #24]
+  82 0050 144B     		ldr	r3, .L2
+  83 0052 9B69     		ldr	r3, [r3, #24]
+  84 0054 03F00403 		and	r3, r3, #4
+  85 0058 7B60     		str	r3, [r7, #4]
+  86 005a 7B68     		ldr	r3, [r7, #4]
+  87              	.LBE4:
+  88              	.LBB5:
   51:Core/Src/gpio.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
-  94              		.loc 1 51 3 view .LVU21
-  95              	.LBB5:
-  96              		.loc 1 51 3 view .LVU22
-  97              		.loc 1 51 3 view .LVU23
-  98 0046 9A69     		ldr	r2, [r3, #24]
-  99 0048 42F00802 		orr	r2, r2, #8
- 100 004c 9A61     		str	r2, [r3, #24]
- 101              		.loc 1 51 3 view .LVU24
- 102 004e 9B69     		ldr	r3, [r3, #24]
- 103 0050 03F00803 		and	r3, r3, #8
- 104 0054 0393     		str	r3, [sp, #12]
- 105              		.loc 1 51 3 view .LVU25
- 106 0056 039B     		ldr	r3, [sp, #12]
- 107              	.LBE5:
- 108              		.loc 1 51 3 view .LVU26
+  89              		.loc 1 51 3
+  90 005c 114B     		ldr	r3, .L2
+  91 005e 9B69     		ldr	r3, [r3, #24]
+  92 0060 104A     		ldr	r2, .L2
+  93 0062 43F00803 		orr	r3, r3, #8
+  94 0066 9361     		str	r3, [r2, #24]
+  95 0068 0E4B     		ldr	r3, .L2
+  96 006a 9B69     		ldr	r3, [r3, #24]
+  97 006c 03F00803 		and	r3, r3, #8
+  98 0070 3B60     		str	r3, [r7]
+  99 0072 3B68     		ldr	r3, [r7]
+ 100              	.LBE5:
   52:Core/Src/gpio.c **** 
-  53:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
-  54:Core/Src/gpio.c ****   HAL_GPIO_WritePin(Buzzer_GPIO_Port, Buzzer_Pin, GPIO_PIN_RESET);
- 109              		.loc 1 54 3 view .LVU27
- 110 0058 124D     		ldr	r5, .L3+4
- 111 005a 2246     		mov	r2, r4
- 112 005c 0821     		movs	r1, #8
- 113 005e 2846     		mov	r0, r5
- 114 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 115              	.LVL0:
-  55:Core/Src/gpio.c **** 
-  56:Core/Src/gpio.c ****   /*Configure GPIO pin : PtPin */
-  57:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = Buzzer_Pin;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 4
+  53:Core/Src/gpio.c ****   /*Configure GPIO pin : PtPin */
+  54:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = Button_Pin;
+ 101              		.loc 1 54 23
+ 102 0074 2023     		movs	r3, #32
+ 103 0076 3B61     		str	r3, [r7, #16]
+  55:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+ 104              		.loc 1 55 24
+ 105 0078 0B4B     		ldr	r3, .L2+4
+ 106 007a 7B61     		str	r3, [r7, #20]
+  56:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
+ 107              		.loc 1 56 24
+ 108 007c 0123     		movs	r3, #1
+ 109 007e BB61     		str	r3, [r7, #24]
+  57:Core/Src/gpio.c ****   HAL_GPIO_Init(Button_GPIO_Port, &GPIO_InitStruct);
+ 110              		.loc 1 57 3
+ 111 0080 07F11003 		add	r3, r7, #16
+ 112 0084 1946     		mov	r1, r3
+ 113 0086 0948     		ldr	r0, .L2+8
+ 114 0088 FFF7FEFF 		bl	HAL_GPIO_Init
+  58:Core/Src/gpio.c **** 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 4
 
 
- 116              		.loc 1 57 3 view .LVU28
- 117              		.loc 1 57 23 is_stmt 0 view .LVU29
- 118 0064 0823     		movs	r3, #8
- 119 0066 0493     		str	r3, [sp, #16]
-  58:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 120              		.loc 1 58 3 is_stmt 1 view .LVU30
- 121              		.loc 1 58 24 is_stmt 0 view .LVU31
- 122 0068 0126     		movs	r6, #1
- 123 006a 0596     		str	r6, [sp, #20]
-  59:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
- 124              		.loc 1 59 3 is_stmt 1 view .LVU32
- 125              		.loc 1 59 24 is_stmt 0 view .LVU33
- 126 006c 0223     		movs	r3, #2
- 127 006e 0693     		str	r3, [sp, #24]
-  60:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
- 128              		.loc 1 60 3 is_stmt 1 view .LVU34
- 129              		.loc 1 60 25 is_stmt 0 view .LVU35
- 130 0070 0796     		str	r6, [sp, #28]
-  61:Core/Src/gpio.c ****   HAL_GPIO_Init(Buzzer_GPIO_Port, &GPIO_InitStruct);
- 131              		.loc 1 61 3 is_stmt 1 view .LVU36
- 132 0072 04A9     		add	r1, sp, #16
- 133 0074 2846     		mov	r0, r5
- 134 0076 FFF7FEFF 		bl	HAL_GPIO_Init
- 135              	.LVL1:
+  59:Core/Src/gpio.c ****   /* EXTI interrupt init*/
+  60:Core/Src/gpio.c ****   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+ 115              		.loc 1 60 3
+ 116 008c 0022     		movs	r2, #0
+ 117 008e 0021     		movs	r1, #0
+ 118 0090 1720     		movs	r0, #23
+ 119 0092 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  61:Core/Src/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+ 120              		.loc 1 61 3
+ 121 0096 1720     		movs	r0, #23
+ 122 0098 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
   62:Core/Src/gpio.c **** 
-  63:Core/Src/gpio.c ****   /*Configure GPIO pin : PtPin */
-  64:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = Button_Pin;
- 136              		.loc 1 64 3 view .LVU37
- 137              		.loc 1 64 23 is_stmt 0 view .LVU38
- 138 007a 2023     		movs	r3, #32
- 139 007c 0493     		str	r3, [sp, #16]
-  65:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
- 140              		.loc 1 65 3 is_stmt 1 view .LVU39
- 141              		.loc 1 65 24 is_stmt 0 view .LVU40
- 142 007e 0A4B     		ldr	r3, .L3+8
- 143 0080 0593     		str	r3, [sp, #20]
-  66:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
- 144              		.loc 1 66 3 is_stmt 1 view .LVU41
- 145              		.loc 1 66 24 is_stmt 0 view .LVU42
- 146 0082 0696     		str	r6, [sp, #24]
-  67:Core/Src/gpio.c ****   HAL_GPIO_Init(Button_GPIO_Port, &GPIO_InitStruct);
- 147              		.loc 1 67 3 is_stmt 1 view .LVU43
- 148 0084 04A9     		add	r1, sp, #16
- 149 0086 2846     		mov	r0, r5
- 150 0088 FFF7FEFF 		bl	HAL_GPIO_Init
- 151              	.LVL2:
-  68:Core/Src/gpio.c **** 
-  69:Core/Src/gpio.c ****   /* EXTI interrupt init*/
-  70:Core/Src/gpio.c ****   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
- 152              		.loc 1 70 3 view .LVU44
- 153 008c 2246     		mov	r2, r4
- 154 008e 2146     		mov	r1, r4
- 155 0090 1720     		movs	r0, #23
- 156 0092 FFF7FEFF 		bl	HAL_NVIC_SetPriority
- 157              	.LVL3:
-  71:Core/Src/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
- 158              		.loc 1 71 3 view .LVU45
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 5
-
-
- 159 0096 1720     		movs	r0, #23
- 160 0098 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
- 161              	.LVL4:
-  72:Core/Src/gpio.c **** 
-  73:Core/Src/gpio.c **** }
- 162              		.loc 1 73 1 is_stmt 0 view .LVU46
- 163 009c 08B0     		add	sp, sp, #32
- 164              	.LCFI2:
- 165              		.cfi_def_cfa_offset 16
- 166              		@ sp needed
- 167 009e 70BD     		pop	{r4, r5, r6, pc}
- 168              	.L4:
- 169              		.align	2
- 170              	.L3:
- 171 00a0 00100240 		.word	1073876992
- 172 00a4 000C0140 		.word	1073810432
- 173 00a8 00002110 		.word	270598144
- 174              		.cfi_endproc
- 175              	.LFE65:
- 177              		.text
- 178              	.Letext0:
- 179              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 180              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 181              		.file 4 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 182              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 183              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s 			page 6
+  63:Core/Src/gpio.c **** }
+ 123              		.loc 1 63 1
+ 124 009c 00BF     		nop
+ 125 009e 2037     		adds	r7, r7, #32
+ 126              	.LCFI3:
+ 127              		.cfi_def_cfa_offset 8
+ 128 00a0 BD46     		mov	sp, r7
+ 129              	.LCFI4:
+ 130              		.cfi_def_cfa_register 13
+ 131              		@ sp needed
+ 132 00a2 80BD     		pop	{r7, pc}
+ 133              	.L3:
+ 134              		.align	2
+ 135              	.L2:
+ 136 00a4 00100240 		.word	1073876992
+ 137 00a8 00002110 		.word	270598144
+ 138 00ac 000C0140 		.word	1073810432
+ 139              		.cfi_endproc
+ 140              	.LFE65:
+ 142              		.text
+ 143              	.Letext0:
+ 144              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 145              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 146              		.file 4 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 147              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 148              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gpio.c
-C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s:19     .text.MX_GPIO_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s:25     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccTfVWZa.s:171    .text.MX_GPIO_Init:00000000000000a0 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s:19     .text.MX_GPIO_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s:25     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s:136    .text.MX_GPIO_Init:00000000000000a4 $d
 
 UNDEFINED SYMBOLS
-HAL_GPIO_WritePin
 HAL_GPIO_Init
 HAL_NVIC_SetPriority
 HAL_NVIC_EnableIRQ

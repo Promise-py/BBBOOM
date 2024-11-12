@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"stm32f1xx_hal_msp.c"
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 1
   30:Core/Src/stm32f1xx_hal_msp.c **** 
   31:Core/Src/stm32f1xx_hal_msp.c **** /* USER CODE END TD */
   32:Core/Src/stm32f1xx_hal_msp.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s 			page 2
 
 
   33:Core/Src/stm32f1xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
@@ -94,110 +94,119 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 1
   63:Core/Src/stm32f1xx_hal_msp.c ****   */
   64:Core/Src/stm32f1xx_hal_msp.c **** void HAL_MspInit(void)
   65:Core/Src/stm32f1xx_hal_msp.c **** {
-  27              		.loc 1 65 1 view -0
+  27              		.loc 1 65 1
   28              		.cfi_startproc
-  29              		@ args = 0, pretend = 0, frame = 8
-  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  29              		@ args = 0, pretend = 0, frame = 16
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
   31              		@ link register save eliminated.
-  32 0000 82B0     		sub	sp, sp, #8
+  32 0000 80B4     		push	{r7}
   33              	.LCFI0:
-  34              		.cfi_def_cfa_offset 8
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 7, -4
+  36 0002 85B0     		sub	sp, sp, #20
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 24
+  39 0004 00AF     		add	r7, sp, #0
+  40              	.LCFI2:
+  41              		.cfi_def_cfa_register 7
+  42              	.LBB2:
   66:Core/Src/stm32f1xx_hal_msp.c **** 
   67:Core/Src/stm32f1xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
   68:Core/Src/stm32f1xx_hal_msp.c **** 
   69:Core/Src/stm32f1xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
   70:Core/Src/stm32f1xx_hal_msp.c **** 
   71:Core/Src/stm32f1xx_hal_msp.c ****   __HAL_RCC_AFIO_CLK_ENABLE();
-  35              		.loc 1 71 3 view .LVU1
-  36              	.LBB2:
-  37              		.loc 1 71 3 view .LVU2
-  38              		.loc 1 71 3 view .LVU3
-  39 0002 0E4B     		ldr	r3, .L3
-  40 0004 9A69     		ldr	r2, [r3, #24]
-  41 0006 42F00102 		orr	r2, r2, #1
-  42 000a 9A61     		str	r2, [r3, #24]
-  43              		.loc 1 71 3 view .LVU4
-  44 000c 9A69     		ldr	r2, [r3, #24]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 3
+  43              		.loc 1 71 3
+  44 0006 154B     		ldr	r3, .L2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s 			page 3
 
 
-  45 000e 02F00102 		and	r2, r2, #1
-  46 0012 0092     		str	r2, [sp]
-  47              		.loc 1 71 3 view .LVU5
-  48 0014 009A     		ldr	r2, [sp]
-  49              	.LBE2:
-  50              		.loc 1 71 3 view .LVU6
+  45 0008 9B69     		ldr	r3, [r3, #24]
+  46 000a 144A     		ldr	r2, .L2
+  47 000c 43F00103 		orr	r3, r3, #1
+  48 0010 9361     		str	r3, [r2, #24]
+  49 0012 124B     		ldr	r3, .L2
+  50 0014 9B69     		ldr	r3, [r3, #24]
+  51 0016 03F00103 		and	r3, r3, #1
+  52 001a BB60     		str	r3, [r7, #8]
+  53 001c BB68     		ldr	r3, [r7, #8]
+  54              	.LBE2:
+  55              	.LBB3:
   72:Core/Src/stm32f1xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
-  51              		.loc 1 72 3 view .LVU7
-  52              	.LBB3:
-  53              		.loc 1 72 3 view .LVU8
-  54              		.loc 1 72 3 view .LVU9
-  55 0016 DA69     		ldr	r2, [r3, #28]
-  56 0018 42F08052 		orr	r2, r2, #268435456
-  57 001c DA61     		str	r2, [r3, #28]
-  58              		.loc 1 72 3 view .LVU10
-  59 001e DB69     		ldr	r3, [r3, #28]
-  60 0020 03F08053 		and	r3, r3, #268435456
-  61 0024 0193     		str	r3, [sp, #4]
-  62              		.loc 1 72 3 view .LVU11
-  63 0026 019B     		ldr	r3, [sp, #4]
-  64              	.LBE3:
-  65              		.loc 1 72 3 view .LVU12
+  56              		.loc 1 72 3
+  57 001e 0F4B     		ldr	r3, .L2
+  58 0020 DB69     		ldr	r3, [r3, #28]
+  59 0022 0E4A     		ldr	r2, .L2
+  60 0024 43F08053 		orr	r3, r3, #268435456
+  61 0028 D361     		str	r3, [r2, #28]
+  62 002a 0C4B     		ldr	r3, .L2
+  63 002c DB69     		ldr	r3, [r3, #28]
+  64 002e 03F08053 		and	r3, r3, #268435456
+  65 0032 7B60     		str	r3, [r7, #4]
+  66 0034 7B68     		ldr	r3, [r7, #4]
+  67              	.LBE3:
+  68              	.LBB4:
   73:Core/Src/stm32f1xx_hal_msp.c **** 
   74:Core/Src/stm32f1xx_hal_msp.c ****   /* System interrupt init*/
   75:Core/Src/stm32f1xx_hal_msp.c **** 
   76:Core/Src/stm32f1xx_hal_msp.c ****   /** NOJTAG: JTAG-DP Disabled and SW-DP Enabled
   77:Core/Src/stm32f1xx_hal_msp.c ****   */
   78:Core/Src/stm32f1xx_hal_msp.c ****   __HAL_AFIO_REMAP_SWJ_NOJTAG();
-  66              		.loc 1 78 3 view .LVU13
-  67              	.LBB4:
-  68              		.loc 1 78 3 view .LVU14
-  69 0028 054A     		ldr	r2, .L3+4
-  70 002a 5368     		ldr	r3, [r2, #4]
-  71              	.LVL0:
-  72              		.loc 1 78 3 view .LVU15
-  73 002c 23F0E063 		bic	r3, r3, #117440512
-  74              	.LVL1:
-  75              		.loc 1 78 3 view .LVU16
-  76 0030 43F00073 		orr	r3, r3, #33554432
-  77              	.LVL2:
-  78              		.loc 1 78 3 view .LVU17
-  79 0034 5360     		str	r3, [r2, #4]
-  80              	.LBE4:
-  81              		.loc 1 78 3 view .LVU18
+  69              		.loc 1 78 3
+  70 0036 0A4B     		ldr	r3, .L2+4
+  71 0038 5B68     		ldr	r3, [r3, #4]
+  72 003a FB60     		str	r3, [r7, #12]
+  73 003c FB68     		ldr	r3, [r7, #12]
+  74 003e 23F0E063 		bic	r3, r3, #117440512
+  75 0042 FB60     		str	r3, [r7, #12]
+  76 0044 FB68     		ldr	r3, [r7, #12]
+  77 0046 43F00073 		orr	r3, r3, #33554432
+  78 004a FB60     		str	r3, [r7, #12]
+  79 004c 044A     		ldr	r2, .L2+4
+  80 004e FB68     		ldr	r3, [r7, #12]
+  81 0050 5360     		str	r3, [r2, #4]
+  82              	.LBE4:
   79:Core/Src/stm32f1xx_hal_msp.c **** 
   80:Core/Src/stm32f1xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
   81:Core/Src/stm32f1xx_hal_msp.c **** 
   82:Core/Src/stm32f1xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
   83:Core/Src/stm32f1xx_hal_msp.c **** }
-  82              		.loc 1 83 1 is_stmt 0 view .LVU19
-  83 0036 02B0     		add	sp, sp, #8
-  84              	.LCFI1:
-  85              		.cfi_def_cfa_offset 0
-  86              		@ sp needed
-  87 0038 7047     		bx	lr
-  88              	.L4:
-  89 003a 00BF     		.align	2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 4
+  83              		.loc 1 83 1
+  84 0052 00BF     		nop
+  85 0054 1437     		adds	r7, r7, #20
+  86              	.LCFI3:
+  87              		.cfi_def_cfa_offset 4
+  88 0056 BD46     		mov	sp, r7
+  89              	.LCFI4:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s 			page 4
 
 
-  90              	.L3:
-  91 003c 00100240 		.word	1073876992
-  92 0040 00000140 		.word	1073807360
-  93              		.cfi_endproc
-  94              	.LFE65:
-  96              		.text
-  97              	.Letext0:
-  98              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
-  99              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 100              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s 			page 5
+  90              		.cfi_def_cfa_register 13
+  91              		@ sp needed
+  92 0058 80BC     		pop	{r7}
+  93              	.LCFI5:
+  94              		.cfi_restore 7
+  95              		.cfi_def_cfa_offset 0
+  96 005a 7047     		bx	lr
+  97              	.L3:
+  98              		.align	2
+  99              	.L2:
+ 100 005c 00100240 		.word	1073876992
+ 101 0060 00000140 		.word	1073807360
+ 102              		.cfi_endproc
+ 103              	.LFE65:
+ 105              		.text
+ 106              	.Letext0:
+ 107              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 108              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 109              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_msp.c
-C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s:19     .text.HAL_MspInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s:25     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-C:\Users\Lenovo\AppData\Local\Temp\ccz1F0yh.s:91     .text.HAL_MspInit:000000000000003c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s:19     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s:25     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\ccVdXMg1.s:100    .text.HAL_MspInit:000000000000005c $d
 
 NO UNDEFINED SYMBOLS

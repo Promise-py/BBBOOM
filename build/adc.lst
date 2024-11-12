@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.file	"adc.c"
@@ -18,14 +18,32 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
   17              		.file 1 "Core/Src/adc.c"
-  18              		.section	.text.MX_ADC1_Init,"ax",%progbits
-  19              		.align	1
-  20              		.global	MX_ADC1_Init
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  25              	MX_ADC1_Init:
-  26              	.LFB65:
+  18              		.global	hadc1
+  19              		.section	.bss.hadc1,"aw",%nobits
+  20              		.align	2
+  23              	hadc1:
+  24 0000 00000000 		.space	48
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  24      00000000 
+  25              		.global	hadc2
+  26              		.section	.bss.hadc2,"aw",%nobits
+  27              		.align	2
+  30              	hadc2:
+  31 0000 00000000 		.space	48
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  32              		.section	.text.MX_ADC1_Init,"ax",%progbits
+  33              		.align	1
+  34              		.global	MX_ADC1_Init
+  35              		.syntax unified
+  36              		.thumb
+  37              		.thumb_func
+  39              	MX_ADC1_Init:
+  40              	.LFB65:
    1:Core/Src/adc.c **** /* USER CODE BEGIN Header */
    2:Core/Src/adc.c **** /**
    3:Core/Src/adc.c ****   ******************************************************************************
@@ -40,6 +58,9 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
   12:Core/Src/adc.c ****   *
   13:Core/Src/adc.c ****   * This software is licensed under terms that can be found in the LICENSE file
   14:Core/Src/adc.c ****   * in the root directory of this software component.
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 2
+
+
   15:Core/Src/adc.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   16:Core/Src/adc.c ****   *
   17:Core/Src/adc.c ****   ******************************************************************************
@@ -58,32 +79,33 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
   30:Core/Src/adc.c **** /* ADC1 init function */
   31:Core/Src/adc.c **** void MX_ADC1_Init(void)
   32:Core/Src/adc.c **** {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 2
-
-
-  27              		.loc 1 32 1 view -0
-  28              		.cfi_startproc
-  29              		@ args = 0, pretend = 0, frame = 16
-  30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31 0000 00B5     		push	{lr}
-  32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 4
-  34              		.cfi_offset 14, -4
-  35 0002 85B0     		sub	sp, sp, #20
-  36              	.LCFI1:
-  37              		.cfi_def_cfa_offset 24
+  41              		.loc 1 32 1
+  42              		.cfi_startproc
+  43              		@ args = 0, pretend = 0, frame = 16
+  44              		@ frame_needed = 1, uses_anonymous_args = 0
+  45 0000 80B5     		push	{r7, lr}
+  46              	.LCFI0:
+  47              		.cfi_def_cfa_offset 8
+  48              		.cfi_offset 7, -8
+  49              		.cfi_offset 14, -4
+  50 0002 84B0     		sub	sp, sp, #16
+  51              	.LCFI1:
+  52              		.cfi_def_cfa_offset 24
+  53 0004 00AF     		add	r7, sp, #0
+  54              	.LCFI2:
+  55              		.cfi_def_cfa_register 7
   33:Core/Src/adc.c **** 
   34:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_Init 0 */
   35:Core/Src/adc.c **** 
   36:Core/Src/adc.c ****   /* USER CODE END ADC1_Init 0 */
   37:Core/Src/adc.c **** 
   38:Core/Src/adc.c ****   ADC_ChannelConfTypeDef sConfig = {0};
-  38              		.loc 1 38 3 view .LVU1
-  39              		.loc 1 38 26 is_stmt 0 view .LVU2
-  40 0004 0023     		movs	r3, #0
-  41 0006 0193     		str	r3, [sp, #4]
-  42 0008 0293     		str	r3, [sp, #8]
-  43 000a 0393     		str	r3, [sp, #12]
+  56              		.loc 1 38 26
+  57 0006 3B1D     		adds	r3, r7, #4
+  58 0008 0022     		movs	r2, #0
+  59 000a 1A60     		str	r2, [r3]
+  60 000c 5A60     		str	r2, [r3, #4]
+  61 000e 9A60     		str	r2, [r3, #8]
   39:Core/Src/adc.c **** 
   40:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_Init 1 */
   41:Core/Src/adc.c **** 
@@ -92,835 +114,781 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
   44:Core/Src/adc.c ****   /** Common config
   45:Core/Src/adc.c ****   */
   46:Core/Src/adc.c ****   hadc1.Instance = ADC1;
-  44              		.loc 1 46 3 is_stmt 1 view .LVU3
-  45              		.loc 1 46 18 is_stmt 0 view .LVU4
-  46 000c 4248     		ldr	r0, .L21
-  47 000e 434A     		ldr	r2, .L21+4
-  48 0010 0260     		str	r2, [r0]
+  62              		.loc 1 46 18
+  63 0010 4D4B     		ldr	r3, .L12
+  64 0012 4E4A     		ldr	r2, .L12+4
+  65 0014 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 3
+
+
   47:Core/Src/adc.c ****   hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
-  49              		.loc 1 47 3 is_stmt 1 view .LVU5
-  50              		.loc 1 47 27 is_stmt 0 view .LVU6
-  51 0012 4FF48072 		mov	r2, #256
-  52 0016 8260     		str	r2, [r0, #8]
+  66              		.loc 1 47 27
+  67 0016 4C4B     		ldr	r3, .L12
+  68 0018 4FF48072 		mov	r2, #256
+  69 001c 9A60     		str	r2, [r3, #8]
   48:Core/Src/adc.c ****   hadc1.Init.ContinuousConvMode = DISABLE;
-  53              		.loc 1 48 3 is_stmt 1 view .LVU7
-  54              		.loc 1 48 33 is_stmt 0 view .LVU8
-  55 0018 0373     		strb	r3, [r0, #12]
+  70              		.loc 1 48 33
+  71 001e 4A4B     		ldr	r3, .L12
+  72 0020 0022     		movs	r2, #0
+  73 0022 1A73     		strb	r2, [r3, #12]
   49:Core/Src/adc.c ****   hadc1.Init.DiscontinuousConvMode = ENABLE;
-  56              		.loc 1 49 3 is_stmt 1 view .LVU9
-  57              		.loc 1 49 36 is_stmt 0 view .LVU10
-  58 001a 0122     		movs	r2, #1
-  59 001c 0275     		strb	r2, [r0, #20]
+  74              		.loc 1 49 36
+  75 0024 484B     		ldr	r3, .L12
+  76 0026 0122     		movs	r2, #1
+  77 0028 1A75     		strb	r2, [r3, #20]
   50:Core/Src/adc.c ****   hadc1.Init.NbrOfDiscConversion = 1;
-  60              		.loc 1 50 3 is_stmt 1 view .LVU11
-  61              		.loc 1 50 34 is_stmt 0 view .LVU12
-  62 001e 8261     		str	r2, [r0, #24]
+  78              		.loc 1 50 34
+  79 002a 474B     		ldr	r3, .L12
+  80 002c 0122     		movs	r2, #1
+  81 002e 9A61     		str	r2, [r3, #24]
   51:Core/Src/adc.c ****   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  63              		.loc 1 51 3 is_stmt 1 view .LVU13
-  64              		.loc 1 51 31 is_stmt 0 view .LVU14
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 3
-
-
-  65 0020 4FF46022 		mov	r2, #917504
-  66 0024 C261     		str	r2, [r0, #28]
+  82              		.loc 1 51 31
+  83 0030 454B     		ldr	r3, .L12
+  84 0032 4FF46022 		mov	r2, #917504
+  85 0036 DA61     		str	r2, [r3, #28]
   52:Core/Src/adc.c ****   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  67              		.loc 1 52 3 is_stmt 1 view .LVU15
-  68              		.loc 1 52 24 is_stmt 0 view .LVU16
-  69 0026 4360     		str	r3, [r0, #4]
+  86              		.loc 1 52 24
+  87 0038 434B     		ldr	r3, .L12
+  88 003a 0022     		movs	r2, #0
+  89 003c 5A60     		str	r2, [r3, #4]
   53:Core/Src/adc.c ****   hadc1.Init.NbrOfConversion = 8;
-  70              		.loc 1 53 3 is_stmt 1 view .LVU17
-  71              		.loc 1 53 30 is_stmt 0 view .LVU18
-  72 0028 0823     		movs	r3, #8
-  73 002a 0361     		str	r3, [r0, #16]
+  90              		.loc 1 53 30
+  91 003e 424B     		ldr	r3, .L12
+  92 0040 0822     		movs	r2, #8
+  93 0042 1A61     		str	r2, [r3, #16]
   54:Core/Src/adc.c ****   if (HAL_ADC_Init(&hadc1) != HAL_OK)
-  74              		.loc 1 54 3 is_stmt 1 view .LVU19
-  75              		.loc 1 54 7 is_stmt 0 view .LVU20
-  76 002c FFF7FEFF 		bl	HAL_ADC_Init
-  77              	.LVL0:
-  78              		.loc 1 54 6 view .LVU21
-  79 0030 0028     		cmp	r0, #0
-  80 0032 55D1     		bne	.L12
-  81              	.L2:
+  94              		.loc 1 54 7
+  95 0044 4048     		ldr	r0, .L12
+  96 0046 FFF7FEFF 		bl	HAL_ADC_Init
+  97 004a 0346     		mov	r3, r0
+  98              		.loc 1 54 6
+  99 004c 002B     		cmp	r3, #0
+ 100 004e 01D0     		beq	.L2
   55:Core/Src/adc.c ****   {
   56:Core/Src/adc.c ****     Error_Handler();
+ 101              		.loc 1 56 5
+ 102 0050 FFF7FEFF 		bl	Error_Handler
+ 103              	.L2:
   57:Core/Src/adc.c ****   }
   58:Core/Src/adc.c **** 
   59:Core/Src/adc.c ****   /** Configure Regular Channel
   60:Core/Src/adc.c ****   */
   61:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_8;
-  82              		.loc 1 61 3 is_stmt 1 view .LVU22
-  83              		.loc 1 61 19 is_stmt 0 view .LVU23
-  84 0034 0823     		movs	r3, #8
-  85 0036 0193     		str	r3, [sp, #4]
+ 104              		.loc 1 61 19
+ 105 0054 0823     		movs	r3, #8
+ 106 0056 7B60     		str	r3, [r7, #4]
   62:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_1;
-  86              		.loc 1 62 3 is_stmt 1 view .LVU24
-  87              		.loc 1 62 16 is_stmt 0 view .LVU25
-  88 0038 0123     		movs	r3, #1
-  89 003a 0293     		str	r3, [sp, #8]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 4
+
+
+ 107              		.loc 1 62 16
+ 108 0058 0123     		movs	r3, #1
+ 109 005a BB60     		str	r3, [r7, #8]
   63:Core/Src/adc.c ****   sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES_5;
-  90              		.loc 1 63 3 is_stmt 1 view .LVU26
-  91              		.loc 1 63 24 is_stmt 0 view .LVU27
-  92 003c 0323     		movs	r3, #3
-  93 003e 0393     		str	r3, [sp, #12]
+ 110              		.loc 1 63 24
+ 111 005c 0323     		movs	r3, #3
+ 112 005e FB60     		str	r3, [r7, #12]
   64:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
-  94              		.loc 1 64 3 is_stmt 1 view .LVU28
-  95              		.loc 1 64 7 is_stmt 0 view .LVU29
-  96 0040 01A9     		add	r1, sp, #4
-  97 0042 3548     		ldr	r0, .L21
-  98 0044 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
-  99              	.LVL1:
- 100              		.loc 1 64 6 view .LVU30
- 101 0048 0028     		cmp	r0, #0
- 102 004a 4CD1     		bne	.L13
- 103              	.L3:
+ 113              		.loc 1 64 7
+ 114 0060 3B1D     		adds	r3, r7, #4
+ 115 0062 1946     		mov	r1, r3
+ 116 0064 3848     		ldr	r0, .L12
+ 117 0066 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 118 006a 0346     		mov	r3, r0
+ 119              		.loc 1 64 6
+ 120 006c 002B     		cmp	r3, #0
+ 121 006e 01D0     		beq	.L3
   65:Core/Src/adc.c ****   {
   66:Core/Src/adc.c ****     Error_Handler();
+ 122              		.loc 1 66 5
+ 123 0070 FFF7FEFF 		bl	Error_Handler
+ 124              	.L3:
   67:Core/Src/adc.c ****   }
   68:Core/Src/adc.c **** 
   69:Core/Src/adc.c ****   /** Configure Regular Channel
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 4
-
-
   70:Core/Src/adc.c ****   */
   71:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_9;
- 104              		.loc 1 71 3 is_stmt 1 view .LVU31
- 105              		.loc 1 71 19 is_stmt 0 view .LVU32
- 106 004c 0923     		movs	r3, #9
- 107 004e 0193     		str	r3, [sp, #4]
+ 125              		.loc 1 71 19
+ 126 0074 0923     		movs	r3, #9
+ 127 0076 7B60     		str	r3, [r7, #4]
   72:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_2;
- 108              		.loc 1 72 3 is_stmt 1 view .LVU33
- 109              		.loc 1 72 16 is_stmt 0 view .LVU34
- 110 0050 0223     		movs	r3, #2
- 111 0052 0293     		str	r3, [sp, #8]
+ 128              		.loc 1 72 16
+ 129 0078 0223     		movs	r3, #2
+ 130 007a BB60     		str	r3, [r7, #8]
   73:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 112              		.loc 1 73 3 is_stmt 1 view .LVU35
- 113              		.loc 1 73 7 is_stmt 0 view .LVU36
- 114 0054 01A9     		add	r1, sp, #4
- 115 0056 3048     		ldr	r0, .L21
- 116 0058 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 117              	.LVL2:
- 118              		.loc 1 73 6 view .LVU37
- 119 005c 0028     		cmp	r0, #0
- 120 005e 45D1     		bne	.L14
- 121              	.L4:
+ 131              		.loc 1 73 7
+ 132 007c 3B1D     		adds	r3, r7, #4
+ 133 007e 1946     		mov	r1, r3
+ 134 0080 3148     		ldr	r0, .L12
+ 135 0082 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 136 0086 0346     		mov	r3, r0
+ 137              		.loc 1 73 6
+ 138 0088 002B     		cmp	r3, #0
+ 139 008a 01D0     		beq	.L4
   74:Core/Src/adc.c ****   {
   75:Core/Src/adc.c ****     Error_Handler();
+ 140              		.loc 1 75 5
+ 141 008c FFF7FEFF 		bl	Error_Handler
+ 142              	.L4:
   76:Core/Src/adc.c ****   }
   77:Core/Src/adc.c **** 
   78:Core/Src/adc.c ****   /** Configure Regular Channel
   79:Core/Src/adc.c ****   */
   80:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_10;
- 122              		.loc 1 80 3 is_stmt 1 view .LVU38
- 123              		.loc 1 80 19 is_stmt 0 view .LVU39
- 124 0060 0A23     		movs	r3, #10
- 125 0062 0193     		str	r3, [sp, #4]
+ 143              		.loc 1 80 19
+ 144 0090 0A23     		movs	r3, #10
+ 145 0092 7B60     		str	r3, [r7, #4]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 5
+
+
   81:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_3;
- 126              		.loc 1 81 3 is_stmt 1 view .LVU40
- 127              		.loc 1 81 16 is_stmt 0 view .LVU41
- 128 0064 0323     		movs	r3, #3
- 129 0066 0293     		str	r3, [sp, #8]
+ 146              		.loc 1 81 16
+ 147 0094 0323     		movs	r3, #3
+ 148 0096 BB60     		str	r3, [r7, #8]
   82:Core/Src/adc.c ****   sConfig.SamplingTime = ADC_SAMPLETIME_41CYCLES_5;
- 130              		.loc 1 82 3 is_stmt 1 view .LVU42
- 131              		.loc 1 82 24 is_stmt 0 view .LVU43
- 132 0068 0423     		movs	r3, #4
- 133 006a 0393     		str	r3, [sp, #12]
+ 149              		.loc 1 82 24
+ 150 0098 0423     		movs	r3, #4
+ 151 009a FB60     		str	r3, [r7, #12]
   83:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 134              		.loc 1 83 3 is_stmt 1 view .LVU44
- 135              		.loc 1 83 7 is_stmt 0 view .LVU45
- 136 006c 0DEB0301 		add	r1, sp, r3
- 137 0070 2948     		ldr	r0, .L21
- 138 0072 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 139              	.LVL3:
- 140              		.loc 1 83 6 view .LVU46
- 141 0076 0028     		cmp	r0, #0
- 142 0078 3BD1     		bne	.L15
- 143              	.L5:
+ 152              		.loc 1 83 7
+ 153 009c 3B1D     		adds	r3, r7, #4
+ 154 009e 1946     		mov	r1, r3
+ 155 00a0 2948     		ldr	r0, .L12
+ 156 00a2 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 157 00a6 0346     		mov	r3, r0
+ 158              		.loc 1 83 6
+ 159 00a8 002B     		cmp	r3, #0
+ 160 00aa 01D0     		beq	.L5
   84:Core/Src/adc.c ****   {
   85:Core/Src/adc.c ****     Error_Handler();
+ 161              		.loc 1 85 5
+ 162 00ac FFF7FEFF 		bl	Error_Handler
+ 163              	.L5:
   86:Core/Src/adc.c ****   }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 5
-
-
   87:Core/Src/adc.c **** 
   88:Core/Src/adc.c ****   /** Configure Regular Channel
   89:Core/Src/adc.c ****   */
   90:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_11;
- 144              		.loc 1 90 3 is_stmt 1 view .LVU47
- 145              		.loc 1 90 19 is_stmt 0 view .LVU48
- 146 007a 0B23     		movs	r3, #11
- 147 007c 0193     		str	r3, [sp, #4]
+ 164              		.loc 1 90 19
+ 165 00b0 0B23     		movs	r3, #11
+ 166 00b2 7B60     		str	r3, [r7, #4]
   91:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_4;
- 148              		.loc 1 91 3 is_stmt 1 view .LVU49
- 149              		.loc 1 91 16 is_stmt 0 view .LVU50
- 150 007e 0423     		movs	r3, #4
- 151 0080 0293     		str	r3, [sp, #8]
+ 167              		.loc 1 91 16
+ 168 00b4 0423     		movs	r3, #4
+ 169 00b6 BB60     		str	r3, [r7, #8]
   92:Core/Src/adc.c ****   sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES_5;
- 152              		.loc 1 92 3 is_stmt 1 view .LVU51
- 153              		.loc 1 92 24 is_stmt 0 view .LVU52
- 154 0082 0323     		movs	r3, #3
- 155 0084 0393     		str	r3, [sp, #12]
+ 170              		.loc 1 92 24
+ 171 00b8 0323     		movs	r3, #3
+ 172 00ba FB60     		str	r3, [r7, #12]
   93:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 156              		.loc 1 93 3 is_stmt 1 view .LVU53
- 157              		.loc 1 93 7 is_stmt 0 view .LVU54
- 158 0086 01A9     		add	r1, sp, #4
- 159 0088 2348     		ldr	r0, .L21
- 160 008a FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 161              	.LVL4:
- 162              		.loc 1 93 6 view .LVU55
- 163 008e 0028     		cmp	r0, #0
- 164 0090 32D1     		bne	.L16
- 165              	.L6:
+ 173              		.loc 1 93 7
+ 174 00bc 3B1D     		adds	r3, r7, #4
+ 175 00be 1946     		mov	r1, r3
+ 176 00c0 2148     		ldr	r0, .L12
+ 177 00c2 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 178 00c6 0346     		mov	r3, r0
+ 179              		.loc 1 93 6
+ 180 00c8 002B     		cmp	r3, #0
+ 181 00ca 01D0     		beq	.L6
   94:Core/Src/adc.c ****   {
   95:Core/Src/adc.c ****     Error_Handler();
+ 182              		.loc 1 95 5
+ 183 00cc FFF7FEFF 		bl	Error_Handler
+ 184              	.L6:
   96:Core/Src/adc.c ****   }
   97:Core/Src/adc.c **** 
   98:Core/Src/adc.c ****   /** Configure Regular Channel
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 6
+
+
   99:Core/Src/adc.c ****   */
  100:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_12;
- 166              		.loc 1 100 3 is_stmt 1 view .LVU56
- 167              		.loc 1 100 19 is_stmt 0 view .LVU57
- 168 0092 0C23     		movs	r3, #12
- 169 0094 0193     		str	r3, [sp, #4]
+ 185              		.loc 1 100 19
+ 186 00d0 0C23     		movs	r3, #12
+ 187 00d2 7B60     		str	r3, [r7, #4]
  101:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_5;
- 170              		.loc 1 101 3 is_stmt 1 view .LVU58
- 171              		.loc 1 101 16 is_stmt 0 view .LVU59
- 172 0096 0523     		movs	r3, #5
- 173 0098 0293     		str	r3, [sp, #8]
+ 188              		.loc 1 101 16
+ 189 00d4 0523     		movs	r3, #5
+ 190 00d6 BB60     		str	r3, [r7, #8]
  102:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 174              		.loc 1 102 3 is_stmt 1 view .LVU60
- 175              		.loc 1 102 7 is_stmt 0 view .LVU61
- 176 009a 01A9     		add	r1, sp, #4
- 177 009c 1E48     		ldr	r0, .L21
- 178 009e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 179              	.LVL5:
- 180              		.loc 1 102 6 view .LVU62
- 181 00a2 60BB     		cbnz	r0, .L17
- 182              	.L7:
+ 191              		.loc 1 102 7
+ 192 00d8 3B1D     		adds	r3, r7, #4
+ 193 00da 1946     		mov	r1, r3
+ 194 00dc 1A48     		ldr	r0, .L12
+ 195 00de FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 196 00e2 0346     		mov	r3, r0
+ 197              		.loc 1 102 6
+ 198 00e4 002B     		cmp	r3, #0
+ 199 00e6 01D0     		beq	.L7
  103:Core/Src/adc.c ****   {
  104:Core/Src/adc.c ****     Error_Handler();
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 6
-
-
+ 200              		.loc 1 104 5
+ 201 00e8 FFF7FEFF 		bl	Error_Handler
+ 202              	.L7:
  105:Core/Src/adc.c ****   }
  106:Core/Src/adc.c **** 
  107:Core/Src/adc.c ****   /** Configure Regular Channel
  108:Core/Src/adc.c ****   */
  109:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_13;
- 183              		.loc 1 109 3 is_stmt 1 view .LVU63
- 184              		.loc 1 109 19 is_stmt 0 view .LVU64
- 185 00a4 0D23     		movs	r3, #13
- 186 00a6 0193     		str	r3, [sp, #4]
+ 203              		.loc 1 109 19
+ 204 00ec 0D23     		movs	r3, #13
+ 205 00ee 7B60     		str	r3, [r7, #4]
  110:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_6;
- 187              		.loc 1 110 3 is_stmt 1 view .LVU65
- 188              		.loc 1 110 16 is_stmt 0 view .LVU66
- 189 00a8 0623     		movs	r3, #6
- 190 00aa 0293     		str	r3, [sp, #8]
+ 206              		.loc 1 110 16
+ 207 00f0 0623     		movs	r3, #6
+ 208 00f2 BB60     		str	r3, [r7, #8]
  111:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 191              		.loc 1 111 3 is_stmt 1 view .LVU67
- 192              		.loc 1 111 7 is_stmt 0 view .LVU68
- 193 00ac 01A9     		add	r1, sp, #4
- 194 00ae 1A48     		ldr	r0, .L21
- 195 00b0 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 196              	.LVL6:
- 197              		.loc 1 111 6 view .LVU69
- 198 00b4 30BB     		cbnz	r0, .L18
- 199              	.L8:
+ 209              		.loc 1 111 7
+ 210 00f4 3B1D     		adds	r3, r7, #4
+ 211 00f6 1946     		mov	r1, r3
+ 212 00f8 1348     		ldr	r0, .L12
+ 213 00fa FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 214 00fe 0346     		mov	r3, r0
+ 215              		.loc 1 111 6
+ 216 0100 002B     		cmp	r3, #0
+ 217 0102 01D0     		beq	.L8
  112:Core/Src/adc.c ****   {
  113:Core/Src/adc.c ****     Error_Handler();
+ 218              		.loc 1 113 5
+ 219 0104 FFF7FEFF 		bl	Error_Handler
+ 220              	.L8:
  114:Core/Src/adc.c ****   }
  115:Core/Src/adc.c **** 
  116:Core/Src/adc.c ****   /** Configure Regular Channel
  117:Core/Src/adc.c ****   */
  118:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_14;
- 200              		.loc 1 118 3 is_stmt 1 view .LVU70
- 201              		.loc 1 118 19 is_stmt 0 view .LVU71
- 202 00b6 0E23     		movs	r3, #14
- 203 00b8 0193     		str	r3, [sp, #4]
+ 221              		.loc 1 118 19
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 7
+
+
+ 222 0108 0E23     		movs	r3, #14
+ 223 010a 7B60     		str	r3, [r7, #4]
  119:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_7;
- 204              		.loc 1 119 3 is_stmt 1 view .LVU72
- 205              		.loc 1 119 16 is_stmt 0 view .LVU73
- 206 00ba 0723     		movs	r3, #7
- 207 00bc 0293     		str	r3, [sp, #8]
+ 224              		.loc 1 119 16
+ 225 010c 0723     		movs	r3, #7
+ 226 010e BB60     		str	r3, [r7, #8]
  120:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 208              		.loc 1 120 3 is_stmt 1 view .LVU74
- 209              		.loc 1 120 7 is_stmt 0 view .LVU75
- 210 00be 01A9     		add	r1, sp, #4
- 211 00c0 1548     		ldr	r0, .L21
- 212 00c2 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 213              	.LVL7:
- 214              		.loc 1 120 6 view .LVU76
- 215 00c6 00BB     		cbnz	r0, .L19
- 216              	.L9:
+ 227              		.loc 1 120 7
+ 228 0110 3B1D     		adds	r3, r7, #4
+ 229 0112 1946     		mov	r1, r3
+ 230 0114 0C48     		ldr	r0, .L12
+ 231 0116 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 232 011a 0346     		mov	r3, r0
+ 233              		.loc 1 120 6
+ 234 011c 002B     		cmp	r3, #0
+ 235 011e 01D0     		beq	.L9
  121:Core/Src/adc.c ****   {
  122:Core/Src/adc.c ****     Error_Handler();
+ 236              		.loc 1 122 5
+ 237 0120 FFF7FEFF 		bl	Error_Handler
+ 238              	.L9:
  123:Core/Src/adc.c ****   }
  124:Core/Src/adc.c **** 
  125:Core/Src/adc.c ****   /** Configure Regular Channel
  126:Core/Src/adc.c ****   */
  127:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_15;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 7
-
-
- 217              		.loc 1 127 3 is_stmt 1 view .LVU77
- 218              		.loc 1 127 19 is_stmt 0 view .LVU78
- 219 00c8 0F23     		movs	r3, #15
- 220 00ca 0193     		str	r3, [sp, #4]
+ 239              		.loc 1 127 19
+ 240 0124 0F23     		movs	r3, #15
+ 241 0126 7B60     		str	r3, [r7, #4]
  128:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_8;
- 221              		.loc 1 128 3 is_stmt 1 view .LVU79
- 222              		.loc 1 128 16 is_stmt 0 view .LVU80
- 223 00cc 0823     		movs	r3, #8
- 224 00ce 0293     		str	r3, [sp, #8]
+ 242              		.loc 1 128 16
+ 243 0128 0823     		movs	r3, #8
+ 244 012a BB60     		str	r3, [r7, #8]
  129:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
- 225              		.loc 1 129 3 is_stmt 1 view .LVU81
- 226              		.loc 1 129 7 is_stmt 0 view .LVU82
- 227 00d0 01A9     		add	r1, sp, #4
- 228 00d2 1148     		ldr	r0, .L21
- 229 00d4 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 230              	.LVL8:
- 231              		.loc 1 129 6 view .LVU83
- 232 00d8 D0B9     		cbnz	r0, .L20
- 233              	.L1:
+ 245              		.loc 1 129 7
+ 246 012c 3B1D     		adds	r3, r7, #4
+ 247 012e 1946     		mov	r1, r3
+ 248 0130 0548     		ldr	r0, .L12
+ 249 0132 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 250 0136 0346     		mov	r3, r0
+ 251              		.loc 1 129 6
+ 252 0138 002B     		cmp	r3, #0
+ 253 013a 01D0     		beq	.L11
  130:Core/Src/adc.c ****   {
  131:Core/Src/adc.c ****     Error_Handler();
+ 254              		.loc 1 131 5
+ 255 013c FFF7FEFF 		bl	Error_Handler
+ 256              	.L11:
  132:Core/Src/adc.c ****   }
  133:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_Init 2 */
  134:Core/Src/adc.c **** 
  135:Core/Src/adc.c ****   /* USER CODE END ADC1_Init 2 */
  136:Core/Src/adc.c **** 
  137:Core/Src/adc.c **** }
- 234              		.loc 1 137 1 view .LVU84
- 235 00da 05B0     		add	sp, sp, #20
- 236              	.LCFI2:
- 237              		.cfi_remember_state
- 238              		.cfi_def_cfa_offset 4
- 239              		@ sp needed
- 240 00dc 5DF804FB 		ldr	pc, [sp], #4
- 241              	.L12:
- 242              	.LCFI3:
- 243              		.cfi_restore_state
-  56:Core/Src/adc.c ****   }
- 244              		.loc 1 56 5 is_stmt 1 view .LVU85
- 245 00e0 FFF7FEFF 		bl	Error_Handler
- 246              	.LVL9:
- 247 00e4 A6E7     		b	.L2
- 248              	.L13:
-  66:Core/Src/adc.c ****   }
- 249              		.loc 1 66 5 view .LVU86
- 250 00e6 FFF7FEFF 		bl	Error_Handler
- 251              	.LVL10:
- 252 00ea AFE7     		b	.L3
- 253              	.L14:
-  75:Core/Src/adc.c ****   }
- 254              		.loc 1 75 5 view .LVU87
- 255 00ec FFF7FEFF 		bl	Error_Handler
- 256              	.LVL11:
- 257 00f0 B6E7     		b	.L4
- 258              	.L15:
-  85:Core/Src/adc.c ****   }
- 259              		.loc 1 85 5 view .LVU88
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 8
+ 257              		.loc 1 137 1
+ 258 0140 00BF     		nop
+ 259 0142 1037     		adds	r7, r7, #16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 8
 
 
- 260 00f2 FFF7FEFF 		bl	Error_Handler
- 261              	.LVL12:
- 262 00f6 C0E7     		b	.L5
- 263              	.L16:
-  95:Core/Src/adc.c ****   }
- 264              		.loc 1 95 5 view .LVU89
- 265 00f8 FFF7FEFF 		bl	Error_Handler
- 266              	.LVL13:
- 267 00fc C9E7     		b	.L6
- 268              	.L17:
- 104:Core/Src/adc.c ****   }
- 269              		.loc 1 104 5 view .LVU90
- 270 00fe FFF7FEFF 		bl	Error_Handler
- 271              	.LVL14:
- 272 0102 CFE7     		b	.L7
- 273              	.L18:
- 113:Core/Src/adc.c ****   }
- 274              		.loc 1 113 5 view .LVU91
- 275 0104 FFF7FEFF 		bl	Error_Handler
- 276              	.LVL15:
- 277 0108 D5E7     		b	.L8
- 278              	.L19:
- 122:Core/Src/adc.c ****   }
- 279              		.loc 1 122 5 view .LVU92
- 280 010a FFF7FEFF 		bl	Error_Handler
- 281              	.LVL16:
- 282 010e DBE7     		b	.L9
- 283              	.L20:
- 131:Core/Src/adc.c ****   }
- 284              		.loc 1 131 5 view .LVU93
- 285 0110 FFF7FEFF 		bl	Error_Handler
- 286              	.LVL17:
- 287              		.loc 1 137 1 is_stmt 0 view .LVU94
- 288 0114 E1E7     		b	.L1
- 289              	.L22:
- 290 0116 00BF     		.align	2
- 291              	.L21:
- 292 0118 00000000 		.word	hadc1
- 293 011c 00240140 		.word	1073816576
- 294              		.cfi_endproc
- 295              	.LFE65:
- 297              		.section	.text.MX_ADC2_Init,"ax",%progbits
- 298              		.align	1
- 299              		.global	MX_ADC2_Init
- 300              		.syntax unified
- 301              		.thumb
- 302              		.thumb_func
- 304              	MX_ADC2_Init:
- 305              	.LFB66:
+ 260              	.LCFI3:
+ 261              		.cfi_def_cfa_offset 8
+ 262 0144 BD46     		mov	sp, r7
+ 263              	.LCFI4:
+ 264              		.cfi_def_cfa_register 13
+ 265              		@ sp needed
+ 266 0146 80BD     		pop	{r7, pc}
+ 267              	.L13:
+ 268              		.align	2
+ 269              	.L12:
+ 270 0148 00000000 		.word	hadc1
+ 271 014c 00240140 		.word	1073816576
+ 272              		.cfi_endproc
+ 273              	.LFE65:
+ 275              		.section	.text.MX_ADC2_Init,"ax",%progbits
+ 276              		.align	1
+ 277              		.global	MX_ADC2_Init
+ 278              		.syntax unified
+ 279              		.thumb
+ 280              		.thumb_func
+ 282              	MX_ADC2_Init:
+ 283              	.LFB66:
  138:Core/Src/adc.c **** /* ADC2 init function */
  139:Core/Src/adc.c **** void MX_ADC2_Init(void)
  140:Core/Src/adc.c **** {
- 306              		.loc 1 140 1 is_stmt 1 view -0
- 307              		.cfi_startproc
- 308              		@ args = 0, pretend = 0, frame = 16
- 309              		@ frame_needed = 0, uses_anonymous_args = 0
- 310 0000 00B5     		push	{lr}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 9
-
-
- 311              	.LCFI4:
- 312              		.cfi_def_cfa_offset 4
- 313              		.cfi_offset 14, -4
- 314 0002 85B0     		sub	sp, sp, #20
- 315              	.LCFI5:
- 316              		.cfi_def_cfa_offset 24
+ 284              		.loc 1 140 1
+ 285              		.cfi_startproc
+ 286              		@ args = 0, pretend = 0, frame = 16
+ 287              		@ frame_needed = 1, uses_anonymous_args = 0
+ 288 0000 80B5     		push	{r7, lr}
+ 289              	.LCFI5:
+ 290              		.cfi_def_cfa_offset 8
+ 291              		.cfi_offset 7, -8
+ 292              		.cfi_offset 14, -4
+ 293 0002 84B0     		sub	sp, sp, #16
+ 294              	.LCFI6:
+ 295              		.cfi_def_cfa_offset 24
+ 296 0004 00AF     		add	r7, sp, #0
+ 297              	.LCFI7:
+ 298              		.cfi_def_cfa_register 7
  141:Core/Src/adc.c **** 
  142:Core/Src/adc.c ****   /* USER CODE BEGIN ADC2_Init 0 */
  143:Core/Src/adc.c **** 
  144:Core/Src/adc.c ****   /* USER CODE END ADC2_Init 0 */
  145:Core/Src/adc.c **** 
  146:Core/Src/adc.c ****   ADC_ChannelConfTypeDef sConfig = {0};
- 317              		.loc 1 146 3 view .LVU96
- 318              		.loc 1 146 26 is_stmt 0 view .LVU97
- 319 0004 0023     		movs	r3, #0
- 320 0006 0193     		str	r3, [sp, #4]
- 321 0008 0293     		str	r3, [sp, #8]
- 322 000a 0393     		str	r3, [sp, #12]
+ 299              		.loc 1 146 26
+ 300 0006 3B1D     		adds	r3, r7, #4
+ 301 0008 0022     		movs	r2, #0
+ 302 000a 1A60     		str	r2, [r3]
+ 303 000c 5A60     		str	r2, [r3, #4]
+ 304 000e 9A60     		str	r2, [r3, #8]
  147:Core/Src/adc.c **** 
  148:Core/Src/adc.c ****   /* USER CODE BEGIN ADC2_Init 1 */
  149:Core/Src/adc.c **** 
  150:Core/Src/adc.c ****   /* USER CODE END ADC2_Init 1 */
  151:Core/Src/adc.c **** 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 9
+
+
  152:Core/Src/adc.c ****   /** Common config
  153:Core/Src/adc.c ****   */
  154:Core/Src/adc.c ****   hadc2.Instance = ADC2;
- 323              		.loc 1 154 3 is_stmt 1 view .LVU98
- 324              		.loc 1 154 18 is_stmt 0 view .LVU99
- 325 000c 4048     		ldr	r0, .L43
- 326 000e 414A     		ldr	r2, .L43+4
- 327 0010 0260     		str	r2, [r0]
+ 305              		.loc 1 154 18
+ 306 0010 4B4B     		ldr	r3, .L25
+ 307 0012 4C4A     		ldr	r2, .L25+4
+ 308 0014 1A60     		str	r2, [r3]
  155:Core/Src/adc.c ****   hadc2.Init.ScanConvMode = ADC_SCAN_ENABLE;
- 328              		.loc 1 155 3 is_stmt 1 view .LVU100
- 329              		.loc 1 155 27 is_stmt 0 view .LVU101
- 330 0012 4FF48072 		mov	r2, #256
- 331 0016 8260     		str	r2, [r0, #8]
+ 309              		.loc 1 155 27
+ 310 0016 4A4B     		ldr	r3, .L25
+ 311 0018 4FF48072 		mov	r2, #256
+ 312 001c 9A60     		str	r2, [r3, #8]
  156:Core/Src/adc.c ****   hadc2.Init.ContinuousConvMode = DISABLE;
- 332              		.loc 1 156 3 is_stmt 1 view .LVU102
- 333              		.loc 1 156 33 is_stmt 0 view .LVU103
- 334 0018 0373     		strb	r3, [r0, #12]
+ 313              		.loc 1 156 33
+ 314 001e 484B     		ldr	r3, .L25
+ 315 0020 0022     		movs	r2, #0
+ 316 0022 1A73     		strb	r2, [r3, #12]
  157:Core/Src/adc.c ****   hadc2.Init.DiscontinuousConvMode = ENABLE;
- 335              		.loc 1 157 3 is_stmt 1 view .LVU104
- 336              		.loc 1 157 36 is_stmt 0 view .LVU105
- 337 001a 0122     		movs	r2, #1
- 338 001c 0275     		strb	r2, [r0, #20]
+ 317              		.loc 1 157 36
+ 318 0024 464B     		ldr	r3, .L25
+ 319 0026 0122     		movs	r2, #1
+ 320 0028 1A75     		strb	r2, [r3, #20]
  158:Core/Src/adc.c ****   hadc2.Init.NbrOfDiscConversion = 1;
- 339              		.loc 1 158 3 is_stmt 1 view .LVU106
- 340              		.loc 1 158 34 is_stmt 0 view .LVU107
- 341 001e 8261     		str	r2, [r0, #24]
+ 321              		.loc 1 158 34
+ 322 002a 454B     		ldr	r3, .L25
+ 323 002c 0122     		movs	r2, #1
+ 324 002e 9A61     		str	r2, [r3, #24]
  159:Core/Src/adc.c ****   hadc2.Init.ExternalTrigConv = ADC_SOFTWARE_START;
- 342              		.loc 1 159 3 is_stmt 1 view .LVU108
- 343              		.loc 1 159 31 is_stmt 0 view .LVU109
- 344 0020 4FF46022 		mov	r2, #917504
- 345 0024 C261     		str	r2, [r0, #28]
+ 325              		.loc 1 159 31
+ 326 0030 434B     		ldr	r3, .L25
+ 327 0032 4FF46022 		mov	r2, #917504
+ 328 0036 DA61     		str	r2, [r3, #28]
  160:Core/Src/adc.c ****   hadc2.Init.DataAlign = ADC_DATAALIGN_RIGHT;
- 346              		.loc 1 160 3 is_stmt 1 view .LVU110
- 347              		.loc 1 160 24 is_stmt 0 view .LVU111
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 10
-
-
- 348 0026 4360     		str	r3, [r0, #4]
+ 329              		.loc 1 160 24
+ 330 0038 414B     		ldr	r3, .L25
+ 331 003a 0022     		movs	r2, #0
+ 332 003c 5A60     		str	r2, [r3, #4]
  161:Core/Src/adc.c ****   hadc2.Init.NbrOfConversion = 8;
- 349              		.loc 1 161 3 is_stmt 1 view .LVU112
- 350              		.loc 1 161 30 is_stmt 0 view .LVU113
- 351 0028 0823     		movs	r3, #8
- 352 002a 0361     		str	r3, [r0, #16]
+ 333              		.loc 1 161 30
+ 334 003e 404B     		ldr	r3, .L25
+ 335 0040 0822     		movs	r2, #8
+ 336 0042 1A61     		str	r2, [r3, #16]
  162:Core/Src/adc.c ****   if (HAL_ADC_Init(&hadc2) != HAL_OK)
- 353              		.loc 1 162 3 is_stmt 1 view .LVU114
- 354              		.loc 1 162 7 is_stmt 0 view .LVU115
- 355 002c FFF7FEFF 		bl	HAL_ADC_Init
- 356              	.LVL18:
- 357              		.loc 1 162 6 view .LVU116
- 358 0030 0028     		cmp	r0, #0
- 359 0032 51D1     		bne	.L34
- 360              	.L24:
+ 337              		.loc 1 162 7
+ 338 0044 3E48     		ldr	r0, .L25
+ 339 0046 FFF7FEFF 		bl	HAL_ADC_Init
+ 340 004a 0346     		mov	r3, r0
+ 341              		.loc 1 162 6
+ 342 004c 002B     		cmp	r3, #0
+ 343 004e 01D0     		beq	.L15
  163:Core/Src/adc.c ****   {
  164:Core/Src/adc.c ****     Error_Handler();
+ 344              		.loc 1 164 5
+ 345 0050 FFF7FEFF 		bl	Error_Handler
+ 346              	.L15:
  165:Core/Src/adc.c ****   }
  166:Core/Src/adc.c **** 
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 10
+
+
  167:Core/Src/adc.c ****   /** Configure Regular Channel
  168:Core/Src/adc.c ****   */
  169:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_0;
- 361              		.loc 1 169 3 is_stmt 1 view .LVU117
- 362              		.loc 1 169 19 is_stmt 0 view .LVU118
- 363 0034 0023     		movs	r3, #0
- 364 0036 0193     		str	r3, [sp, #4]
+ 347              		.loc 1 169 19
+ 348 0054 0023     		movs	r3, #0
+ 349 0056 7B60     		str	r3, [r7, #4]
  170:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_1;
- 365              		.loc 1 170 3 is_stmt 1 view .LVU119
- 366              		.loc 1 170 16 is_stmt 0 view .LVU120
- 367 0038 0123     		movs	r3, #1
- 368 003a 0293     		str	r3, [sp, #8]
+ 350              		.loc 1 170 16
+ 351 0058 0123     		movs	r3, #1
+ 352 005a BB60     		str	r3, [r7, #8]
  171:Core/Src/adc.c ****   sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES_5;
- 369              		.loc 1 171 3 is_stmt 1 view .LVU121
- 370              		.loc 1 171 24 is_stmt 0 view .LVU122
- 371 003c 0323     		movs	r3, #3
- 372 003e 0393     		str	r3, [sp, #12]
+ 353              		.loc 1 171 24
+ 354 005c 0323     		movs	r3, #3
+ 355 005e FB60     		str	r3, [r7, #12]
  172:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 373              		.loc 1 172 3 is_stmt 1 view .LVU123
- 374              		.loc 1 172 7 is_stmt 0 view .LVU124
- 375 0040 01A9     		add	r1, sp, #4
- 376 0042 3348     		ldr	r0, .L43
- 377 0044 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 378              	.LVL19:
- 379              		.loc 1 172 6 view .LVU125
- 380 0048 0028     		cmp	r0, #0
- 381 004a 48D1     		bne	.L35
- 382              	.L25:
+ 356              		.loc 1 172 7
+ 357 0060 3B1D     		adds	r3, r7, #4
+ 358 0062 1946     		mov	r1, r3
+ 359 0064 3648     		ldr	r0, .L25
+ 360 0066 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 361 006a 0346     		mov	r3, r0
+ 362              		.loc 1 172 6
+ 363 006c 002B     		cmp	r3, #0
+ 364 006e 01D0     		beq	.L16
  173:Core/Src/adc.c ****   {
  174:Core/Src/adc.c ****     Error_Handler();
+ 365              		.loc 1 174 5
+ 366 0070 FFF7FEFF 		bl	Error_Handler
+ 367              	.L16:
  175:Core/Src/adc.c ****   }
  176:Core/Src/adc.c **** 
  177:Core/Src/adc.c ****   /** Configure Regular Channel
  178:Core/Src/adc.c ****   */
  179:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_1;
- 383              		.loc 1 179 3 is_stmt 1 view .LVU126
- 384              		.loc 1 179 19 is_stmt 0 view .LVU127
- 385 004c 0123     		movs	r3, #1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 11
-
-
- 386 004e 0193     		str	r3, [sp, #4]
+ 368              		.loc 1 179 19
+ 369 0074 0123     		movs	r3, #1
+ 370 0076 7B60     		str	r3, [r7, #4]
  180:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_2;
- 387              		.loc 1 180 3 is_stmt 1 view .LVU128
- 388              		.loc 1 180 16 is_stmt 0 view .LVU129
- 389 0050 0223     		movs	r3, #2
- 390 0052 0293     		str	r3, [sp, #8]
+ 371              		.loc 1 180 16
+ 372 0078 0223     		movs	r3, #2
+ 373 007a BB60     		str	r3, [r7, #8]
  181:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 391              		.loc 1 181 3 is_stmt 1 view .LVU130
- 392              		.loc 1 181 7 is_stmt 0 view .LVU131
- 393 0054 01A9     		add	r1, sp, #4
- 394 0056 2E48     		ldr	r0, .L43
- 395 0058 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 396              	.LVL20:
- 397              		.loc 1 181 6 view .LVU132
- 398 005c 0028     		cmp	r0, #0
- 399 005e 41D1     		bne	.L36
- 400              	.L26:
+ 374              		.loc 1 181 7
+ 375 007c 3B1D     		adds	r3, r7, #4
+ 376 007e 1946     		mov	r1, r3
+ 377 0080 2F48     		ldr	r0, .L25
+ 378 0082 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 379 0086 0346     		mov	r3, r0
+ 380              		.loc 1 181 6
+ 381 0088 002B     		cmp	r3, #0
+ 382 008a 01D0     		beq	.L17
  182:Core/Src/adc.c ****   {
  183:Core/Src/adc.c ****     Error_Handler();
+ 383              		.loc 1 183 5
+ 384 008c FFF7FEFF 		bl	Error_Handler
+ 385              	.L17:
  184:Core/Src/adc.c ****   }
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 11
+
+
  185:Core/Src/adc.c **** 
  186:Core/Src/adc.c ****   /** Configure Regular Channel
  187:Core/Src/adc.c ****   */
  188:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_2;
- 401              		.loc 1 188 3 is_stmt 1 view .LVU133
- 402              		.loc 1 188 19 is_stmt 0 view .LVU134
- 403 0060 0223     		movs	r3, #2
- 404 0062 0193     		str	r3, [sp, #4]
+ 386              		.loc 1 188 19
+ 387 0090 0223     		movs	r3, #2
+ 388 0092 7B60     		str	r3, [r7, #4]
  189:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_3;
- 405              		.loc 1 189 3 is_stmt 1 view .LVU135
- 406              		.loc 1 189 16 is_stmt 0 view .LVU136
- 407 0064 0323     		movs	r3, #3
- 408 0066 0293     		str	r3, [sp, #8]
+ 389              		.loc 1 189 16
+ 390 0094 0323     		movs	r3, #3
+ 391 0096 BB60     		str	r3, [r7, #8]
  190:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 409              		.loc 1 190 3 is_stmt 1 view .LVU137
- 410              		.loc 1 190 7 is_stmt 0 view .LVU138
- 411 0068 01A9     		add	r1, sp, #4
- 412 006a 2948     		ldr	r0, .L43
- 413 006c FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 414              	.LVL21:
- 415              		.loc 1 190 6 view .LVU139
- 416 0070 0028     		cmp	r0, #0
- 417 0072 3AD1     		bne	.L37
- 418              	.L27:
+ 392              		.loc 1 190 7
+ 393 0098 3B1D     		adds	r3, r7, #4
+ 394 009a 1946     		mov	r1, r3
+ 395 009c 2848     		ldr	r0, .L25
+ 396 009e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 397 00a2 0346     		mov	r3, r0
+ 398              		.loc 1 190 6
+ 399 00a4 002B     		cmp	r3, #0
+ 400 00a6 01D0     		beq	.L18
  191:Core/Src/adc.c ****   {
  192:Core/Src/adc.c ****     Error_Handler();
+ 401              		.loc 1 192 5
+ 402 00a8 FFF7FEFF 		bl	Error_Handler
+ 403              	.L18:
  193:Core/Src/adc.c ****   }
  194:Core/Src/adc.c **** 
  195:Core/Src/adc.c ****   /** Configure Regular Channel
  196:Core/Src/adc.c ****   */
  197:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_3;
- 419              		.loc 1 197 3 is_stmt 1 view .LVU140
- 420              		.loc 1 197 19 is_stmt 0 view .LVU141
- 421 0074 0323     		movs	r3, #3
- 422 0076 0193     		str	r3, [sp, #4]
+ 404              		.loc 1 197 19
+ 405 00ac 0323     		movs	r3, #3
+ 406 00ae 7B60     		str	r3, [r7, #4]
  198:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_4;
- 423              		.loc 1 198 3 is_stmt 1 view .LVU142
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 12
-
-
- 424              		.loc 1 198 16 is_stmt 0 view .LVU143
- 425 0078 0423     		movs	r3, #4
- 426 007a 0293     		str	r3, [sp, #8]
+ 407              		.loc 1 198 16
+ 408 00b0 0423     		movs	r3, #4
+ 409 00b2 BB60     		str	r3, [r7, #8]
  199:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 427              		.loc 1 199 3 is_stmt 1 view .LVU144
- 428              		.loc 1 199 7 is_stmt 0 view .LVU145
- 429 007c 0DEB0301 		add	r1, sp, r3
- 430 0080 2348     		ldr	r0, .L43
- 431 0082 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 432              	.LVL22:
- 433              		.loc 1 199 6 view .LVU146
- 434 0086 0028     		cmp	r0, #0
- 435 0088 32D1     		bne	.L38
- 436              	.L28:
+ 410              		.loc 1 199 7
+ 411 00b4 3B1D     		adds	r3, r7, #4
+ 412 00b6 1946     		mov	r1, r3
+ 413 00b8 2148     		ldr	r0, .L25
+ 414 00ba FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 415 00be 0346     		mov	r3, r0
+ 416              		.loc 1 199 6
+ 417 00c0 002B     		cmp	r3, #0
+ 418 00c2 01D0     		beq	.L19
  200:Core/Src/adc.c ****   {
  201:Core/Src/adc.c ****     Error_Handler();
+ 419              		.loc 1 201 5
+ 420 00c4 FFF7FEFF 		bl	Error_Handler
+ 421              	.L19:
  202:Core/Src/adc.c ****   }
  203:Core/Src/adc.c **** 
  204:Core/Src/adc.c ****   /** Configure Regular Channel
  205:Core/Src/adc.c ****   */
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 12
+
+
  206:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_4;
- 437              		.loc 1 206 3 is_stmt 1 view .LVU147
- 438              		.loc 1 206 19 is_stmt 0 view .LVU148
- 439 008a 0423     		movs	r3, #4
- 440 008c 0193     		str	r3, [sp, #4]
+ 422              		.loc 1 206 19
+ 423 00c8 0423     		movs	r3, #4
+ 424 00ca 7B60     		str	r3, [r7, #4]
  207:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_5;
- 441              		.loc 1 207 3 is_stmt 1 view .LVU149
- 442              		.loc 1 207 16 is_stmt 0 view .LVU150
- 443 008e 0523     		movs	r3, #5
- 444 0090 0293     		str	r3, [sp, #8]
+ 425              		.loc 1 207 16
+ 426 00cc 0523     		movs	r3, #5
+ 427 00ce BB60     		str	r3, [r7, #8]
  208:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 445              		.loc 1 208 3 is_stmt 1 view .LVU151
- 446              		.loc 1 208 7 is_stmt 0 view .LVU152
- 447 0092 01A9     		add	r1, sp, #4
- 448 0094 1E48     		ldr	r0, .L43
- 449 0096 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 450              	.LVL23:
- 451              		.loc 1 208 6 view .LVU153
- 452 009a 60BB     		cbnz	r0, .L39
- 453              	.L29:
+ 428              		.loc 1 208 7
+ 429 00d0 3B1D     		adds	r3, r7, #4
+ 430 00d2 1946     		mov	r1, r3
+ 431 00d4 1A48     		ldr	r0, .L25
+ 432 00d6 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 433 00da 0346     		mov	r3, r0
+ 434              		.loc 1 208 6
+ 435 00dc 002B     		cmp	r3, #0
+ 436 00de 01D0     		beq	.L20
  209:Core/Src/adc.c ****   {
  210:Core/Src/adc.c ****     Error_Handler();
+ 437              		.loc 1 210 5
+ 438 00e0 FFF7FEFF 		bl	Error_Handler
+ 439              	.L20:
  211:Core/Src/adc.c ****   }
  212:Core/Src/adc.c **** 
  213:Core/Src/adc.c ****   /** Configure Regular Channel
  214:Core/Src/adc.c ****   */
  215:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_5;
- 454              		.loc 1 215 3 is_stmt 1 view .LVU154
- 455              		.loc 1 215 19 is_stmt 0 view .LVU155
- 456 009c 0523     		movs	r3, #5
- 457 009e 0193     		str	r3, [sp, #4]
+ 440              		.loc 1 215 19
+ 441 00e4 0523     		movs	r3, #5
+ 442 00e6 7B60     		str	r3, [r7, #4]
  216:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_6;
- 458              		.loc 1 216 3 is_stmt 1 view .LVU156
- 459              		.loc 1 216 16 is_stmt 0 view .LVU157
- 460 00a0 0623     		movs	r3, #6
- 461 00a2 0293     		str	r3, [sp, #8]
+ 443              		.loc 1 216 16
+ 444 00e8 0623     		movs	r3, #6
+ 445 00ea BB60     		str	r3, [r7, #8]
  217:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 13
-
-
- 462              		.loc 1 217 3 is_stmt 1 view .LVU158
- 463              		.loc 1 217 7 is_stmt 0 view .LVU159
- 464 00a4 01A9     		add	r1, sp, #4
- 465 00a6 1A48     		ldr	r0, .L43
- 466 00a8 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 467              	.LVL24:
- 468              		.loc 1 217 6 view .LVU160
- 469 00ac 30BB     		cbnz	r0, .L40
- 470              	.L30:
+ 446              		.loc 1 217 7
+ 447 00ec 3B1D     		adds	r3, r7, #4
+ 448 00ee 1946     		mov	r1, r3
+ 449 00f0 1348     		ldr	r0, .L25
+ 450 00f2 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 451 00f6 0346     		mov	r3, r0
+ 452              		.loc 1 217 6
+ 453 00f8 002B     		cmp	r3, #0
+ 454 00fa 01D0     		beq	.L21
  218:Core/Src/adc.c ****   {
  219:Core/Src/adc.c ****     Error_Handler();
+ 455              		.loc 1 219 5
+ 456 00fc FFF7FEFF 		bl	Error_Handler
+ 457              	.L21:
  220:Core/Src/adc.c ****   }
  221:Core/Src/adc.c **** 
  222:Core/Src/adc.c ****   /** Configure Regular Channel
  223:Core/Src/adc.c ****   */
  224:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_6;
- 471              		.loc 1 224 3 is_stmt 1 view .LVU161
- 472              		.loc 1 224 19 is_stmt 0 view .LVU162
- 473 00ae 0623     		movs	r3, #6
- 474 00b0 0193     		str	r3, [sp, #4]
+ 458              		.loc 1 224 19
+ 459 0100 0623     		movs	r3, #6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 13
+
+
+ 460 0102 7B60     		str	r3, [r7, #4]
  225:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_7;
- 475              		.loc 1 225 3 is_stmt 1 view .LVU163
- 476              		.loc 1 225 16 is_stmt 0 view .LVU164
- 477 00b2 0723     		movs	r3, #7
- 478 00b4 0293     		str	r3, [sp, #8]
+ 461              		.loc 1 225 16
+ 462 0104 0723     		movs	r3, #7
+ 463 0106 BB60     		str	r3, [r7, #8]
  226:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 479              		.loc 1 226 3 is_stmt 1 view .LVU165
- 480              		.loc 1 226 7 is_stmt 0 view .LVU166
- 481 00b6 01A9     		add	r1, sp, #4
- 482 00b8 1548     		ldr	r0, .L43
- 483 00ba FFF7FEFF 		bl	HAL_ADC_ConfigChannel
- 484              	.LVL25:
- 485              		.loc 1 226 6 view .LVU167
- 486 00be 00BB     		cbnz	r0, .L41
- 487              	.L31:
+ 464              		.loc 1 226 7
+ 465 0108 3B1D     		adds	r3, r7, #4
+ 466 010a 1946     		mov	r1, r3
+ 467 010c 0C48     		ldr	r0, .L25
+ 468 010e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 469 0112 0346     		mov	r3, r0
+ 470              		.loc 1 226 6
+ 471 0114 002B     		cmp	r3, #0
+ 472 0116 01D0     		beq	.L22
  227:Core/Src/adc.c ****   {
  228:Core/Src/adc.c ****     Error_Handler();
+ 473              		.loc 1 228 5
+ 474 0118 FFF7FEFF 		bl	Error_Handler
+ 475              	.L22:
  229:Core/Src/adc.c ****   }
  230:Core/Src/adc.c **** 
  231:Core/Src/adc.c ****   /** Configure Regular Channel
  232:Core/Src/adc.c ****   */
  233:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_7;
- 488              		.loc 1 233 3 is_stmt 1 view .LVU168
- 489              		.loc 1 233 19 is_stmt 0 view .LVU169
- 490 00c0 0723     		movs	r3, #7
- 491 00c2 0193     		str	r3, [sp, #4]
+ 476              		.loc 1 233 19
+ 477 011c 0723     		movs	r3, #7
+ 478 011e 7B60     		str	r3, [r7, #4]
  234:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_8;
- 492              		.loc 1 234 3 is_stmt 1 view .LVU170
- 493              		.loc 1 234 16 is_stmt 0 view .LVU171
- 494 00c4 0823     		movs	r3, #8
- 495 00c6 0293     		str	r3, [sp, #8]
+ 479              		.loc 1 234 16
+ 480 0120 0823     		movs	r3, #8
+ 481 0122 BB60     		str	r3, [r7, #8]
  235:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
- 496              		.loc 1 235 3 is_stmt 1 view .LVU172
- 497              		.loc 1 235 7 is_stmt 0 view .LVU173
- 498 00c8 01A9     		add	r1, sp, #4
- 499 00ca 1148     		ldr	r0, .L43
- 500 00cc FFF7FEFF 		bl	HAL_ADC_ConfigChannel
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 14
-
-
- 501              	.LVL26:
- 502              		.loc 1 235 6 view .LVU174
- 503 00d0 D0B9     		cbnz	r0, .L42
- 504              	.L23:
+ 482              		.loc 1 235 7
+ 483 0124 3B1D     		adds	r3, r7, #4
+ 484 0126 1946     		mov	r1, r3
+ 485 0128 0548     		ldr	r0, .L25
+ 486 012a FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 487 012e 0346     		mov	r3, r0
+ 488              		.loc 1 235 6
+ 489 0130 002B     		cmp	r3, #0
+ 490 0132 01D0     		beq	.L24
  236:Core/Src/adc.c ****   {
  237:Core/Src/adc.c ****     Error_Handler();
+ 491              		.loc 1 237 5
+ 492 0134 FFF7FEFF 		bl	Error_Handler
+ 493              	.L24:
  238:Core/Src/adc.c ****   }
  239:Core/Src/adc.c ****   /* USER CODE BEGIN ADC2_Init 2 */
  240:Core/Src/adc.c **** 
  241:Core/Src/adc.c ****   /* USER CODE END ADC2_Init 2 */
  242:Core/Src/adc.c **** 
  243:Core/Src/adc.c **** }
- 505              		.loc 1 243 1 view .LVU175
- 506 00d2 05B0     		add	sp, sp, #20
- 507              	.LCFI6:
- 508              		.cfi_remember_state
- 509              		.cfi_def_cfa_offset 4
- 510              		@ sp needed
- 511 00d4 5DF804FB 		ldr	pc, [sp], #4
- 512              	.L34:
- 513              	.LCFI7:
- 514              		.cfi_restore_state
- 164:Core/Src/adc.c ****   }
- 515              		.loc 1 164 5 is_stmt 1 view .LVU176
- 516 00d8 FFF7FEFF 		bl	Error_Handler
- 517              	.LVL27:
- 518 00dc AAE7     		b	.L24
- 519              	.L35:
- 174:Core/Src/adc.c ****   }
- 520              		.loc 1 174 5 view .LVU177
- 521 00de FFF7FEFF 		bl	Error_Handler
- 522              	.LVL28:
- 523 00e2 B3E7     		b	.L25
- 524              	.L36:
- 183:Core/Src/adc.c ****   }
- 525              		.loc 1 183 5 view .LVU178
- 526 00e4 FFF7FEFF 		bl	Error_Handler
- 527              	.LVL29:
- 528 00e8 BAE7     		b	.L26
- 529              	.L37:
- 192:Core/Src/adc.c ****   }
- 530              		.loc 1 192 5 view .LVU179
- 531 00ea FFF7FEFF 		bl	Error_Handler
- 532              	.LVL30:
- 533 00ee C1E7     		b	.L27
- 534              	.L38:
- 201:Core/Src/adc.c ****   }
- 535              		.loc 1 201 5 view .LVU180
- 536 00f0 FFF7FEFF 		bl	Error_Handler
- 537              	.LVL31:
- 538 00f4 C9E7     		b	.L28
- 539              	.L39:
- 210:Core/Src/adc.c ****   }
- 540              		.loc 1 210 5 view .LVU181
- 541 00f6 FFF7FEFF 		bl	Error_Handler
- 542              	.LVL32:
- 543 00fa CFE7     		b	.L29
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 15
+ 494              		.loc 1 243 1
+ 495 0138 00BF     		nop
+ 496 013a 1037     		adds	r7, r7, #16
+ 497              	.LCFI8:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 14
 
 
- 544              	.L40:
- 219:Core/Src/adc.c ****   }
- 545              		.loc 1 219 5 view .LVU182
- 546 00fc FFF7FEFF 		bl	Error_Handler
- 547              	.LVL33:
- 548 0100 D5E7     		b	.L30
- 549              	.L41:
- 228:Core/Src/adc.c ****   }
- 550              		.loc 1 228 5 view .LVU183
- 551 0102 FFF7FEFF 		bl	Error_Handler
- 552              	.LVL34:
- 553 0106 DBE7     		b	.L31
- 554              	.L42:
- 237:Core/Src/adc.c ****   }
- 555              		.loc 1 237 5 view .LVU184
- 556 0108 FFF7FEFF 		bl	Error_Handler
- 557              	.LVL35:
- 558              		.loc 1 243 1 is_stmt 0 view .LVU185
- 559 010c E1E7     		b	.L23
- 560              	.L44:
- 561 010e 00BF     		.align	2
- 562              	.L43:
- 563 0110 00000000 		.word	hadc2
- 564 0114 00280140 		.word	1073817600
- 565              		.cfi_endproc
- 566              	.LFE66:
- 568              		.section	.text.HAL_ADC_MspInit,"ax",%progbits
- 569              		.align	1
- 570              		.global	HAL_ADC_MspInit
- 571              		.syntax unified
- 572              		.thumb
- 573              		.thumb_func
- 575              	HAL_ADC_MspInit:
- 576              	.LVL36:
- 577              	.LFB67:
+ 498              		.cfi_def_cfa_offset 8
+ 499 013c BD46     		mov	sp, r7
+ 500              	.LCFI9:
+ 501              		.cfi_def_cfa_register 13
+ 502              		@ sp needed
+ 503 013e 80BD     		pop	{r7, pc}
+ 504              	.L26:
+ 505              		.align	2
+ 506              	.L25:
+ 507 0140 00000000 		.word	hadc2
+ 508 0144 00280140 		.word	1073817600
+ 509              		.cfi_endproc
+ 510              	.LFE66:
+ 512              		.section	.text.HAL_ADC_MspInit,"ax",%progbits
+ 513              		.align	1
+ 514              		.global	HAL_ADC_MspInit
+ 515              		.syntax unified
+ 516              		.thumb
+ 517              		.thumb_func
+ 519              	HAL_ADC_MspInit:
+ 520              	.LFB67:
  244:Core/Src/adc.c **** 
  245:Core/Src/adc.c **** void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
  246:Core/Src/adc.c **** {
- 578              		.loc 1 246 1 is_stmt 1 view -0
- 579              		.cfi_startproc
- 580              		@ args = 0, pretend = 0, frame = 40
- 581              		@ frame_needed = 0, uses_anonymous_args = 0
- 582              		.loc 1 246 1 is_stmt 0 view .LVU187
- 583 0000 10B5     		push	{r4, lr}
- 584              	.LCFI8:
- 585              		.cfi_def_cfa_offset 8
- 586              		.cfi_offset 4, -8
- 587              		.cfi_offset 14, -4
- 588 0002 8AB0     		sub	sp, sp, #40
- 589              	.LCFI9:
- 590              		.cfi_def_cfa_offset 48
+ 521              		.loc 1 246 1
+ 522              		.cfi_startproc
+ 523              		@ args = 0, pretend = 0, frame = 48
+ 524              		@ frame_needed = 1, uses_anonymous_args = 0
+ 525 0000 80B5     		push	{r7, lr}
+ 526              	.LCFI10:
+ 527              		.cfi_def_cfa_offset 8
+ 528              		.cfi_offset 7, -8
+ 529              		.cfi_offset 14, -4
+ 530 0002 8CB0     		sub	sp, sp, #48
+ 531              	.LCFI11:
+ 532              		.cfi_def_cfa_offset 56
+ 533 0004 00AF     		add	r7, sp, #0
+ 534              	.LCFI12:
+ 535              		.cfi_def_cfa_register 7
+ 536 0006 7860     		str	r0, [r7, #4]
  247:Core/Src/adc.c **** 
  248:Core/Src/adc.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
- 591              		.loc 1 248 3 is_stmt 1 view .LVU188
- 592              		.loc 1 248 20 is_stmt 0 view .LVU189
- 593 0004 0023     		movs	r3, #0
- 594 0006 0693     		str	r3, [sp, #24]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 16
-
-
- 595 0008 0793     		str	r3, [sp, #28]
- 596 000a 0893     		str	r3, [sp, #32]
- 597 000c 0993     		str	r3, [sp, #36]
+ 537              		.loc 1 248 20
+ 538 0008 07F12003 		add	r3, r7, #32
+ 539 000c 0022     		movs	r2, #0
+ 540 000e 1A60     		str	r2, [r3]
+ 541 0010 5A60     		str	r2, [r3, #4]
+ 542 0012 9A60     		str	r2, [r3, #8]
+ 543 0014 DA60     		str	r2, [r3, #12]
  249:Core/Src/adc.c ****   if(adcHandle->Instance==ADC1)
- 598              		.loc 1 249 3 is_stmt 1 view .LVU190
- 599              		.loc 1 249 15 is_stmt 0 view .LVU191
- 600 000e 0368     		ldr	r3, [r0]
- 601              		.loc 1 249 5 view .LVU192
- 602 0010 274A     		ldr	r2, .L51
- 603 0012 9342     		cmp	r3, r2
- 604 0014 04D0     		beq	.L49
+ 544              		.loc 1 249 15
+ 545 0016 7B68     		ldr	r3, [r7, #4]
+ 546 0018 1B68     		ldr	r3, [r3]
+ 547              		.loc 1 249 5
+ 548 001a 334A     		ldr	r2, .L31
+ 549 001c 9342     		cmp	r3, r2
+ 550 001e 38D1     		bne	.L28
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 15
+
+
+ 551              	.LBB2:
  250:Core/Src/adc.c ****   {
  251:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_MspInit 0 */
  252:Core/Src/adc.c **** 
  253:Core/Src/adc.c ****   /* USER CODE END ADC1_MspInit 0 */
  254:Core/Src/adc.c ****     /* ADC1 clock enable */
  255:Core/Src/adc.c ****     __HAL_RCC_ADC1_CLK_ENABLE();
+ 552              		.loc 1 255 5
+ 553 0020 324B     		ldr	r3, .L31+4
+ 554 0022 9B69     		ldr	r3, [r3, #24]
+ 555 0024 314A     		ldr	r2, .L31+4
+ 556 0026 43F40073 		orr	r3, r3, #512
+ 557 002a 9361     		str	r3, [r2, #24]
+ 558 002c 2F4B     		ldr	r3, .L31+4
+ 559 002e 9B69     		ldr	r3, [r3, #24]
+ 560 0030 03F40073 		and	r3, r3, #512
+ 561 0034 FB61     		str	r3, [r7, #28]
+ 562 0036 FB69     		ldr	r3, [r7, #28]
+ 563              	.LBE2:
+ 564              	.LBB3:
  256:Core/Src/adc.c **** 
  257:Core/Src/adc.c ****     __HAL_RCC_GPIOC_CLK_ENABLE();
+ 565              		.loc 1 257 5
+ 566 0038 2C4B     		ldr	r3, .L31+4
+ 567 003a 9B69     		ldr	r3, [r3, #24]
+ 568 003c 2B4A     		ldr	r2, .L31+4
+ 569 003e 43F01003 		orr	r3, r3, #16
+ 570 0042 9361     		str	r3, [r2, #24]
+ 571 0044 294B     		ldr	r3, .L31+4
+ 572 0046 9B69     		ldr	r3, [r3, #24]
+ 573 0048 03F01003 		and	r3, r3, #16
+ 574 004c BB61     		str	r3, [r7, #24]
+ 575 004e BB69     		ldr	r3, [r7, #24]
+ 576              	.LBE3:
+ 577              	.LBB4:
  258:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
+ 578              		.loc 1 258 5
+ 579 0050 264B     		ldr	r3, .L31+4
+ 580 0052 9B69     		ldr	r3, [r3, #24]
+ 581 0054 254A     		ldr	r2, .L31+4
+ 582 0056 43F00803 		orr	r3, r3, #8
+ 583 005a 9361     		str	r3, [r2, #24]
+ 584 005c 234B     		ldr	r3, .L31+4
+ 585 005e 9B69     		ldr	r3, [r3, #24]
+ 586 0060 03F00803 		and	r3, r3, #8
+ 587 0064 7B61     		str	r3, [r7, #20]
+ 588 0066 7B69     		ldr	r3, [r7, #20]
+ 589              	.LBE4:
  259:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
  260:Core/Src/adc.c ****     PC0     ------> ADC1_IN10
  261:Core/Src/adc.c ****     PC1     ------> ADC1_IN11
@@ -930,37 +898,52 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
  265:Core/Src/adc.c ****     PC5     ------> ADC1_IN15
  266:Core/Src/adc.c ****     PB0     ------> ADC1_IN8
  267:Core/Src/adc.c ****     PB1     ------> ADC1_IN9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 16
+
+
  268:Core/Src/adc.c ****     */
  269:Core/Src/adc.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
+ 590              		.loc 1 269 25
+ 591 0068 3F23     		movs	r3, #63
+ 592 006a 3B62     		str	r3, [r7, #32]
  270:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5;
  271:Core/Src/adc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 593              		.loc 1 271 26
+ 594 006c 0323     		movs	r3, #3
+ 595 006e 7B62     		str	r3, [r7, #36]
  272:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 596              		.loc 1 272 5
+ 597 0070 07F12003 		add	r3, r7, #32
+ 598 0074 1946     		mov	r1, r3
+ 599 0076 1E48     		ldr	r0, .L31+8
+ 600 0078 FFF7FEFF 		bl	HAL_GPIO_Init
  273:Core/Src/adc.c **** 
  274:Core/Src/adc.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+ 601              		.loc 1 274 25
+ 602 007c 0323     		movs	r3, #3
+ 603 007e 3B62     		str	r3, [r7, #32]
  275:Core/Src/adc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+ 604              		.loc 1 275 26
+ 605 0080 0323     		movs	r3, #3
+ 606 0082 7B62     		str	r3, [r7, #36]
  276:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 607              		.loc 1 276 5
+ 608 0084 07F12003 		add	r3, r7, #32
+ 609 0088 1946     		mov	r1, r3
+ 610 008a 1A48     		ldr	r0, .L31+12
+ 611 008c FFF7FEFF 		bl	HAL_GPIO_Init
  277:Core/Src/adc.c **** 
  278:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_MspInit 1 */
  279:Core/Src/adc.c **** 
  280:Core/Src/adc.c ****   /* USER CODE END ADC1_MspInit 1 */
  281:Core/Src/adc.c ****   }
  282:Core/Src/adc.c ****   else if(adcHandle->Instance==ADC2)
- 605              		.loc 1 282 8 is_stmt 1 view .LVU193
- 606              		.loc 1 282 10 is_stmt 0 view .LVU194
- 607 0016 274A     		ldr	r2, .L51+4
- 608 0018 9342     		cmp	r3, r2
- 609 001a 2CD0     		beq	.L50
- 610              	.LVL37:
- 611              	.L45:
  283:Core/Src/adc.c ****   {
  284:Core/Src/adc.c ****   /* USER CODE BEGIN ADC2_MspInit 0 */
  285:Core/Src/adc.c **** 
  286:Core/Src/adc.c ****   /* USER CODE END ADC2_MspInit 0 */
  287:Core/Src/adc.c ****     /* ADC2 clock enable */
  288:Core/Src/adc.c ****     __HAL_RCC_ADC2_CLK_ENABLE();
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 17
-
-
  289:Core/Src/adc.c **** 
  290:Core/Src/adc.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
  291:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
@@ -975,6 +958,9 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
  300:Core/Src/adc.c ****     */
  301:Core/Src/adc.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
  302:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 17
+
+
  303:Core/Src/adc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
  304:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
  305:Core/Src/adc.c **** 
@@ -983,247 +969,136 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
  308:Core/Src/adc.c ****   /* USER CODE END ADC2_MspInit 1 */
  309:Core/Src/adc.c ****   }
  310:Core/Src/adc.c **** }
- 612              		.loc 1 310 1 view .LVU195
- 613 001c 0AB0     		add	sp, sp, #40
- 614              	.LCFI10:
- 615              		.cfi_remember_state
- 616              		.cfi_def_cfa_offset 8
- 617              		@ sp needed
- 618 001e 10BD     		pop	{r4, pc}
- 619              	.LVL38:
- 620              	.L49:
- 621              	.LCFI11:
- 622              		.cfi_restore_state
- 255:Core/Src/adc.c **** 
- 623              		.loc 1 255 5 is_stmt 1 view .LVU196
- 624              	.LBB2:
- 255:Core/Src/adc.c **** 
- 625              		.loc 1 255 5 view .LVU197
- 255:Core/Src/adc.c **** 
- 626              		.loc 1 255 5 view .LVU198
- 627 0020 254B     		ldr	r3, .L51+8
- 628 0022 9A69     		ldr	r2, [r3, #24]
- 629 0024 42F40072 		orr	r2, r2, #512
- 630 0028 9A61     		str	r2, [r3, #24]
- 255:Core/Src/adc.c **** 
- 631              		.loc 1 255 5 view .LVU199
- 632 002a 9A69     		ldr	r2, [r3, #24]
- 633 002c 02F40072 		and	r2, r2, #512
- 634 0030 0192     		str	r2, [sp, #4]
- 255:Core/Src/adc.c **** 
- 635              		.loc 1 255 5 view .LVU200
- 636 0032 019A     		ldr	r2, [sp, #4]
- 637              	.LBE2:
- 255:Core/Src/adc.c **** 
- 638              		.loc 1 255 5 view .LVU201
- 257:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
- 639              		.loc 1 257 5 view .LVU202
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 18
-
-
- 640              	.LBB3:
- 257:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
- 641              		.loc 1 257 5 view .LVU203
- 257:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
- 642              		.loc 1 257 5 view .LVU204
- 643 0034 9A69     		ldr	r2, [r3, #24]
- 644 0036 42F01002 		orr	r2, r2, #16
- 645 003a 9A61     		str	r2, [r3, #24]
- 257:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
- 646              		.loc 1 257 5 view .LVU205
- 647 003c 9A69     		ldr	r2, [r3, #24]
- 648 003e 02F01002 		and	r2, r2, #16
- 649 0042 0292     		str	r2, [sp, #8]
- 257:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
- 650              		.loc 1 257 5 view .LVU206
- 651 0044 029A     		ldr	r2, [sp, #8]
- 652              	.LBE3:
- 257:Core/Src/adc.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
- 653              		.loc 1 257 5 view .LVU207
- 258:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
- 654              		.loc 1 258 5 view .LVU208
- 655              	.LBB4:
- 258:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
- 656              		.loc 1 258 5 view .LVU209
- 258:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
- 657              		.loc 1 258 5 view .LVU210
- 658 0046 9A69     		ldr	r2, [r3, #24]
- 659 0048 42F00802 		orr	r2, r2, #8
- 660 004c 9A61     		str	r2, [r3, #24]
- 258:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
- 661              		.loc 1 258 5 view .LVU211
- 662 004e 9B69     		ldr	r3, [r3, #24]
- 663 0050 03F00803 		and	r3, r3, #8
- 664 0054 0393     		str	r3, [sp, #12]
- 258:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
- 665              		.loc 1 258 5 view .LVU212
- 666 0056 039B     		ldr	r3, [sp, #12]
- 667              	.LBE4:
- 258:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
- 668              		.loc 1 258 5 view .LVU213
- 269:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5;
- 669              		.loc 1 269 5 view .LVU214
- 269:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5;
- 670              		.loc 1 269 25 is_stmt 0 view .LVU215
- 671 0058 3F23     		movs	r3, #63
- 672 005a 0693     		str	r3, [sp, #24]
- 271:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
- 673              		.loc 1 271 5 is_stmt 1 view .LVU216
- 271:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
- 674              		.loc 1 271 26 is_stmt 0 view .LVU217
- 675 005c 0324     		movs	r4, #3
- 676 005e 0794     		str	r4, [sp, #28]
- 272:Core/Src/adc.c **** 
- 677              		.loc 1 272 5 is_stmt 1 view .LVU218
- 678 0060 06A9     		add	r1, sp, #24
- 679 0062 1648     		ldr	r0, .L51+12
- 680              	.LVL39:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 19
-
-
- 272:Core/Src/adc.c **** 
- 681              		.loc 1 272 5 is_stmt 0 view .LVU219
- 682 0064 FFF7FEFF 		bl	HAL_GPIO_Init
- 683              	.LVL40:
- 274:Core/Src/adc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
- 684              		.loc 1 274 5 is_stmt 1 view .LVU220
- 274:Core/Src/adc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
- 685              		.loc 1 274 25 is_stmt 0 view .LVU221
- 686 0068 0694     		str	r4, [sp, #24]
- 275:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
- 687              		.loc 1 275 5 is_stmt 1 view .LVU222
- 275:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
- 688              		.loc 1 275 26 is_stmt 0 view .LVU223
- 689 006a 0794     		str	r4, [sp, #28]
- 276:Core/Src/adc.c **** 
- 690              		.loc 1 276 5 is_stmt 1 view .LVU224
- 691 006c 06A9     		add	r1, sp, #24
- 692 006e 1448     		ldr	r0, .L51+16
- 693 0070 FFF7FEFF 		bl	HAL_GPIO_Init
- 694              	.LVL41:
- 695 0074 D2E7     		b	.L45
- 696              	.LVL42:
- 697              	.L50:
+ 612              		.loc 1 310 1
+ 613 0090 26E0     		b	.L30
+ 614              	.L28:
+ 282:Core/Src/adc.c ****   {
+ 615              		.loc 1 282 20
+ 616 0092 7B68     		ldr	r3, [r7, #4]
+ 617 0094 1B68     		ldr	r3, [r3]
+ 282:Core/Src/adc.c ****   {
+ 618              		.loc 1 282 10
+ 619 0096 184A     		ldr	r2, .L31+16
+ 620 0098 9342     		cmp	r3, r2
+ 621 009a 21D1     		bne	.L30
+ 622              	.LBB5:
  288:Core/Src/adc.c **** 
- 698              		.loc 1 288 5 view .LVU225
- 699              	.LBB5:
- 288:Core/Src/adc.c **** 
- 700              		.loc 1 288 5 view .LVU226
- 288:Core/Src/adc.c **** 
- 701              		.loc 1 288 5 view .LVU227
- 702 0076 104B     		ldr	r3, .L51+8
- 703 0078 9A69     		ldr	r2, [r3, #24]
- 704 007a 42F48062 		orr	r2, r2, #1024
- 705 007e 9A61     		str	r2, [r3, #24]
- 288:Core/Src/adc.c **** 
- 706              		.loc 1 288 5 view .LVU228
- 707 0080 9A69     		ldr	r2, [r3, #24]
- 708 0082 02F48062 		and	r2, r2, #1024
- 709 0086 0492     		str	r2, [sp, #16]
- 288:Core/Src/adc.c **** 
- 710              		.loc 1 288 5 view .LVU229
- 711 0088 049A     		ldr	r2, [sp, #16]
- 712              	.LBE5:
- 288:Core/Src/adc.c **** 
- 713              		.loc 1 288 5 view .LVU230
+ 623              		.loc 1 288 5
+ 624 009c 134B     		ldr	r3, .L31+4
+ 625 009e 9B69     		ldr	r3, [r3, #24]
+ 626 00a0 124A     		ldr	r2, .L31+4
+ 627 00a2 43F48063 		orr	r3, r3, #1024
+ 628 00a6 9361     		str	r3, [r2, #24]
+ 629 00a8 104B     		ldr	r3, .L31+4
+ 630 00aa 9B69     		ldr	r3, [r3, #24]
+ 631 00ac 03F48063 		and	r3, r3, #1024
+ 632 00b0 3B61     		str	r3, [r7, #16]
+ 633 00b2 3B69     		ldr	r3, [r7, #16]
+ 634              	.LBE5:
+ 635              	.LBB6:
  290:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
- 714              		.loc 1 290 5 view .LVU231
- 715              	.LBB6:
- 290:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
- 716              		.loc 1 290 5 view .LVU232
- 290:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
- 717              		.loc 1 290 5 view .LVU233
- 718 008a 9A69     		ldr	r2, [r3, #24]
- 719 008c 42F00402 		orr	r2, r2, #4
- 720 0090 9A61     		str	r2, [r3, #24]
- 290:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
- 721              		.loc 1 290 5 view .LVU234
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 20
-
-
- 722 0092 9B69     		ldr	r3, [r3, #24]
- 723 0094 03F00403 		and	r3, r3, #4
- 724 0098 0593     		str	r3, [sp, #20]
- 290:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
- 725              		.loc 1 290 5 view .LVU235
- 726 009a 059B     		ldr	r3, [sp, #20]
- 727              	.LBE6:
- 290:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
- 728              		.loc 1 290 5 view .LVU236
+ 636              		.loc 1 290 5
+ 637 00b4 0D4B     		ldr	r3, .L31+4
+ 638 00b6 9B69     		ldr	r3, [r3, #24]
+ 639 00b8 0C4A     		ldr	r2, .L31+4
+ 640 00ba 43F00403 		orr	r3, r3, #4
+ 641 00be 9361     		str	r3, [r2, #24]
+ 642 00c0 0A4B     		ldr	r3, .L31+4
+ 643 00c2 9B69     		ldr	r3, [r3, #24]
+ 644 00c4 03F00403 		and	r3, r3, #4
+ 645 00c8 FB60     		str	r3, [r7, #12]
+ 646 00ca FB68     		ldr	r3, [r7, #12]
+ 647              	.LBE6:
  301:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
- 729              		.loc 1 301 5 view .LVU237
- 301:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
- 730              		.loc 1 301 25 is_stmt 0 view .LVU238
- 731 009c FF23     		movs	r3, #255
- 732 009e 0693     		str	r3, [sp, #24]
+ 648              		.loc 1 301 25
+ 649 00cc FF23     		movs	r3, #255
+ 650 00ce 3B62     		str	r3, [r7, #32]
  303:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 733              		.loc 1 303 5 is_stmt 1 view .LVU239
- 303:Core/Src/adc.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 734              		.loc 1 303 26 is_stmt 0 view .LVU240
- 735 00a0 0323     		movs	r3, #3
- 736 00a2 0793     		str	r3, [sp, #28]
+ 651              		.loc 1 303 26
+ 652 00d0 0323     		movs	r3, #3
+ 653 00d2 7B62     		str	r3, [r7, #36]
  304:Core/Src/adc.c **** 
- 737              		.loc 1 304 5 is_stmt 1 view .LVU241
- 738 00a4 06A9     		add	r1, sp, #24
- 739 00a6 0748     		ldr	r0, .L51+20
- 740              	.LVL43:
- 304:Core/Src/adc.c **** 
- 741              		.loc 1 304 5 is_stmt 0 view .LVU242
- 742 00a8 FFF7FEFF 		bl	HAL_GPIO_Init
- 743              	.LVL44:
- 744              		.loc 1 310 1 view .LVU243
- 745 00ac B6E7     		b	.L45
- 746              	.L52:
- 747 00ae 00BF     		.align	2
- 748              	.L51:
- 749 00b0 00240140 		.word	1073816576
- 750 00b4 00280140 		.word	1073817600
- 751 00b8 00100240 		.word	1073876992
- 752 00bc 00100140 		.word	1073811456
- 753 00c0 000C0140 		.word	1073810432
- 754 00c4 00080140 		.word	1073809408
- 755              		.cfi_endproc
- 756              	.LFE67:
- 758              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
- 759              		.align	1
- 760              		.global	HAL_ADC_MspDeInit
- 761              		.syntax unified
- 762              		.thumb
- 763              		.thumb_func
- 765              	HAL_ADC_MspDeInit:
- 766              	.LVL45:
- 767              	.LFB68:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 18
+
+
+ 654              		.loc 1 304 5
+ 655 00d4 07F12003 		add	r3, r7, #32
+ 656 00d8 1946     		mov	r1, r3
+ 657 00da 0848     		ldr	r0, .L31+20
+ 658 00dc FFF7FEFF 		bl	HAL_GPIO_Init
+ 659              	.L30:
+ 660              		.loc 1 310 1
+ 661 00e0 00BF     		nop
+ 662 00e2 3037     		adds	r7, r7, #48
+ 663              	.LCFI13:
+ 664              		.cfi_def_cfa_offset 8
+ 665 00e4 BD46     		mov	sp, r7
+ 666              	.LCFI14:
+ 667              		.cfi_def_cfa_register 13
+ 668              		@ sp needed
+ 669 00e6 80BD     		pop	{r7, pc}
+ 670              	.L32:
+ 671              		.align	2
+ 672              	.L31:
+ 673 00e8 00240140 		.word	1073816576
+ 674 00ec 00100240 		.word	1073876992
+ 675 00f0 00100140 		.word	1073811456
+ 676 00f4 000C0140 		.word	1073810432
+ 677 00f8 00280140 		.word	1073817600
+ 678 00fc 00080140 		.word	1073809408
+ 679              		.cfi_endproc
+ 680              	.LFE67:
+ 682              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
+ 683              		.align	1
+ 684              		.global	HAL_ADC_MspDeInit
+ 685              		.syntax unified
+ 686              		.thumb
+ 687              		.thumb_func
+ 689              	HAL_ADC_MspDeInit:
+ 690              	.LFB68:
  311:Core/Src/adc.c **** 
  312:Core/Src/adc.c **** void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
  313:Core/Src/adc.c **** {
- 768              		.loc 1 313 1 is_stmt 1 view -0
- 769              		.cfi_startproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 21
-
-
- 770              		@ args = 0, pretend = 0, frame = 0
- 771              		@ frame_needed = 0, uses_anonymous_args = 0
- 772              		.loc 1 313 1 is_stmt 0 view .LVU245
- 773 0000 08B5     		push	{r3, lr}
- 774              	.LCFI12:
- 775              		.cfi_def_cfa_offset 8
- 776              		.cfi_offset 3, -8
- 777              		.cfi_offset 14, -4
+ 691              		.loc 1 313 1
+ 692              		.cfi_startproc
+ 693              		@ args = 0, pretend = 0, frame = 8
+ 694              		@ frame_needed = 1, uses_anonymous_args = 0
+ 695 0000 80B5     		push	{r7, lr}
+ 696              	.LCFI15:
+ 697              		.cfi_def_cfa_offset 8
+ 698              		.cfi_offset 7, -8
+ 699              		.cfi_offset 14, -4
+ 700 0002 82B0     		sub	sp, sp, #8
+ 701              	.LCFI16:
+ 702              		.cfi_def_cfa_offset 16
+ 703 0004 00AF     		add	r7, sp, #0
+ 704              	.LCFI17:
+ 705              		.cfi_def_cfa_register 7
+ 706 0006 7860     		str	r0, [r7, #4]
  314:Core/Src/adc.c **** 
  315:Core/Src/adc.c ****   if(adcHandle->Instance==ADC1)
- 778              		.loc 1 315 3 is_stmt 1 view .LVU246
- 779              		.loc 1 315 15 is_stmt 0 view .LVU247
- 780 0002 0368     		ldr	r3, [r0]
- 781              		.loc 1 315 5 view .LVU248
- 782 0004 104A     		ldr	r2, .L59
- 783 0006 9342     		cmp	r3, r2
- 784 0008 03D0     		beq	.L57
+ 707              		.loc 1 315 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 19
+
+
+ 708 0008 7B68     		ldr	r3, [r7, #4]
+ 709 000a 1B68     		ldr	r3, [r3]
+ 710              		.loc 1 315 5
+ 711 000c 124A     		ldr	r2, .L37
+ 712 000e 9342     		cmp	r3, r2
+ 713 0010 0ED1     		bne	.L34
  316:Core/Src/adc.c ****   {
  317:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_MspDeInit 0 */
  318:Core/Src/adc.c **** 
  319:Core/Src/adc.c ****   /* USER CODE END ADC1_MspDeInit 0 */
  320:Core/Src/adc.c ****     /* Peripheral clock disable */
  321:Core/Src/adc.c ****     __HAL_RCC_ADC1_CLK_DISABLE();
+ 714              		.loc 1 321 5
+ 715 0012 124B     		ldr	r3, .L37+4
+ 716 0014 9B69     		ldr	r3, [r3, #24]
+ 717 0016 114A     		ldr	r2, .L37+4
+ 718 0018 23F40073 		bic	r3, r3, #512
+ 719 001c 9361     		str	r3, [r2, #24]
  322:Core/Src/adc.c **** 
  323:Core/Src/adc.c ****     /**ADC1 GPIO Configuration
  324:Core/Src/adc.c ****     PC0     ------> ADC1_IN10
@@ -1236,35 +1111,36 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
  331:Core/Src/adc.c ****     PB1     ------> ADC1_IN9
  332:Core/Src/adc.c ****     */
  333:Core/Src/adc.c ****     HAL_GPIO_DeInit(GPIOC, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
+ 720              		.loc 1 333 5
+ 721 001e 3F21     		movs	r1, #63
+ 722 0020 0F48     		ldr	r0, .L37+8
+ 723 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
  334:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5);
  335:Core/Src/adc.c **** 
  336:Core/Src/adc.c ****     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_0|GPIO_PIN_1);
+ 724              		.loc 1 336 5
+ 725 0026 0321     		movs	r1, #3
+ 726 0028 0E48     		ldr	r0, .L37+12
+ 727 002a FFF7FEFF 		bl	HAL_GPIO_DeInit
  337:Core/Src/adc.c **** 
  338:Core/Src/adc.c ****   /* USER CODE BEGIN ADC1_MspDeInit 1 */
  339:Core/Src/adc.c **** 
  340:Core/Src/adc.c ****   /* USER CODE END ADC1_MspDeInit 1 */
  341:Core/Src/adc.c ****   }
  342:Core/Src/adc.c ****   else if(adcHandle->Instance==ADC2)
- 785              		.loc 1 342 8 is_stmt 1 view .LVU249
- 786              		.loc 1 342 10 is_stmt 0 view .LVU250
- 787 000a 104A     		ldr	r2, .L59+4
- 788 000c 9342     		cmp	r3, r2
- 789 000e 0FD0     		beq	.L58
- 790              	.LVL46:
- 791              	.L53:
  343:Core/Src/adc.c ****   {
  344:Core/Src/adc.c ****   /* USER CODE BEGIN ADC2_MspDeInit 0 */
  345:Core/Src/adc.c **** 
  346:Core/Src/adc.c ****   /* USER CODE END ADC2_MspDeInit 0 */
  347:Core/Src/adc.c ****     /* Peripheral clock disable */
  348:Core/Src/adc.c ****     __HAL_RCC_ADC2_CLK_DISABLE();
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 22
-
-
  349:Core/Src/adc.c **** 
  350:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
  351:Core/Src/adc.c ****     PA0-WKUP     ------> ADC2_IN0
  352:Core/Src/adc.c ****     PA1     ------> ADC2_IN1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 20
+
+
  353:Core/Src/adc.c ****     PA2     ------> ADC2_IN2
  354:Core/Src/adc.c ****     PA3     ------> ADC2_IN3
  355:Core/Src/adc.c ****     PA4     ------> ADC2_IN4
@@ -1280,119 +1156,92 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 1
  365:Core/Src/adc.c ****   /* USER CODE END ADC2_MspDeInit 1 */
  366:Core/Src/adc.c ****   }
  367:Core/Src/adc.c **** }
- 792              		.loc 1 367 1 view .LVU251
- 793 0010 08BD     		pop	{r3, pc}
- 794              	.LVL47:
- 795              	.L57:
- 321:Core/Src/adc.c **** 
- 796              		.loc 1 321 5 is_stmt 1 view .LVU252
- 797 0012 02F56C42 		add	r2, r2, #60416
- 798 0016 9369     		ldr	r3, [r2, #24]
- 799 0018 23F40073 		bic	r3, r3, #512
- 800 001c 9361     		str	r3, [r2, #24]
- 333:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5);
- 801              		.loc 1 333 5 view .LVU253
- 802 001e 3F21     		movs	r1, #63
- 803 0020 0B48     		ldr	r0, .L59+8
- 804              	.LVL48:
- 333:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5);
- 805              		.loc 1 333 5 is_stmt 0 view .LVU254
- 806 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
- 807              	.LVL49:
- 336:Core/Src/adc.c **** 
- 808              		.loc 1 336 5 is_stmt 1 view .LVU255
- 809 0026 0321     		movs	r1, #3
- 810 0028 0A48     		ldr	r0, .L59+12
- 811 002a FFF7FEFF 		bl	HAL_GPIO_DeInit
- 812              	.LVL50:
- 813 002e EFE7     		b	.L53
- 814              	.LVL51:
- 815              	.L58:
+ 728              		.loc 1 367 1
+ 729 002e 0EE0     		b	.L36
+ 730              	.L34:
+ 342:Core/Src/adc.c ****   {
+ 731              		.loc 1 342 20
+ 732 0030 7B68     		ldr	r3, [r7, #4]
+ 733 0032 1B68     		ldr	r3, [r3]
+ 342:Core/Src/adc.c ****   {
+ 734              		.loc 1 342 10
+ 735 0034 0C4A     		ldr	r2, .L37+16
+ 736 0036 9342     		cmp	r3, r2
+ 737 0038 09D1     		bne	.L36
  348:Core/Src/adc.c **** 
- 816              		.loc 1 348 5 view .LVU256
- 817 0030 02F56842 		add	r2, r2, #59392
- 818 0034 9369     		ldr	r3, [r2, #24]
- 819 0036 23F48063 		bic	r3, r3, #1024
- 820 003a 9361     		str	r3, [r2, #24]
+ 738              		.loc 1 348 5
+ 739 003a 084B     		ldr	r3, .L37+4
+ 740 003c 9B69     		ldr	r3, [r3, #24]
+ 741 003e 074A     		ldr	r2, .L37+4
+ 742 0040 23F48063 		bic	r3, r3, #1024
+ 743 0044 9361     		str	r3, [r2, #24]
  360:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7);
- 821              		.loc 1 360 5 view .LVU257
- 822 003c FF21     		movs	r1, #255
- 823 003e 0648     		ldr	r0, .L59+16
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 23
+ 744              		.loc 1 360 5
+ 745 0046 FF21     		movs	r1, #255
+ 746 0048 0848     		ldr	r0, .L37+20
+ 747 004a FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 748              	.L36:
+ 749              		.loc 1 367 1
+ 750 004e 00BF     		nop
+ 751 0050 0837     		adds	r7, r7, #8
+ 752              	.LCFI18:
+ 753              		.cfi_def_cfa_offset 8
+ 754 0052 BD46     		mov	sp, r7
+ 755              	.LCFI19:
+ 756              		.cfi_def_cfa_register 13
+ 757              		@ sp needed
+ 758 0054 80BD     		pop	{r7, pc}
+ 759              	.L38:
+ 760 0056 00BF     		.align	2
+ 761              	.L37:
+ 762 0058 00240140 		.word	1073816576
+ 763 005c 00100240 		.word	1073876992
+ 764 0060 00100140 		.word	1073811456
+ 765 0064 000C0140 		.word	1073810432
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 21
 
 
- 824              	.LVL52:
- 360:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7);
- 825              		.loc 1 360 5 is_stmt 0 view .LVU258
- 826 0040 FFF7FEFF 		bl	HAL_GPIO_DeInit
- 827              	.LVL53:
- 828              		.loc 1 367 1 view .LVU259
- 829 0044 E4E7     		b	.L53
- 830              	.L60:
- 831 0046 00BF     		.align	2
- 832              	.L59:
- 833 0048 00240140 		.word	1073816576
- 834 004c 00280140 		.word	1073817600
- 835 0050 00100140 		.word	1073811456
- 836 0054 000C0140 		.word	1073810432
- 837 0058 00080140 		.word	1073809408
- 838              		.cfi_endproc
- 839              	.LFE68:
- 841              		.global	hadc2
- 842              		.section	.bss.hadc2,"aw",%nobits
- 843              		.align	2
- 846              	hadc2:
- 847 0000 00000000 		.space	48
- 847      00000000 
- 847      00000000 
- 847      00000000 
- 847      00000000 
- 848              		.global	hadc1
- 849              		.section	.bss.hadc1,"aw",%nobits
- 850              		.align	2
- 853              	hadc1:
- 854 0000 00000000 		.space	48
- 854      00000000 
- 854      00000000 
- 854      00000000 
- 854      00000000 
- 855              		.text
- 856              	.Letext0:
- 857              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 858              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 859              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 860              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 861              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 862              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 863              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 864              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
- 865              		.file 10 "Core/Inc/adc.h"
- 866              		.file 11 "Core/Inc/main.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s 			page 24
+ 766 0068 00280140 		.word	1073817600
+ 767 006c 00080140 		.word	1073809408
+ 768              		.cfi_endproc
+ 769              	.LFE68:
+ 771              		.text
+ 772              	.Letext0:
+ 773              		.file 2 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 774              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 775              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 776              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 777              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 778              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 779              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 780              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 781              		.file 10 "Core/Inc/adc.h"
+ 782              		.file 11 "Core/Inc/main.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 adc.c
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:19     .text.MX_ADC1_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:25     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:292    .text.MX_ADC1_Init:0000000000000118 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:853    .bss.hadc1:0000000000000000 hadc1
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:298    .text.MX_ADC2_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:304    .text.MX_ADC2_Init:0000000000000000 MX_ADC2_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:563    .text.MX_ADC2_Init:0000000000000110 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:846    .bss.hadc2:0000000000000000 hadc2
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:569    .text.HAL_ADC_MspInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:575    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:749    .text.HAL_ADC_MspInit:00000000000000b0 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:759    .text.HAL_ADC_MspDeInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:765    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:833    .text.HAL_ADC_MspDeInit:0000000000000048 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:843    .bss.hadc2:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccDhTBi9.s:850    .bss.hadc1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:23     .bss.hadc1:0000000000000000 hadc1
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:20     .bss.hadc1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:30     .bss.hadc2:0000000000000000 hadc2
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:27     .bss.hadc2:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:33     .text.MX_ADC1_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:39     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:270    .text.MX_ADC1_Init:0000000000000148 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:276    .text.MX_ADC2_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:282    .text.MX_ADC2_Init:0000000000000000 MX_ADC2_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:507    .text.MX_ADC2_Init:0000000000000140 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:513    .text.HAL_ADC_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:519    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:673    .text.HAL_ADC_MspInit:00000000000000e8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:683    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:689    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:762    .text.HAL_ADC_MspDeInit:0000000000000058 $d
 
 UNDEFINED SYMBOLS
 HAL_ADC_Init
-HAL_ADC_ConfigChannel
 Error_Handler
+HAL_ADC_ConfigChannel
 HAL_GPIO_Init
 HAL_GPIO_DeInit

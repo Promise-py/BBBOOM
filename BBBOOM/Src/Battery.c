@@ -1,6 +1,9 @@
-
 #include "Battery.h"
 #include "ADS1015.h"
+#include "main.h"
+#include "adc.h"
+#include "FSM.h"
+#include "string.h"
 
 BATTERY Battery[3]={0};
 unsigned int ADC1_value[8];//IN 8-14
@@ -27,6 +30,27 @@ void Battery_Init(BATTERY *battery,float alarm_voltage,float cut_off_voltage)
 }
 
 /**
+ * @brief 清除电池数据
+ * 
+ * @param  battery 电池数据结构体指针
+ * 
+ */
+void Battery_Clear(BATTERY *battery)
+{
+    uint8_t i=0;
+    for ( i = 0; i < 3; i++)
+    {
+        battery[i].Alarm_Voltage = 0;
+        battery[i].CutOff_Voltage = 0;
+        battery[i].Battery_State=0;
+        battery[i].Battery_Voltage=0;
+        memset(battery[i].Cells_Voltage, 0, sizeof(battery[i].Cells_Voltage));
+        battery[i].Cells_Num=0;
+    }
+}
+
+
+/**
  * @brief 更新电池数据
  * 
  * @param  battery 电池数据结构体指针
@@ -35,6 +59,7 @@ void Battery_Init(BATTERY *battery,float alarm_voltage,float cut_off_voltage)
  */
 void Battery_Refresh(BATTERY *battery)
 {
+    Battery_Clear(battery);
     uint8_t i=0;
     HAL_ADCEx_Calibration_Start(&hadc1);
     for(i=0;i<8;i++)
@@ -46,7 +71,7 @@ void Battery_Refresh(BATTERY *battery)
 	}
     HAL_ADC_Stop(&hadc1); //停止擦剂
 
-    HAL_ADCEx_Calibration_Start(&hadc2);    
+    HAL_ADCEx_Calibration_Start(&hadc2);  
     for(i=0;i<8;i++)
 	{
         HAL_ADC_Start(&hadc2);//启动ADC转换，必须放在for循环中，否则只能采集第一个通道的ADC值；
@@ -78,9 +103,14 @@ void Battery_Refresh(BATTERY *battery)
     battery[2].Cells_Voltage[3] = (float)ADC1_value[0]/4095*3.3*Resistance;
     battery[2].Cells_Voltage[2] = (float)ADC1_value[1]/4095*3.3*Resistance;
 
-    battery[2].Cells_Voltage[1] = ADS1015_Read(0);
-    HAL_Delay(10);
-    battery[2].Cells_Voltage[0] = ADS1015_Read(2);
+    // ADS1015_Config(hi2c2,ADS1015_SINGLE_END,0);
+    // ADS1015_Config_Register(hi2c2,ADS1015_REG_POINTER_CONFIG,ADS1015_CONFIG);
+    // battery[2].Cells_Voltage[1] = (float)ADS1015_Read_Data(hi2c2,0);
+    // HAL_Delay(10);
+
+    // ADS1015_Config(hi2c2,ADS1015_SINGLE_END,2);
+    // ADS1015_Config_Register(hi2c2,ADS1015_REG_POINTER_CONFIG,ADS1015_CONFIG);
+    // battery[2].Cells_Voltage[0] = (float)ADS1015_Read_Data(hi2c2,2);
 
     //电池总电压&电芯节数录入&缺电状态录入
     for ( i = 0; i < 6; i++)

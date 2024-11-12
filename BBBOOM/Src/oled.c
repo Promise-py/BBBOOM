@@ -33,19 +33,6 @@ void OLED_DisplayTurn(u8 i)
 		}
 }
 
-//等待信号响应
-void I2C_WaitAck(void) //测数据信号的电平
-{
-	OLED_SDA_Set();
-	IIC_delay();
-	OLED_SCL_Set();
-	IIC_delay();
-	OLED_SCL_Clr();
-	IIC_delay();
-}
-
-
-
 //发送一个字节
 //mode:数据/命令标志 0,表示命令;1,表示数据;
 void OLED_WR_Byte(u8 dat,u8 mode)
@@ -95,13 +82,28 @@ void OLED_Clear(void)
 	u8 i,n;
 	for(i=0;i<8;i++)
 	{
-	   for(n=0;n<128;n++)
-			{
-			 OLED_GRAM[n][i]=0;//清除所有数据
-			}
+	    for(n=0;n<128;n++)
+		{
+			OLED_GRAM[n][i]=0;//清除所有数据
+		}
   }
+	// OLED_Refresh();//更新显示
+}
+
+//只清除电芯电压显示
+void OLED_ClearCell(void)
+{
+	u8 i,n;
+	for(i=0;i<5;i++)
+	{
+	    for(n=35;n<60;n++)
+		{
+			OLED_GRAM[n][i]=0;//清除所有数据
+		}
+  	}
 	OLED_Refresh();//更新显示
 }
+
 
 //画点 
 //x:0~127

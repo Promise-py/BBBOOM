@@ -1,9 +1,10 @@
-#ifndef __UI_H__
-#define __UI_H__
+#ifndef __UI_H
+#define __UI_H
 
 #include "oled.h"
 #include "Battery.h"
-#include "oledfont.h"
+#include "oledfont.h" 
+#include "FSM.h"
 
 typedef struct UI_STATE
 {
@@ -12,7 +13,8 @@ typedef struct UI_STATE
     uint8_t Cells_No;
 }UI_STATE;
 
-extern char ch1[];
 void UI_ShowRUAGH(void);
-void UI_Normal(BATTERY *battery, uint8_t CHx, uint8_t xS, float cell_v, float alaV,float cutV);
+void UI_Normal(BATTERY *battery,BB_FSM *bb_fsm);
 #endif
+
+

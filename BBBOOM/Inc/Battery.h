@@ -2,10 +2,9 @@
 #define __BATTERY_H
 
 #include <stdint.h>
-#include "main.h"
-#include "adc.h"
 
-#define Resistance 1//分压电阻 分压系数
+
+#define Resistance 1.53//分压电阻 分压系数
 
 //电池状态定义
 #define READY       1 //就绪
@@ -24,6 +23,7 @@ typedef struct BATTERY{
     float Alarm_Voltage; //3.8v
     float CutOff_Voltage; //3.7v
 }BATTERY;
+
 void Battery_Init(BATTERY *battery,float alarm_voltage,float cut_off_voltage);
 void Battery_Refresh(BATTERY *battery);
 extern BATTERY Battery[3];
