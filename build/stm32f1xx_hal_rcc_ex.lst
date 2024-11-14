@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @defgroup RCCEx RCCEx
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief RCC Extension HAL module driver.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 2
 
 
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @note   Care must be taken when HAL_RCCEx_PeriphCLKConfig() is used to select
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         the RTC clock source; in this case the Backup domain will be reset in
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         order to modify the RTC Clock source, as consequence RTC registers (including
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 3
 
 
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         the backup registers) are set to their reset values.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
   59 001c 0023     		movs	r3, #0
   60 001e FB75     		strb	r3, [r7, #23]
  112:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 4
 
 
  113:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* check for RTC Parameters used to output RTCCLK */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  130:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Wait for Backup domain Write protection disable */
  131:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       tickstart = HAL_GetTick();
   98              		.loc 1 131 19
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 5
 
 
   99 0060 FFF7FEFF 		bl	HAL_GetTick
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  139              		.loc 1 144 35 discriminator 1
  140 009e FA68     		ldr	r2, [r7, #12]
  141 00a0 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 6
 
 
  142 00a2 27D0     		beq	.L8
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  177              		.loc 1 163 30
  178 00d8 3B69     		ldr	r3, [r7, #16]
  179 00da D31A     		subs	r3, r2, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 7
 
 
  180              		.loc 1 163 14
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  179:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------ ADC clock Configuration ------------------*/
  180:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if (((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_ADC) == RCC_PERIPHCLK_ADC)
  217              		.loc 1 180 22
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 8
 
 
  218 0118 7B68     		ldr	r3, [r7, #4]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  218:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Check if PLL I2S need to be enabled */
  219:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if (pllactive == 1)
  220:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 9
 
 
  221:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Enable PLL I2S only if not active */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  237 0138 1B68     		ldr	r3, [r3]
  238              		.loc 1 272 46
  239 013a 03F01003 		and	r3, r3, #16
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 10
 
 
  240              		.loc 1 272 6
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
  286:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief  Get the PeriphClkInit according to the internal
  287:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * RCC configuration registers.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 11
 
 
  288:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @param  PeriphClkInit pointer to an RCC_PeriphCLKInitTypeDef structure that
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  320              		.loc 1 305 39
  321 0026 43F00202 		orr	r2, r3, #2
  322 002a 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 12
 
 
  323 002c 1A60     		str	r2, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  330:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
  331:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)\
  332:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F105xC) || defined(STM32F107xC)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 13
 
 
  333:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the USB clock configuration -----------------------------------------*/
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  345:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_ADC  ADC peripheral clock
  346:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F103xE
  347:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 14
 
 
  348:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  412 0006 7860     		str	r0, [r7, #4]
  387:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
  388:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   static const uint8_t aPLLMULFactorTable[14U] = {0, 0, 4, 5, 6, 7, 8, 9, 0, 0, 0, 0, 0, 13};
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 15
 
 
  389:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   static const uint8_t aPredivFactorTable[16U] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  449 005c 85010000 		.word	.L35+1
  450 0060 85010000 		.word	.L35+1
  451 0064 85010000 		.word	.L35+1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 16
 
 
  452 0068 6D000000 		.word	.L20+1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  486 009c 5B0C     		lsrs	r3, r3, #17
  487 009e 03F00103 		and	r3, r3, #1
  488              		.loc 1 426 39
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 17
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 17
 
 
  489 00a2 3F4A     		ldr	r2, .L38+8
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  461:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           pllclk = (uint32_t)((HSI_VALUE >> 1) * pllmul);
  509              		.loc 1 461 18
  510 00c4 3B69     		ldr	r3, [r7, #16]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 18
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 18
 
 
  511 00c6 384A     		ldr	r2, .L38+16
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  533 00e8 A2FB0323 		umull	r2, r3, r2, r3
  534 00ec 5B08     		lsrs	r3, r3, #1
  535 00ee BB61     		str	r3, [r7, #24]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 19
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 19
 
 
  536              		.loc 1 491 7
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  534:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if (HAL_IS_BIT_SET(RCC->CR, RCC_CR_PLL3ON))
  535:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
  536:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* PLLI2SVCO = 2 * PLLI2SCLK = 2 * (HSE/PREDIV2 * PLL3MUL) */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 20
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 20
 
 
  537:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           prediv2 = ((RCC->CFGR2 & RCC_CFGR2_PREDIV2) >> RCC_CFGR2_PREDIV2_Pos) + 1;
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  581 0134 5B6A     		ldr	r3, [r3, #36]
  582 0136 03F00203 		and	r3, r3, #2
  583              		.loc 1 557 71 discriminator 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 21
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 21
 
 
  584 013a 002B     		cmp	r3, #0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  621              		.loc 1 574 98
  622 0178 0133     		adds	r3, r3, #1
  623              		.loc 1 574 103
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 22
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 22
 
 
  624 017a 5B00     		lsls	r3, r3, #1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  670              	aPLLMULFactorTable.1:
  671 0000 02030405 		.ascii	"\002\003\004\005\006\007\010\011\012\013\014\015\016"
  671      06070809 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 23
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 23
 
 
  671      0A0B0C0D 
@@ -1338,26 +1338,26 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 1
  686              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
  687              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
  688              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s 			page 24
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_rcc_ex.c
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:19     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:25     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:269    .text.HAL_RCCEx_PeriphCLKConfig:0000000000000160 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:276    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:282    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:384    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000080 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:389    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:395    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:437    .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000002c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:453    .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000006c $t
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:657    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000198 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:670    .rodata.aPLLMULFactorTable.1:0000000000000000 aPLLMULFactorTable.1
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:677    .rodata.aPredivFactorTable.0:0000000000000000 aPredivFactorTable.0
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:667    .rodata.aPLLMULFactorTable.1:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccnwVoRc.s:674    .rodata.aPredivFactorTable.0:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:19     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:25     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:269    .text.HAL_RCCEx_PeriphCLKConfig:0000000000000160 $d
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:276    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:282    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:384    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000080 $d
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:389    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:395    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:437    .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:453    .text.HAL_RCCEx_GetPeriphCLKFreq:000000000000006c $t
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:657    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000198 $d
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:670    .rodata.aPLLMULFactorTable.1:0000000000000000 aPLLMULFactorTable.1
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:677    .rodata.aPredivFactorTable.0:0000000000000000 aPredivFactorTable.0
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:667    .rodata.aPLLMULFactorTable.1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\cceRCPC7.s:674    .rodata.aPredivFactorTable.0:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

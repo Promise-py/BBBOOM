@@ -15,6 +15,8 @@ typedef struct UI_STATE
 
 void UI_ShowRUAGH(void);
 void UI_Normal(BATTERY *battery,BB_FSM *bb_fsm);
+void UI_Rotate(BATTERY *battery,BB_FSM *bb_fsm);
+void UI_ALARM(BATTERY *battery,BB_FSM *bb_fsm);
 #endif
 
 

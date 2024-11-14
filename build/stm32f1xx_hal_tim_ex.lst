@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     (#) Complementary outputs with programmable dead-time for :
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****         (++) Output Compare
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****         (++) PWM generation (Edge and Center-aligned Mode)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 2
 
 
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****         (++) One-pulse mode output
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** /** @defgroup TIMEx TIMEx
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @brief TIM Extended HAL module driver
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @{
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 3
 
 
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
   31 0000 80B5     		push	{r7, lr}
   32              	.LCFI0:
   33              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 4
 
 
   34              		.cfi_offset 7, -8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  165:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     TIM_ResetCallback(htim);
  166:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  167:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     if (htim->HallSensor_MspInitCallback == NULL)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 5
 
 
  168:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
   95 005a 1B68     		ldr	r3, [r3]
   96              		.loc 1 189 17
   97 005c 9A69     		ldr	r2, [r3, #24]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 6
 
 
   98              		.loc 1 189 7
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  143              		.loc 1 198 17
  144 009e 9A68     		ldr	r2, [r3, #8]
  145              		.loc 1 198 7
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 7
 
 
  146 00a0 7B68     		ldr	r3, [r7, #4]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  188              		.loc 1 210 24
  189 00de 0023     		movs	r3, #0
  190 00e0 7B61     		str	r3, [r7, #20]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 8
 
 
  211:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   OC_Config.Pulse = sConfig->Commutation_Delay;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  231 0122 0122     		movs	r2, #1
  232 0124 83F83E20 		strb	r2, [r3, #62]
  225:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 9
 
 
  233              		.loc 1 225 3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  241:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** {
  274              		.loc 1 241 1
  275              		.cfi_startproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 10
 
 
  276              		@ args = 0, pretend = 0, frame = 8
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  253:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     htim->HallSensor_MspDeInitCallback = HAL_TIMEx_HallSensor_MspDeInit;
  254:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   }
  255:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* DeInit the low level hardware */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 11
 
 
  256:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   htim->HallSensor_MspDeInitCallback(htim);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  351 007e 0023     		movs	r3, #0
  278:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** }
  352              		.loc 1 278 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 12
 
 
  353 0080 1846     		mov	r0, r3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  394              		.cfi_def_cfa_offset 4
  395 000c BD46     		mov	sp, r7
  396              	.LCFI14:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 13
 
 
  397              		.cfi_def_cfa_register 13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  438              	.LCFI20:
  439              		.cfi_def_cfa_register 13
  440              		@ sp needed
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 14
 
 
  441 000e 80BC     		pop	{r7}
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  485 001e 7B73     		strb	r3, [r7, #13]
  321:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef complementary_channel_2_state = TIM_CHANNEL_N_STATE_GET(htim, TIM_CHA
  486              		.loc 1 321 31
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 15
 
 
  487 0020 7B68     		ldr	r3, [r7, #4]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  523              		.loc 1 339 3
  524 005c 7B68     		ldr	r3, [r7, #4]
  525 005e 0222     		movs	r2, #2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 16
 
 
  526 0060 83F84320 		strb	r2, [r3, #67]
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  349:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     tmpsmcr = htim->Instance->SMCR & TIM_SMCR_SMS;
  571              		.loc 1 349 19 is_stmt 1
  572 00ae 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 17
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 17
 
 
  573 00b0 1B68     		ldr	r3, [r3]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  613              		.cfi_def_cfa_register 13
  614              		@ sp needed
  615 00ea 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 18
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 18
 
 
  616              	.L20:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  657 0010 1846     		mov	r0, r3
  658 0012 FFF7FEFF 		bl	TIM_CCxChannelCmd
  378:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 19
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 19
 
 
  379:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Disable the Peripheral */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  390:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** }
  702              		.loc 1 390 1
  703 0068 1846     		mov	r0, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 20
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 20
 
 
  704 006a 0837     		adds	r7, r7, #8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  748              		.loc 1 402 31
  749 0018 7B68     		ldr	r3, [r7, #4]
  750 001a 93F84230 		ldrb	r3, [r3, #66]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 21
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 21
 
 
  751 001e 7B73     		strb	r3, [r7, #13]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  787 0056 0222     		movs	r2, #2
  788 0058 83F84220 		strb	r2, [r3, #66]
  421:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 22
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 22
 
 
  789              		.loc 1 421 3
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  832              		.loc 1 432 7 discriminator 4
  833 00aa 7B68     		ldr	r3, [r7, #4]
  834 00ac 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 23
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 23
 
 
  835 00ae 164A     		ldr	r2, .L32+12
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  444:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  445:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Return function status */
  446:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   return HAL_OK;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 24
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 24
 
 
  877              		.loc 1 446 10
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  924              		.cfi_def_cfa_register 7
  925 0006 7860     		str	r0, [r7, #4]
  456:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Check the parameters */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 25
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 25
 
 
  457:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   assert_param(IS_TIM_HALL_SENSOR_INTERFACE_INSTANCE(htim->Instance));
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  471:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
  966              		.loc 1 471 3 is_stmt 1
  967 0056 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 26
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 26
 
 
  968 0058 0122     		movs	r2, #1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1007              		.cfi_startproc
  1008              		@ args = 0, pretend = 0, frame = 24
  1009              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 27
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 27
 
 
  1010 0000 80B5     		push	{r7, lr}
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  503:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****            && (complementary_channel_1_state == HAL_TIM_CHANNEL_STATE_READY))
  1050              		.loc 1 503 12
  1051 0034 BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 28
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 28
 
 
  1052 0036 012B     		cmp	r3, #1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  525:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Set the DMA Input Capture 1 Callbacks */
  526:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   htim->hdma[TIM_DMA_ID_CC1]->XferCpltCallback = TIM_DMACaptureCplt;
  1084              		.loc 1 526 13
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 29
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 29
 
 
  1085 006a FB68     		ldr	r3, [r7, #12]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  536:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   }
  537:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Enable the capture compare 1 Interrupt */
  538:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   __HAL_TIM_ENABLE_DMA(htim, TIM_DMA_CC1);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 30
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 30
 
 
  1129              		.loc 1 538 3
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1178 00f6 9B68     		ldr	r3, [r3, #8]
  1179              		.loc 1 543 13
  1180 00f8 03F00703 		and	r3, r3, #7
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 31
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 31
 
 
  1181 00fc 3B61     		str	r3, [r7, #16]
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1221              	.L51:
  1222 0130 00000000 		.word	TIM_DMACaptureCplt
  1223 0134 00000000 		.word	TIM_DMACaptureHalfCplt
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 32
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 32
 
 
  1224 0138 00000000 		.word	TIM_DMAError
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  572:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  573:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  574:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Disable the capture compare Interrupts 1 event */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 33
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 33
 
 
  575:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   __HAL_TIM_DISABLE_DMA(htim, TIM_DMA_CC1);
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1309 006a 0122     		movs	r2, #1
  1310 006c 83F84220 		strb	r2, [r3, #66]
  585:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 34
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 34
 
 
  586:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Return function status */
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  618:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be enabled
  619:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
  620:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 35
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 35
 
 
  621:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1376              		.loc 1 633 46 discriminator 4
  1377 0032 012B     		cmp	r3, #1
  1378 0034 14BF     		ite	ne
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 36
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 36
 
 
  1379 0036 0123     		movne	r3, #1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1427              	.L65:
  1428              		.loc 1 639 3 discriminator 2
  1429 0082 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 37
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 37
 
 
  1430 0084 042B     		cmp	r3, #4
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1475              		.loc 1 648 7 discriminator 1
  1476 00d2 7B68     		ldr	r3, [r7, #4]
  1477 00d4 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 38
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 38
 
 
  1478 00d6 1C4A     		ldr	r2, .L75+4
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1526 0126 07E0     		b	.L74
  1527              	.L72:
  654:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 39
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 39
 
 
  655:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  669:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be disabled
  670:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
  671:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 40
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 40
 
 
  672:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1610              		.loc 1 685 3 discriminator 2
  1611 0038 7B68     		ldr	r3, [r7, #4]
  1612 003a 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 41
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 41
 
 
  1613 003c 5A6C     		ldr	r2, [r3, #68]
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1661 0092 83F84320 		strb	r2, [r3, #67]
  1662 0096 0BE0     		b	.L81
  1663              	.L82:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 42
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 42
 
 
  1664              		.loc 1 691 3 discriminator 4
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  709:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** {
  1703              		.loc 1 709 1
  1704              		.cfi_startproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 43
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 43
 
 
  1705              		@ args = 0, pretend = 0, frame = 16
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1751 003c 0023     		moveq	r3, #0
  1752 003e DBB2     		uxtb	r3, r3
  1753 0040 15E0     		b	.L89
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 44
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 44
 
 
  1754              	.L90:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1802 008a 04D1     		bne	.L98
  1803              		.loc 1 723 3 discriminator 3
  1804 008c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 45
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 45
 
 
  1805 008e 0222     		movs	r2, #2
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  733:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  734:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
  735:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 46
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 46
 
 
  736:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       /* Enable the TIM Output Compare interrupt */
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1882              		.loc 1 757 5
  1883 010a 7B68     		ldr	r3, [r7, #4]
  1884 010c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 47
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 47
 
 
  1885 010e DA68     		ldr	r2, [r3, #12]
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  1930 0160 7B68     		ldr	r3, [r7, #4]
  1931 0162 1B68     		ldr	r3, [r3]
  1932 0164 164A     		ldr	r2, .L111+12
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 48
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 48
 
 
  1933 0166 9342     		cmp	r3, r2
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  779:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  780:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Return function status */
  781:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   return status;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 49
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 49
 
 
  1974              		.loc 1 781 10
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2015              		.cfi_offset 14, -4
  2016 0002 84B0     		sub	sp, sp, #16
  2017              	.LCFI68:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 50
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 50
 
 
  2018              		.cfi_def_cfa_offset 24
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2053              		.loc 1 815 7
  2054 003a 7B68     		ldr	r3, [r7, #4]
  2055 003c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 51
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 51
 
 
  2056 003e DA68     		ldr	r2, [r3, #12]
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2091 0074 FFF7FEFF 		bl	TIM_CCxNChannelCmd
  835:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  836:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     /* Disable the TIM Break interrupt (only if no more channel is active) */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 52
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 52
 
 
  837:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     tmpccer = htim->Instance->CCER;
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2138              	.L121:
  845:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  846:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     /* Disable the Peripheral */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 53
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 53
 
 
  847:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     __HAL_TIM_DISABLE(htim);
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2189 0122 7B68     		ldr	r3, [r7, #4]
  2190 0124 0122     		movs	r2, #1
  2191 0126 83F84420 		strb	r2, [r3, #68]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 54
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 54
 
 
  2192 012a 03E0     		b	.L119
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2226              		@ frame_needed = 1, uses_anonymous_args = 0
  2227 0000 80B5     		push	{r7, lr}
  2228              	.LCFI72:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 55
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 55
 
 
  2229              		.cfi_def_cfa_offset 8
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2275 0044 15E0     		b	.L131
  2276              	.L132:
  2277              		.loc 1 880 46 is_stmt 0 discriminator 5
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 56
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 56
 
 
  2278 0046 BB68     		ldr	r3, [r7, #8]
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2328 0094 BB68     		ldr	r3, [r7, #8]
  2329 0096 042B     		cmp	r3, #4
  2330 0098 09D1     		bne	.L140
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 57
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 57
 
 
  2331              		.loc 1 884 12 is_stmt 1 discriminator 4
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  888:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       return HAL_ERROR;
  2382              		.loc 1 888 14
  2383 00ea 0123     		movs	r3, #1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 58
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 58
 
 
  2384 00ec E5E0     		b	.L137
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2426              		.loc 1 900 3
  2427 012c BB68     		ldr	r3, [r7, #8]
  2428 012e 082B     		cmp	r3, #8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 59
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 59
 
 
  2429 0130 51D0     		beq	.L153
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2471 016e FFF7FEFF 		bl	HAL_DMA_Start_IT
  2472 0172 0346     		mov	r3, r0
  2473              		.loc 1 912 10
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 60
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 60
 
 
  2474 0174 002B     		cmp	r3, #0
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  932:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       /* Enable the DMA channel */
  933:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       if (HAL_DMA_Start_IT(htim->hdma[TIM_DMA_ID_CC2], (uint32_t)pData, (uint32_t)&htim->Instance->
  2509              		.loc 1 933 11
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 61
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 61
 
 
  2510 01a6 FB68     		ldr	r3, [r7, #12]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2549 01e0 DB6A     		ldr	r3, [r3, #44]
  2550              		.loc 1 948 56
  2551 01e2 394A     		ldr	r2, .L165+4
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 62
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 62
 
 
  2552 01e4 DA62     		str	r2, [r3, #44]
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  964:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
  965:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     default:
  966:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       status = HAL_ERROR;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 63
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 63
 
 
  2591              		.loc 1 966 14
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2632 0260 B3F1804F 		cmp	r3, #1073741824
  2633 0264 0ED0     		beq	.L162
  2634              		.loc 1 979 9 discriminator 3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 64
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 64
 
 
  2635 0266 FB68     		ldr	r3, [r7, #12]
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2678 02aa 1B68     		ldr	r3, [r3]
  2679 02ac 1A68     		ldr	r2, [r3]
  2680 02ae FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 65
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 65
 
 
  2681 02b0 1B68     		ldr	r3, [r3]
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1006:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @retval HAL status
 1007:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   */
 1008:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_OCN_Stop_DMA(TIM_HandleTypeDef *htim, uint32_t Channel)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 66
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 66
 
 
 1009:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** {
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2763 0036 DA60     		str	r2, [r3, #12]
 1021:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       (void)HAL_DMA_Abort_IT(htim->hdma[TIM_DMA_ID_CC1]);
  2764              		.loc 1 1021 13
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 67
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 67
 
 
  2765 0038 7B68     		ldr	r3, [r7, #4]
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2802 007a 02E0     		b	.L172
  2803              	.L169:
 1039:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 68
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 68
 
 
 1040:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2845              	.L174:
 1053:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
 1054:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     /* Disable the Peripheral */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 69
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 69
 
 
 1055:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     __HAL_TIM_DISABLE(htim);
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2896 011c 7B68     		ldr	r3, [r7, #4]
  2897 011e 0122     		movs	r2, #1
  2898 0120 83F84420 		strb	r2, [r3, #68]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 70
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 70
 
 
  2899 0124 03E0     		b	.L173
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1084:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** @endverbatim
 1085:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @{
 1086:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 71
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 71
 
 
 1087:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  2964 0024 3B68     		ldr	r3, [r7]
  2965 0026 042B     		cmp	r3, #4
  2966 0028 09D1     		bne	.L185
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 72
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 72
 
 
  2967              		.loc 1 1106 7 is_stmt 1 discriminator 4
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3015 0074 002B     		cmp	r3, #0
  3016 0076 04D1     		bne	.L191
  3017              		.loc 1 1112 3 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 73
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 73
 
 
  3018 0078 7B68     		ldr	r3, [r7, #4]
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3063              		.loc 1 1121 7
  3064 00c8 7B68     		ldr	r3, [r7, #4]
  3065 00ca 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 74
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 74
 
 
  3066              		.loc 1 1121 6
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3115 011a 1A68     		ldr	r2, [r3]
  3116 011c 7B68     		ldr	r3, [r7, #4]
  3117 011e 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 75
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 75
 
 
  3118 0120 42F00102 		orr	r2, r2, #1
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3163              	HAL_TIMEx_PWMN_Stop:
  3164              	.LFB82:
 1137:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 76
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 76
 
 
 1138:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** /**
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3199 002a 1B68     		ldr	r3, [r3]
  3200 002c 1A6A     		ldr	r2, [r3, #32]
  3201 002e 40F24443 		movw	r3, #1092
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 77
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 77
 
 
  3202 0032 1340     		ands	r3, r3, r2
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3250 0088 3B68     		ldr	r3, [r7]
  3251 008a 042B     		cmp	r3, #4
  3252 008c 04D1     		bne	.L208
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 78
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 78
 
 
  3253              		.loc 1 1163 3 discriminator 3
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1175:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
 1176:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
 1177:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_3: TIM Channel 3 selected
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 79
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 79
 
 
 1178:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @retval HAL status
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3340 0030 93F84330 		ldrb	r3, [r3, #67]
  3341 0034 DBB2     		uxtb	r3, r3
  3342              		.loc 1 1189 46 discriminator 4
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 80
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 80
 
 
  3343 0036 012B     		cmp	r3, #1
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3391 0080 83F84220 		strb	r2, [r3, #66]
  3392 0084 13E0     		b	.L223
  3393              	.L222:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 81
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 81
 
 
  3394              		.loc 1 1195 3 discriminator 2
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3441 00d6 DA60     		str	r2, [r3, #12]
 1203:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       break;
  3442              		.loc 1 1203 7
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 82
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 82
 
 
  3443 00d8 14E0     		b	.L232
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3475 0106 002B     		cmp	r3, #0
  3476 0108 4ED1     		bne	.L233
 1226:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 83
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 83
 
 
 1227:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     /* Enable the TIM Break interrupt */
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3520 0158 1B68     		ldr	r3, [r3]
  3521 015a 184A     		ldr	r2, .L237+8
  3522 015c 9342     		cmp	r3, r2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 84
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 84
 
 
  3523 015e 09D0     		beq	.L234
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3566 01a2 42F00102 		orr	r2, r2, #1
  3567 01a6 1A60     		str	r2, [r3]
  3568              	.L233:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 85
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 85
 
 
 1248:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     }
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3605              		@ frame_needed = 1, uses_anonymous_args = 0
  3606 0000 80B5     		push	{r7, lr}
  3607              	.LCFI97:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 86
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 86
 
 
  3608              		.cfi_def_cfa_offset 8
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1282:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
 1283:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
 1284:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 87
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 87
 
 
 1285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       /* Disable the TIM Capture/Compare 2 interrupt */
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3681 006a 7B68     		ldr	r3, [r7, #4]
  3682 006c 1B68     		ldr	r3, [r3]
  3683 006e 0022     		movs	r2, #0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 88
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 88
 
 
  3684 0070 3968     		ldr	r1, [r7]
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3728 00c0 5A6C     		ldr	r2, [r3, #68]
  3729 00c2 7B68     		ldr	r3, [r7, #4]
  3730 00c4 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 89
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 89
 
 
  3731 00c6 22F40042 		bic	r2, r2, #32768
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3779              		.loc 1 1321 5 discriminator 4
  3780 011c 3B68     		ldr	r3, [r7]
  3781 011e 082B     		cmp	r3, #8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 90
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 90
 
 
  3782 0120 04D1     		bne	.L252
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1342:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****                                            uint16_t Length)
 1343:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** {
  3818              		.loc 1 1343 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 91
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 91
 
 
  3819              		.cfi_startproc
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3865 003a 022B     		cmp	r3, #2
  3866 003c 0CBF     		ite	eq
  3867 003e 0123     		moveq	r3, #1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 92
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 92
 
 
  3868 0040 0023     		movne	r3, #0
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3918 008e 0023     		movne	r3, #0
  3919 0090 DBB2     		uxtb	r3, r3
  3920 0092 22E0     		b	.L265
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 93
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 93
 
 
  3921              	.L264:
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  3973 00e4 7B88     		ldrh	r3, [r7, #2]
  3974 00e6 002B     		cmp	r3, #0
  3975 00e8 01D1     		bne	.L272
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 94
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 94
 
 
  3976              	.L271:
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4019 012a C6E0     		b	.L263
  4020              	.L274:
 1369:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 95
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 95
 
 
 1370:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4061              		.loc 1 1383 83
  4062 0168 3433     		adds	r3, r3, #52
  4063              		.loc 1 1383 11
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 96
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 96
 
 
  4064 016a 1A46     		mov	r2, r3
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4100 01a0 9B6A     		ldr	r3, [r3, #40]
  4101              		.loc 1 1401 53
  4102 01a2 4A4A     		ldr	r2, .L291+8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 97
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 97
 
 
  4103 01a4 1A63     		str	r2, [r3, #48]
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4140 01da 3A4A     		ldr	r2, .L291
  4141 01dc 9A62     		str	r2, [r3, #40]
 1419:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC3]->XferHalfCpltCallback = TIM_DMADelayPulseHalfCplt;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 98
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 98
 
 
  4142              		.loc 1 1419 17
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1433:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       break;
  4183              		.loc 1 1433 7
  4184 021c 02E0     		b	.L284
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 99
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 99
 
 
  4185              	.L280:
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4222 0258 9342     		cmp	r3, r2
  4223 025a 13D0     		beq	.L288
  4224              		.loc 1 1450 9 is_stmt 0 discriminator 2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 100
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 100
 
 
  4225 025c FB68     		ldr	r3, [r7, #12]
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1458:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     else
 1459:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     {
 1460:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       __HAL_TIM_ENABLE(htim);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 101
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 101
 
 
  4271              		.loc 1 1460 7
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1472:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be disabled
 1473:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
 1474:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 102
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 102
 
 
 1475:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4353 002a 1B68     		ldr	r3, [r3]
  4354 002c DA68     		ldr	r2, [r3, #12]
  4355 002e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 103
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 103
 
 
  4356 0030 1B68     		ldr	r3, [r3]
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4393 0072 DB6A     		ldr	r3, [r3, #44]
  4394 0074 1846     		mov	r0, r3
  4395 0076 FFF7FEFF 		bl	HAL_DMA_Abort_IT
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 104
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 104
 
 
 1509:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****       break;
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4435 00ba 5A6C     		ldr	r2, [r3, #68]
  4436 00bc 7B68     		ldr	r3, [r7, #4]
  4437 00be 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 105
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 105
 
 
  4438 00c0 22F40042 		bic	r2, r2, #32768
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4486              		.loc 1 1529 5 discriminator 4
  4487 0116 3B68     		ldr	r3, [r7]
  4488 0118 082B     		cmp	r3, #8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 106
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 106
 
 
  4489 011a 04D1     		bne	.L305
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1550:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     (+) Stop the Complementary One Pulse.
 1551:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     (+) Start the Complementary One Pulse and enable interrupts.
 1552:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     (+) Stop the Complementary One Pulse and disable interrupts.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 107
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 107
 
 
 1553:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4558 001e FB72     		strb	r3, [r7, #11]
 1574:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
  4559              		.loc 1 1574 31 discriminator 4
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 108
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 108
 
 
  4560 0020 7B68     		ldr	r3, [r7, #4]
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4596              		.loc 1 1592 3
  4597 005c 7B68     		ldr	r3, [r7, #4]
  4598 005e 0222     		movs	r2, #2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 109
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 109
 
 
  4599 0060 83F83F20 		strb	r2, [r3, #63]
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4640              		.cfi_def_cfa_register 13
  4641              		@ sp needed
  4642 00a8 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 110
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 110
 
 
  4643              		.cfi_endproc
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4683              		.loc 1 1621 12 is_stmt 1 discriminator 4
  4684 0016 FB60     		str	r3, [r7, #12]
 1622:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 111
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 111
 
 
 1623:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Check the parameters */
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4727 0068 1A6A     		ldr	r2, [r3, #32]
  4728 006a 41F21113 		movw	r3, #4369
  4729 006e 1340     		ands	r3, r3, r2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 112
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 112
 
 
  4730 0070 002B     		cmp	r3, #0
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4774              		.cfi_def_cfa_register 13
  4775              		@ sp needed
  4776 00bc 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 113
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 113
 
 
  4777              		.cfi_endproc
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4817              		.loc 1 1660 12 is_stmt 1 discriminator 4
  4818 0016 FB60     		str	r3, [r7, #12]
 1661:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_1_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_1);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 114
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 114
 
 
  4819              		.loc 1 1661 31 discriminator 4
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1679:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_BUSY);
  4856              		.loc 1 1679 3
  4857 0054 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 115
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 115
 
 
  4858 0056 0222     		movs	r2, #2
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4899 00a8 F968     		ldr	r1, [r7, #12]
  4900 00aa 1846     		mov	r0, r3
  4901 00ac FFF7FEFF 		bl	TIM_CCxChannelCmd
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 116
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 116
 
 
 1693:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  4936              		.cfi_startproc
  4937              		@ args = 0, pretend = 0, frame = 16
  4938              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 117
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 117
 
 
  4939 0000 80B5     		push	{r7, lr}
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1727:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_CCxNChannelCmd(htim->Instance, OutputChannel, TIM_CCxN_DISABLE);
  4981              		.loc 1 1727 3 discriminator 4
  4982 0038 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 118
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 118
 
 
  4983 003a 1B68     		ldr	r3, [r3]
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5030 0096 1B68     		ldr	r3, [r3]
  5031 0098 1A6A     		ldr	r2, [r3, #32]
  5032 009a 40F24443 		movw	r3, #1092
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 119
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 119
 
 
  5033 009e 1340     		ands	r3, r3, r2
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5078              		.global	HAL_TIMEx_ConfigCommutEvent
  5079              		.syntax unified
  5080              		.thumb
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 120
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 120
 
 
  5081              		.thumb_func
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5086              		.cfi_startproc
  5087              		@ args = 0, pretend = 0, frame = 16
  5088              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 121
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 121
 
 
  5089              		@ link register save eliminated.
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1805:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     htim->Instance->SMCR &= ~TIM_SMCR_TS;
  5133              		.loc 1 1805 9
  5134 003a FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 122
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 122
 
 
  5135 003c 1B68     		ldr	r3, [r3]
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5181 007c 1B68     		ldr	r3, [r3]
  5182              		.loc 1 1813 17
  5183 007e 5968     		ldr	r1, [r3, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 123
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 123
 
 
  5184              		.loc 1 1813 7
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5227 00bc 7047     		bx	lr
  5228              		.cfi_endproc
  5229              	.LFE91:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 124
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 124
 
 
  5231              		.section	.text.HAL_TIMEx_ConfigCommutEvent_IT,"ax",%progbits
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1853:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   assert_param(IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION(InputTrigger));
 1854:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
 1855:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   __HAL_LOCK(htim);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 125
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 125
 
 
  5258              		.loc 1 1855 3
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5305 0050 FB68     		ldr	r3, [r7, #12]
  5306 0052 1B68     		ldr	r3, [r3]
  5307              		.loc 1 1862 26
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 126
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 126
 
 
  5308 0054 BA68     		ldr	r2, [r7, #8]
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5352 0094 22F40052 		bic	r2, r2, #8192
  5353 0098 DA60     		str	r2, [r3, #12]
 1873:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 127
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 127
 
 
 1874:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Enable the Commutation Interrupt */
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1889:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *        the TI1 of the Interface Timer detect a commutation at its input TI1.
 1890:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @note  The user should configure the DMA in his own software, in This function only the COMDE b
 1891:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  htim TIM handle
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 128
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 128
 
 
 1892:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  InputTrigger the Internal trigger corresponding to the Timer Interfacing with the Hall 
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5426              		.loc 1 1914 6 is_stmt 1 discriminator 2
  5427 0022 BB68     		ldr	r3, [r7, #8]
  5428 0024 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 129
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 129
 
 
  5429 0026 08D0     		beq	.L345
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5474 0062 1B68     		ldr	r3, [r3]
  5475              		.loc 1 1923 23
  5476 0064 42F00102 		orr	r2, r2, #1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 130
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 130
 
 
  5477 0068 5A60     		str	r2, [r3, #4]
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1936:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   __HAL_TIM_DISABLE_IT(htim, TIM_IT_COM);
  5519              		.loc 1 1936 3
  5520 00a2 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 131
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 131
 
 
  5521 00a4 1B68     		ldr	r3, [r3]
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5568              		.syntax unified
  5569              		.thumb
  5570              		.thumb_func
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 132
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 132
 
 
  5572              	HAL_TIMEx_MasterConfigSynchronization:
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 1967:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
 1968:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Change the handler state */
 1969:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   htim->State = HAL_TIM_STATE_BUSY;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 133
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 133
 
 
  5604              		.loc 1 1969 15 is_stmt 1 discriminator 2
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5642 0058 9342     		cmp	r3, r2
  5643 005a 18D0     		beq	.L352
  5644              		.loc 1 1985 7 discriminator 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 134
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 134
 
 
  5645 005c 7B68     		ldr	r3, [r7, #4]
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5691              	.L353:
 1994:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   }
 1995:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 135
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 135
 
 
 1996:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Change the htim state */
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2007:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  htim TIM handle
 2008:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  sBreakDeadTimeConfig pointer to a TIM_ConfigBreakDeadConfigTypeDef structure that
 2009:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *         contains the BDTR Register configuration  information for the TIM peripheral.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 136
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 136
 
 
 2010:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @note   Interrupts can be generated when an active level is detected on the
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5768 001e 0122     		movs	r2, #1
  5769 0020 83F83C20 		strb	r2, [r3, #60]
 2033:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 137
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 137
 
 
 2034:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Set the Lock level, the Break enable Bit and the Polarity, the OSSR State,
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5813 0078 FB68     		ldr	r3, [r7, #12]
  5814 007a 23F48042 		bic	r2, r3, #16384
  5815 007e 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 138
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 138
 
 
  5816 0080 DB69     		ldr	r3, [r3, #28]
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2059:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   *
 2060:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @retval HAL status
 2061:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 139
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 139
 
 
 2062:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_RemapConfig(TIM_HandleTypeDef *htim, uint32_t Remap)
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2073:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   */
 2074:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
 2075:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** /** @defgroup TIMEx_Exported_Functions_Group6 Extended Callbacks functions
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 140
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 140
 
 
 2076:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @brief    Extended Callbacks functions
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5928 000e 80BC     		pop	{r7}
  5929              	.LCFI173:
  5930              		.cfi_restore 7
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 141
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 141
 
 
  5931              		.cfi_def_cfa_offset 0
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  5973              		.cfi_def_cfa_offset 0
  5974 0010 7047     		bx	lr
  5975              		.cfi_endproc
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 142
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 142
 
 
  5976              	.LFE98:
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6017              		.cfi_endproc
  6018              	.LFE99:
  6020              		.section	.text.HAL_TIMEx_HallSensor_GetState,"ax",%progbits
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 143
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 143
 
 
  6021              		.align	1
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2161:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** }
  6049              		.loc 1 2161 1
  6050 0010 1846     		mov	r0, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 144
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 144
 
 
  6051 0012 0C37     		adds	r7, r7, #12
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2177:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   /* Check the parameters */
 2178:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   assert_param(IS_TIM_CCXN_INSTANCE(htim->Instance, ChannelN));
 2179:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 145
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 145
 
 
 2180:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   channel_state = TIM_CHANNEL_N_STATE_GET(htim, ChannelN);
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6142              		.cfi_restore 7
  6143              		.cfi_def_cfa_offset 0
  6144 004e 7047     		bx	lr
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 146
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 146
 
 
  6145              		.cfi_endproc
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6177              		.loc 1 2207 15
  6178 000e FB68     		ldr	r3, [r7, #12]
  6179 0010 0122     		movs	r2, #1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 147
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 147
 
 
  6180 0012 83F83D20 		strb	r2, [r3, #61]
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6221 0006 7860     		str	r0, [r7, #4]
 2223:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
  6222              		.loc 1 2223 22
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 148
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 148
 
 
  6223 0008 7B68     		ldr	r3, [r7, #4]
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6260              		.cfi_def_cfa_offset 8
  6261              		.cfi_offset 7, -8
  6262              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 149
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 149
 
 
  6263 0002 84B0     		sub	sp, sp, #16
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2256:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****     htim->Channel = HAL_TIM_ACTIVE_CHANNEL_2;
  6304              		.loc 1 2256 19
  6305 003a FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 150
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 150
 
 
  6306 003c 0222     		movs	r2, #2
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2275:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   }
 2276:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** 
 2277:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** #if (USE_HAL_TIM_REGISTER_CALLBACKS == 1)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 151
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 151
 
 
 2278:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   htim->PWM_PulseFinishedCallback(htim);
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6383              	.LCFI215:
  6384              		.cfi_def_cfa_register 7
  6385 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 152
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 152
 
 
 2293:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6427              		.loc 1 2305 11
  6428 0046 7A68     		ldr	r2, [r7, #4]
  6429 0048 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 153
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 153
 
 
  6430 004a 06D1     		bne	.L382
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2324:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c **** /**
 2325:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @brief  Enables or disables the TIM Capture Compare Channel xN.
 2326:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  TIMx to select the TIM peripheral
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 154
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 154
 
 
 2327:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   * @param  Channel specifies the TIM Channel
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
 2346:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c ****   TIMx->CCER |= (uint32_t)(ChannelNState << (Channel & 0xFU)); /* 0xFU = 15 bits max shift */
  6503              		.loc 1 2346 7
  6504 0028 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 155
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 155
 
 
  6505 002a 1A6A     		ldr	r2, [r3, #32]
@@ -9279,109 +9279,109 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 1
  6540              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
  6541              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
  6542              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 156
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 156
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_tim_ex.c
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:19     .text.HAL_TIMEx_HallSensor_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:25     .text.HAL_TIMEx_HallSensor_Init:0000000000000000 HAL_TIMEx_HallSensor_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:372    .text.HAL_TIMEx_HallSensor_MspInit:0000000000000000 HAL_TIMEx_HallSensor_MspInit
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:266    .text.HAL_TIMEx_HallSensor_DeInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:272    .text.HAL_TIMEx_HallSensor_DeInit:0000000000000000 HAL_TIMEx_HallSensor_DeInit
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:414    .text.HAL_TIMEx_HallSensor_MspDeInit:0000000000000000 HAL_TIMEx_HallSensor_MspDeInit
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:366    .text.HAL_TIMEx_HallSensor_MspInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:408    .text.HAL_TIMEx_HallSensor_MspDeInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:450    .text.HAL_TIMEx_HallSensor_Start:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:456    .text.HAL_TIMEx_HallSensor_Start:0000000000000000 HAL_TIMEx_HallSensor_Start
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:619    .text.HAL_TIMEx_HallSensor_Start:00000000000000ec $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:628    .text.HAL_TIMEx_HallSensor_Stop:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:634    .text.HAL_TIMEx_HallSensor_Stop:0000000000000000 HAL_TIMEx_HallSensor_Stop
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:716    .text.HAL_TIMEx_HallSensor_Start_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:722    .text.HAL_TIMEx_HallSensor_Start_IT:0000000000000000 HAL_TIMEx_HallSensor_Start_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:893    .text.HAL_TIMEx_HallSensor_Start_IT:00000000000000fc $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:902    .text.HAL_TIMEx_HallSensor_Stop_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:908    .text.HAL_TIMEx_HallSensor_Stop_IT:0000000000000000 HAL_TIMEx_HallSensor_Stop_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:998    .text.HAL_TIMEx_HallSensor_Start_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1004   .text.HAL_TIMEx_HallSensor_Start_DMA:0000000000000000 HAL_TIMEx_HallSensor_Start_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1222   .text.HAL_TIMEx_HallSensor_Start_DMA:0000000000000130 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1234   .text.HAL_TIMEx_HallSensor_Stop_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1240   .text.HAL_TIMEx_HallSensor_Stop_DMA:0000000000000000 HAL_TIMEx_HallSensor_Stop_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1327   .text.HAL_TIMEx_OCN_Start:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1333   .text.HAL_TIMEx_OCN_Start:0000000000000000 HAL_TIMEx_OCN_Start
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6466   .text.TIM_CCxNChannelCmd:0000000000000000 TIM_CCxNChannelCmd
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1553   .text.HAL_TIMEx_OCN_Start:0000000000000144 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1562   .text.HAL_TIMEx_OCN_Stop:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1568   .text.HAL_TIMEx_OCN_Stop:0000000000000000 HAL_TIMEx_OCN_Stop
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1695   .text.HAL_TIMEx_OCN_Start_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1701   .text.HAL_TIMEx_OCN_Start_IT:0000000000000000 HAL_TIMEx_OCN_Start_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1990   .text.HAL_TIMEx_OCN_Start_IT:00000000000001b4 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:1999   .text.HAL_TIMEx_OCN_Stop_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2005   .text.HAL_TIMEx_OCN_Stop_IT:0000000000000000 HAL_TIMEx_OCN_Stop_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2215   .text.HAL_TIMEx_OCN_Start_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2221   .text.HAL_TIMEx_OCN_Start_DMA:0000000000000000 HAL_TIMEx_OCN_Start_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2701   .text.HAL_TIMEx_OCN_Start_DMA:00000000000002c4 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6252   .text.TIM_DMADelayPulseNCplt:0000000000000000 TIM_DMADelayPulseNCplt
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6368   .text.TIM_DMAErrorCCxN:0000000000000000 TIM_DMAErrorCCxN
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2713   .text.HAL_TIMEx_OCN_Stop_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2719   .text.HAL_TIMEx_OCN_Stop_DMA:0000000000000000 HAL_TIMEx_OCN_Stop_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2922   .text.HAL_TIMEx_PWMN_Start:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:2928   .text.HAL_TIMEx_PWMN_Start:0000000000000000 HAL_TIMEx_PWMN_Start
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3148   .text.HAL_TIMEx_PWMN_Start:0000000000000144 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3157   .text.HAL_TIMEx_PWMN_Stop:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3163   .text.HAL_TIMEx_PWMN_Stop:0000000000000000 HAL_TIMEx_PWMN_Stop
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3290   .text.HAL_TIMEx_PWMN_Start_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3296   .text.HAL_TIMEx_PWMN_Start_IT:0000000000000000 HAL_TIMEx_PWMN_Start_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3585   .text.HAL_TIMEx_PWMN_Start_IT:00000000000001b4 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3594   .text.HAL_TIMEx_PWMN_Stop_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3600   .text.HAL_TIMEx_PWMN_Stop_IT:0000000000000000 HAL_TIMEx_PWMN_Stop_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3810   .text.HAL_TIMEx_PWMN_Start_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:3816   .text.HAL_TIMEx_PWMN_Start_DMA:0000000000000000 HAL_TIMEx_PWMN_Start_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4296   .text.HAL_TIMEx_PWMN_Start_DMA:00000000000002c4 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4308   .text.HAL_TIMEx_PWMN_Stop_DMA:0000000000000000 $t
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s 			page 157
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:19     .text.HAL_TIMEx_HallSensor_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:25     .text.HAL_TIMEx_HallSensor_Init:0000000000000000 HAL_TIMEx_HallSensor_Init
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:372    .text.HAL_TIMEx_HallSensor_MspInit:0000000000000000 HAL_TIMEx_HallSensor_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:266    .text.HAL_TIMEx_HallSensor_DeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:272    .text.HAL_TIMEx_HallSensor_DeInit:0000000000000000 HAL_TIMEx_HallSensor_DeInit
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:414    .text.HAL_TIMEx_HallSensor_MspDeInit:0000000000000000 HAL_TIMEx_HallSensor_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:366    .text.HAL_TIMEx_HallSensor_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:408    .text.HAL_TIMEx_HallSensor_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:450    .text.HAL_TIMEx_HallSensor_Start:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:456    .text.HAL_TIMEx_HallSensor_Start:0000000000000000 HAL_TIMEx_HallSensor_Start
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:619    .text.HAL_TIMEx_HallSensor_Start:00000000000000ec $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:628    .text.HAL_TIMEx_HallSensor_Stop:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:634    .text.HAL_TIMEx_HallSensor_Stop:0000000000000000 HAL_TIMEx_HallSensor_Stop
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:716    .text.HAL_TIMEx_HallSensor_Start_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:722    .text.HAL_TIMEx_HallSensor_Start_IT:0000000000000000 HAL_TIMEx_HallSensor_Start_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:893    .text.HAL_TIMEx_HallSensor_Start_IT:00000000000000fc $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:902    .text.HAL_TIMEx_HallSensor_Stop_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:908    .text.HAL_TIMEx_HallSensor_Stop_IT:0000000000000000 HAL_TIMEx_HallSensor_Stop_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:998    .text.HAL_TIMEx_HallSensor_Start_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1004   .text.HAL_TIMEx_HallSensor_Start_DMA:0000000000000000 HAL_TIMEx_HallSensor_Start_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1222   .text.HAL_TIMEx_HallSensor_Start_DMA:0000000000000130 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1234   .text.HAL_TIMEx_HallSensor_Stop_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1240   .text.HAL_TIMEx_HallSensor_Stop_DMA:0000000000000000 HAL_TIMEx_HallSensor_Stop_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1327   .text.HAL_TIMEx_OCN_Start:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1333   .text.HAL_TIMEx_OCN_Start:0000000000000000 HAL_TIMEx_OCN_Start
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6466   .text.TIM_CCxNChannelCmd:0000000000000000 TIM_CCxNChannelCmd
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1553   .text.HAL_TIMEx_OCN_Start:0000000000000144 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1562   .text.HAL_TIMEx_OCN_Stop:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1568   .text.HAL_TIMEx_OCN_Stop:0000000000000000 HAL_TIMEx_OCN_Stop
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1695   .text.HAL_TIMEx_OCN_Start_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1701   .text.HAL_TIMEx_OCN_Start_IT:0000000000000000 HAL_TIMEx_OCN_Start_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1990   .text.HAL_TIMEx_OCN_Start_IT:00000000000001b4 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:1999   .text.HAL_TIMEx_OCN_Stop_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2005   .text.HAL_TIMEx_OCN_Stop_IT:0000000000000000 HAL_TIMEx_OCN_Stop_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2215   .text.HAL_TIMEx_OCN_Start_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2221   .text.HAL_TIMEx_OCN_Start_DMA:0000000000000000 HAL_TIMEx_OCN_Start_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2701   .text.HAL_TIMEx_OCN_Start_DMA:00000000000002c4 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6252   .text.TIM_DMADelayPulseNCplt:0000000000000000 TIM_DMADelayPulseNCplt
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6368   .text.TIM_DMAErrorCCxN:0000000000000000 TIM_DMAErrorCCxN
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2713   .text.HAL_TIMEx_OCN_Stop_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2719   .text.HAL_TIMEx_OCN_Stop_DMA:0000000000000000 HAL_TIMEx_OCN_Stop_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2922   .text.HAL_TIMEx_PWMN_Start:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:2928   .text.HAL_TIMEx_PWMN_Start:0000000000000000 HAL_TIMEx_PWMN_Start
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3148   .text.HAL_TIMEx_PWMN_Start:0000000000000144 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3157   .text.HAL_TIMEx_PWMN_Stop:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3163   .text.HAL_TIMEx_PWMN_Stop:0000000000000000 HAL_TIMEx_PWMN_Stop
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3290   .text.HAL_TIMEx_PWMN_Start_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3296   .text.HAL_TIMEx_PWMN_Start_IT:0000000000000000 HAL_TIMEx_PWMN_Start_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3585   .text.HAL_TIMEx_PWMN_Start_IT:00000000000001b4 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3594   .text.HAL_TIMEx_PWMN_Stop_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3600   .text.HAL_TIMEx_PWMN_Stop_IT:0000000000000000 HAL_TIMEx_PWMN_Stop_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3810   .text.HAL_TIMEx_PWMN_Start_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:3816   .text.HAL_TIMEx_PWMN_Start_DMA:0000000000000000 HAL_TIMEx_PWMN_Start_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4296   .text.HAL_TIMEx_PWMN_Start_DMA:00000000000002c4 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4308   .text.HAL_TIMEx_PWMN_Stop_DMA:0000000000000000 $t
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s 			page 157
 
 
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4314   .text.HAL_TIMEx_PWMN_Stop_DMA:0000000000000000 HAL_TIMEx_PWMN_Stop_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4517   .text.HAL_TIMEx_OnePulseN_Start:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4523   .text.HAL_TIMEx_OnePulseN_Start:0000000000000000 HAL_TIMEx_OnePulseN_Start
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4647   .text.HAL_TIMEx_OnePulseN_Stop:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4653   .text.HAL_TIMEx_OnePulseN_Stop:0000000000000000 HAL_TIMEx_OnePulseN_Stop
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4781   .text.HAL_TIMEx_OnePulseN_Start_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4787   .text.HAL_TIMEx_OnePulseN_Start_IT:0000000000000000 HAL_TIMEx_OnePulseN_Start_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4927   .text.HAL_TIMEx_OnePulseN_Stop_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:4933   .text.HAL_TIMEx_OnePulseN_Stop_IT:0000000000000000 HAL_TIMEx_OnePulseN_Stop_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5077   .text.HAL_TIMEx_ConfigCommutEvent:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5083   .text.HAL_TIMEx_ConfigCommutEvent:0000000000000000 HAL_TIMEx_ConfigCommutEvent
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5232   .text.HAL_TIMEx_ConfigCommutEvent_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5238   .text.HAL_TIMEx_ConfigCommutEvent_IT:0000000000000000 HAL_TIMEx_ConfigCommutEvent_IT
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5387   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5393   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000000000000000 HAL_TIMEx_ConfigCommutEvent_DMA
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5559   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000000000d8 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6155   .text.TIMEx_DMACommutationCplt:0000000000000000 TIMEx_DMACommutationCplt
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6204   .text.TIMEx_DMACommutationHalfCplt:0000000000000000 TIMEx_DMACommutationHalfCplt
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5566   .text.HAL_TIMEx_MasterConfigSynchronization:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5572   .text.HAL_TIMEx_MasterConfigSynchronization:0000000000000000 HAL_TIMEx_MasterConfigSynchronization
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5720   .text.HAL_TIMEx_MasterConfigSynchronization:00000000000000c4 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5729   .text.HAL_TIMEx_ConfigBreakDeadTime:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5735   .text.HAL_TIMEx_ConfigBreakDeadTime:0000000000000000 HAL_TIMEx_ConfigBreakDeadTime
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5850   .text.HAL_TIMEx_RemapConfig:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5856   .text.HAL_TIMEx_RemapConfig:0000000000000000 HAL_TIMEx_RemapConfig
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5895   .text.HAL_TIMEx_CommutCallback:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5901   .text.HAL_TIMEx_CommutCallback:0000000000000000 HAL_TIMEx_CommutCallback
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5937   .text.HAL_TIMEx_CommutHalfCpltCallback:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5943   .text.HAL_TIMEx_CommutHalfCpltCallback:0000000000000000 HAL_TIMEx_CommutHalfCpltCallback
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5979   .text.HAL_TIMEx_BreakCallback:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:5985   .text.HAL_TIMEx_BreakCallback:0000000000000000 HAL_TIMEx_BreakCallback
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6021   .text.HAL_TIMEx_HallSensor_GetState:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6027   .text.HAL_TIMEx_HallSensor_GetState:0000000000000000 HAL_TIMEx_HallSensor_GetState
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6067   .text.HAL_TIMEx_GetChannelNState:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6073   .text.HAL_TIMEx_GetChannelNState:0000000000000000 HAL_TIMEx_GetChannelNState
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6149   .text.TIMEx_DMACommutationCplt:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6198   .text.TIMEx_DMACommutationHalfCplt:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6247   .text.TIM_DMADelayPulseNCplt:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6363   .text.TIM_DMAErrorCCxN:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccg0vmOo.s:6461   .text.TIM_CCxNChannelCmd:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4314   .text.HAL_TIMEx_PWMN_Stop_DMA:0000000000000000 HAL_TIMEx_PWMN_Stop_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4517   .text.HAL_TIMEx_OnePulseN_Start:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4523   .text.HAL_TIMEx_OnePulseN_Start:0000000000000000 HAL_TIMEx_OnePulseN_Start
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4647   .text.HAL_TIMEx_OnePulseN_Stop:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4653   .text.HAL_TIMEx_OnePulseN_Stop:0000000000000000 HAL_TIMEx_OnePulseN_Stop
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4781   .text.HAL_TIMEx_OnePulseN_Start_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4787   .text.HAL_TIMEx_OnePulseN_Start_IT:0000000000000000 HAL_TIMEx_OnePulseN_Start_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4927   .text.HAL_TIMEx_OnePulseN_Stop_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:4933   .text.HAL_TIMEx_OnePulseN_Stop_IT:0000000000000000 HAL_TIMEx_OnePulseN_Stop_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5077   .text.HAL_TIMEx_ConfigCommutEvent:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5083   .text.HAL_TIMEx_ConfigCommutEvent:0000000000000000 HAL_TIMEx_ConfigCommutEvent
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5232   .text.HAL_TIMEx_ConfigCommutEvent_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5238   .text.HAL_TIMEx_ConfigCommutEvent_IT:0000000000000000 HAL_TIMEx_ConfigCommutEvent_IT
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5387   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5393   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000000000000000 HAL_TIMEx_ConfigCommutEvent_DMA
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5559   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000000000d8 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6155   .text.TIMEx_DMACommutationCplt:0000000000000000 TIMEx_DMACommutationCplt
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6204   .text.TIMEx_DMACommutationHalfCplt:0000000000000000 TIMEx_DMACommutationHalfCplt
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5566   .text.HAL_TIMEx_MasterConfigSynchronization:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5572   .text.HAL_TIMEx_MasterConfigSynchronization:0000000000000000 HAL_TIMEx_MasterConfigSynchronization
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5720   .text.HAL_TIMEx_MasterConfigSynchronization:00000000000000c4 $d
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5729   .text.HAL_TIMEx_ConfigBreakDeadTime:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5735   .text.HAL_TIMEx_ConfigBreakDeadTime:0000000000000000 HAL_TIMEx_ConfigBreakDeadTime
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5850   .text.HAL_TIMEx_RemapConfig:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5856   .text.HAL_TIMEx_RemapConfig:0000000000000000 HAL_TIMEx_RemapConfig
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5895   .text.HAL_TIMEx_CommutCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5901   .text.HAL_TIMEx_CommutCallback:0000000000000000 HAL_TIMEx_CommutCallback
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5937   .text.HAL_TIMEx_CommutHalfCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5943   .text.HAL_TIMEx_CommutHalfCpltCallback:0000000000000000 HAL_TIMEx_CommutHalfCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5979   .text.HAL_TIMEx_BreakCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:5985   .text.HAL_TIMEx_BreakCallback:0000000000000000 HAL_TIMEx_BreakCallback
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6021   .text.HAL_TIMEx_HallSensor_GetState:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6027   .text.HAL_TIMEx_HallSensor_GetState:0000000000000000 HAL_TIMEx_HallSensor_GetState
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6067   .text.HAL_TIMEx_GetChannelNState:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6073   .text.HAL_TIMEx_GetChannelNState:0000000000000000 HAL_TIMEx_GetChannelNState
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6149   .text.TIMEx_DMACommutationCplt:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6198   .text.TIMEx_DMACommutationHalfCplt:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6247   .text.TIM_DMADelayPulseNCplt:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6363   .text.TIM_DMAErrorCCxN:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cckKJFV6.s:6461   .text.TIM_CCxNChannelCmd:0000000000000000 $t
 
 UNDEFINED SYMBOLS
 TIM_Base_SetConfig

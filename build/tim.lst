@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
   12:Core/Src/tim.c ****   *
   13:Core/Src/tim.c ****   * This software is licensed under terms that can be found in the LICENSE file
   14:Core/Src/tim.c ****   * in the root directory of this software component.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 2
 
 
   15:Core/Src/tim.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
   42:Core/Src/tim.c **** 
   43:Core/Src/tim.c ****   /* USER CODE END TIM1_Init 1 */
   44:Core/Src/tim.c ****   htim1.Instance = TIM1;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 3
 
 
   68              		.loc 1 44 18
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  110 0060 07F10803 		add	r3, r7, #8
  111 0064 1946     		mov	r1, r3
  112 0066 0D48     		ldr	r0, .L6
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 4
 
 
  113 0068 FFF7FEFF 		bl	HAL_TIM_ConfigClockSource
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  153 00a0 002C0140 		.word	1073818624
  154              		.cfi_endproc
  155              	.LFE65:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 5
 
 
  157              		.section	.text.MX_TIM2_Init,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  201 002c 5A61     		str	r2, [r3, #20]
  202 002e 9A61     		str	r2, [r3, #24]
   82:Core/Src/tim.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 6
 
 
   83:Core/Src/tim.c ****   /* USER CODE BEGIN TIM2_Init 1 */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  242 0074 1946     		mov	r1, r3
  243 0076 1C48     		ldr	r0, .L14
  244 0078 FFF7FEFF 		bl	HAL_TIM_ConfigClockSource
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 7
 
 
  245 007c 0346     		mov	r3, r0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  284 00b8 0023     		movs	r3, #0
  285 00ba BB60     		str	r3, [r7, #8]
  113:Core/Src/tim.c ****   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 8
 
 
  286              		.loc 1 113 24
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  330              		.thumb_func
  332              	HAL_TIM_Base_MspInit:
  333              	.LFB67:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 9
 
 
  125:Core/Src/tim.c **** 
@@ -530,15 +530,15 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  369              	.LBE2:
  136:Core/Src/tim.c **** 
  137:Core/Src/tim.c ****     /* TIM1 interrupt Init */
- 138:Core/Src/tim.c ****     HAL_NVIC_SetPriority(TIM1_UP_IRQn, 0, 0);
+ 138:Core/Src/tim.c ****     HAL_NVIC_SetPriority(TIM1_UP_IRQn, 1, 0);
  370              		.loc 1 138 5
  371 002a 0022     		movs	r2, #0
- 372 002c 0021     		movs	r1, #0
+ 372 002c 0121     		movs	r1, #1
  373 002e 1920     		movs	r0, #25
  374 0030 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  139:Core/Src/tim.c ****     HAL_NVIC_EnableIRQ(TIM1_UP_IRQn);
  375              		.loc 1 139 5
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 10
 
 
  376 0034 1920     		movs	r0, #25
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  411              	.L21:
  412 0066 00BF     		.align	2
  413              	.L20:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 11
 
 
  414 0068 002C0140 		.word	1073818624
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  459 0020 164B     		ldr	r3, .L25
  460 0022 9B69     		ldr	r3, [r3, #24]
  461 0024 154A     		ldr	r2, .L25
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 12
 
 
  462 0026 43F00803 		orr	r3, r3, #8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  180:Core/Src/tim.c ****   }
  181:Core/Src/tim.c **** 
  182:Core/Src/tim.c **** }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 13
 
 
  503              		.loc 1 182 1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  188:Core/Src/tim.c ****   {
  189:Core/Src/tim.c ****   /* USER CODE BEGIN TIM1_MspDeInit 0 */
  190:Core/Src/tim.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 14
 
 
  191:Core/Src/tim.c ****   /* USER CODE END TIM1_MspDeInit 0 */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  583              		.cfi_def_cfa_offset 8
  584 0040 BD46     		mov	sp, r7
  585              	.LCFI24:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 15
 
 
  586              		.cfi_def_cfa_register 13
@@ -864,30 +864,30 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 1
  607              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
  608              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h"
  609              		.file 12 "Core/Inc/main.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s 			page 16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 tim.c
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:23     .bss.htim1:0000000000000000 htim1
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:20     .bss.htim1:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:30     .bss.htim2:0000000000000000 htim2
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:27     .bss.htim2:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:33     .text.MX_TIM1_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:39     .text.MX_TIM1_Init:0000000000000000 MX_TIM1_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:152    .text.MX_TIM1_Init:000000000000009c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:158    .text.MX_TIM2_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:164    .text.MX_TIM2_Init:0000000000000000 MX_TIM2_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:426    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:321    .text.MX_TIM2_Init:00000000000000e8 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:326    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:332    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:414    .text.HAL_TIM_Base_MspInit:0000000000000068 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:420    .text.HAL_TIM_MspPostInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:516    .text.HAL_TIM_MspPostInit:000000000000007c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:523    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:529    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
-C:\Users\Lenovo\AppData\Local\Temp\ccUgq94J.s:592    .text.HAL_TIM_Base_MspDeInit:0000000000000044 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:23     .bss.htim1:0000000000000000 htim1
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:20     .bss.htim1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:30     .bss.htim2:0000000000000000 htim2
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:27     .bss.htim2:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:33     .text.MX_TIM1_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:39     .text.MX_TIM1_Init:0000000000000000 MX_TIM1_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:152    .text.MX_TIM1_Init:000000000000009c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:158    .text.MX_TIM2_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:164    .text.MX_TIM2_Init:0000000000000000 MX_TIM2_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:426    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:321    .text.MX_TIM2_Init:00000000000000e8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:326    .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:332    .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:414    .text.HAL_TIM_Base_MspInit:0000000000000068 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:420    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:516    .text.HAL_TIM_MspPostInit:000000000000007c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:523    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:529    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\ccdJheAA.s:592    .text.HAL_TIM_Base_MspDeInit:0000000000000044 $d
 
 UNDEFINED SYMBOLS
 HAL_TIM_Base_Init

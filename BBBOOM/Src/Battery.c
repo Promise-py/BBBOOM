@@ -40,8 +40,6 @@ void Battery_Clear(BATTERY *battery)
     uint8_t i=0;
     for ( i = 0; i < 3; i++)
     {
-        battery[i].Alarm_Voltage = 0;
-        battery[i].CutOff_Voltage = 0;
         battery[i].Battery_State=0;
         battery[i].Battery_Voltage=0;
         memset(battery[i].Cells_Voltage, 0, sizeof(battery[i].Cells_Voltage));
@@ -117,8 +115,15 @@ void Battery_Refresh(BATTERY *battery)
     {
         if(battery[0].Cells_Voltage[i]>1)
         {
-            if(battery[0].CutOff_Voltage < battery[0].Cells_Voltage[i]&&battery[0].Cells_Voltage[i]<= battery[0].Alarm_Voltage)battery[0].Battery_State = ALARM;
-            else if(battery[0].CutOff_Voltage >= battery[0].Cells_Voltage[i]&&battery[0].Cells_Voltage[i]>3)battery[0].Battery_State = EXHAUST;
+            if(battery[0].CutOff_Voltage < battery[0].Cells_Voltage[i]&&battery[0].Cells_Voltage[i]<= battery[0].Alarm_Voltage)
+            {
+                battery[0].Battery_State = ALARM;
+                battery[0].Alarm_Cells = i+1;
+            }
+            else if(battery[0].CutOff_Voltage >= battery[0].Cells_Voltage[i]&&battery[0].Cells_Voltage[i]>3)
+            {
+                battery[0].Battery_State = EXHAUST;
+            }
             if(battery[0].Cells_Voltage[i]<2 || battery[0].Cells_Voltage[i]>4.3)battery[0].Battery_State = ERR;
             else if(battery[0].Cells_Voltage[i]>4.2)battery[0].Cells_Voltage[i]=4.2;
 
@@ -128,8 +133,15 @@ void Battery_Refresh(BATTERY *battery)
 
         if(battery[1].Cells_Voltage[i]>1)
         {
-            if(battery[1].CutOff_Voltage < battery[1].Cells_Voltage[i]&&battery[1].Cells_Voltage[i]<= battery[1].Alarm_Voltage)battery[1].Battery_State = ALARM;
-            else if(battery[1].CutOff_Voltage >= battery[1].Cells_Voltage[i]&&battery[1].Cells_Voltage[i]>3)battery[1].Battery_State = EXHAUST;
+            if(battery[1].CutOff_Voltage < battery[1].Cells_Voltage[i]&&battery[1].Cells_Voltage[i]<= battery[1].Alarm_Voltage)
+            {
+                battery[1].Battery_State = ALARM;
+                battery[1].Alarm_Cells = i+1;
+            }
+            else if(battery[1].CutOff_Voltage >= battery[1].Cells_Voltage[i]&&battery[1].Cells_Voltage[i]>3)
+            {
+                battery[1].Battery_State = EXHAUST;
+            }
             if(battery[1].Cells_Voltage[i]<2 || battery[1].Cells_Voltage[i]>4.3)battery[1].Battery_State = ERR;
             else if(battery[1].Cells_Voltage[i]>4.2)battery[1].Cells_Voltage[i]=4.2;
 
@@ -139,8 +151,16 @@ void Battery_Refresh(BATTERY *battery)
 
         if(battery[2].Cells_Voltage[i]>1)
         {
-            if(battery[2].CutOff_Voltage < battery[2].Cells_Voltage[i]&&battery[2].Cells_Voltage[i]<= battery[2].Alarm_Voltage)battery[2].Battery_State = ALARM;
-            else if(battery[2].CutOff_Voltage >= battery[2].Cells_Voltage[i]&&battery[2].Cells_Voltage[i]>3)battery[2].Battery_State = EXHAUST;
+            if(battery[2].CutOff_Voltage < battery[2].Cells_Voltage[i]&&battery[2].Cells_Voltage[i]<= battery[2].Alarm_Voltage)
+            {
+                battery[2].Battery_State = ALARM;
+                battery[2].Alarm_Cells = i+1;
+            }
+            else if(battery[2].CutOff_Voltage >= battery[2].Cells_Voltage[i]&&battery[2].Cells_Voltage[i]>3)
+            {
+                battery[2].Battery_State = EXHAUST;
+            }
+
             if(battery[2].Cells_Voltage[i]<2 || battery[2].Cells_Voltage[i]>4.3)battery[2].Battery_State = ERR;
             else if(battery[2].Cells_Voltage[i]>4.2)battery[2].Cells_Voltage[i]=4.2;
             
@@ -158,3 +178,28 @@ void Battery_Refresh(BATTERY *battery)
     }
 }
 
+
+/**
+ * @brief 电池接入
+ * @param CHx 电池通道
+ * @param mode 模式 1：闭合 0：断开
+ * @retval None
+ */
+void Battery_ON(uint8_t CHx,uint8_t mode)
+{
+    switch(CHx)
+    {
+        case 1:
+            if(mode)HAL_GPIO_WritePin(VBAT1_GPIO_Port,VBAT1_Pin,GPIO_PIN_SET);
+            else HAL_GPIO_WritePin(VBAT1_GPIO_Port,VBAT1_Pin,GPIO_PIN_RESET);
+            break;
+        case 2:
+            if(mode)HAL_GPIO_WritePin(VBAT2_GPIO_Port,VBAT2_Pin,GPIO_PIN_SET);
+            else HAL_GPIO_WritePin(VBAT2_GPIO_Port,VBAT2_Pin,GPIO_PIN_RESET);
+            break;
+        case 3:
+            if(mode)HAL_GPIO_WritePin(VBAT3_GPIO_Port,VBAT3_Pin,GPIO_PIN_SET);
+            else HAL_GPIO_WritePin(VBAT3_GPIO_Port,VBAT3_Pin,GPIO_PIN_RESET);
+            break;
+    }
+}

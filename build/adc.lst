@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
   12:Core/Src/adc.c ****   *
   13:Core/Src/adc.c ****   * This software is licensed under terms that can be found in the LICENSE file
   14:Core/Src/adc.c ****   * in the root directory of this software component.
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 2
 
 
   15:Core/Src/adc.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
   63 0010 4D4B     		ldr	r3, .L12
   64 0012 4E4A     		ldr	r2, .L12+4
   65 0014 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 3
 
 
   47:Core/Src/adc.c ****   hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  105 0054 0823     		movs	r3, #8
  106 0056 7B60     		str	r3, [r7, #4]
   62:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_1;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 4
 
 
  107              		.loc 1 62 16
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  143              		.loc 1 80 19
  144 0090 0A23     		movs	r3, #10
  145 0092 7B60     		str	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 5
 
 
   81:Core/Src/adc.c ****   sConfig.Rank = ADC_REGULAR_RANK_3;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
   96:Core/Src/adc.c ****   }
   97:Core/Src/adc.c **** 
   98:Core/Src/adc.c ****   /** Configure Regular Channel
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 6
 
 
   99:Core/Src/adc.c ****   */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  117:Core/Src/adc.c ****   */
  118:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_14;
  221              		.loc 1 118 19
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 7
 
 
  222 0108 0E23     		movs	r3, #14
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  257              		.loc 1 137 1
  258 0140 00BF     		nop
  259 0142 1037     		adds	r7, r7, #16
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 8
 
 
  260              	.LCFI3:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  149:Core/Src/adc.c **** 
  150:Core/Src/adc.c ****   /* USER CODE END ADC2_Init 1 */
  151:Core/Src/adc.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 9
 
 
  152:Core/Src/adc.c ****   /** Common config
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  346              	.L15:
  165:Core/Src/adc.c ****   }
  166:Core/Src/adc.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 10
 
 
  167:Core/Src/adc.c ****   /** Configure Regular Channel
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  384 008c FFF7FEFF 		bl	Error_Handler
  385              	.L17:
  184:Core/Src/adc.c ****   }
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 11
 
 
  185:Core/Src/adc.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  203:Core/Src/adc.c **** 
  204:Core/Src/adc.c ****   /** Configure Regular Channel
  205:Core/Src/adc.c ****   */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 12
 
 
  206:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_4;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  224:Core/Src/adc.c ****   sConfig.Channel = ADC_CHANNEL_6;
  458              		.loc 1 224 19
  459 0100 0623     		movs	r3, #6
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 13
 
 
  460 0102 7B60     		str	r3, [r7, #4]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  495 0138 00BF     		nop
  496 013a 1037     		adds	r7, r7, #16
  497              	.LCFI8:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 14
 
 
  498              		.cfi_def_cfa_offset 8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  548 001a 334A     		ldr	r2, .L31
  549 001c 9342     		cmp	r3, r2
  550 001e 38D1     		bne	.L28
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 15
 
 
  551              	.LBB2:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  265:Core/Src/adc.c ****     PC5     ------> ADC1_IN15
  266:Core/Src/adc.c ****     PB0     ------> ADC1_IN8
  267:Core/Src/adc.c ****     PB1     ------> ADC1_IN9
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 16
 
 
  268:Core/Src/adc.c ****     */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  300:Core/Src/adc.c ****     */
  301:Core/Src/adc.c ****     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
  302:Core/Src/adc.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 17
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 17
 
 
  303:Core/Src/adc.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  652 00d0 0323     		movs	r3, #3
  653 00d2 7B62     		str	r3, [r7, #36]
  304:Core/Src/adc.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 18
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 18
 
 
  654              		.loc 1 304 5
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  314:Core/Src/adc.c **** 
  315:Core/Src/adc.c ****   if(adcHandle->Instance==ADC1)
  707              		.loc 1 315 15
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 19
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 19
 
 
  708 0008 7B68     		ldr	r3, [r7, #4]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  350:Core/Src/adc.c ****     /**ADC2 GPIO Configuration
  351:Core/Src/adc.c ****     PA0-WKUP     ------> ADC2_IN0
  352:Core/Src/adc.c ****     PA1     ------> ADC2_IN1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 20
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 20
 
 
  353:Core/Src/adc.c ****     PA2     ------> ADC2_IN2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  763 005c 00100240 		.word	1073876992
  764 0060 00100140 		.word	1073811456
  765 0064 000C0140 		.word	1073810432
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 21
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 21
 
 
  766 0068 00280140 		.word	1073817600
@@ -1217,27 +1217,27 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 1
  780              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
  781              		.file 10 "Core/Inc/adc.h"
  782              		.file 11 "Core/Inc/main.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s 			page 22
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 adc.c
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:23     .bss.hadc1:0000000000000000 hadc1
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:20     .bss.hadc1:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:30     .bss.hadc2:0000000000000000 hadc2
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:27     .bss.hadc2:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:33     .text.MX_ADC1_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:39     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:270    .text.MX_ADC1_Init:0000000000000148 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:276    .text.MX_ADC2_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:282    .text.MX_ADC2_Init:0000000000000000 MX_ADC2_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:507    .text.MX_ADC2_Init:0000000000000140 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:513    .text.HAL_ADC_MspInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:519    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:673    .text.HAL_ADC_MspInit:00000000000000e8 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:683    .text.HAL_ADC_MspDeInit:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:689    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
-C:\Users\Lenovo\AppData\Local\Temp\ccfiEdsW.s:762    .text.HAL_ADC_MspDeInit:0000000000000058 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:23     .bss.hadc1:0000000000000000 hadc1
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:20     .bss.hadc1:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:30     .bss.hadc2:0000000000000000 hadc2
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:27     .bss.hadc2:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:33     .text.MX_ADC1_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:39     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:270    .text.MX_ADC1_Init:0000000000000148 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:276    .text.MX_ADC2_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:282    .text.MX_ADC2_Init:0000000000000000 MX_ADC2_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:507    .text.MX_ADC2_Init:0000000000000140 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:513    .text.HAL_ADC_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:519    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:673    .text.HAL_ADC_MspInit:00000000000000e8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:683    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:689    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\ccKn3QO7.s:762    .text.HAL_ADC_MspDeInit:0000000000000058 $d
 
 UNDEFINED SYMBOLS
 HAL_ADC_Init

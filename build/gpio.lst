@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s 			page 2
 
 
   33:Core/Src/gpio.c **** /* USER CODE END 1 */
@@ -101,12 +101,12 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
   47:Core/Src/gpio.c ****   /* GPIO Ports Clock Enable */
   48:Core/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
   50              		.loc 1 48 3
-  51 0014 234B     		ldr	r3, .L2
+  51 0014 2E4B     		ldr	r3, .L2
   52 0016 9B69     		ldr	r3, [r3, #24]
-  53 0018 224A     		ldr	r2, .L2
+  53 0018 2D4A     		ldr	r2, .L2
   54 001a 43F01003 		orr	r3, r3, #16
   55 001e 9361     		str	r3, [r2, #24]
-  56 0020 204B     		ldr	r3, .L2
+  56 0020 2B4B     		ldr	r3, .L2
   57 0022 9B69     		ldr	r3, [r3, #24]
   58 0024 03F01003 		and	r3, r3, #16
   59 0028 FB60     		str	r3, [r7, #12]
@@ -115,15 +115,15 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
   62              	.LBB3:
   49:Core/Src/gpio.c ****   __HAL_RCC_GPIOD_CLK_ENABLE();
   63              		.loc 1 49 3
-  64 002c 1D4B     		ldr	r3, .L2
+  64 002c 284B     		ldr	r3, .L2
   65 002e 9B69     		ldr	r3, [r3, #24]
-  66 0030 1C4A     		ldr	r2, .L2
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 3
+  66 0030 274A     		ldr	r2, .L2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s 			page 3
 
 
   67 0032 43F02003 		orr	r3, r3, #32
   68 0036 9361     		str	r3, [r2, #24]
-  69 0038 1A4B     		ldr	r3, .L2
+  69 0038 254B     		ldr	r3, .L2
   70 003a 9B69     		ldr	r3, [r3, #24]
   71 003c 03F02003 		and	r3, r3, #32
   72 0040 BB60     		str	r3, [r7, #8]
@@ -132,12 +132,12 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
   75              	.LBB4:
   50:Core/Src/gpio.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
   76              		.loc 1 50 3
-  77 0044 174B     		ldr	r3, .L2
+  77 0044 224B     		ldr	r3, .L2
   78 0046 9B69     		ldr	r3, [r3, #24]
-  79 0048 164A     		ldr	r2, .L2
+  79 0048 214A     		ldr	r2, .L2
   80 004a 43F00403 		orr	r3, r3, #4
   81 004e 9361     		str	r3, [r2, #24]
-  82 0050 144B     		ldr	r3, .L2
+  82 0050 1F4B     		ldr	r3, .L2
   83 0052 9B69     		ldr	r3, [r3, #24]
   84 0054 03F00403 		and	r3, r3, #4
   85 0058 7B60     		str	r3, [r7, #4]
@@ -146,89 +146,126 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 1
   88              	.LBB5:
   51:Core/Src/gpio.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
   89              		.loc 1 51 3
-  90 005c 114B     		ldr	r3, .L2
+  90 005c 1C4B     		ldr	r3, .L2
   91 005e 9B69     		ldr	r3, [r3, #24]
-  92 0060 104A     		ldr	r2, .L2
+  92 0060 1B4A     		ldr	r2, .L2
   93 0062 43F00803 		orr	r3, r3, #8
   94 0066 9361     		str	r3, [r2, #24]
-  95 0068 0E4B     		ldr	r3, .L2
+  95 0068 194B     		ldr	r3, .L2
   96 006a 9B69     		ldr	r3, [r3, #24]
   97 006c 03F00803 		and	r3, r3, #8
   98 0070 3B60     		str	r3, [r7]
   99 0072 3B68     		ldr	r3, [r7]
  100              	.LBE5:
   52:Core/Src/gpio.c **** 
-  53:Core/Src/gpio.c ****   /*Configure GPIO pin : PtPin */
-  54:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = Button_Pin;
- 101              		.loc 1 54 23
- 102 0074 2023     		movs	r3, #32
- 103 0076 3B61     		str	r3, [r7, #16]
-  55:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
- 104              		.loc 1 55 24
- 105 0078 0B4B     		ldr	r3, .L2+4
- 106 007a 7B61     		str	r3, [r7, #20]
-  56:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLUP;
- 107              		.loc 1 56 24
- 108 007c 0123     		movs	r3, #1
- 109 007e BB61     		str	r3, [r7, #24]
-  57:Core/Src/gpio.c ****   HAL_GPIO_Init(Button_GPIO_Port, &GPIO_InitStruct);
- 110              		.loc 1 57 3
- 111 0080 07F11003 		add	r3, r7, #16
- 112 0084 1946     		mov	r1, r3
- 113 0086 0948     		ldr	r0, .L2+8
- 114 0088 FFF7FEFF 		bl	HAL_GPIO_Init
-  58:Core/Src/gpio.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 4
+  53:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
+  54:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOA, VBAT1_Pin|VBAT2_Pin|VBAT3_Pin, GPIO_PIN_RESET);
+ 101              		.loc 1 54 3
+ 102 0074 0022     		movs	r2, #0
+ 103 0076 4FF4E061 		mov	r1, #1792
+ 104 007a 1648     		ldr	r0, .L2+4
+ 105 007c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  55:Core/Src/gpio.c **** 
+  56:Core/Src/gpio.c ****   /*Configure GPIO pins : PAPin PAPin PAPin */
+  57:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = VBAT1_Pin|VBAT2_Pin|VBAT3_Pin;
+ 106              		.loc 1 57 23
+ 107 0080 4FF4E063 		mov	r3, #1792
+ 108 0084 3B61     		str	r3, [r7, #16]
+  58:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 109              		.loc 1 58 24
+ 110 0086 0123     		movs	r3, #1
+ 111 0088 7B61     		str	r3, [r7, #20]
+  59:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+ 112              		.loc 1 59 24
+ 113 008a 0223     		movs	r3, #2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s 			page 4
 
 
-  59:Core/Src/gpio.c ****   /* EXTI interrupt init*/
-  60:Core/Src/gpio.c ****   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
- 115              		.loc 1 60 3
- 116 008c 0022     		movs	r2, #0
- 117 008e 0021     		movs	r1, #0
- 118 0090 1720     		movs	r0, #23
- 119 0092 FFF7FEFF 		bl	HAL_NVIC_SetPriority
-  61:Core/Src/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
- 120              		.loc 1 61 3
- 121 0096 1720     		movs	r0, #23
- 122 0098 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 114 008c BB61     		str	r3, [r7, #24]
+  60:Core/Src/gpio.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+ 115              		.loc 1 60 25
+ 116 008e 0123     		movs	r3, #1
+ 117 0090 FB61     		str	r3, [r7, #28]
+  61:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 118              		.loc 1 61 3
+ 119 0092 07F11003 		add	r3, r7, #16
+ 120 0096 1946     		mov	r1, r3
+ 121 0098 0E48     		ldr	r0, .L2+4
+ 122 009a FFF7FEFF 		bl	HAL_GPIO_Init
   62:Core/Src/gpio.c **** 
-  63:Core/Src/gpio.c **** }
- 123              		.loc 1 63 1
- 124 009c 00BF     		nop
- 125 009e 2037     		adds	r7, r7, #32
- 126              	.LCFI3:
- 127              		.cfi_def_cfa_offset 8
- 128 00a0 BD46     		mov	sp, r7
- 129              	.LCFI4:
- 130              		.cfi_def_cfa_register 13
- 131              		@ sp needed
- 132 00a2 80BD     		pop	{r7, pc}
- 133              	.L3:
- 134              		.align	2
- 135              	.L2:
- 136 00a4 00100240 		.word	1073876992
- 137 00a8 00002110 		.word	270598144
- 138 00ac 000C0140 		.word	1073810432
- 139              		.cfi_endproc
- 140              	.LFE65:
- 142              		.text
- 143              	.Letext0:
- 144              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 145              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
- 146              		.file 4 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
- 147              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 148              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s 			page 5
+  63:Core/Src/gpio.c ****   /*Configure GPIO pin : PtPin */
+  64:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = Button_Pin;
+ 123              		.loc 1 64 23
+ 124 009e 2023     		movs	r3, #32
+ 125 00a0 3B61     		str	r3, [r7, #16]
+  65:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+ 126              		.loc 1 65 24
+ 127 00a2 0D4B     		ldr	r3, .L2+8
+ 128 00a4 7B61     		str	r3, [r7, #20]
+  66:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 129              		.loc 1 66 24
+ 130 00a6 0023     		movs	r3, #0
+ 131 00a8 BB61     		str	r3, [r7, #24]
+  67:Core/Src/gpio.c ****   HAL_GPIO_Init(Button_GPIO_Port, &GPIO_InitStruct);
+ 132              		.loc 1 67 3
+ 133 00aa 07F11003 		add	r3, r7, #16
+ 134 00ae 1946     		mov	r1, r3
+ 135 00b0 0A48     		ldr	r0, .L2+12
+ 136 00b2 FFF7FEFF 		bl	HAL_GPIO_Init
+  68:Core/Src/gpio.c **** 
+  69:Core/Src/gpio.c ****   /* EXTI interrupt init*/
+  70:Core/Src/gpio.c ****   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+ 137              		.loc 1 70 3
+ 138 00b6 0022     		movs	r2, #0
+ 139 00b8 0021     		movs	r1, #0
+ 140 00ba 1720     		movs	r0, #23
+ 141 00bc FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  71:Core/Src/gpio.c ****   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+ 142              		.loc 1 71 3
+ 143 00c0 1720     		movs	r0, #23
+ 144 00c2 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  72:Core/Src/gpio.c **** 
+  73:Core/Src/gpio.c **** }
+ 145              		.loc 1 73 1
+ 146 00c6 00BF     		nop
+ 147 00c8 2037     		adds	r7, r7, #32
+ 148              	.LCFI3:
+ 149              		.cfi_def_cfa_offset 8
+ 150 00ca BD46     		mov	sp, r7
+ 151              	.LCFI4:
+ 152              		.cfi_def_cfa_register 13
+ 153              		@ sp needed
+ 154 00cc 80BD     		pop	{r7, pc}
+ 155              	.L3:
+ 156 00ce 00BF     		.align	2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s 			page 5
+
+
+ 157              	.L2:
+ 158 00d0 00100240 		.word	1073876992
+ 159 00d4 00080140 		.word	1073809408
+ 160 00d8 00002110 		.word	270598144
+ 161 00dc 000C0140 		.word	1073810432
+ 162              		.cfi_endproc
+ 163              	.LFE65:
+ 165              		.text
+ 166              	.Letext0:
+ 167              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 168              		.file 3 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 169              		.file 4 "d:\\msys64\\mingw64\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 170              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 171              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gpio.c
-C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s:19     .text.MX_GPIO_Init:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s:25     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-C:\Users\Lenovo\AppData\Local\Temp\ccRluK0S.s:136    .text.MX_GPIO_Init:00000000000000a4 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s:19     .text.MX_GPIO_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s:25     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccU278X6.s:158    .text.MX_GPIO_Init:00000000000000d0 $d
 
 UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
 HAL_GPIO_Init
 HAL_NVIC_SetPriority
 HAL_NVIC_EnableIRQ

@@ -22,10 +22,15 @@ typedef struct BATTERY{
 
     float Alarm_Voltage; //3.8v
     float CutOff_Voltage; //3.7v
+
+    uint8_t Alarm_Flag; //报警标志
+    uint8_t Alarm_Cells; //报警电池号
+    uint8_t Exhaust_Flag; //耗尽标志
 }BATTERY;
 
 void Battery_Init(BATTERY *battery,float alarm_voltage,float cut_off_voltage);
 void Battery_Refresh(BATTERY *battery);
+void Battery_ON(uint8_t CHx,uint8_t mode);
 extern BATTERY Battery[3];
 extern unsigned int ADC1_value[8];//IN 8-14
 extern unsigned int ADC2_value[8];//IN 0-7

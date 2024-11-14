@@ -102,6 +102,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   OLED_Init();
   UI_ShowRUAGH();
+  HAL_Delay(1000);
   Battery_Init(Battery,3.8,3.7);
   FSM_StateRefresh(Battery,&BB_fsm);
   // ADS1015_Init();
@@ -111,7 +112,7 @@ int main(void)
   // ADS1015_Config(hi2c2,ADS1015_SINGLE_END,2);
   // ADS1015_Config_Register(hi2c2,ADS1015_REG_POINTER_CONFIG,ADS1015_CONFIG);
 
-  i2c_state=AD1015_Check(hi2c2);
+  // i2c_state=AD1015_Check(hi2c2);
   // i2c_state=HAL_I2C_IsDeviceReady(&hi2c2, ADS1015_ADDRESS<<1, 2, 1000);
   // Battery_Init(Battery,3.8,3.7);
   // Show_Normal_UI(Battery,1,1,1,1); 

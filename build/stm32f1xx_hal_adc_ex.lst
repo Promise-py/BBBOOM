@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** 
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** /* Includes ------------------------------------------------------------------*/
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** #include "stm32f1xx_hal.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 2
 
 
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****  ===============================================================================
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                       ##### IO operation functions #####
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****  ===============================================================================
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 3
 
 
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     [..]  This section provides functions allowing to:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
   47              		.loc 1 123 17
   48 000c 0023     		movs	r3, #0
   49 000e FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 4
 
 
  124:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                        HAL_ADC_STATE_REG_BUSY | HAL_ADC_STATE_INJ_BUSY,
  144:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                        HAL_ADC_STATE_BUSY_INTERNAL);
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 5
 
 
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /* Hardware prerequisite: delay before starting the calibration.          */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  162:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** 
  163:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /* Wait for calibration reset completion */
  164:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     while(HAL_IS_BIT_SET(hadc->Instance->CR2, ADC_CR2_RSTCAL))
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 6
 
 
  121              		.loc 1 164 10
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  159 00cc 9B68     		ldr	r3, [r3, #8]
  160 00ce 03F00803 		and	r3, r3, #8
  161 00d2 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 7
 
 
  162 00d4 DCD1     		bne	.L9
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  197 010e 23F01203 		bic	r3, r3, #18
  198 0112 43F01002 		orr	r2, r3, #16
  199 0116 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 8
 
 
  200 0118 9A62     		str	r2, [r3, #40]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  221:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** }
  231              		.loc 1 221 1
  232 014e 1846     		mov	r0, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 9
 
 
  233 0150 1C37     		adds	r7, r7, #28
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  235:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   
  236:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   /* Process locked */
  237:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 10
 
 
  276              		.loc 1 237 3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  313              		.loc 1 254 9 discriminator 1
  314 0050 2D4B     		ldr	r3, .L27+4
  315 0052 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 11
 
 
  316 0054 03F47023 		and	r3, r3, #983040
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  348 0088 7B68     		ldr	r3, [r7, #4]
  349 008a 0022     		movs	r2, #0
  350 008c 83F82420 		strb	r2, [r3, #36]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 12
 
 
  277:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  385 00cc 08D1     		bne	.L24
  386              	.L25:
  295:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 13
 
 
  296:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****         /* Start ADC conversion on injected group with SW start */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  422              		.cfi_def_cfa_register 13
  423              		@ sp needed
  424 0102 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 14
 
 
  425              	.L28:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  335:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   /* Process locked */
  336:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
  461              		.loc 1 336 3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 15
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 15
 
 
  462 000c 7B68     		ldr	r3, [r7, #4]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  353:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     {
  354:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       /* Set ADC state */
  355:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       ADC_STATE_CLR_SET(hadc->State,
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 16
 
 
  499              		.loc 1 355 7
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  534              		.cfi_def_cfa_register 13
  535              		@ sp needed
  536 0082 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 17
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 17
 
 
  537              		.cfi_endproc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  394:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   tickstart = HAL_GetTick();  
  573              		.loc 1 394 15
  574 0012 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 18
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 18
 
 
  575 0016 3861     		str	r0, [r7, #16]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  603              		.loc 1 420 28 discriminator 1
  604 0040 3A68     		ldr	r2, [r7]
  605 0042 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 19
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 19
 
 
  606 0044 12D2     		bcs	.L38
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  441:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /*    and ADC maximum conversion cycles on all channels.                  */
  442:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /*  - Wait for the expected ADC clock cycles delay                        */
  443:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     Conversion_Timeout_CPU_cycles_max = ((SystemCoreClock
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 20
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 20
 
 
  444:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                                           / HAL_RCCEx_GetPeriphCLKFreq(RCC_PERIPHCLK_ADC))
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  691 00d0 1969     		ldr	r1, [r3, #16]
  692 00d2 444B     		ldr	r3, .L58+12
  693 00d4 0B40     		ands	r3, r3, r1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 21
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 21
 
 
  694 00d6 002B     		cmp	r3, #0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  740 011a 3B68     		ldr	r3, [r7]
  741 011c 002B     		cmp	r3, #0
  742 011e 07D0     		beq	.L54
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 22
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 22
 
 
  743              		.loc 1 452 30 discriminator 1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  781 0158 7A69     		ldr	r2, [r7, #20]
  782 015a 9A42     		cmp	r2, r3
  783 015c D9D8     		bhi	.L55
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 23
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 23
 
 
  784              	.L43:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  819 01a0 15D1     		bne	.L57
  485:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       (hadc->Init.ContinuousConvMode == DISABLE)   )        )   )
  820              		.loc 1 485 18
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 24
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 24
 
 
  821 01a2 7B68     		ldr	r3, [r7, #4]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  861              		.align	2
  862              	.L58:
  863 01d8 00000000 		.word	SystemCoreClock
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 25
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 25
 
 
  864 01dc 24499224 		.word	613566756
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  903 0012 012B     		cmp	r3, #1
  904 0014 01D1     		bne	.L61
  905              		.loc 1 515 3 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 26
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 26
 
 
  906 0016 0223     		movs	r3, #2
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  943              	.L64:
  533:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     {
  534:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       CLEAR_BIT(hadc->State, HAL_ADC_STATE_MULTIMODE_SLAVE);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 27
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 27
 
 
  944              		.loc 1 534 7
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  558:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     __HAL_ADC_CLEAR_FLAG(hadc, ADC_FLAG_JEOC);
  975              		.loc 1 558 5
  976 0090 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 28
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 28
 
 
  977 0092 1B68     		ldr	r3, [r3]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1015              		.loc 1 571 52 discriminator 2
  1016 00da 002B     		cmp	r3, #0
  1017 00dc 08D1     		bne	.L69
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 29
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 29
 
 
  1018              	.L70:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1052 0110 BD46     		mov	sp, r7
  1053              	.LCFI24:
  1054              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 30
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 30
 
 
  1055              		@ sp needed
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  611:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
  612:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** 
  613:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   /* Process locked */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 31
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 31
 
 
  614:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   __HAL_LOCK(hadc);
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1129 0048 002B     		cmp	r3, #0
  1130 004a 1AD1     		bne	.L79
  631:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 32
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 32
 
 
  632:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       /* Disable ADC end of conversion interrupt for injected channels */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  652:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   /* Return function status */
  653:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   return tmp_hal_status;
  1164              		.loc 1 653 10
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 33
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 33
 
 
  1165 008a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1198 0002 92B0     		sub	sp, sp, #72
  1199              	.LCFI31:
  1200              		.cfi_def_cfa_offset 80
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 34
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 34
 
 
  1201 0004 00AF     		add	r7, sp, #0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1237 0042 B3F5602F 		cmp	r3, #917504
  1238 0046 0BD0     		beq	.L83
  695:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   {
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 35
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 35
 
 
  696:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /* Update ADC state machine to error */
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  716:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /* Set ADC state (ADC master)                                             */
  717:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /* - Clear state bitfield related to regular group conversion results     */
  718:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     /* - Set state bitfield related to regular operation                      */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 36
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 36
 
 
  719:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     ADC_STATE_CLR_SET(hadc->State,
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1305              		.loc 1 740 9
  1306 00c8 FB68     		ldr	r3, [r7, #12]
  1307 00ca 1B6A     		ldr	r3, [r3, #32]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 37
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 37
 
 
  1308              		.loc 1 740 40
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1342              		.loc 1 760 50
  1343 0102 4C33     		adds	r3, r3, #76
  1344              		.loc 1 760 5
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 38
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 38
 
 
  1345 0104 1946     		mov	r1, r3
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1378 0142 FB68     		ldr	r3, [r7, #12]
  1379 0144 0022     		movs	r2, #0
  1380 0146 83F82420 		strb	r2, [r3, #36]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 39
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 39
 
 
  1381              	.L88:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1416              		.cfi_startproc
  1417              		@ args = 0, pretend = 0, frame = 64
  1418              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 40
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 40
 
 
  1419 0000 80B5     		push	{r7, lr}
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1458              		.loc 1 817 5 discriminator 2
  1459 003e 97F83F30 		ldrb	r3, [r7, #63]	@ zero_extendqisi2
  1460 0042 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 41
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 41
 
 
  1461 0044 3BD1     		bne	.L95
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1494 0082 1B68     		ldr	r3, [r3]
  1495 0084 22F48072 		bic	r2, r2, #256
  1496 0088 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 42
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 42
 
 
  839:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1531              	.LCFI38:
  1532              		.cfi_def_cfa_offset 8
  1533 00ce BD46     		mov	sp, r7
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 43
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 43
 
 
  1534              	.LCFI39:
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1558              		@ link register save eliminated.
  1559 0000 80B4     		push	{r7}
  1560              	.LCFI40:
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 44
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 44
 
 
  1561              		.cfi_def_cfa_offset 4
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1601              		.loc 1 904 15
  1602 0036 5B6C     		ldr	r3, [r3, #68]
  1603 0038 FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 45
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 45
 
 
  905:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       break;
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1646              		.global	HAL_ADCEx_MultiModeGetValue
  1647              		.syntax unified
  1648              		.thumb
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 46
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 46
 
 
  1649              		.thumb_func
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1678              		.loc 1 943 7
  1679 0014 084B     		ldr	r3, .L110
  1680 0016 9B68     		ldr	r3, [r3, #8]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 47
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 47
 
 
  1681 0018 03F48073 		and	r3, r3, #256
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  953:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** /**
  954:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   * @brief  Injected conversion complete callback in non blocking mode 
  955:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   * @param  hadc: ADC handle
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 48
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 48
 
 
  956:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   * @retval None
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  970:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** 
  971:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c **** /** @defgroup ADCEx_Exported_Functions_Group2 Extended Peripheral Control functions
  972:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   * @brief    Extended Peripheral Control functions
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 49
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 49
 
 
  973:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   *
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1793 0010 BB60     		str	r3, [r7, #8]
 1004:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   
 1005:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   /* Check the parameters */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 50
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 50
 
 
 1006:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
 1035:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     {
 1036:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       /* Clear the old SQx bits for all injected ranks */
 1037:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       MODIFY_REG(hadc->Instance->JSQR                             ,
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 51
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 51
 
 
  1819              		.loc 1 1037 7
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1848              		.loc 1 1062 57
  1849 0068 3B68     		ldr	r3, [r7]
  1850 006a 1B69     		ldr	r3, [r3, #16]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 52
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 52
 
 
  1851              		.loc 1 1062 8
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
 1073:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                  ADC_JSQR_JL_SHIFT(sConfigInjected->InjectedNbrOfConversion) |
 1074:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                  ADC_JSQR_RK_JL(sConfigInjected->InjectedChannel,      
 1075:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                                   sConfigInjected->InjectedRank,         
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 53
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 53
 
 
 1076:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                                   sConfigInjected->InjectedNbrOfConversion)    );
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1923 00fc 012B     		cmp	r3, #1
  1924 00fe 1CD0     		beq	.L120
 1102:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   {    
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 54
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 54
 
 
 1103:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     MODIFY_REG(hadc->Instance->CR2                                           ,
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  1965 0140 15D1     		bne	.L125
 1117:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     {
 1118:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       if (sConfigInjected->ExternalTrigInjecConv == ADC_INJECTED_SOFTWARE_START)
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 55
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 55
 
 
  1966              		.loc 1 1118 26
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2003 017c 08D1     		bne	.L128
 1136:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       {
 1137:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****         SET_BIT(hadc->Instance->CR1, ADC_CR1_JDISCEN);
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 56
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 56
 
 
  2004              		.loc 1 1137 9
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2042 01c0 DB43     		mvns	r3, r3
  2043 01c2 1940     		ands	r1, r1, r3
  2044 01c4 3B68     		ldr	r3, [r7]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 57
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 57
 
 
  2045 01c6 9868     		ldr	r0, [r3, #8]
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2086 0216 3B68     		ldr	r3, [r7]
  2087 0218 1B68     		ldr	r3, [r3]
  2088              		.loc 1 1166 6
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 58
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 58
 
 
  2089 021a 102B     		cmp	r3, #16
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2130 0260 1268     		ldr	r2, [r2]
  2131 0262 0B43     		orrs	r3, r3, r1
  2132 0264 5361     		str	r3, [r2, #20]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 59
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 59
 
 
 1179:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****                  ADC_JOFR1_JOFFSET1,
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2169 02a4 1B6A     		ldr	r3, [r3, #32]
  2170 02a6 23F47F63 		bic	r3, r3, #4080
  2171 02aa 23F00F03 		bic	r3, r3, #15
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 60
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 60
 
 
  2172 02ae 3A68     		ldr	r2, [r7]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
 1213:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       {
 1214:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****         SET_BIT(hadc->Instance->CR2, ADC_CR2_TSVREFE);
  2209              		.loc 1 1214 9
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 61
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 61
 
 
  2210 02e4 7B68     		ldr	r3, [r7, #4]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
 1228:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     else
 1229:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****     {
 1230:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       /* Update ADC state machine to error */
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 62
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 62
 
 
 1231:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****       SET_BIT(hadc->State, HAL_ADC_STATE_ERROR_CONFIG);
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2293              		.align	1
  2294              		.global	HAL_ADCEx_MultiModeConfigChannel
  2295              		.syntax unified
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 63
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 63
 
 
  2296              		.thumb
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
 1267:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   assert_param(IS_ADC_MULTIMODE_MASTER_INSTANCE(hadc->Instance));
 1268:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   assert_param(IS_ADC_MODE(multimode->Mode));
 1269:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 64
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 64
 
 
 1270:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   /* Process locked */
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2362 0056 124A     		ldr	r2, .L151+4
  2363 0058 9342     		cmp	r3, r2
  2364 005a 0BD1     		bne	.L148
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 65
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 65
 
 
 1287:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c ****   {
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2397 0094 4037     		adds	r7, r7, #64
  2398              	.LCFI67:
  2399              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 66
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 66
 
 
  2400 0096 BD46     		mov	sp, r7
@@ -3926,46 +3926,46 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 1
  2423              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
  2424              		.file 11 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  2425              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s 			page 67
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s 			page 67
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_adc_ex.c
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:19     .text.HAL_ADCEx_Calibration_Start:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:25     .text.HAL_ADCEx_Calibration_Start:0000000000000000 HAL_ADCEx_Calibration_Start
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:244    .text.HAL_ADCEx_Calibration_Start:0000000000000158 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:249    .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:255    .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:428    .text.HAL_ADCEx_InjectedStart:0000000000000104 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:434    .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:440    .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:541    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:547    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:863    .text.HAL_ADCEx_InjectedPollForConversion:00000000000001d8 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:873    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:879    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1060   .text.HAL_ADCEx_InjectedStart_IT:0000000000000114 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1066   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1072   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1181   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1187   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 HAL_ADCEx_MultiModeStart_DMA
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1398   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000158 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1407   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1413   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 HAL_ADCEx_MultiModeStop_DMA
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1541   .text.HAL_ADCEx_MultiModeStop_DMA:00000000000000d4 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1546   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1552   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1645   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1651   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 HAL_ADCEx_MultiModeGetValue
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1714   .text.HAL_ADCEx_MultiModeGetValue:0000000000000038 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1720   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1726   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1762   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:1768   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:2285   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000348 $d
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:2293   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:2299   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 HAL_ADCEx_MultiModeConfigChannel
-C:\Users\Lenovo\AppData\Local\Temp\cch7Ri34.s:2408   .text.HAL_ADCEx_MultiModeConfigChannel:000000000000009c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:19     .text.HAL_ADCEx_Calibration_Start:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:25     .text.HAL_ADCEx_Calibration_Start:0000000000000000 HAL_ADCEx_Calibration_Start
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:244    .text.HAL_ADCEx_Calibration_Start:0000000000000158 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:249    .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:255    .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:428    .text.HAL_ADCEx_InjectedStart:0000000000000104 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:434    .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:440    .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:541    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:547    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:863    .text.HAL_ADCEx_InjectedPollForConversion:00000000000001d8 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:873    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:879    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1060   .text.HAL_ADCEx_InjectedStart_IT:0000000000000114 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1066   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1072   .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1181   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1187   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 HAL_ADCEx_MultiModeStart_DMA
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1398   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000158 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1407   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1413   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 HAL_ADCEx_MultiModeStop_DMA
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1541   .text.HAL_ADCEx_MultiModeStop_DMA:00000000000000d4 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1546   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1552   .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1645   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1651   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 HAL_ADCEx_MultiModeGetValue
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1714   .text.HAL_ADCEx_MultiModeGetValue:0000000000000038 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1720   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1726   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1762   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:1768   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:2285   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000348 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:2293   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:2299   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 HAL_ADCEx_MultiModeConfigChannel
+C:\Users\Lenovo\AppData\Local\Temp\ccmLSxY6.s:2408   .text.HAL_ADCEx_MultiModeConfigChannel:000000000000009c $d
 
 UNDEFINED SYMBOLS
 ADC_ConversionStop_Disable

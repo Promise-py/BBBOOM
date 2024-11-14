@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
   50 0006 07F10804 		add	r4, r7, #8
   51 000a 84E80F00 		stm	r4, {r0, r1, r2, r3}
    9:BBBOOM/Src/ADS1015.c **** 	// Start with default values
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 2
 
 
   10:BBBOOM/Src/ADS1015.c **** 	ADS1015_CONFIG  = ADS1015_REG_CONFIG_CQUE_NONE  | // Disable the comparator (default val)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
   27:BBBOOM/Src/ADS1015.c **** 		  ADS1015_CONFIG |= ADS1015_REG_CONFIG_MUX_DIFF_0_3;
   89              		.loc 1 27 20
   90 0056 2C4B     		ldr	r3, .L17
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 3
 
 
   91 0058 1B88     		ldrh	r3, [r3]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  133 00a4 CD000000 		.word	.L12+1
  134 00a8 DD000000 		.word	.L10+1
  135              		.p2align 1
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 4
 
 
  136              	.L14:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
   53:BBBOOM/Src/ADS1015.c **** 		}
   54:BBBOOM/Src/ADS1015.c **** 	}
   55:BBBOOM/Src/ADS1015.c **** 
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 5
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 5
 
 
   56:BBBOOM/Src/ADS1015.c **** 	// Set 'start single-conversion' bit
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  224              	.LCFI7:
  225              		.cfi_def_cfa_offset 24
  226              		.cfi_offset 7, -24
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 6
 
 
  227              		.cfi_offset 14, -20
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
   79:BBBOOM/Src/ADS1015.c **** 
   80:BBBOOM/Src/ADS1015.c ****     while(HAL_I2C_Master_Receive(&I2cHandle, (uint16_t)(ADS1015_ADDRESS|ADS1015_READ_MODE), rx_data
  265              		.loc 1 80 10
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 7
 
 
  266 0044 03E0     		b	.L23
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  308              	.LCFI12:
  309              		.cfi_restore 14
  310              		.cfi_restore 7
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 8
 
 
  311              		.cfi_def_cfa_offset 16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  359 0026 3B70     		strb	r3, [r7]
  360 0028 FB79     		ldrb	r3, [r7, #7]
  361 002a 7B70     		strb	r3, [r7, #1]
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 9
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 9
 
 
  362 002c BB79     		ldrb	r3, [r7, #6]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  407              		.global	AD1015_Check
  408              		.syntax unified
  409              		.thumb
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 10
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 10
 
 
  410              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  453 002e 07F11000 		add	r0, r7, #16
  454 0032 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
  455 0036 0346     		mov	r3, r0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 11
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 11
 
 
  115:BBBOOM/Src/ADS1015.c **** 	while(HAL_I2C_Master_Transmit(&I2cHandle, (uint16_t)(ADS1015_ADDRESS|ADS1015_WRITE_MODE), tx_data,
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  494 006c 04B0     		add	sp, sp, #16
  495              	.LCFI29:
  496              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 12
 
 
  497 006e 7047     		bx	lr
@@ -673,26 +673,26 @@ ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 1
  507              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
  508              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
  509              		.file 8 "BBBOOM/Inc/ADS1015.h"
-ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s 			page 13
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ADS1015.c
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:23     .bss.ADS1015_CONFIG:0000000000000000 ADS1015_CONFIG
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:20     .bss.ADS1015_CONFIG:0000000000000000 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:26     .text.ADS1015_Config:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:32     .text.ADS1015_Config:0000000000000000 ADS1015_Config
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:75     .text.ADS1015_Config:000000000000003c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:79     .text.ADS1015_Config:000000000000004c $t
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:131    .text.ADS1015_Config:000000000000009c $d
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:135    .text.ADS1015_Config:00000000000000ac $t
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:203    .text.ADS1015_Config:0000000000000108 $d
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:208    .text.ADS1015_Read_Data:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:214    .text.ADS1015_Read_Data:0000000000000000 ADS1015_Read_Data
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:320    .text.ADS1015_Config_Register:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:326    .text.ADS1015_Config_Register:0000000000000000 ADS1015_Config_Register
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:406    .text.AD1015_Check:0000000000000000 $t
-C:\Users\Lenovo\AppData\Local\Temp\ccgkjsOD.s:412    .text.AD1015_Check:0000000000000000 AD1015_Check
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:23     .bss.ADS1015_CONFIG:0000000000000000 ADS1015_CONFIG
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:20     .bss.ADS1015_CONFIG:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:26     .text.ADS1015_Config:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:32     .text.ADS1015_Config:0000000000000000 ADS1015_Config
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:75     .text.ADS1015_Config:000000000000003c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:79     .text.ADS1015_Config:000000000000004c $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:131    .text.ADS1015_Config:000000000000009c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:135    .text.ADS1015_Config:00000000000000ac $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:203    .text.ADS1015_Config:0000000000000108 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:208    .text.ADS1015_Read_Data:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:214    .text.ADS1015_Read_Data:0000000000000000 ADS1015_Read_Data
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:320    .text.ADS1015_Config_Register:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:326    .text.ADS1015_Config_Register:0000000000000000 ADS1015_Config_Register
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:406    .text.AD1015_Check:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxdEBlm.s:412    .text.AD1015_Check:0000000000000000 AD1015_Check
 
 UNDEFINED SYMBOLS
 HAL_I2C_GetError
